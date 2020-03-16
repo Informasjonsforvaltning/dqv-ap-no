@@ -1,1 +1,1 @@
-# Ontology and controlled vocabularies the Norwegian Application Profile of DQV
+# Ontology and controlled vocabularies for the Norwegian Application Profile of DQV
