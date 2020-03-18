@@ -102,30 +102,19 @@ dqv:value rdf:type owl:DatatypeProperty .
 #################################################################
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
-skos:Concept rdf:type owl:Class ;
-             rdfs:isDefinedBy "https://www.w3.org/2009/08/skos-reference/skos.html#Concept"@en ,
-                              "https://www.w3.org/2009/08/skos-reference/skos.html#Concept"@nb .
+skos:Concept rdf:type owl:Class .
 
 
 ###  https://data.norge.no/standard/dqv-ap-no#Kvalitetsdeldimensjon
-dqv-ap-no:Kvalitetsdeldimensjon rdf:type owl:Class ;
-                                rdfs:isDefinedBy "dqv-ap-no:Kvalitetsdeldimensjon"@en ,
-                                                 "dqv-ap-no:Kvalitetsdeldimensjon"@nb ,
-                                                 "dqv-ap-no:Kvalitetsdeldimensjon"@nn .
+dqv-ap-no:Kvalitetsdeldimensjon rdf:type owl:Class .
 
 
 ###  https://data.norge.no/standard/dqv-ap-no#Kvalitetsdimensjon
-dqv-ap-no:Kvalitetsdimensjon rdf:type owl:Class ;
-                             rdfs:isDefinedBy "dqv-ap-no:Kvalitetsdimensjon"@en ,
-                                              "dqv-ap-no:Kvalitetsdimensjon"@nb ,
-                                              "dqv-ap-no:Kvalitetsdimensjon"@nn .
+dqv-ap-no:Kvalitetsdimensjon rdf:type owl:Class .
 
 
 ###  https://data.norge.no/standard/dqv-ap-no#Kvalitetsmål
-dqv-ap-no:Kvalitetsmål rdf:type owl:Class ;
-                       rdfs:isDefinedBy "dqv-ao-no:Kvalitetsmål"@en ,
-                                        "dqv-ao-no:Kvalitetsmål"@nb ,
-                                        "dqv-ao-no:Kvalitetsmål"@nn .
+dqv-ap-no:Kvalitetsmål rdf:type owl:Class .
 
 
 #################################################################
@@ -148,7 +137,7 @@ dqv-ap-no:Kvalitetsmål rdf:type owl:Class ;
 :andelEnheterMedIdentifikatorfeil rdf:type owl:NamedIndividual ,
                                            dqv-ap-no:Kvalitetsmål ;
                                   dqv:inDimension :identifikatorriktighet ;
-                                  dqv:expectedDataType  ;
+                                  dqv:expectedDataType ""^^xsd:double ;
                                   dct:source "egendefinert"@nb ,
                                              "own definition"@en ;
                                   skos:altLabel "andel objekter med identifikatorfeil"@nb ;
@@ -157,13 +146,14 @@ dqv-ap-no:Kvalitetsmål rdf:type owl:Class ;
                                   skos:example "\"0,01%\" (0,01% av personene i datasettet har gått fra midlertidig tilknytning til permanent oppholdstillatelse og står oppført med d-nummer som identifikator istedenfor f-nummer)"@nb ,
                                                "\"0.01%\" (0.01% of the buildings in the dataset have wrong identifiers)"@en ;
                                   skos:prefLabel "andel enheter med identifikatorfeil"@nb ,
-                                                 "rate of objects with incorrect identifiers"@en .
+                                                 "rate of objects with incorrect identifiers"@en ;
+                                  dqv:expectedDataType xsd:decimal .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :andelEnheterMedIdentifikatorfeil ;
    owl:annotatedProperty dqv:expectedDataType ;
-   owl:annotatedTarget  ;
-   rdfs:comment "as percentage"@en ,
+   owl:annotatedTarget ""^^xsd:double ;
+   rdfs:comment "as percent"@en ,
                 "som prosent"@nb
  ] .
 
@@ -172,7 +162,7 @@ dqv-ap-no:Kvalitetsmål rdf:type owl:Class ;
 :andelEnheterMedImputertVerdiForEnGittEgenskap rdf:type owl:NamedIndividual ,
                                                         dqv-ap-no:Kvalitetsmål ;
                                                dqv:inDimension :imputering ;
-                                               dqv:expectedDataType  ;
+                                               dqv:expectedDataType ""^^xsd:double ;
                                                dct:source "egendefinert"@nb ,
                                                           "own definition"@en ;
                                                skos:altLabel "andel objekter med imputert verdi for en gitt egenskap"@nb ;
@@ -181,12 +171,13 @@ dqv-ap-no:Kvalitetsmål rdf:type owl:Class ;
                                                skos:example "\"0.04%\" (0.04% av bygningene har fått antatt verdi for «byggeår»)"@nb ,
                                                             "\"0.04%\" (0.04% of the buildings have imputed value for the property “year of construction”)"@en ;
                                                skos:prefLabel "andel enheter med imputert verdi for en gitt egenskap"@nb ,
-                                                              "rate of objects with imputed value for a given property"@en .
+                                                              "rate of objects with imputed value for a given property"@en ;
+                                               dqv:expectedDataType xsd:decimal .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :andelEnheterMedImputertVerdiForEnGittEgenskap ;
    owl:annotatedProperty dqv:expectedDataType ;
-   owl:annotatedTarget  ;
+   owl:annotatedTarget ""^^xsd:double ;
    rdfs:comment "as percentage"@en ,
                 "som prosent"@nb
  ] .
@@ -196,7 +187,7 @@ dqv-ap-no:Kvalitetsmål rdf:type owl:Class ;
 :andelEnheterMedInkonsistensMellomGitteEgenskaper rdf:type owl:NamedIndividual ,
                                                            dqv-ap-no:Kvalitetsmål ;
                                                   dqv:inDimension :konsistensInnadIDatasett ;
-                                                  dqv:expectedDataType  ;
+                                                  dqv:expectedDataType ""^^xsd:double ;
                                                   dct:source "egendefinert"@nb ,
                                                              "own definition"@en ;
                                                   skos:altLabel "andel objekter med inkonsistens mellom gitte egenskaper"@nb ;
@@ -207,12 +198,13 @@ dqv-ap-no:Kvalitetsmål rdf:type owl:Class ;
                                                                "\"0,4%\" (av ansatte i datasettet står oppført med startdato på arbeidsforhold som er før fødsesldato)"@nb ,
                                                                "“0.03%\" (0.03% of the buildings in the dataset have “usable area” larger than “gross area”)"@en ;
                                                   skos:prefLabel "andel enheter med inkonsistens mellom gitte egenskaper"@nb ,
-                                                                 "rate of objects with inconsistency between given properties"@en .
+                                                                 "rate of objects with inconsistency between given properties"@en ;
+                                                  dqv:expectedDataType xsd:decimal .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :andelEnheterMedInkonsistensMellomGitteEgenskaper ;
    owl:annotatedProperty dqv:expectedDataType ;
-   owl:annotatedTarget  ;
+   owl:annotatedTarget ""^^xsd:double ;
    rdfs:comment "as percentage"@en ,
                 "som prosent"@nb
  ] .
@@ -222,7 +214,7 @@ dqv-ap-no:Kvalitetsmål rdf:type owl:Class ;
 :andelEnheterMedInkonsistenteEgenskaper rdf:type owl:NamedIndividual ,
                                                  dqv-ap-no:Kvalitetsmål ;
                                         dqv:inDimension :konsistensInnadIDatasett ;
-                                        dqv:expectedDataType  ;
+                                        dqv:expectedDataType ""^^xsd:double ;
                                         dct:source "egendefinert"@nb ,
                                                    "own definition"@en ;
                                         skos:altLabel "andel objekter med inkonsistente egenskaper"@nb ;
@@ -231,12 +223,13 @@ dqv-ap-no:Kvalitetsmål rdf:type owl:Class ;
                                         skos:example "\"0.03%\" (0.03% of the buildings have inconsistency between some properties)"@en ,
                                                      "\"0.03%\" (av bygningene har inkonsistens innbyrdes mellom noen av egenskapene)"@nb ;
                                         skos:prefLabel "andel enheter med inkonsistente egenskaper"@nb ,
-                                                       "rate of objects with inconsistent properties"@en .
+                                                       "rate of objects with inconsistent properties"@en ;
+                                        dqv:expectedDataType xsd:decimal .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :andelEnheterMedInkonsistenteEgenskaper ;
    owl:annotatedProperty dqv:expectedDataType ;
-   owl:annotatedTarget  ;
+   owl:annotatedTarget ""^^xsd:double ;
    rdfs:comment "as percentage"@en ,
                 "som prosent"@nb
  ] .
@@ -246,7 +239,7 @@ dqv-ap-no:Kvalitetsmål rdf:type owl:Class ;
 :andelEnheterMedManglendeVerdiForEnGittEgenskap rdf:type owl:NamedIndividual ,
                                                          dqv-ap-no:Kvalitetsmål ;
                                                 dqv:inDimension :underdekning ;
-                                                dqv:expectedDataType  ;
+                                                dqv:expectedDataType ""^^xsd:double ;
                                                 dct:source "egendefinert"@nb ,
                                                            "own definition"@en ;
                                                 skos:definition "antall enheter med manglende verdi for en gitt egenskap i forhold til antall enheter i datasettet"@nb ,
@@ -254,12 +247,13 @@ dqv-ap-no:Kvalitetsmål rdf:type owl:Class ;
                                                 skos:example "\"0.02%\" (0.02% av verdiene for egenskapen «bruksareal» mangler i datasettet)"@nb ,
                                                              "\"0.02%\" (0.02% of buildings in the dataset do not have value for the property “usable area”)"@en ;
                                                 skos:prefLabel "andel enheter med manglende verdi for en gitt egenskap"@nb ,
-                                                               "rate of objects with missing value for av given property"@en .
+                                                               "rate of objects with missing value for av given property"@en ;
+                                                dqv:expectedDataType xsd:decimal .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :andelEnheterMedManglendeVerdiForEnGittEgenskap ;
    owl:annotatedProperty dqv:expectedDataType ;
-   owl:annotatedTarget  ;
+   owl:annotatedTarget ""^^xsd:double ;
    rdfs:comment "as percentage"@en ,
                 "som prosent"@nb
  ] .
@@ -269,7 +263,7 @@ dqv-ap-no:Kvalitetsmål rdf:type owl:Class ;
 :andelFeilklassifiserteEnheterForEnGittEgenskap rdf:type owl:NamedIndividual ,
                                                          dqv-ap-no:Kvalitetsmål ;
                                                 dqv:inDimension :klassifikasjonsriktighet ;
-                                                dqv:expectedDataType  ;
+                                                dqv:expectedDataType ""^^xsd:double ;
                                                 dct:source "based on ISO 19157"@en ,
                                                            "basert på ISO 19157"@nb ;
                                                 skos:altLabel "andel feilklassifiserte objekter for en gitt egenskap"@nb ,
@@ -279,12 +273,13 @@ dqv-ap-no:Kvalitetsmål rdf:type owl:Class ;
                                                 skos:example "\"0,4%\" (0,4% av enhetene har feil kommunenummer)"@nb ,
                                                              "\"0.01%\" (0.01% of the buildings in the dataset are classified with wrong occupancy codes)"@en ;
                                                 skos:prefLabel "andel feilklassifiserte enheter for en gitt egenskap"@nb ,
-                                                               "rate of incorrectly classified objects for a given property"@en .
+                                                               "rate of incorrectly classified objects for a given property"@en ;
+                                                dqv:expectedDataType xsd:decimal .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :andelFeilklassifiserteEnheterForEnGittEgenskap ;
    owl:annotatedProperty dqv:expectedDataType ;
-   owl:annotatedTarget  ;
+   owl:annotatedTarget ""^^xsd:double ;
    rdfs:comment "as percentage"@en ,
                 "som prosent"@nb
  ] .
@@ -294,7 +289,7 @@ dqv-ap-no:Kvalitetsmål rdf:type owl:Class ;
 :andelManglendeEnheter rdf:type owl:NamedIndividual ,
                                 dqv-ap-no:Kvalitetsmål ;
                        dqv:inDimension :underdekning ;
-                       dqv:expectedDataType  ;
+                       dqv:expectedDataType ""^^xsd:double ;
                        dct:source "based on ISO 19157"@en ,
                                   "basert på ISO 19157"@nb ;
                        skos:definition "antall enheter som mangler i forhold til antall enheter som skulle være med i datasettet"@nb ,
@@ -302,12 +297,13 @@ dqv-ap-no:Kvalitetsmål rdf:type owl:Class ;
                        skos:example "\"0.02%\" (0.02% of buildings are missing in the dataset)"@en ,
                                     "\"0.02%\" (datasettet dekker 0.02% færre bygninger en det som eksisterer i virkeligheten)"@nb ;
                        skos:prefLabel "andel manglende enheter"@nb ,
-                                      "rate of missing objects"@en .
+                                      "rate of missing objects"@en ;
+                       dqv:expectedDataType xsd:decimal .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :andelManglendeEnheter ;
    owl:annotatedProperty dqv:expectedDataType ;
-   owl:annotatedTarget  ;
+   owl:annotatedTarget ""^^xsd:double ;
    rdfs:comment "as percentage"@en ,
                 "som prosent"@nb
  ] .
@@ -317,7 +313,7 @@ dqv-ap-no:Kvalitetsmål rdf:type owl:Class ;
 :andelOverflødigeEnheter rdf:type owl:NamedIndividual ,
                                   dqv-ap-no:Kvalitetsmål ;
                          dqv:inDimension :overdekning ;
-                         dqv:expectedDataType  ;
+                         dqv:expectedDataType ""^^xsd:double ;
                          dct:source "based on ISO 19157"@en ,
                                     "basert på ISO 19157"@nb ;
                          skos:altLabel "andel overflødige objekter"@nb ;
@@ -326,12 +322,13 @@ dqv-ap-no:Kvalitetsmål rdf:type owl:Class ;
                          skos:example "\"0,03%\" (0,03% av bygningene i datasettet burde ikke være representert)"@nb ,
                                       "\"0.03%\" (0.03% of the buildings in the dataset are not supposed to be there)"@en ;
                          skos:prefLabel "andel overflødige enheter"@nb ,
-                                        "rate of excess objects"@en .
+                                        "rate of excess objects"@en ;
+                         dqv:expectedDataType xsd:decimal .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :andelOverflødigeEnheter ;
    owl:annotatedProperty dqv:expectedDataType ;
-   owl:annotatedTarget  ;
+   owl:annotatedTarget ""^^xsd:double ;
    rdfs:comment "as percentage"@en ,
                 "som prosent"@nb
  ] .
@@ -432,7 +429,8 @@ dqv-ap-no:Kvalitetsmål rdf:type owl:Class ;
 
 
 ###  https://data.norge.no/vocabulary/dqvno#egenskap
-:egenskap rdf:type owl:NamedIndividual ;
+:egenskap rdf:type owl:NamedIndividual ,
+                   skos:Concept ;
           dct:source "based on \"Geodatakvalitet\", Norwegian Mapping Authority (https://www.kartverket.no/globalassets/standard/bransjestandarder-utover-sosi/geodatakvalitet.pdf)"@en ,
                      "«Geodatakvalitet», Kartverket (https://www.kartverket.no/globalassets/standard/bransjestandarder-utover-sosi/geodatakvalitet.pdf)"@nb ;
           skos:altLabel "attribute"@en ,
@@ -449,7 +447,8 @@ dqv-ap-no:Kvalitetsmål rdf:type owl:Class ;
 
 
 ###  https://data.norge.no/vocabulary/dqvno#element
-:element rdf:type owl:NamedIndividual ;
+:element rdf:type owl:NamedIndividual ,
+                  skos:Concept ;
          dct:source "ISO 19157"@en ,
                     "ISO 19157"@nb ;
          skos:altLabel "entity"@en ;
