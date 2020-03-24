@@ -1,0 +1,247 @@
+@prefix : <https://data.norge.no/standard/dqv-ap-no#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dqv: <https://www.w3.org/TR/vocab-dqv/#dqv:> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dqvno: <https://data.norge.no/vocabulary/dqvno#> .
+@base <https://data.norge.no/standard/dqv-ap-no#> .
+
+<https://data.norge.no/standard/dqv-ap-no#> rdf:type owl:Ontology ;
+                                             owl:versionIRI <dqv-ap-no:0.1> ;
+                                             rdfs:comment "Ontologi for DQV-AP-NO, the Norwegian application profile of DQV (https://www.w3.org/TR/vocab-dqv/)" ;
+                                             rdfs:isDefinedBy "Digitaliseringsdirektoratet"@nb ,
+                                                              "Norwegian Digitalisation Agency"@en ;
+                                             rdfs:label "DQV-AP-NO"@en ,
+                                                        "DQV-AP-NO"@nb ;
+                                             owl:versionInfo "first draft"@en ,
+                                                             "første utkast"@nb .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/dc/terms/conformsTo
+dct:conformsTo rdf:type owl:ObjectProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain dcat:Dataset ;
+               rdfs:range dct:Standard .
+
+
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty rdf:type owl:FunctionalProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#broader
+skos:broader rdf:type owl:ObjectProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :Kvalitetsdeldimensjon ;
+             rdfs:range :Kvalitetsdimensjon .
+
+
+###  https://data.norge.no/standard/dqv-ap-no#iDeldimensjon
+:iDeldimensjon rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf dqv:inDimension ;
+               rdf:type owl:FunctionalProperty ;
+               rdfs:domain :Kvalitetsmål ;
+               rdfs:range :Kvalitetsdeldimensjon .
+
+
+###  https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityAnnotation
+dqv:hasQualityAnnotation rdf:type owl:ObjectProperty ,
+                                  owl:FunctionalProperty ;
+                         rdfs:domain dcat:Dataset ;
+                         rdfs:range :BrukerKvalitetstilbakemelding ,
+                                    :Kvalitetsnote .
+
+
+###  https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityMeasurement
+dqv:hasQualityMeasurement rdf:type owl:ObjectProperty ,
+                                   owl:FunctionalProperty ;
+                          rdfs:domain dcat:Dataset ;
+                          rdfs:range :Måleresultat ;
+                          rdfs:isDefinedBy "https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityMeasurement" .
+
+
+###  https://www.w3.org/TR/vocab-dqv/#dqv:inDimension
+dqv:inDimension rdf:type owl:ObjectProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain dct:Standard ,
+                            :BrukerKvalitetstilbakemelding ,
+                            :Kvalitetsnote ;
+                rdfs:range :Kvalitetsdimensjon ;
+                rdfs:isDefinedBy "https://www.w3.org/TR/vocab-dqv/#dqv:inDimension" .
+
+
+###  https://www.w3.org/TR/vocab-dqv/#dqv:isMeasurementOf
+dqv:isMeasurementOf rdf:type owl:ObjectProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain :Måleresultat ;
+                    rdfs:range :Kvalitetsmål .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/dc/terms/Standard
+dct:Standard rdf:type owl:Class ;
+             dct:source "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Standard"@en ;
+             skos:definition "reference point against which other things can be evaluated or compared"@en ;
+             skos:prefLabel "standard or specification"@en .
+
+
+###  http://www.w3.org/ns/dcat#Dataset
+dcat:Dataset rdf:type owl:Class ;
+             rdfs:isDefinedBy "https://www.w3.org/TR/vocab-dcat-2/#Class:Dataset" ;
+             skos:definition "collection of data, published or curated by a single agent, and available for access or download in one or more representations"@en ;
+             skos:prefLabel "dataset"@en .
+
+
+###  https://data.norge.no/standard/dqv-ap-no#BrukerKvalitetstilbakemelding
+:BrukerKvalitetstilbakemelding rdf:type owl:Class ;
+                               owl:equivalentClass dqv:UserQualityFeedback ;
+                               rdfs:subClassOf :Kvalitetsnote ;
+                               skos:prefLabel "brukertilbakemelding på kvalitet"@nb ,
+                                              "user quality feedback"@en .
+
+
+###  https://data.norge.no/standard/dqv-ap-no#Kvalitetsdeldimensjon
+:Kvalitetsdeldimensjon rdf:type owl:Class ;
+                       rdfs:subClassOf dqv:Dimension ;
+                       owl:disjointWith :Kvalitetsdimensjon ;
+                       skos:altLabel "deldimensjon"@nb ,
+                                     "subdimension"@en ;
+                       skos:definition "mer detaljert inndeling av en kvalitetsdimensjon"@nb ;
+                       skos:prefLabel "kvalitetsdeldimensjon"@nb ,
+                                      "quality subdimension"@en ;
+                       skos:scopeNote "Datakvalitetsvokabularet DQV fra W3C har ikke definert kvalitets*del*dimensjon som et eget begrep (klasse), men kun kvalitetsdimensjon."@nb .
+
+
+###  https://data.norge.no/standard/dqv-ap-no#Kvalitetsdimensjon
+:Kvalitetsdimensjon rdf:type owl:Class ;
+                    owl:equivalentClass dqv:Dimension ;
+                    dct:source "https://www.w3.org/TR/vocab-dqv/#dqv:Dimension"@en ,
+                               "https://www.w3.org/TR/vocab-dqv/#dqv:Dimension"@nb ;
+                    rdfs:comment "Each quality dimension must have one or more metric to measure it."@en ;
+                    skos:altLabel "dimension"@en ,
+                                  "dimensjon"@nb ;
+                    skos:definition "kriterier relevant for evaluering av kvalitet på datasett"@nb ,
+                                    "represents criteria relevant for assessing quality"@en ;
+                    skos:prefLabel "kvalitetsdimensjon"@nb ,
+                                   "quality dimension"@en .
+
+
+###  https://data.norge.no/standard/dqv-ap-no#Kvalitetsmål
+:Kvalitetsmål rdf:type owl:Class ;
+              owl:equivalentClass dqv:Metric ;
+              dct:source "https://www.w3.org/TR/vocab-dqv/#dqv:Metric"@en ,
+                         "https://www.w3.org/TR/vocab-dqv/#dqv:Metric"@nb ;
+              skos:altLabel "beregningsmetode for et kvalitetsmål"@nb ,
+                            "definisjon av et kvalitetsmål"@nb ;
+              skos:definition "definisjon/beskrivelse av måten å beregne/oppgi kvalitetsmål"@nb ,
+                              "represents a standard to measure a quality dimension"@en ;
+              skos:prefLabel "kvalitetsmål"@nb ,
+                             "metric"@en ;
+              skos:scopeNote "I henhold til DQV skal selve måleverdi oppgis ved å bruke dqv:QualityMeasurement"@nb .
+
+
+###  https://data.norge.no/standard/dqv-ap-no#Kvalitetsnote
+:Kvalitetsnote rdf:type owl:Class ;
+               skos:prefLabel "kvalitetsnote"@nb ,
+                              "quality annotation"@en .
+
+
+###  https://data.norge.no/standard/dqv-ap-no#Måleresultat
+:Måleresultat rdf:type owl:Class ;
+              owl:equivalentClass dqv:QualityMeasurement ;
+              dct:source "https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurement"@en ,
+                         "https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurement"@nb ;
+              skos:altLabel "kvalitetsmåleresultat"@nb ;
+              skos:definition "konkret resultat av kvalitetsmål"@nb ,
+                              "represents the evaluation of a given dataset (or dataset distribution) against a specific quality metric"@en ;
+              skos:prefLabel "måleresultat"@nb ,
+                             "quality measurement"@en .
+
+
+###  https://www.w3.org/TR/vocab-dqv/#dqv:Dimension
+dqv:Dimension rdf:type owl:Class ;
+              rdfs:isDefinedBy "https://www.w3.org/TR/vocab-dqv/#dqv:Dimension"@en ;
+              skos:altLabel "dimension"@en ;
+              skos:definition "represents criteria relevant for assessing quality"@en ;
+              skos:prefLabel "quality dimension"@en ;
+              skos:scopeNote "Each quality dimension must have one or more metric to measure it. A dimension is linked with a category using the dqv:inCategory property."@en .
+
+
+###  https://www.w3.org/TR/vocab-dqv/#dqv:Metric
+dqv:Metric rdf:type owl:Class ;
+           rdfs:isDefinedBy "https://www.w3.org/TR/vocab-dqv/#dqv:Metric"@en ;
+           skos:definition "represents a standard to measure a quality dimension"@en ;
+           skos:prefLabel "metric"@en ;
+           skos:scopeNote "An observation (instance of dqv:QualityMeasurement) assigns a value in a given unit to a Metric."@en .
+
+
+###  https://www.w3.org/TR/vocab-dqv/#dqv:QualityAnnotation
+dqv:QualityAnnotation rdf:type owl:Class ;
+                      rdfs:isDefinedBy "https://www.w3.org/TR/vocab-dqv/#dqv:QualityAnnotation"@en ;
+                      skos:definition "represents quality annotations, including ratings, quality certificates or feedback that can be associated to datasets or distributions"@en ;
+                      skos:prefLabel "quality annotation"@en ;
+                      skos:scopeNote "Quality annotations must have one oa:motivatedBy statement with an instance of oa:Motivation (and skos:Concept) that reflects a quality assessment purpose. We define this instance as dqv:qualityAssessment."@en .
+
+
+###  https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurement
+dqv:QualityMeasurement rdf:type owl:Class ;
+                       rdfs:isDefinedBy "https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurement"@en ;
+                       skos:definition "represents the evaluation of a given dataset (or dataset distribution) against a specific quality metric"@en ;
+                       skos:prefLabel "quality measurement"@en .
+
+
+###  https://www.w3.org/TR/vocab-dqv/#dqv:UserQualityFeedback
+dqv:UserQualityFeedback rdf:type owl:Class ;
+                        rdfs:subClassOf dqv:QualityAnnotation ;
+                        rdfs:isDefinedBy "https://www.w3.org/TR/vocab-dqv/#dqv:UserQualityFeedback"@en ;
+                        skos:definition "represents feedback that users have on the quality of datasets or distributions"@en ;
+                        skos:prefLabel "user quality feedback"@en ;
+                        skos:scopeNote "Besides dqv:qualityAssessment, which is the motivation required by all quality annotations, one of the predefined instances of oa:Motivation should be indicated as motivation to distinguish among the different kinds of feedback, e.g., classifications, questions."@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+owl:Thing rdfs:label ""@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
