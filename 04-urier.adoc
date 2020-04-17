@@ -1,0 +1,15 @@
+== URIer brukt i denne spesifikasjonen
+
+[cols="2s,8"]
+|===
+|dcat:|http://www.w3.org/ns/dcat#
+|dct:|http://purl.org/dc/terms/
+|dqv:|https://www.w3.org/TR/vocab-dqv/#dqv:
+|dqvno:|https://data.norge.no/vocabulary/dqvno# (under publisering)
+|oa:|http://www.w3.org/ns/oa#
+|owl:|http://www.w3.org/2002/07/owl#
+|rdf:|http://www.w3.org/1999/02/22-rdf-syntax-ns#
+|rdfs:|https://www.w3.org/TR/rdf-schema/#ch_
+|skos:|http://www.w3.org/2004/02/skos/core#
+|xsd:|http://www.w3.org/2001/XMLSchema#
+|===

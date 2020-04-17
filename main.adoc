@@ -1,0 +1,46 @@
+= Forslag til DQV-AP-NO (Norsk applikasjonsprofil av DQV)
+:description DQV-AP-NO (Norwegian application Profile of DQV)
+:doctype: book
+:docinfo:
+:icons: font
+:toc: left
+:toc-title: Innholdsfortegnelse
+:toclevels: 4
+:sectlinks:
+:table-stripes: odd
+:title-logo-image: image:images/digitaliseringsdirektoratet.png[pdfwidth=30vw]
+
+image::images/digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
+
+include::shared/download.adoc[]
+
+WARNING: under publisering (små justeringer kan komme).
+
+NOTE: *Innmelding av feil og mangler:* +
+Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/dqv-ap-no[Github Issues]. Dersom man ikke allerede har bruker på Github kan man opprette bruker gratis. +
+
+// innhold her:
+
+include::01-formål-omfang-avgrensinger.adoc[]
+
+include::02-eksempler-bruksområder.adoc[]
+
+include::03-konvensjoner.adoc[]
+
+include::04-urier.adoc[]
+
+include::05-forenklet-modell.adoc[]
+
+include::06-norske-tilpasninger.adoc[]
+
+include::08-egenskaper.adoc[]
+
+include::07-klasser.adoc[]
+
+include::v1-eksempel.adoc[]
+
+// slutt på innhold
+
+include::shared/stats.adoc[]
+
+include::shared/translation.adoc[]
