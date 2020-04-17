@@ -36,7 +36,7 @@ include::06-norske-tilpasninger.adoc[]
 
 include::08-egenskaper.adoc[]
 
-include::07b_diagram.adoc[]
+include::07-klasser.adoc[]
 
 include::v1-eksempel.adoc[]
 
