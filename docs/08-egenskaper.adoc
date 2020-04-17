@@ -6,7 +6,7 @@ For klasser som finnes både i denne spesifikasjonen og i DCAT-AP-NO, supplerer 
 
 === Datasett (dcat:Dataset)
 
-Tilsvarende gjelder også for f.eks. Distribusjon (`dcat:Distribution`) når spesifikasjonen skal brukes til å beskrive kvalitet av en distribusjon.
+Tilsvarende gjelder også for f.eks. Distribusjon (`dcat:Distribution`) når spesifikasjonen skal brukes til å beskrive kvalitet på en distribusjon.
 
 Egenskapene beskrevet her i denne spesifikasjonen, supplerer https://doc.difi.no/review/dcat-ap-no/#_datasett[egenskapene for Datasett beskrevet i DCAT-AP-NO].
 
