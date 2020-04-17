@@ -173,7 +173,7 @@ dqvno:undercoverage
 
 ==== Anbefalte egenskaper
 
-===== Kvalitetsmål: forventet datatype (dqv:expectedDataType)
+===== Kvalitetsmål: har forventet datatype (dqv:expectedDataType)
 
 [cols="30s,70"]
 |===
@@ -276,7 +276,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 ----
 |===
 
-===== Kvalitetsnote: har tekst (oa:hasBody)
+===== Kvalitetsnote: har tekstdel (oa:hasBody)
 
 [cols="30s,70"]
 |===
@@ -507,7 +507,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 
 ==== Anbefalte egenskaper
 
-===== Tekstdel: format
+===== Tekstdel: er i format
 
 [cols="30s,70"]
 |===
@@ -522,7 +522,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Eksempel|Se eksemplet over.
 |===
 
-===== Tekstdel: språk/målform
+===== Tekstdel: er i språk/målform
 
 [cols="30s,70"]
 |===
