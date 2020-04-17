@@ -97,9 +97,9 @@ Her er Kvalitetsdimensjon og Kvalitetsdeldimensjon beskrevet samlet. `dqv:Dimens
 :aDataset
    a dcat:Dataset ;
    dqv:dqv:hasQualityAnnotation dqvno:isAuthoritative .
-
-der dqvno:isAuthoritative er en predefinert instans av dqv:QualityCertificate:
-
+```
+der `dqvno:isAuthoritative` er en predefinert instans av `dqv:QualityCertificate`:
+```
 dqvno:isAuthoritative
    a dqv:QualityCertificate ;
    oa:motivatedBy dqv:qualityAssessment ;
