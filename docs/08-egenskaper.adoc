@@ -6,7 +6,7 @@ For klasser som finnes både i denne spesifikasjonen og i DCAT-AP-NO, supplerer 
 
 === Datasett (dcat:Dataset)
 
-Tilsvarende gjelder også for f.eks. dcat:Distribution når spesifikasjonen skal brukes til å beskrive kvalitet av en distribusjon.
+Tilsvarende gjelder også for f.eks. Distribusjon (`dcat:Distribution`) når spesifikasjonen skal brukes til å beskrive kvalitet av en distribusjon.
 
 Egenskapene beskrevet her i denne spesifikasjonen, supplerer https://doc.difi.no/review/dcat-ap-no/#_datasett[egenskapene for Datasett beskrevet i DCAT-AP-NO].
 
@@ -52,7 +52,7 @@ Egenskapene beskrevet her i denne spesifikasjonen, supplerer https://doc.difi.no
 ----
 |===
 
-===== Datasett: har kvantifiserbart måleresultat (dqv:hasQualityMeasurement) 
+===== Datasett: har kvantifiserbart måleresultat (dqv:hasQualityMeasurement)
 
 [cols="30s,70"]
 |===
@@ -229,7 +229,7 @@ dqvno:undercoverage
 
 === Kvalitetsnote (dqv:QualityAnnotation)
 
-Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemelding>> (dqv:UserFeedback) og <<klasse-kvalitetssertifikat, Kvalitetssertifikat>> (dqv:QualityCertificate) som er subklasser av Kvalitetsnote (dqv:QualityAnnotation).
+Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemelding>> (`dqv:UserFeedback`) og <<klasse-kvalitetssertifikat, Kvalitetssertifikat>> (`dqv:QualityCertificate`) som er subklasser av Kvalitetsnote (`dqv:QualityAnnotation`).
 
 ==== Obligatoriske egenskaper
 
@@ -451,7 +451,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 
 [cols="30s,70"]
 |===
-|Engelsk navn|has comment
+|Engelsk navn|has reference
 |URI|rdfs:seeAlso
 |Range|rdfs:Literal
 |Beskrivelse|Brukes til å referere til referanse til standard/spesifikasjon.
@@ -515,7 +515,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |URI|dct:format
 |Range|dct:MediaType
 |Beskrivelse|Brukes til å referere til formatet som en gitt tekst er skrevet i.
-|Referanse|http://purl.org/dc/terms/language[http://purl.org/dc/terms/language]
+|Referanse|http://purl.org/dc/terms/format[http://purl.org/dc/terms/format]
 |Multiplisitet|0..1
 |Status|Anbefalt
 |Kommentar|

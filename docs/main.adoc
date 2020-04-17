@@ -1,5 +1,5 @@
 = Forslag til DQV-AP-NO (Norsk applikasjonsprofil av DQV)
-:description DQV-AP-NO (Norwegian application Profile of DQV)
+:description: DQV-AP-NO (Norwegian application Profile of DQV)
 :doctype: book
 :docinfo:
 :icons: font
@@ -33,9 +33,9 @@ include::05-forenklet-modell.adoc[]
 
 include::06-norske-tilpasninger.adoc[]
 
-include::08-egenskaper.adoc[]
-
 include::07-klasser.adoc[]
+
+include::08-egenskaper.adoc[]
 
 include::v1-eksempel.adoc[]
 
