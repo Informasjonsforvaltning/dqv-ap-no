@@ -94,10 +94,8 @@ Egenskapene beskrevet her i denne spesifikasjonen, supplerer https://doc.difi.no
 dqvno:undercoverage
    a dqv:Dimension ;
    skos:broader dqvno:completeness ;
-   skos:prefLabel "under-coverage"@en ,
-                           "underdekning"@nb ;
-   skos:definition "data absent from a data set"@en ,
-                           "data som mangler i et datasett"@nb .
+   skos:prefLabel "under-coverage"@en , "underdekning"@nb ;
+   skos:definition "data absent from a data set"@en , "data som mangler i et datasett"@nb .
 ----
 |===
 
@@ -317,7 +315,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Referanse|https://www.w3.org/TR/rdf-schema/#ch_comment[https://www.w3.org/TR/rdf-schema/#ch_comment]
 |Multiplisitet|0..n
 |Status|Valgfri
-|Kommentar|Norsk utvidelse.
+|Kommentar|Norsk utvidelse. For å kunne ha fritekstkommentarer. 
 |Eksempel|
 |===
 
