@@ -1,6 +1,6 @@
 == URIer brukt i denne spesifikasjonen
 
-[cols="2s,8"]
+[cols="20s,80"]
 |===
 |dcat:|http://www.w3.org/ns/dcat#
 |dct:|http://purl.org/dc/terms/

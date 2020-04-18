@@ -8,7 +8,7 @@ Siden denne spesifikasjonen bruker datasett (`dcat:Dataset`) som utgangspunkt, t
 
 ==== Datasett [[klasse-datasett]]
 
-Se https://doc.difi.no/review/dcat-ap-no/#klasse-datasett[beskrivelse av klassen Datasett i DCAT-AP-NO].
+Se https://doc.difi.no/review/dcat-ap-no/#klasse-datasett[beskrivelsen av denne klassen i DCAT-AP-NO].
 
 === Anbefalte Klasser
 
@@ -51,7 +51,7 @@ Se https://doc.difi.no/review/dcat-ap-no/#klasse-datasett[beskrivelse av klassen
 
 ==== Standard/spesifikasjon [[klasse-standard]]
 
-Se https://doc.difi.no/review/dcat-ap-no/#klasse-standard[beskrivelsen av klassen Standard i DCAT-AP-NO].
+Se https://doc.difi.no/review/dcat-ap-no/#klasse-standard[beskrivelsen av denne klassen i DCAT-AP-NO].
 
 === Valgfrie klasser
 
