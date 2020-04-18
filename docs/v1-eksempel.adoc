@@ -1,8 +1,8 @@
-== Et komplett eksempel
+== Et eksempeldatasett med kvalitetsbeskrivelse
 
 Eksemplet under viser de ulike måter å beskrive kvalitet på et eksempeldatasett ved å bruke DQV-AP-NO.
 
-[source,turtle]
+[source, turtle]
 ----
 @prefix : <https://exampledatasets.org/examples/dqvExamples#> .
 @prefix oa: <https://www.w3.org/TR/annotation-vocab/#> .
