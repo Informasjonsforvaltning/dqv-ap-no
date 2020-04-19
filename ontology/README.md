@@ -1,5 +1,5 @@
-# Ontologyies and controlled vocabularies for the Norwegian Application Profile of DQV
+# Ontologies, controlled vocabularies and examples related to DQV-AP-NO
 
-For forvaltningen av ontologier / kontrollerte vokabularer knyttet til norsk profil av DQV. 
+For forvaltningen av ontologier, kontrollerte vokabularer og eksempler knyttet til DQV-AP-NO (norsk applikasjonsprofil av DQV).
 
-\- _Digitaliseringsdirektoratet / Norwegian Digitalisation Agency (https://digdir.no)_ 
+\- _Digitaliseringsdirektoratet / Norwegian Digitalisation Agency (https://digdir.no)_
