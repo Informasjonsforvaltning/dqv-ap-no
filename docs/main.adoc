@@ -1,5 +1,5 @@
 = Forslag til DQV-AP-NO (Norsk applikasjonsprofil av DQV)
-:description: DQV-AP-NO (Norwegian application Profile of DQV)
+:description: DQV-AP-NO (Norwegian Application Profile of DQV)
 :doctype: book
 :docinfo:
 :icons: font

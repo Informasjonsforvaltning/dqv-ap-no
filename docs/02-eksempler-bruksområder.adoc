@@ -11,4 +11,4 @@ Noen eksempler på når spesifikasjonen skal brukes (ikke-uttømmende):
 
 * Beskrivelse av at et datasett er autoritativt: Se eksempel under klassen <<Kvalitetssertifikat (dqv:QualityCertificate)>>.
 
-Se ellers også <<Et komplett eksempel, eksemplet>> bakerst i denne spesifikasjonen, som viser de ulike måtene å beskrive kvalitet på som denne spesifikasjonen dekker.
+Se ellers også <<eksemplet, eksemplet>> bakerst i denne spesifikasjonen, som viser de ulike måtene å beskrive kvalitet på som denne spesifikasjonen dekker.

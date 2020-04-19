@@ -1,4 +1,4 @@
-== Et eksempeldatasett med kvalitetsbeskrivelse
+== Et eksempeldatasett med kvalitetsbeskrivelser [[eksemplet]]
 
 Eksemplet under viser de ulike måter å beskrive kvalitet på et eksempeldatasett ved å bruke DQV-AP-NO.
 

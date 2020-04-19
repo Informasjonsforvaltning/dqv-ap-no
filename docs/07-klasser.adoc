@@ -92,20 +92,21 @@ Her er Kvalitetsdimensjon og Kvalitetsdeldimensjon beskrevet samlet. `dqv:Dimens
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate[https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate]
 |Status|Valgfri
 |Kommentar|Klassen brukes når  man skal definere sitt eget kvalitetssertifikat.
-|Eksempel a|
-```
+|Eksempel a| [source]
+----
 :aDataset
    a dcat:Dataset ;
-   dqv:dqv:hasQualityAnnotation dqvno:isAuthoritative .
-```
+   dqv:hasQualityAnnotation dqvno:isAuthoritative .
+----
 der `dqvno:isAuthoritative` er en predefinert instans av `dqv:QualityCertificate`:
-```
+[souce]
+----
 dqvno:isAuthoritative
    a dqv:QualityCertificate ;
    oa:motivatedBy dqv:qualityAssessment ;
    skos:definition "kvalitetsbeskrivelse som uttrykker at noe er autoritativt"@nb , "quality description which states that something is authoritative"@en ;
    skos:prefLabel "er autoritativ"@nb , "is authoritative"@en .
-```
+----
 |===
 
 ==== Motivasjon (oa:Motivation) [[klasse-motivasjon]]
