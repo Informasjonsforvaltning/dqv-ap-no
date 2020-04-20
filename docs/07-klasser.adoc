@@ -8,7 +8,7 @@ Siden denne spesifikasjonen bruker datasett (`dcat:Dataset`) som utgangspunkt, t
 
 ==== Datasett [[klasse-datasett]]
 
-Se https://doc.difi.no/review/dcat-ap-no/#klasse-datasett[beskrivelse av klassen Datasett i DCAT-AP-NO].
+Se https://doc.difi.no/review/dcat-ap-no/#klasse-datasett[beskrivelsen av denne klassen i DCAT-AP-NO].
 
 === Anbefalte Klasser
 
@@ -51,13 +51,13 @@ Se https://doc.difi.no/review/dcat-ap-no/#klasse-datasett[beskrivelse av klassen
 
 ==== Standard/spesifikasjon [[klasse-standard]]
 
-Se https://doc.difi.no/review/dcat-ap-no/#klasse-standard[beskrivelsen av klassen Standard i DCAT-AP-NO].
+Se https://doc.difi.no/review/dcat-ap-no/#klasse-standard[beskrivelsen av denne klassen i DCAT-AP-NO].
 
 === Valgfrie klasser
 
 ==== Kvalitets(del)dimensjon (dqv:Dimension) [[klasse-kvalitetsdimensjon]]
 
-Her er Kvalitetsdimensjon og Kvalitetsdeldimensjon beskrevet samlet. dqv:Dimension skal brukes som URI for begge.
+Her er Kvalitetsdimensjon og Kvalitetsdeldimensjon beskrevet samlet. `dqv:Dimension` skal brukes som URI for begge.
 
 [cols="30s,70"]
 |===
@@ -66,7 +66,7 @@ Her er Kvalitetsdimensjon og Kvalitetsdeldimensjon beskrevet samlet. dqv:Dimensi
 |URI|dqv:Dimension
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:Dimension[https://www.w3.org/TR/vocab-dqv/#dqv:Dimension]
 |Status|Valgfri
-|Kommentar|DQV har ikke definert kvalitets*del*dimensjon som egen klasse, kun kvalitetsdimensjon (dqv:Dimension). For å uttrykke kvalitetsdeldimensjoner brukes skos:broader. Se under <<Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)>> for eksempel.
+|Kommentar|DQV har ikke definert kvalitets**del**dimensjon som egen klasse, kun kvalitetsdimensjon (`dqv:Dimension`). For å uttrykke kvalitetsdeldimensjoner brukes skos:broader. Se under <<Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)>> for eksempel.
 |===
 
 ==== Kvalitetsmål (dqv:Metric) [[klasse-kvalitetsmål]]
@@ -92,20 +92,21 @@ Her er Kvalitetsdimensjon og Kvalitetsdeldimensjon beskrevet samlet. dqv:Dimensi
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate[https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate]
 |Status|Valgfri
 |Kommentar|Klassen brukes når  man skal definere sitt eget kvalitetssertifikat.
-|Eksempel a|
-```
+|Eksempel a| [source]
+----
 :aDataset
    a dcat:Dataset ;
-   dqv:dqv:hasQualityAnnotation dqvno:isAuthoritative .
-
-der dqvno:isAuthoritative er en predefinert instans av dqv:QualityCertificate:
-
+   dqv:hasQualityAnnotation dqvno:isAuthoritative .
+----
+der `dqvno:isAuthoritative` er en predefinert instans av `dqv:QualityCertificate`:
+[souce]
+----
 dqvno:isAuthoritative
    a dqv:QualityCertificate ;
    oa:motivatedBy dqv:qualityAssessment ;
    skos:definition "kvalitetsbeskrivelse som uttrykker at noe er autoritativt"@nb , "quality description which states that something is authoritative"@en ;
    skos:prefLabel "er autoritativ"@nb , "is authoritative"@en .
-```
+----
 |===
 
 ==== Motivasjon (oa:Motivation) [[klasse-motivasjon]]
@@ -113,11 +114,11 @@ dqvno:isAuthoritative
 [cols="30s,70"]
 |===
 |Engelsk navn|motivation
-|Beskrivelse|Brukes til å beskrive intensjonen eller motivasjonen til en Kvalitetsnote (dqv:QualityAnnotation).
+|Beskrivelse|Brukes til å beskrive intensjonen eller motivasjonen til en Kvalitetsnote (`dqv:QualityAnnotation`).
 |URI|oa:Motivation
 |Referanse|https://www.w3.org/TR/annotation-vocab/#motivation[https://www.w3.org/TR/annotation-vocab/#motivation]
 |Status|Valgfri
-|Kommentar|Den predefinerte instans https://www.w3.org/TR/vocab-dqv/#dqv:qualityAssessment[dqv:qualityAssessment] skal brukes som motivasjon for kvalitetsbeskrivelse.
+|Kommentar|Den predefinerte instans https://www.w3.org/TR/vocab-dqv/#dqv:qualityAssessment[`dqv:qualityAssessment`] skal brukes som motivasjon for kvalitetsbeskrivelse.
 |===
 
 ==== Tekstdel (oa:TextualBody) [[klasse-tekstdel]]
@@ -125,7 +126,7 @@ dqvno:isAuthoritative
 [cols="30s,70"]
 |===
 |Engelsk navn|textual body
-|Beskrivelse|Brukes til å beskrive tekstdelen av en Kvalitetsnote (dqv:QualityAnnotation).
+|Beskrivelse|Brukes til å beskrive tekstdelen av en Kvalitetsnote (`dqv:QualityAnnotation`).
 |URI|oa:TextualBody
 |Referanse|https://www.w3.org/TR/annotation-vocab/#textualbody[https://www.w3.org/TR/annotation-vocab/#textualbody]
 |Status|Valgfri
