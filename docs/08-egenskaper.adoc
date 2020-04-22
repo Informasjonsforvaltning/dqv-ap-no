@@ -315,7 +315,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Referanse|https://www.w3.org/TR/rdf-schema/#ch_comment[https://www.w3.org/TR/rdf-schema/#ch_comment]
 |Multiplisitet|0..n
 |Status|Valgfri
-|Kommentar|Norsk utvidelse. For å kunne ha fritekstkommentarer. 
+|Kommentar|Norsk utvidelse. For å kunne ha fritekstkommentarer.
 |Eksempel|
 |===
 
@@ -355,7 +355,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 :aQMeasurement
    a dqv:QualityMeasurement ;
    dqv:isMeasurementOf dqvno:missingObjects ;
-   dvq:value “true”^^xsd:boolean .
+   dqv:value “true”^^xsd:boolean .
 ----
 |===
 
@@ -378,7 +378,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 :aQMeasurement
    a dqv:QualityMeasurement ;
    dqv:isMeasurementOf dqvno:missingObjects ;
-   dvq:value “true”^^xsd:boolean .
+   dqv:value “true”^^xsd:boolean .
 ----
 |===
 
