@@ -20,7 +20,7 @@
                                                       "dqvno"@nb ,
                                                       "dqvno"@nn ;
                                            owl:versionInfo "Draft"@en ,
-                                                           """Ut kast. Endringene sammenlignet med forrige versjon, hovedsakelig:
+                                                           """Utkast. Endringene sammenlignet med forrige versjon, hovedsakelig:
 - fjernet dqv:isMeasurementOf fra Object Properties (brukes ikke her)
 - fjernet dqv:expectedDataType \"\"\"^^xsd:decimal (brukes ikke her)"""@nb .
 
