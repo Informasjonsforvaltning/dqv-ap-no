@@ -118,7 +118,7 @@ dqvno:isAuthoritative
 |URI|oa:Motivation
 |Referanse|https://www.w3.org/TR/annotation-vocab/#motivation[https://www.w3.org/TR/annotation-vocab/#motivation]
 |Status|Valgfri
-|Kommentar|Den predefinerte instans https://www.w3.org/TR/vocab-dqv/#dqv:qualityAssessment[`dqv:qualityAssessment`] skal brukes som motivasjon for kvalitetsbeskrivelse.
+|Kommentar|Den predefinerte instansenen https://www.w3.org/TR/vocab-dqv/#dqv:qualityAssessment[`dqv:qualityAssessment`] skal brukes som motivasjon for kvalitetsbeskrivelse.
 |===
 
 ==== Tekstdel (oa:TextualBody) [[klasse-tekstdel]]
