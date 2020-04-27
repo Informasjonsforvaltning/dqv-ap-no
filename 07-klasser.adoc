@@ -1,0 +1,134 @@
+== Klasser
+
+I tillegg til klassene som er tatt med i denne spesifikasjonen, kan alle de andre klassene i https://www.w3.org/TR/vocab-dqv/[DQV] også brukes.
+
+=== Obligatoriske klasser
+
+Siden denne spesifikasjonen bruker datasett (`dcat:Dataset`) som utgangspunkt, tas bare datasett (`dcat:Dataset`) med som obligatorisk klasse. Når f.eks. spesifikasjonen brukes til å beskrive kvalitet av en distribusjon (`dcat:Distribution`) vil selvsagt distribusjon også være obligatorisk.
+
+==== Datasett [[klasse-datasett]]
+
+Se https://doc.difi.no/review/dcat-ap-no/#klasse-datasett[beskrivelsen av denne klassen i DCAT-AP-NO].
+
+=== Anbefalte Klasser
+
+==== Brukertilbakemelding (dqv:UserQualityFeedback) [[klasse-brukertilbakemelding]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|user quality feedback
+|Beskrivelse|Brukes til å beskrive brukertilbakemeldinger på kvalitet.
+|URI|dqv:UserQualityFeedback
+|Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:UserQualityFeedback[https://www.w3.org/TR/vocab-dqv/#dqv:UserQualityFeedback]
+|Subklasse av|dqv:QualityAnnotation
+|Status|Anbefalt
+|Kommentar|
+|===
+
+==== Kvalitetsnote (dqv:QualityAnnotation) [[klasse-kvalitetsnote]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|quality annotation
+|Beskrivelse|Brukes til tekstlige beskrivelser av kvalitet.
+|URI|dqv:QualityAnnotation
+|Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:QualityAnnotation[https://www.w3.org/TR/vocab-dqv/#dqv:QualityAnnotation]
+|Status|Anbefalt
+|Kommentar|
+|===
+
+==== Måleresultat (dqv:QualityMeasurement) [[klasse-måleresultat]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|quality measurement
+|Beskrivelse|Brukes til å beskrive kvantifiserbare måleresultater.
+|URI|dqv:QualityMeasurement
+|Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurement[https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurement]
+|Status|Anbefalt
+|Kommentar|
+|===
+
+==== Standard/spesifikasjon [[klasse-standard]]
+
+Se https://doc.difi.no/review/dcat-ap-no/#klasse-standard[beskrivelsen av denne klassen i DCAT-AP-NO].
+
+=== Valgfrie klasser
+
+==== Kvalitets(del)dimensjon (dqv:Dimension) [[klasse-kvalitetsdimensjon]]
+
+Her er Kvalitetsdimensjon og Kvalitetsdeldimensjon beskrevet samlet. `dqv:Dimension` skal brukes som URI for begge.
+
+[cols="30s,70"]
+|===
+|Engelsk navn|quality dimension
+|Beskrivelse|Brukes til å beskrive kvalitetsdimensjoner og kvalitetsdeldimensjoner.
+|URI|dqv:Dimension
+|Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:Dimension[https://www.w3.org/TR/vocab-dqv/#dqv:Dimension]
+|Status|Valgfri
+|Kommentar|DQV har ikke definert kvalitets**del**dimensjon som egen klasse, kun kvalitetsdimensjon (`dqv:Dimension`). For å uttrykke kvalitetsdeldimensjoner brukes skos:broader. Se under <<Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)>> for eksempel.
+|===
+
+==== Kvalitetsmål (dqv:Metric) [[klasse-kvalitetsmål]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|quality metric
+|Beskrivelse|Brukes til å beskrive kvalitetsmål.
+|URI|dqv:Metric
+|Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:Metric[https://www.w3.org/TR/vocab-dqv/#dqv:Metric]
+|Status|Valgfri
+|Kommentar|Klassen brukes når man skal definere sitt eget kvalitetsmål.
+|===
+
+==== Kvalitetssertifikat (dqv:QualityCertificate) [[klasse-kvalitetssertifikat]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|quality certificate
+|Beskrivelse|Brukes til å beskrive noe som bekrefter en gitt kvalitet.
+|URI|dqv:QualityCertificate
+|Subklasse av|dqv:QualityAnnotation
+|Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate[https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate]
+|Status|Valgfri
+|Kommentar|Klassen brukes når  man skal definere sitt eget kvalitetssertifikat.
+|Eksempel a| [source]
+----
+:aDataset
+   a dcat:Dataset ;
+   dqv:hasQualityAnnotation dqvno:isAuthoritative .
+----
+der `dqvno:isAuthoritative` er en predefinert instans av `dqv:QualityCertificate`:
+[souce]
+----
+dqvno:isAuthoritative
+   a dqv:QualityCertificate ;
+   oa:motivatedBy dqv:qualityAssessment ;
+   skos:definition "kvalitetsbeskrivelse som uttrykker at noe er autoritativt"@nb , "quality description which states that something is authoritative"@en ;
+   skos:prefLabel "er autoritativ"@nb , "is authoritative"@en .
+----
+|===
+
+==== Motivasjon (oa:Motivation) [[klasse-motivasjon]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|motivation
+|Beskrivelse|Brukes til å beskrive intensjonen eller motivasjonen til en Kvalitetsnote (`dqv:QualityAnnotation`).
+|URI|oa:Motivation
+|Referanse|https://www.w3.org/TR/annotation-vocab/#motivation[https://www.w3.org/TR/annotation-vocab/#motivation]
+|Status|Valgfri
+|Kommentar|Den predefinerte instansenen https://www.w3.org/TR/vocab-dqv/#dqv:qualityAssessment[`dqv:qualityAssessment`] skal brukes som motivasjon for kvalitetsbeskrivelse.
+|===
+
+==== Tekstdel (oa:TextualBody) [[klasse-tekstdel]]
+
+[cols="30s,70"]
+|===
+|Engelsk navn|textual body
+|Beskrivelse|Brukes til å beskrive tekstdelen av en Kvalitetsnote (`dqv:QualityAnnotation`).
+|URI|oa:TextualBody
+|Referanse|https://www.w3.org/TR/annotation-vocab/#textualbody[https://www.w3.org/TR/annotation-vocab/#textualbody]
+|Status|Valgfri
+|Kommentar|
+|===
