@@ -19,6 +19,9 @@ WARNING: under publisering (små justeringer kan komme).
 NOTE: *Innmelding av feil og mangler:* +
 Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/dqv-ap-no[Github Issues]. Dersom man ikke allerede har bruker på Github kan man opprette bruker gratis. +
 
+// Oversettelse:
+include::locale/attributes.adoc[]
+
 // innhold her:
 
 include::01-formål-omfang-avgrensinger.adoc[]
@@ -42,5 +45,3 @@ include::v1-eksempel.adoc[]
 // slutt på innhold
 
 include::shared/stats.adoc[]
-
-include::shared/translation.adoc[]
