@@ -55,18 +55,31 @@ Se https://doc.difi.no/review/dcat-ap-no/#klasse-standard[beskrivelsen av denne 
 
 === Valgfrie klasser
 
-==== Kvalitets(del)dimensjon (dqv:Dimension) [[klasse-kvalitetsdimensjon]]
+==== Kvalitetsdeldimensjon (dqvno:SubDimension) [[klasse-kvalitetsdeldimensjon]]
 
-Her er Kvalitetsdimensjon og Kvalitetsdeldimensjon beskrevet samlet. `dqv:Dimension` skal brukes som URI for begge.
+[cols="30s,70"]
+|===
+|Engelsk navn|quality subdimension
+|Beskrivelse|Brukes til å beskrive kvalitetsdeldimensjoner.
+|URI|dqvno:SubDimension
+|Subklasse av| dqv:Dimension
+|Referanse|
+|Status|Valgfri
+|Kommentar|Norsk utvidelse. DQV har ikke definert kvalitets**del**dimensjon som egen klasse, kun kvalitetsdimensjon (`dqv:Dimension`).
+
+Klassen brukes når man skal beskrive sin egen Kvalitetsdeldimensjon, dvs. når man ikke bruker prederfinerte instanser av Kvalitetsdeldimensjon.
+|===
+
+==== Kvalitetsdimensjon (dqv:Dimension) [[klasse-kvalitetsdimensjon]]
 
 [cols="30s,70"]
 |===
 |Engelsk navn|quality dimension
-|Beskrivelse|Brukes til å beskrive kvalitetsdimensjoner og kvalitetsdeldimensjoner.
+|Beskrivelse|Brukes til å beskrive kvalitetsdimensjoner.
 |URI|dqv:Dimension
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:Dimension[https://www.w3.org/TR/vocab-dqv/#dqv:Dimension]
 |Status|Valgfri
-|Kommentar|DQV har ikke definert kvalitets**del**dimensjon som egen klasse, kun kvalitetsdimensjon (`dqv:Dimension`). For å uttrykke kvalitetsdeldimensjoner brukes skos:broader. Se under <<Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)>> for eksempel.
+|Kommentar| Klassen brukes når man skal beskrive sin egen Kvalitetsdimensjon, dvs. når man ikke bruker prederfinerte instanser av Kvalitetsdimensjon.
 |===
 
 ==== Kvalitetsmål (dqv:Metric) [[klasse-kvalitetsmål]]
@@ -78,7 +91,7 @@ Her er Kvalitetsdimensjon og Kvalitetsdeldimensjon beskrevet samlet. `dqv:Dimens
 |URI|dqv:Metric
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:Metric[https://www.w3.org/TR/vocab-dqv/#dqv:Metric]
 |Status|Valgfri
-|Kommentar|Klassen brukes når man skal definere sitt eget kvalitetsmål.
+|Kommentar|Klassen brukes når man skal beskrive sitt eget Kvalitetsmål, dvs. når man ikke bruker prederfinerte instanser av Kvalitetsmål.
 |===
 
 ==== Kvalitetssertifikat (dqv:QualityCertificate) [[klasse-kvalitetssertifikat]]
@@ -86,27 +99,12 @@ Her er Kvalitetsdimensjon og Kvalitetsdeldimensjon beskrevet samlet. `dqv:Dimens
 [cols="30s,70"]
 |===
 |Engelsk navn|quality certificate
-|Beskrivelse|Brukes til å beskrive noe som bekrefter en gitt kvalitet.
+|Beskrivelse|Brukes til å beskrive Kvalitetssertifikater, dvs. noe som bekrefter en gitt kvalitet.
 |URI|dqv:QualityCertificate
 |Subklasse av|dqv:QualityAnnotation
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate[https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate]
 |Status|Valgfri
-|Kommentar|Klassen brukes når  man skal definere sitt eget kvalitetssertifikat.
-|Eksempel a| [source]
-----
-:aDataset
-   a dcat:Dataset ;
-   dqv:hasQualityAnnotation dqvno:isAuthoritative .
-----
-der `dqvno:isAuthoritative` er en predefinert instans av `dqv:QualityCertificate`:
-[souce]
-----
-dqvno:isAuthoritative
-   a dqv:QualityCertificate ;
-   oa:motivatedBy dqv:qualityAssessment ;
-   skos:definition "kvalitetsbeskrivelse som uttrykker at noe er autoritativt"@nb , "quality description which states that something is authoritative"@en ;
-   skos:prefLabel "er autoritativ"@nb , "is authoritative"@en .
-----
+|Kommentar|Klassen brukes når  man skal beskrive sitt eget Kvalitetssertifikat, dvs. når man ikke bruker prederfinerte instanser av Kvalitetssertifikat.
 |===
 
 ==== Motivasjon (oa:Motivation) [[klasse-motivasjon]]
