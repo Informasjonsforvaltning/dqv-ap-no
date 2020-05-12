@@ -117,7 +117,7 @@ dqvno:undercoverage
 |Engelsk navn|has prefered label
 |URI|skos:prefLabel
 |Range|rdf:Literal
-|Beskrivelse|Brukes til å referere til termen som blir sett på som den best egnede for kvalitetsdeldimensjonen.
+|Beskrivelse|Brukes til å referere til den anbefalte termen til en kvalitetsdeldimensjon.
 |Referanse|https://www.w3.org/TR/skos-reference/#labels[https://www.w3.org/TR/skos-reference/#labels]
 |Multiplisitet|0..n
 |Status|Anbefalt
@@ -140,7 +140,7 @@ dqvno:undercoverage
 |Engelsk navn|has definition
 |URI|skos:definition
 |Range|rdf:Literal
-|Beskrivelse|Brukes til å referere til beskrivelsen som avgrenser kvalitetsdeldimensjonen mot beslektede kvalitetsdeldimensjoner.
+|Beskrivelse|Brukes til å referere til definisjonen av en kvalitetsdeldimensjon.
 |Referanse|https://www.w3.org/TR/skos-reference/#notes[https://www.w3.org/TR/skos-reference/#notes]
 |Multiplisitet|0..n
 |Status|Anbefalt
@@ -167,7 +167,7 @@ dqvno:undercoverage
 |Engelsk navn|has prefered label
 |URI|skos:prefLabel
 |Range|rdf:Literal
-|Beskrivelse|Brukes til å referere til termen som blir sett på som den best egnede for kvalitetsdimensjonen.
+|Beskrivelse|Brukes til å referere til den anbefalte termen til en kvalitetsdimensjon.
 |Referanse|https://www.w3.org/TR/skos-reference/#labels[https://www.w3.org/TR/skos-reference/#labels]
 |Multiplisitet|0..n
 |Status|Anbefalt
@@ -183,7 +183,7 @@ Egenskapen kan gjentas for hvert språk termen finnes i.
 |Engelsk navn|has definition
 |URI|skos:definition
 |Range|rdf:Literal
-|Beskrivelse|Brukes til å referere til beskrivelsen som avgrenser kvalitetsdimensjonen mot beslektede kvalitetsdimensjoner.
+|Beskrivelse|Brukes til å referere til definisjonen av en kvalitetsdimensjon.
 |Referanse|https://www.w3.org/TR/skos-reference/#notes[https://www.w3.org/TR/skos-reference/#notes]
 |Multiplisitet|0..n
 |Status|Anbefalt
@@ -204,7 +204,7 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.
 |URI|dqvno:inSubDimension
 |Subklasse av| dqv:inDimension
 |Range|dqvno:SubDimension
-|Beskrivelse|Brukes til å referere til kvalitetsdeldimensjonen som det gitte kvalitetsmålet hører til.
+|Beskrivelse|Brukes til å referere til kvalitetsdeldimensjonen som kvalitetsmålet hører til.
 |Referanse|
 |Multiplisitet|1..1
 |Status|Anbefalt
@@ -251,7 +251,7 @@ Denne egenskapen skal referere til én instans av en kvalitetsdeldimensjon.
 |Engelsk navn|has prefered label
 |URI|skos:prefLabel
 |Range|rdf:Literal
-|Beskrivelse|Brukes til å referere til termen som blir sett på som den best egnede for kvalitetsmålet.
+|Beskrivelse|Brukes til å referere til den anbefalte termen til et kvalitetsmål.
 |Referanse|https://www.w3.org/TR/skos-reference/#labels[https://www.w3.org/TR/skos-reference/#labels]
 |Multiplisitet|0..n
 |Status|Anbefalt
@@ -267,7 +267,7 @@ Egenskapen kan gjentas for hvert språk termen finnes i.
 |Engelsk navn|has definition
 |URI|skos:definition
 |Range|rdf:Literal
-|Beskrivelse|Brukes til å referere til beskrivelsen som avgrenser kvalitetsmålet mot beslektede kvalitetsmål.
+|Beskrivelse|Brukes til å referere til definisjonen av et kvalitetsmål.
 |Referanse|https://www.w3.org/TR/skos-reference/#notes[https://www.w3.org/TR/skos-reference/#notes]
 |Multiplisitet|0..n
 |Status|Anbefalt
@@ -396,7 +396,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Engelsk navn|is measurement of
 |URI|dqv:isMeasurementOf
 |Range|dqv:Metric
-|Beskrivelse|Brukes til å referere til et kvalitetsmål
+|Beskrivelse|Brukes til å referere til et kvalitetsmål.
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:isMeasurementOf[https://www.w3.org/TR/vocab-dqv/#dqv:isMeasurementOf]
 |Multiplisitet|1..1
 |Status|Obligatorisk
