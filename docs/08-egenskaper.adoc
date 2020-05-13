@@ -1,4 +1,4 @@
-== Egenskaper per klasse
+fritekstmerknad== Egenskaper per klasse
 
 I tillegg til egenskapene som er tatt med i denne spesifikasjonen, kan egenskapene i DQV samt SKOS, DCAT, DCAT-AP, DCAT-AP-NO og andre veletablerte vokabularer også brukes.
 
@@ -362,7 +362,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Engelsk navn|has comment
 |URI|rdfs:comment
 |Range|rdfs:Literal
-|Beskrivelse|Brukes til å referere til en fritekst merknad.
+|Beskrivelse|Brukes til å referere til en fritekstmerknad.
 |Referanse|https://www.w3.org/TR/rdf-schema/#ch_comment[https://www.w3.org/TR/rdf-schema/#ch_comment]
 |Multiplisitet|0..n
 |Status|Valgfri
@@ -442,7 +442,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Engelsk navn|has comment
 |URI|rdfs:comment
 |Range|rdfs:Literal
-|Beskrivelse|Brukes til å referere til en fritekst merknad.
+|Beskrivelse|Brukes til å referere til en fritekstmerknad.
 |Referanse|https://www.w3.org/TR/rdf-schema/#ch_comment[https://www.w3.org/TR/rdf-schema/#ch_comment]
 |Multiplisitet|0..n
 |Status|Valgfri
@@ -521,7 +521,7 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 |Engelsk navn|has comment
 |URI|rdfs:comment
 |Range|rdfs:Literal
-|Beskrivelse|Brukes til å referere til en fritekst merknad.
+|Beskrivelse|Brukes til å referere til en fritekstmerknad.
 |Referanse|https://www.w3.org/TR/rdf-schema/#ch_comment[https://www.w3.org/TR/rdf-schema/#ch_comment]
 |Multiplisitet|0..n
 |Status|Valgfri
