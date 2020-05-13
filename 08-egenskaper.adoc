@@ -1,4 +1,4 @@
-== Egenskaper per klasse
+fritekstmerknad== Egenskaper per klasse
 
 I tillegg til egenskapene som er tatt med i denne spesifikasjonen, kan egenskapene i DQV samt SKOS, DCAT, DCAT-AP, DCAT-AP-NO og andre veletablerte vokabularer også brukes.
 
@@ -19,7 +19,7 @@ Egenskapene beskrevet her i denne spesifikasjonen, supplerer https://doc.difi.no
 |Engelsk navn|conforms to
 |URI|dct:conformsTo
 |Range|dct:Standard
-|Beskrivelse|Brukes til å referere til en eller kvalitetsspesifikasjoner/-standarder.
+|Beskrivelse|Brukes til å referere til en kvalitetsspesifikasjon/-standarder.
 |Referanse|https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo[https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo]
 |Multiplisitet|0..n
 |Status|Anbefalt
@@ -39,16 +39,25 @@ Egenskapene beskrevet her i denne spesifikasjonen, supplerer https://doc.difi.no
 |Engelsk navn|has quality annotation
 |URI|dqv:hasQualityAnnotation
 |Range|dqv:QualityAnnotation
-|Beskrivelse|Brukes til å knytte en Kvalitetsnote eller Brukertilbakemelding til et datasett.
+|Beskrivelse|Brukes til å referere til en kvalitetsnote.
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityAnnotation[https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityAnnotation]
 |Multiplisitet|0..n
 |Status|Anbefalt
-|Kommentar|
+|Kommentar| Gjelder også Brukertilbakemelding (`dqv:UserQualityFeedback`) og Kvalitetssertifikat (`dqv:QualityCertificate`) som er subklasser av Kvalitetsnote (`dqv:QualityAnnotation`).
 |Eksempel a| [source]
 ----
 :aDataset
    a dcat:Dataset ;
-   dqv:hasQualityAnnotation :aQAnnotation, :aUserFeedBack .
+   dqv:hasQualityAnnotation :aQAnnotation, :aUserFeedBack, dqvno:isAuthoritative .
+----
+der `dqvno:isAuthoritative` er en predefinert instans av Kvalitetssertifikat (`dqv:QualityCertificate`):
+[souce]
+----
+dqvno:isAuthoritative
+   a dqv:QualityCertificate ;
+   oa:motivatedBy dqv:qualityAssessment ;
+   skos:definition "kvalitetsbeskrivelse som uttrykker at noe er autoritativt"@nb , "quality description which states that something is authoritative"@en ;
+   skos:prefLabel "er autoritativ"@nb , "is authoritative"@en .
 ----
 |===
 
@@ -59,7 +68,7 @@ Egenskapene beskrevet her i denne spesifikasjonen, supplerer https://doc.difi.no
 |Engelsk navn|has quality measurement
 |URI|dqv:hasQualityMeasurement
 |Range|dqv:QualityMeasurement
-|Beskrivelse|Brukes til å knytte kvalitetsmåleresultat til et datasett.
+|Beskrivelse|Brukes til å referere til et måleresultat.
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityMeasurement[https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityMeasurement]
 |Multiplisitet|0..n
 |Status|Anbefalt
@@ -72,7 +81,7 @@ Egenskapene beskrevet her i denne spesifikasjonen, supplerer https://doc.difi.no
 ----
 |===
 
-=== Kvalitets(del)dimensjon (dqv:Dimension)
+=== Kvalitetsdeldimensjon (dqvno:SubDimension) [[klasse-kvalitetsdeldimensjon]]
 
 ==== Obligatoriske egenskaper
 
@@ -83,7 +92,7 @@ Egenskapene beskrevet her i denne spesifikasjonen, supplerer https://doc.difi.no
 |Engelsk navn|has a broader concept
 |URI|skos:broader
 |Range|dqv:Dimension, skos:Concept
-|Beskrivelse|Brukes til å referere til den tilhørende kvalitetsdimensjon fra en kvalitetsdeldimensjon.
+|Beskrivelse|Brukes til å referere til kvalitetsdimensjonen som kvalitetsdeldimensjonen tilhører.
 |Referanse|https://www.w3.org/TR/skos-reference/#semantic-relations[https://www.w3.org/TR/skos-reference/#semantic-relations]
 |Multiplisitet|1..1
 |Status|Anbefalt
@@ -92,7 +101,7 @@ Egenskapene beskrevet her i denne spesifikasjonen, supplerer https://doc.difi.no
 [source]
 ----
 dqvno:undercoverage
-   a dqv:Dimension ;
+   a dqvno:SubDimension ;
    skos:broader dqvno:completeness ;
    skos:prefLabel "under-coverage"@en , "underdekning"@nb ;
    skos:definition "data absent from a data set"@en , "data som mangler i et datasett"@nb .
@@ -101,71 +110,111 @@ dqvno:undercoverage
 
 ==== Anbefalte egenskaper
 
-===== Kvalitets(del)dimensjon: har anbefalt term (skos:prefLabel)
+===== Kvalitetsdeldimensjon: har anbefalt term (skos:prefLabel)
 
 [cols="30s,70"]
 |===
 |Engelsk navn|has prefered label
 |URI|skos:prefLabel
 |Range|rdf:Literal
-|Beskrivelse|Brukes til å referere til termen som blir sett på som den best egnede for kvalitets(del)dimensjonen.
+|Beskrivelse|Brukes til å referere til den anbefalte termen til en kvalitetsdeldimensjon.
 |Referanse|https://www.w3.org/TR/skos-reference/#labels[https://www.w3.org/TR/skos-reference/#labels]
 |Multiplisitet|0..n
 |Status|Anbefalt
-|Kommentar|Norsk utvidelse.
+|Kommentar|Norsk utvidelse. +
+Egenskapen kan gjentas for hvert språk termen finnes i.
 |Eksempel a| [source]
 ----
 dqvno:undercoverage
-   a dqv:Dimension ;
+   a dqvno:SubDimension ;
    skos:broader dqvno:completeness ;
    skos:prefLabel "under-coverage"@en , "underdekning"@nb ;
    skos:definition "data absent from a data set"@en , "data som mangler i et datasett"@nb .
 ----
 |===
 
-===== Kvalitets(del)dimensjon: har definisjon (skos:definition)
+===== Kvalitetsdeldimensjon: har definisjon (skos:definition)
 
 [cols="30s,70"]
 |===
 |Engelsk navn|has definition
 |URI|skos:definition
 |Range|rdf:Literal
-|Beskrivelse|Brukes til å referere til beskrivelsen som avgrenser kvalitets(del)dimensjonen mot beslektede kvalitets(del)dimensjoner.
+|Beskrivelse|Brukes til å referere til definisjonen av en kvalitetsdeldimensjon.
 |Referanse|https://www.w3.org/TR/skos-reference/#notes[https://www.w3.org/TR/skos-reference/#notes]
 |Multiplisitet|0..n
 |Status|Anbefalt
-|Kommentar|Norsk utvidelse.
+|Kommentar|Norsk utvidelse. +
+Egenskapen kan gjentas for hvert språk definisjonen finnes i.
 |Eksempel a| [source]
 ----
 dqvno:undercoverage
-   a dqv:Dimension ;
+   a dqvno:SubDimension ;
    skos:broader dqvno:completeness ;
    skos:prefLabel "under-coverage"@en , "underdekning"@nb ;
    skos:definition "data absent from a data set"@en , "data som mangler i et datasett"@nb .
 ----
 |===
 
+=== Kvalitetsdimension (dqv:Dimension) [[klasse-kvalitetsdimensjon]]
+
+==== Anbefalte egenskaper
+
+===== Kvalitetsdimensjon: har anbefalt term (skos:prefLabel)
+
+[cols="30s,70"]
+|===
+|Engelsk navn|has prefered label
+|URI|skos:prefLabel
+|Range|rdf:Literal
+|Beskrivelse|Brukes til å referere til den anbefalte termen til en kvalitetsdimensjon.
+|Referanse|https://www.w3.org/TR/skos-reference/#labels[https://www.w3.org/TR/skos-reference/#labels]
+|Multiplisitet|0..n
+|Status|Anbefalt
+|Kommentar|Norsk utvidelse. +
+Egenskapen kan gjentas for hvert språk termen finnes i.
+|Eksempel | Se tilsvarende eksempel for Kvalitetsdimensjon.
+|===
+
+===== Kvalitetsdimensjon: har definisjon (skos:definition)
+
+[cols="30s,70"]
+|===
+|Engelsk navn|has definition
+|URI|skos:definition
+|Range|rdf:Literal
+|Beskrivelse|Brukes til å referere til definisjonen av en kvalitetsdimensjon.
+|Referanse|https://www.w3.org/TR/skos-reference/#notes[https://www.w3.org/TR/skos-reference/#notes]
+|Multiplisitet|0..n
+|Status|Anbefalt
+|Kommentar|Norsk utvidelse. +
+Egenskapen kan gjentas for hvert språk definisjonen finnes i.
+|Eksempel | Se tilsvarende eksempel for Kvalitetsdimensjon.
+|===
+
 === Kvalitetsmål (dqv:Metric)
 
 ==== Obligatoriske egenskaper
 
-===== Kvalitetsmål: er i kvalitetsdeldimensjon (dqv:inDimension)
+===== Kvalitetsmål: er i kvalitetsdeldimensjon (dqvno:inSubDimension)
 
 [cols="30s,70"]
 |===
-|Engelsk navn|is in dimension
-|URI|dqv:inDimension
-|Range|dqv:Dimension
-|Beskrivelse|Brukes til å referere til kvalitetsdeldimensjonen som det gitte kvalitetsmålet hører til.
-|Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:inDimension[https://www.w3.org/TR/vocab-dqv/#dqv:inDimension]
+|Engelsk navn|is in subdimension
+|URI|dqvno:inSubDimension
+|Subklasse av| dqv:inDimension
+|Range|dqvno:SubDimension
+|Beskrivelse|Brukes til å referere til kvalitetsdeldimensjonen som kvalitetsmålet hører til.
+|Referanse|
 |Multiplisitet|1..1
 |Status|Anbefalt
-|Kommentar|Norsk restriksjon: Denne egenskapen skal referere til en instans av en kvalitetsdeldimensjon.
+|Kommentar|Norsk utvidelse. +
+Denne egenskapen skal referere til én instans av en kvalitetsdeldimensjon.
 |Eksempel a| [source]
 ----
 :aQMetric
    a dqv:Metric;
-   dqv:inDimension dqvno:undercoverage .
+   dqvno:inSubDimension dqvno:undercoverage .
 ----
 |===
 
@@ -178,7 +227,7 @@ dqvno:undercoverage
 |Engelsk navn|expected data type
 |URI|dqv:expectedDataType
 |Range|xsd:anySimpleType
-|Beskrivelse|Brukes til å beskrive forventet datatype av måleresultat.
+|Beskrivelse|Brukes til å beskrive forventet datatype av et måleresultat.
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:expectedDataType[https://www.w3.org/TR/vocab-dqv/#dqv:expectedDataType]
 |Multiplisitet|0..1
 |Status|Anbefalt
@@ -202,12 +251,13 @@ dqvno:undercoverage
 |Engelsk navn|has prefered label
 |URI|skos:prefLabel
 |Range|rdf:Literal
-|Beskrivelse|Brukes til å referere til termen som blir sett på som den best egnede for kvalitetsmålet
+|Beskrivelse|Brukes til å referere til den anbefalte termen til et kvalitetsmål.
 |Referanse|https://www.w3.org/TR/skos-reference/#labels[https://www.w3.org/TR/skos-reference/#labels]
 |Multiplisitet|0..n
 |Status|Anbefalt
-|Kommentar|Norsk utvidelse.
-|Eksempel|Se tilsvarende eksempler for Kvalitets(del)dimensjon.
+|Kommentar|Norsk utvidelse. +
+Egenskapen kan gjentas for hvert språk termen finnes i.
+|Eksempel|Se tilsvarende eksempler for Kvalitetsdeldimensjon.
 |===
 
 ===== Kvalitetsmål: har definisjon (skos:definition)
@@ -217,12 +267,13 @@ dqvno:undercoverage
 |Engelsk navn|has definition
 |URI|skos:definition
 |Range|rdf:Literal
-|Beskrivelse|Brukes til å referere til beskrivelsen som avgrenser kvalitetsmålet mot beslektede kvalitetsmål.
+|Beskrivelse|Brukes til å referere til definisjonen av et kvalitetsmål.
 |Referanse|https://www.w3.org/TR/skos-reference/#notes[https://www.w3.org/TR/skos-reference/#notes]
 |Multiplisitet|0..n
 |Status|Anbefalt
-|Kommentar|Norsk utvidelse.
-|Eksempel|Se tilsvarende eksempler for Kvalitets(del)dimensjon.
+|Kommentar|Norsk utvidelse. +
+Egenskapen kan gjentas for hvert språk definisjonen finnes i.
+|Eksempel|Se tilsvarende eksempler for Kvalitetsdeldimensjon.
 |===
 
 === Kvalitetsnote (dqv:QualityAnnotation)
@@ -238,7 +289,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Engelsk navn|is motivated by
 |URI|oa:motivatedBy
 |Range|oa:Motivation
-|Beskrivelse|Brukes til å referere til beskrivelse av motivasjon.
+|Beskrivelse|Brukes til å referere til beskrivelse av motivasjonen.
 |Referanse|https://www.w3.org/TR/annotation-vocab/#motivatedby[https://www.w3.org/TR/annotation-vocab/#motivatedby]
 |Multiplisitet|1..n
 |Status|Obligatorisk
@@ -260,7 +311,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Engelsk navn|is in dimension
 |URI|dqv:inDimension
 |Range|dqv:Dimension
-|Beskrivelse|Brukes til å referere til kvalitetsdimensjon.
+|Beskrivelse|Brukes til å referere til en kvalitetsdimensjon.
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:inDimension[https://www.w3.org/TR/vocab-dqv/#dqv:inDimension]
 |Multiplisitet|0..n
 |Status|Anbefalt
@@ -281,7 +332,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Engelsk navn|has body
 |URI|oa:hasBody
 |Range|oa:TextualBody
-|Beskrivelse|Brukes til å referere til tekstdel i en kvalitetsnote.
+|Beskrivelse|Brukes til å referere til en tekstdel i en kvalitetsnote.
 |Referanse|https://www.w3.org/TR/annotation-vocab/#hasbody[https://www.w3.org/TR/annotation-vocab/#hasbody]
 |Multiplisitet|0..n
 |Status|Anbefalt
@@ -311,7 +362,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Engelsk navn|has comment
 |URI|rdfs:comment
 |Range|rdfs:Literal
-|Beskrivelse|Brukes til å referere til fritekst merknad.
+|Beskrivelse|Brukes til å referere til en fritekstmerknad.
 |Referanse|https://www.w3.org/TR/rdf-schema/#ch_comment[https://www.w3.org/TR/rdf-schema/#ch_comment]
 |Multiplisitet|0..n
 |Status|Valgfri
@@ -345,7 +396,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Engelsk navn|is measurement of
 |URI|dqv:isMeasurementOf
 |Range|dqv:Metric
-|Beskrivelse|Brukes til å referere til et konkret Kvalitetsmål (dqv:Metric) som et gitt Måleresultat (dqv:QualityMeasurement) er resultat av
+|Beskrivelse|Brukes til å referere til et kvalitetsmål.
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:isMeasurementOf[https://www.w3.org/TR/vocab-dqv/#dqv:isMeasurementOf]
 |Multiplisitet|1..1
 |Status|Obligatorisk
@@ -368,7 +419,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Engelsk navn|has value
 |URI|dqv:value
 |Range|xsd:boolean, xsd:double, xsd:nonNagativeInteger, rdfs:Literal
-|Beskrivelse|Brukes til å referere til verdien av et måleresultat
+|Beskrivelse|Brukes til å referere til verdien av et måleresultat.
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:value[https://www.w3.org/TR/vocab-dqv/#dqv:value]
 |Multiplisitet|0..1
 |Status|Anbefalt
@@ -391,7 +442,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Engelsk navn|has comment
 |URI|rdfs:comment
 |Range|rdfs:Literal
-|Beskrivelse|Brukes til å referere til fritekst merknad.
+|Beskrivelse|Brukes til å referere til en fritekstmerknad.
 |Referanse|https://www.w3.org/TR/rdf-schema/#ch_comment[https://www.w3.org/TR/rdf-schema/#ch_comment]
 |Multiplisitet|0..n
 |Status|Valgfri
@@ -417,7 +468,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Engelsk navn|is in dimension
 |URI|dqv:inDimension
 |Range|dqv:Dimension
-|Beskrivelse|Brukes til å referere til kvalitetsdimensjon
+|Beskrivelse|Brukes til å referere til en kvalitetsdimensjon som standarden/spesifikasjonen dekker.
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:inDimension[https://www.w3.org/TR/vocab-dqv/#dqv:inDimension]
 |Multiplisitet|0..n
 |Status|Anbefalt
@@ -437,11 +488,12 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Engelsk navn|has comment
 |URI|dct:title
 |Range|rdfs:Literal
-|Beskrivelse|Brukes til å referere til tittelen til standarden/spesifikasjonen..
+|Beskrivelse|Brukes til å referere til tittelen til standarden/spesifikasjonen.
 |Referanse|https://www.w3.org/TR/rdf-schema/#ch_comment[https://www.w3.org/TR/rdf-schema/#ch_comment]
 |Multiplisitet|0..n
 |Status|Anbefalt
-|Kommentar|Norsk utvidelse. For å kunne ha tittel til standard/spesifikasjon.
+|Kommentar|Norsk utvidelse. For å kunne ha tittel til standard/spesifikasjon. +
+Egenskapen kan gjentas for hvert språk tittelen finnes i.
 |Eksempel|
 |===
 
@@ -452,7 +504,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Engelsk navn|has reference
 |URI|rdfs:seeAlso
 |Range|rdfs:Literal
-|Beskrivelse|Brukes til å referere til referanse til standard/spesifikasjon.
+|Beskrivelse|Brukes til å referere til en referanse til standarden/spesifikasjonen.
 |Referanse|https://www.w3.org/TR/rdf-schema/#ch_seealso[https://www.w3.org/TR/rdf-schema/#ch_seealso]
 |Multiplisitet|0..n
 |Status|Anbefalt
@@ -469,7 +521,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Engelsk navn|has comment
 |URI|rdfs:comment
 |Range|rdfs:Literal
-|Beskrivelse|Brukes til å referere til fritekst merknad.
+|Beskrivelse|Brukes til å referere til en fritekstmerknad.
 |Referanse|https://www.w3.org/TR/rdf-schema/#ch_comment[https://www.w3.org/TR/rdf-schema/#ch_comment]
 |Multiplisitet|0..n
 |Status|Valgfri
@@ -488,7 +540,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Engelsk navn|har value
 |URI|rdfs:value
 |Range|rdfs:Resource
-|Beskrivelse|Brukes til å referere til selve teksten.
+|Beskrivelse|Brukes til å referere til selve teksten i en tekstdel.
 |Referanse|https://www.w3.org/TR/rdf-schema/#ch_value[https://www.w3.org/TR/rdf-schema/#ch_value]
 |Multiplisitet|1..n
 |Status|Obligatorisk

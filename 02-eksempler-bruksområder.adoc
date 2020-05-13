@@ -9,6 +9,6 @@ Noen eksempler på når spesifikasjonen skal brukes (ikke-uttømmende):
 
 * Beskrivelse av at kvaliteten er i samsvar med gitt standard/spesifikasjon: Se eksempel under egenskapen <<Datasett: er i samsvar med (dct:conformsTo)>>.
 
-* Beskrivelse av at et datasett er autoritativt: Se eksempel under klassen <<Kvalitetssertifikat (dqv:QualityCertificate)>>.
+* Beskrivelse av at et datasett er autoritativt: Se eksempel under egenskapen <<Datasett: har kvalitetsnote (dqv:hasQualityAnnotation)>>.
 
 Se ellers også <<eksempelet, eksempelet>> bakerst i denne spesifikasjonen, som viser de ulike måtene å beskrive kvalitet på som denne spesifikasjonen dekker.
