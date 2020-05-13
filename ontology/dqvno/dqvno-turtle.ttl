@@ -1,28 +1,28 @@
 @prefix : <https://data.norge.no/vocabulary/dqvno#> .
-@prefix oa: <https://www.w3.org/ns/oa#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix dct: <http://purl.org/dc/terms/> .
-@prefix dqv: <https://www.w3.org/TR/vocab-dqv/#dqv:> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @base <https://data.norge.no/vocabulary/dqvno#> .
 
 <https://data.norge.no/vocabulary/dqvno#> rdf:type owl:Ontology ;
-                                           owl:versionIRI <dqvno:0.4> ;
-                                           rdfs:comment "Controlled vocabulary for describing data quality"@en ,
-                                                        "Kontrollert vokabular for beskrivelse av datakvalitet"@nb ;
+                                           owl:versionIRI <dqvno:v.0.5> ;
+                                           rdfs:comment "Ontogi for DQV-AP-NO - Norsk applikasjonsprofil av DQV (https://www.w3.org/TR/vocab-dqv/)."@nb ,
+                                                        "Ontology for DQV-AP-NO - Norwegian Application Profile of DQV (https://www.w3.org/TR/vocab-dqv/)"@en ;
                                            rdfs:isDefinedBy "Digitaliseringsdirektoratet"@nb ,
                                                             "Norwegian Digitalisation Agency"@en ;
-                                           rdfs:label "dqvno"@en ,
-                                                      "dqvno"@nb ,
-                                                      "dqvno"@nn ;
-                                           owl:versionInfo "Draft"@en ,
-                                                           """Utkast. Endringene sammenlignet med forrige versjon, hovedsakelig:
-- fjernet dqv:isMeasurementOf fra Object Properties (brukes ikke her)
-- fjernet dqv:expectedDataType \"\"\"^^xsd:decimal (brukes ikke her)"""@nb .
+                                           rdfs:label "DQV-AP-NO"@en ,
+                                                      "DQV-AP-NO"@nb ;
+                                           owl:versionInfo "Changes: Merged together dqv-ap-no and dqvno into one ontology + some refinements."@en ,
+                                                           "Endringer: Flettet sammen dqv-ap-no og dqvno til én ontologi + noen finjusteringer."@nb ;
+                                           skos:prefLabel "DQV-AP-NO"@en ,
+                                                          "DQV-AP-NO"@nb .
 
 #################################################################
 #    Annotation properties
@@ -45,11 +45,23 @@ skos:example rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
-skos:prefLabel rdf:type owl:AnnotationProperty .
+skos:prefLabel rdf:type owl:AnnotationProperty ;
+               rdfs:range rdfs:Literal ;
+               rdfs:domain dqv:Dimension ,
+                           dqv:Metric ,
+                           :SubDimension .
 
 
 ###  http://www.w3.org/2004/02/skos/core#scopeNote
 skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/dqv#expectedDataType
+dqv:expectedDataType rdf:type owl:AnnotationProperty .
+
+
+###  https://data.norge.no/vocabulary/dqvno#ininDimension
+:ininDimension rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -65,64 +77,314 @@ xsd:duration rdf:type rdfs:Datatype ;
 #    Object Properties
 #################################################################
 
+###  http://purl.org/dc/terms/conformsTo
+dct:conformsTo rdf:type owl:ObjectProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain dcat:Dataset ;
+               rdfs:range dct:Standard ;
+               skos:prefLabel "conforms to"@en ,
+                              "er i samsvar med"@nb ;
+               skos:scopeNote "Brukes til å referere til en kvalitetsspesifikasjon/-standard."@nb ,
+                              "To refer to a quality specification or standard."@nb .
+
+
 ###  http://www.w3.org/2002/07/owl#topObjectProperty
 owl:topObjectProperty rdf:type owl:FunctionalProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#broader
-skos:broader rdf:type owl:ObjectProperty .
+skos:broader rdf:type owl:ObjectProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :SubDimension ;
+             rdfs:range [ rdf:type owl:Restriction ;
+                          owl:onProperty skos:broader ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass dqv:Dimension
+                        ] ;
+             skos:altLabel "har et bredere begrep"@nb ;
+             skos:prefLabel "er deldimension av"@nb ,
+                            "has a broader concept"@en ;
+             skos:scopeNote "Brukes til å referere til kvalitetsdimensjonen som kvalitetsdeldimensjonen tilhører."@nb ,
+                            "To refer to the quality dimension that the quality subdimension belongs."@en .
 
 
-###  https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityMeasurement
-dqv:hasQualityMeasurement rdf:type owl:ObjectProperty .
+###  http://www.w3.org/ns/dqv#hasQualityAnnotation
+dqv:hasQualityAnnotation rdf:type owl:ObjectProperty ,
+                                  owl:FunctionalProperty ;
+                         rdfs:domain dcat:Dataset ;
+                         rdfs:range dqv:QualityAnnotation ,
+                                    dqv:QualityCertificate ,
+                                    dqv:UserQualityFeedback ;
+                         skos:prefLabel "har kvalitetsnote"@nb ,
+                                        "has quality annotation"@en ;
+                         skos:scopeNote "Brukes til å referere til en kvalitetsnote."@nb ,
+                                        "To refer to a quality annotation"@en .
 
 
-###  https://www.w3.org/TR/vocab-dqv/#dqv:inDimension
-dqv:inDimension rdf:type owl:ObjectProperty .
+###  http://www.w3.org/ns/dqv#hasQualityMeasurement
+dqv:hasQualityMeasurement rdf:type owl:ObjectProperty ,
+                                   owl:FunctionalProperty ;
+                          rdfs:domain dcat:Dataset ;
+                          rdfs:range dqv:QualityMeasurement ;
+                          rdfs:isDefinedBy "http://www.w3.org/ns/dqv#hasQualityMeasurement" ;
+                          skos:prefLabel "har quantifiserbart måleresultat"@nb ,
+                                         "has quality measurement"@en ;
+                          skos:scopeNote "Brukes til å referere til et måleresultat."@nb ,
+                                         "To refer to a quality measurement"@en .
 
 
-###  https://www.w3.org/ns/oa#motivatedBy
-oa:motivatedBy rdf:type owl:ObjectProperty .
+###  http://www.w3.org/ns/dqv#inDimension
+dqv:inDimension rdf:type owl:ObjectProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain dct:Standard ,
+                            dqv:QualityAnnotation ,
+                            dqv:QualityCertificate ,
+                            dqv:UserQualityFeedback ;
+                rdfs:range dqv:Dimension ;
+                rdfs:isDefinedBy "http://www.w3.org/ns/dqv#inDimension" ;
+                skos:prefLabel "er i kvalitetsdimensjon"@nb ,
+                               "is in quality dimension"@en ;
+                skos:scopeNote "Brukes til å referere til kvalitetsdeldimensjonen som kvalitetsmålet hører til."@nb ,
+                               "To refer to a quality subdimension that the quality metric belongs to"@en .
+
+
+###  http://www.w3.org/ns/dqv#isMeasurementOf
+dqv:isMeasurementOf rdf:type owl:ObjectProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain dqv:QualityMeasurement ;
+                    rdfs:range [ rdf:type owl:Restriction ;
+                                 owl:onProperty dqv:isMeasurementOf ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass dqv:QualityMeasurement
+                               ] ;
+                    rdfs:isDefinedBy "http://www.w3.org/ns/dqv#isMeasurementOf"@nb ;
+                    skos:prefLabel "er måleresultat av"@nb ,
+                                   "is measurement of"@en ;
+                    skos:scopeNote "Brukes til å referere til et kvalitetsmål."@nb ,
+                                   "To refer to a quality metric"@en .
+
+
+###  http://www.w3.org/ns/oa#hasBody
+oa:hasBody rdf:type owl:ObjectProperty ;
+           rdfs:domain dqv:QualityAnnotation ;
+           rdfs:range oa:TextualBody ;
+           rdfs:isDefinedBy "https://www.w3.org/TR/annotation-vocab/#hasbody" ;
+           skos:prefLabel "har tekstdel"@nb ,
+                          "has textbody"@en ;
+           skos:scopeNote "Brukes til å referere til en tekstdel i en kvalitetsnote."@nb ,
+                          "To refer to a textual body of a quality annotation"@en .
+
+
+###  http://www.w3.org/ns/oa#hasTarget
+oa:hasTarget rdf:type owl:ObjectProperty ;
+             rdfs:domain dqv:QualityAnnotation ;
+             rdfs:range dcat:Dataset ;
+             rdfs:isDefinedBy "https://www.w3.org/TR/annotation-vocab/#hasTarget"@nb ;
+             skos:prefLabel "har mål"@nb ,
+                            "has target"@en ;
+             skos:scopeNote "Brukes til å referere til ressursen som kvalitetsnoten er for."@nb ,
+                            "To refer to the resource that the quality annotation is for."@en .
+
+
+###  http://www.w3.org/ns/oa#motivatedBy
+oa:motivatedBy rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain dqv:QualityAnnotation ;
+               rdfs:range [ rdf:type owl:Restriction ;
+                            owl:onProperty oa:motivatedBy ;
+                            owl:hasValue dqv:qualityAssessment
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty dqv:inDimension ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass oa:Motivation
+                          ] ;
+               rdfs:isDefinedBy "http://www.w3.org/ns/oa#motivatedby" ;
+               skos:altLabel "er motivert av"@nb ,
+                             "is motivated by"@en ;
+               skos:scopeNote "Brukes til å referere til beskrivelse av motivasjonen."@nb ,
+                              "To refer to the motivation."@en .
+
+
+###  https://data.norge.no/vocabulary/dqvno#inSubDimension
+:inSubDimension rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf dqv:inDimension ;
+                rdfs:domain dqv:Metric ;
+                rdfs:range [ rdf:type owl:Restriction ;
+                             owl:onProperty :inSubDimension ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :SubDimension
+                           ] ;
+                skos:prefLabel "er i kvalitetsdeldimensjon"@nb ,
+                               "is in subdimension"@en ;
+                skos:scopeNote "Brukes til å referere til kvalitetsdeldimensjonen som kvalitetsmålet hører til."@nb ,
+                               "To refer to the quality SubDimension that the quality metric belongs to."@en .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  https://www.w3.org/TR/vocab-dqv/#dqv:expectedDataType
-dqv:expectedDataType rdf:type owl:DatatypeProperty .
+###  http://www.w3.org/2000/01/rdf-schema#comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+             rdfs:domain dct:Standard ,
+                         dqv:QualityAnnotation ,
+                         dqv:QualityCertificate ,
+                         dqv:QualityMeasurement ,
+                         dqv:UserQualityFeedback ;
+             rdfs:range rdfs:Literal .
 
 
-###  https://www.w3.org/TR/vocab-dqv/#dqv:value
-dqv:value rdf:type owl:DatatypeProperty .
+###  http://www.w3.org/2004/02/skos/core#definision
+skos:definision rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain dqv:Dimension ,
+                            dqv:Metric ,
+                            :SubDimension ;
+                rdfs:range rdfs:Literal ;
+                rdfs:isDefinedBy "https://www.w3.org/TR/skos-reference/#notes" ;
+                skos:prefLabel "har definisjon"@nb ,
+                               "has definition"@en ;
+                skos:scopeNote "Brukes til å referere til definisjonen av en kvalitetsdimensjon, kvalitetsdeldimensjon eller et kvalitetsmål"@nb ,
+                               "To refer to the definition of a quality dimension, subdimension or metric."@en ,
+                               "To represent the definition of a quality dimension, subdimension and metric."@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.w3.org/ns/dqv#value
+dqv:value rdf:type owl:DatatypeProperty ;
+          rdfs:domain dqv:QualityMeasurement ;
+          rdfs:range xsd:boolean ,
+                     xsd:double ,
+                     xsd:nonNegativeInteger ;
+          rdfs:isDefinedBy "http://www.w3.org/ns/dqv#value"@en ;
+          skos:prefLabel "har verdi"@nb ,
+                         "has value"@en ;
+          skos:scopeNote "Brukes til å referere til verdien av et måleresultat."@nb ,
+                         "To represent the observed value of a quality measurement."@en .
 
 
 #################################################################
 #    Classes
 #################################################################
 
+###  http://purl.org/dc/terms/Standard
+dct:Standard rdf:type owl:Class ;
+             rdfs:isDefinedBy "http://purl.org/dc/terms/Standard" ;
+             skos:prefLabel "Standard eller spesifikasjon"@nb ,
+                            "Standard or specification"@en .
+
+
 ###  http://www.w3.org/2004/02/skos/core#Concept
 skos:Concept rdf:type owl:Class .
 
 
-###  https://www.w3.org/TR/vocab-dqv/#dqv:Dimension
+###  http://www.w3.org/ns/dcat#Dataset
+dcat:Dataset rdf:type owl:Class ;
+             rdfs:isDefinedBy "https://www.w3.org/TR/vocab-dcat-2/#Class:Dataset" ;
+             skos:prefLabel "Dataset"@en ,
+                            "Datasett"@nb .
+
+
+###  http://www.w3.org/ns/dqv#Dimension
 dqv:Dimension rdf:type owl:Class ;
-              owl:disjointWith dqv:Metric ,
-                               dqv:QualityCertificate .
+              owl:disjointWith :SubDimension ;
+              rdfs:isDefinedBy "http://www.w3.org/ns/dqv#Dimension"@en ;
+              skos:altLabel "Dimension"@en ;
+              skos:prefLabel "Kvalitetsdimensjon"@nb ,
+                             "Quality dimension"@en ;
+              skos:scopeNote "Brukes til å beskrive en kvalitetsdimensjon." .
 
 
-###  https://www.w3.org/TR/vocab-dqv/#dqv:Metric
+###  http://www.w3.org/ns/dqv#Metric
 dqv:Metric rdf:type owl:Class ;
-           owl:disjointWith dqv:QualityCertificate .
+           rdfs:isDefinedBy "http://www.w3.org/ns/dqv#Metric"@en ;
+           skos:altLabel "Metric"@en ;
+           skos:prefLabel "Kvalitetsmål"@nb ,
+                          "Quality metric"@en ;
+           skos:scopeNote "Brukes til å beskrive kvalitetsmål."@nb .
 
 
-###  https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate
-dqv:QualityCertificate rdf:type owl:Class .
+###  http://www.w3.org/ns/dqv#QualityAnnotation
+dqv:QualityAnnotation rdf:type owl:Class ;
+                      owl:disjointWith dqv:QualityCertificate ,
+                                       dqv:UserQualityFeedback ;
+                      rdfs:isDefinedBy "http://www.w3.org/ns/dqv#QualityAnnotation"@en ;
+                      skos:prefLabel "Kvalitetsnote"@nb ,
+                                     "Quality annotation"@en ;
+                      skos:scopeNote "Brukes til å beskrive en tekstlig kvalitetsbeskrivelse."@nb .
+
+
+###  http://www.w3.org/ns/dqv#QualityCertificate
+dqv:QualityCertificate rdf:type owl:Class ;
+                       rdfs:subClassOf dqv:QualityAnnotation ;
+                       owl:disjointWith dqv:UserQualityFeedback ;
+                       rdfs:isDefinedBy "http://www.w3.org/ns/dqv#QualityCertificate"@en ;
+                       skos:prefLabel "Kvalitetssertifikat"@nb ,
+                                      "Quality certificate"@en ;
+                       skos:scopeNote "Brukes til å beskrive et kvalitetssertifikat."@nb .
+
+
+###  http://www.w3.org/ns/dqv#QualityMeasurement
+dqv:QualityMeasurement rdf:type owl:Class ;
+                       rdfs:isDefinedBy "http://www.w3.org/ns/dqv#QualityMeasurement"@en ;
+                       skos:prefLabel "Måleresultat"@nb ,
+                                      "Quality measurement"@en ;
+                       skos:scopeNote "Brukes til å beskrive et måleresultat."@nb .
+
+
+###  http://www.w3.org/ns/dqv#UserQualityFeedback
+dqv:UserQualityFeedback rdf:type owl:Class ;
+                        rdfs:subClassOf dqv:QualityAnnotation ;
+                        rdfs:isDefinedBy "http://www.w3.org/ns/dqv#UserQualityFeedback"@en ;
+                        skos:prefLabel "user quality feedback"@en ;
+                        skos:scopeNote "Brukes til å beskrive et kvalitetssertifikat."@nb ,
+                                       "I tillegg til predefinerte `dqv:qualityAssessment` som er motivasjonen som skal brukes for alle kvalitetsnoter, bør en av predefinerte instanser av `oa:Motivation` brukes for å skille mellom ulike typer brukertilbakemeldinger, f.eks. 'classifications', 'questions'."@nb .
+
+
+###  http://www.w3.org/ns/oa#Motivation
+oa:Motivation rdf:type owl:Class ;
+              rdfs:isDefinedBy "http://www.w3.org/ns/oa#motivation" ;
+              skos:prefLabel "Motivasjon"@nb ,
+                             "Motivation"@en ;
+              skos:scopeNote "Brukes til å beskrive intensjonen eller motivasjonen til en Kvalitetsnote."@nb .
+
+
+###  http://www.w3.org/ns/oa#TextualBody
+oa:TextualBody rdf:type owl:Class ;
+               rdfs:isDefinedBy "http://www.w3.org/ns/oa#textualbody"@nb ;
+               skos:prefLabel "Tekstdel"@nb ,
+                              "Textual body"@en ;
+               skos:scopeNote "Brukes til å beskrive tekstdelen av en Kvalitetsnote."@nb .
+
+
+###  https://data.norge.no/vocabulary/dqvno#SubDimension
+:SubDimension rdf:type owl:Class ;
+              rdfs:subClassOf dqv:Dimension ;
+              rdfs:isDefinedBy "Digitaliseringsdirektoratet"@nb ,
+                               "Norwegian Digitalisation Agency"@en ;
+              skos:prefLabel "Kvalitetsdeldimensjon"@nb ,
+                             "Quality subdimension"@en ;
+              skos:scopeNote "Brukes til å beskrive en kvalitetsdeldimensjon."@nb ,
+                             "To describe a quality SubDimension (the level in between dqv:Dimension and dqv:Metric)."@en .
 
 
 #################################################################
 #    Individuals
 #################################################################
+
+###  http://www.w3.org/ns/dqv#qualityAssessment
+dqv:qualityAssessment rdf:type owl:NamedIndividual ,
+                               oa:Motivation ;
+                      rdfs:isDefinedBy "http://www.w3.org/ns/dqv#qualityAssessment" ;
+                      skos:prefLabel "kvalitetsvurdering"@nb ,
+                                     "quality assessment"@en ;
+                      skos:scopeNote "Instans av oa:Motivation som skal brukes for alle kvalitetsnoter inkl. brukertilbakemeldinger og kvalitetssertifikater"@nb .
+
 
 ###  https://data.norge.no/vocabulary/dqvno#accuracy
 :accuracy rdf:type owl:NamedIndividual ,
@@ -137,7 +399,7 @@ dqv:QualityCertificate rdf:type owl:Class .
 
 ###  https://data.norge.no/vocabulary/dqvno#classificationCorrectness
 :classificationCorrectness rdf:type owl:NamedIndividual ,
-                                    dqv:Dimension ;
+                                    :SubDimension ;
                            skos:broader :accuracy ;
                            dct:source "ISO 19157"@en ,
                                       "basert på «Geodatakvalitet», Kartverket (https://www.kartverket.no/globalassets/standard/bransjestandarder-utover-sosi/geodatakvalitet.pdf)"@nb ;
@@ -174,7 +436,7 @@ dqv:QualityCertificate rdf:type owl:Class .
 
 ###  https://data.norge.no/vocabulary/dqvno#consistencyWithinDataset
 :consistencyWithinDataset rdf:type owl:NamedIndividual ,
-                                   dqv:Dimension ;
+                                   :SubDimension ;
                           skos:broader :consistency ;
                           dct:source "egendefinert"@nb ,
                                      "own definition"@en ;
@@ -198,7 +460,7 @@ dqv:QualityCertificate rdf:type owl:Class .
 
 ###  https://data.norge.no/vocabulary/dqvno#delay
 :delay rdf:type owl:NamedIndividual ,
-                dqv:Dimension ;
+                :SubDimension ;
        skos:broader :currentness ;
        dct:source "egendefinert"@nb ,
                   "own definition"@en ;
@@ -211,8 +473,7 @@ dqv:QualityCertificate rdf:type owl:Class .
 ###  https://data.norge.no/vocabulary/dqvno#excessObjects
 :excessObjects rdf:type owl:NamedIndividual ,
                         dqv:Metric ;
-               dqv:inDimension :overcoverage ;
-               dqv:expectedDataType "false"^^xsd:boolean ;
+               :inSubDimension :overcoverage ;
                dct:source "based on ISO 19157"@en ,
                           "basert på ISO 19157"@nb ;
                skos:altLabel "overflødige objekter"@nb ;
@@ -221,12 +482,13 @@ dqv:QualityCertificate rdf:type owl:Class .
                skos:example "\"sann\" (noen bygninger er overflødige)"@nb ,
                             "\"true\" (some buildings in the dataset are not supposed to be there)"@en ;
                skos:prefLabel "excess objects"@en ,
-                              "overflødige enheter"@nb .
+                              "overflødige enheter"@nb ;
+               dqv:expectedDataType "false"^^xsd:boolean .
 
 
 ###  https://data.norge.no/vocabulary/dqvno#identifierCorrectness
 :identifierCorrectness rdf:type owl:NamedIndividual ,
-                                dqv:Dimension ;
+                                :SubDimension ;
                        skos:broader :accuracy ;
                        dct:source "based on BLUE-ETS"@en ,
                                   "basert på BLUE-ETS"@nb ;
@@ -239,7 +501,7 @@ dqv:QualityCertificate rdf:type owl:Class .
 ###  https://data.norge.no/vocabulary/dqvno#imputation
 :imputation rdf:type owl:NamedIndividual ,
                      skos:Concept ,
-                     dqv:Dimension ;
+                     :SubDimension ;
             skos:broader :completeness ;
             dct:source "based on \"Glossary of Terms on Statistical Data Editing\", OECD (https://stats.oecd.org/glossary/detail.asp?ID=3462)"@en ,
                        "basert på «Glossary of Terms on Statistical Data Editing», OECD (https://stats.oecd.org/glossary/detail.asp?ID=3462)"@nb ;
@@ -278,8 +540,7 @@ dqv:QualityCertificate rdf:type owl:Class .
 ###  https://data.norge.no/vocabulary/dqvno#missingObjects
 :missingObjects rdf:type owl:NamedIndividual ,
                          dqv:Metric ;
-                dqv:inDimension :undercoverage ;
-                dqv:expectedDataType "false"^^xsd:boolean ;
+                :inSubDimension :undercoverage ;
                 dct:source "based on ISO 19157"@en ,
                            "basert på ISO 19157"@nb ;
                 skos:definition "hvorvidt det mangler enheter i datasettet"@nb ,
@@ -287,14 +548,14 @@ dqv:QualityCertificate rdf:type owl:Class .
                 skos:example "\"false\" (the dataset contains all buildings)"@en ,
                              "\"usann\" (datasettet inneholder alle bygninger)"@nb ;
                 skos:prefLabel "manglende enheter"@nb ,
-                               "missing objects"@en .
+                               "missing objects"@en ;
+                dqv:expectedDataType "false"^^xsd:boolean .
 
 
 ###  https://data.norge.no/vocabulary/dqvno#numberOfExcessObjects
 :numberOfExcessObjects rdf:type owl:NamedIndividual ,
                                 dqv:Metric ;
-                       dqv:inDimension :overcoverage ;
-                       dqv:expectedDataType ""^^xsd:nonNegativeInteger ;
+                       :inSubDimension :overcoverage ;
                        dct:source "based on ISO 19175"@en ,
                                   "basert på ISO 19175"@nb ;
                        skos:altLabel "antall overflødige objekter"@nb ;
@@ -303,14 +564,14 @@ dqv:QualityCertificate rdf:type owl:Class .
                        skos:example "\"3\" (Three buildings in the dataset are not supposed to be there)"@en ,
                                     "\"3\" (i virkeligheten finnes det 15 bygninger, men datasettet dekker 18)"@nb ;
                        skos:prefLabel "antall overflødige enheter"@nb ,
-                                      "number of excess objects"@en .
+                                      "number of excess objects"@en ;
+                       dqv:expectedDataType ""^^xsd:nonNegativeInteger .
 
 
 ###  https://data.norge.no/vocabulary/dqvno#numberOfIncorrectlyClassifiedObjectsForAGivenProperty
 :numberOfIncorrectlyClassifiedObjectsForAGivenProperty rdf:type owl:NamedIndividual ,
                                                                 dqv:Metric ;
-                                                       dqv:inDimension :classificationCorrectness ;
-                                                       dqv:expectedDataType ""^^xsd:nonNegativeInteger ;
+                                                       :inSubDimension :classificationCorrectness ;
                                                        dct:source "based on ISO 19157"@en ,
                                                                   "basert på ISO 19157"@nb ;
                                                        skos:altLabel "antall feilklassifiserte objekter for en gitt egenskap"@nb ;
@@ -319,14 +580,14 @@ dqv:QualityCertificate rdf:type owl:Class .
                                                        skos:example "\"1\" (One building in the dataset is classified with wrong occupancy code)"@en ,
                                                                     "\"97\" (97 enheter er oppført med feil næringskode i datasettet)"@nb ;
                                                        skos:prefLabel "antall feilklassifiserte enheter for en gitt egenskap"@nb ,
-                                                                      "number of incorrectly classified objects for a given property"@en .
+                                                                      "number of incorrectly classified objects for a given property"@en ;
+                                                       dqv:expectedDataType ""^^xsd:nonNegativeInteger .
 
 
 ###  https://data.norge.no/vocabulary/dqvno#numberOfMissigObjects
 :numberOfMissigObjects rdf:type owl:NamedIndividual ,
                                 dqv:Metric ;
-                       dqv:inDimension :undercoverage ;
-                       dqv:expectedDataType ""^^xsd:nonNegativeInteger ;
+                       :inSubDimension :undercoverage ;
                        dct:source "based on ISO 19157"@en ,
                                   "basert på ISO 19157"@nb ;
                        skos:definition "antall enheter som ikke er i datasettet men som forventes å være med"@nb ,
@@ -334,14 +595,14 @@ dqv:QualityCertificate rdf:type owl:Class .
                        skos:example "\"2\" (Two buildings are missing in the dataset)"@en ,
                                     "\"2\" (i virkeligheten finnes det 10 bygninger, men datasettet dekker kun 8)"@nb ;
                        skos:prefLabel "antall manglende enheter"@nb ,
-                                      "number of missing objects"@en .
+                                      "number of missing objects"@en ;
+                       dqv:expectedDataType ""^^xsd:nonNegativeInteger .
 
 
 ###  https://data.norge.no/vocabulary/dqvno#numberOfObjectsWithImputedValueForAGivenProperty
 :numberOfObjectsWithImputedValueForAGivenProperty rdf:type owl:NamedIndividual ,
                                                            dqv:Metric ;
-                                                  dqv:inDimension :imputation ;
-                                                  dqv:expectedDataType ""^^xsd:nonNegativeInteger ;
+                                                  :inSubDimension :imputation ;
                                                   dct:source "egendefinert"@nb ,
                                                              "own definition"@en ;
                                                   skos:altLabel "antall objekter med imputert verdi for en gitt egenskap"@nb ;
@@ -350,14 +611,14 @@ dqv:QualityCertificate rdf:type owl:Class .
                                                   skos:example "\"4\" (Four buildings in the dataset have imputed value for the property “year of construction”)"@en ,
                                                                "\"4\" (fire bygninger har fått antatt verdi for «byggeår»)"@nb ;
                                                   skos:prefLabel "antall enheter med imputert verdi for en gitt egenskap"@nb ,
-                                                                 "number of objects with imputed value for a given property"@en .
+                                                                 "number of objects with imputed value for a given property"@en ;
+                                                  dqv:expectedDataType ""^^xsd:nonNegativeInteger .
 
 
 ###  https://data.norge.no/vocabulary/dqvno#numberOfObjectsWithIncorrectIdentifiers
 :numberOfObjectsWithIncorrectIdentifiers rdf:type owl:NamedIndividual ,
                                                   dqv:Metric ;
-                                         dqv:inDimension :identifierCorrectness ;
-                                         dqv:expectedDataType ""^^xsd:nonNegativeInteger ;
+                                         :inSubDimension :identifierCorrectness ;
                                          dct:source "egendefinert"@nb ,
                                                     "own definition"@en ;
                                          skos:altLabel "antall objekter med identifikatorfeil"@nb ;
@@ -366,14 +627,14 @@ dqv:QualityCertificate rdf:type owl:Class .
                                          skos:example "\"1\" (One building in the dataset has wrong identifier)"@en ,
                                                       "\"207\" (207 personer uten f-nummer/d-nummer men en utenlandsk id som ikke kvalitetssikres)"@nb ;
                                          skos:prefLabel "antall enheter med identifikatorfeil"@nb ,
-                                                        "number of objects with incorrect identifiers"@en .
+                                                        "number of objects with incorrect identifiers"@en ;
+                                         dqv:expectedDataType ""^^xsd:nonNegativeInteger .
 
 
 ###  https://data.norge.no/vocabulary/dqvno#numberOfObjectsWithMissingValueForAGivenProperty
 :numberOfObjectsWithMissingValueForAGivenProperty rdf:type owl:NamedIndividual ,
                                                            dqv:Metric ;
-                                                  dqv:inDimension :undercoverage ;
-                                                  dqv:expectedDataType ""^^xsd:nonNegativeInteger ;
+                                                  :inSubDimension :undercoverage ;
                                                   dct:source "egendefinert"@nb ,
                                                              "own defintion"@en ;
                                                   skos:definition "antall enheter i datasettet som mangler verdi for en gitt egenskap"@nb ,
@@ -381,7 +642,8 @@ dqv:QualityCertificate rdf:type owl:Class .
                                                   skos:example "\"2\" (Two buildings in the dataset do not have value for the property “usable area”)"@en ,
                                                                "\"2\" (to bygninger mangler verdi for «bruksareal»)"@nb ;
                                                   skos:prefLabel "antall enheter med manglende verdi for en gitt egenskap"@nb ,
-                                                                 "number of objects with missing value for a given property"@en .
+                                                                 "number of objects with missing value for a given property"@en ;
+                                                  dqv:expectedDataType ""^^xsd:nonNegativeInteger .
 
 
 ###  https://data.norge.no/vocabulary/dqvno#object
@@ -400,8 +662,7 @@ dqv:QualityCertificate rdf:type owl:Class .
 ###  https://data.norge.no/vocabulary/dqvno#overallTimeDifference
 :overallTimeDifference rdf:type owl:NamedIndividual ,
                                 dqv:Metric ;
-                       dqv:inDimension :delay ;
-                       dqv:expectedDataType ""^^xsd:duration ;
+                       :inSubDimension :delay ;
                        dct:source "Eurostat RAMON, European Union, Regulation (EC) No 223/2009"@en ,
                                   "Eurostats begrepsdatabase RAMON, European Union, Regulation (EC) No 223/2009"@nb ;
                        skos:definition "length of time between data availability and the event or phenomenon they describe"@en ,
@@ -410,12 +671,13 @@ dqv:QualityCertificate rdf:type owl:Class .
                                     "\"P24D\" (On average there will be 24 days from a building is completed or demolished, to it is included in or excluded from the dataset)"@en ;
                        skos:prefLabel "overall time difference"@en ,
                                       "samlet tidsdifferanse"@nb ;
-                       skos:scopeNote "Tillatte måleenheter for duration som er hentet fra xsd, er sekunder, minutter, dager, måneder eller år, dvs. ikke uker."@nb .
+                       skos:scopeNote "Tillatte måleenheter for duration som er hentet fra xsd, er sekunder, minutter, dager, måneder eller år, dvs. ikke uker."@nb ;
+                       dqv:expectedDataType ""^^xsd:duration .
 
 
 ###  https://data.norge.no/vocabulary/dqvno#overcoverage
 :overcoverage rdf:type owl:NamedIndividual ,
-                       dqv:Dimension ;
+                       :SubDimension ;
               skos:broader :completeness ;
               dct:source "ISO 19157"@en ,
                          "ISO 19157"@nb ;
@@ -448,8 +710,7 @@ dqv:QualityCertificate rdf:type owl:Class .
 ###  https://data.norge.no/vocabulary/dqvno#rateOfExcessObjects
 :rateOfExcessObjects rdf:type owl:NamedIndividual ,
                               dqv:Metric ;
-                     dqv:inDimension :overcoverage ;
-                     dqv:expectedDataType ""^^xsd:double ;
+                     :inSubDimension :overcoverage ;
                      dct:source "based on ISO 19157"@en ,
                                 "basert på ISO 19157"@nb ;
                      skos:altLabel "andel overflødige objekter"@nb ;
@@ -458,22 +719,22 @@ dqv:QualityCertificate rdf:type owl:Class .
                      skos:example "\"0,03%\" (0,03% av bygningene i datasettet burde ikke være representert)"@nb ,
                                   "\"0.03%\" (0.03% of the buildings in the dataset are not supposed to be there)"@en ;
                      skos:prefLabel "andel overflødige enheter"@nb ,
-                                    "rate of excess objects"@en .
+                                    "rate of excess objects"@en ;
+                     dqv:expectedDataType ""^^xsd:double .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :rateOfExcessObjects ;
    owl:annotatedProperty dqv:expectedDataType ;
    owl:annotatedTarget ""^^xsd:double ;
-   rdfs:comment "as percentage"@en ,
-                "som prosent"@nb
+   skos:scopeNote "as percentage"@en ,
+                  "som prosent"@nb
  ] .
 
 
 ###  https://data.norge.no/vocabulary/dqvno#rateOfIncorrectlyClassifiedObjectsForAGivenProperty
 :rateOfIncorrectlyClassifiedObjectsForAGivenProperty rdf:type owl:NamedIndividual ,
                                                               dqv:Metric ;
-                                                     dqv:inDimension :classificationCorrectness ;
-                                                     dqv:expectedDataType ""^^xsd:double ;
+                                                     :inSubDimension :classificationCorrectness ;
                                                      dct:source "based on ISO 19157"@en ,
                                                                 "basert på ISO 19157"@nb ;
                                                      skos:altLabel "andel feilklassifiserte objekter for en gitt egenskap"@nb ,
@@ -483,22 +744,21 @@ dqv:QualityCertificate rdf:type owl:Class .
                                                      skos:example "\"0,4%\" (0,4% av enhetene har feil kommunenummer)"@nb ,
                                                                   "\"0.01%\" (0.01% of the buildings in the dataset are classified with wrong occupancy codes)"@en ;
                                                      skos:prefLabel "andel feilklassifiserte enheter for en gitt egenskap"@nb ,
-                                                                    "rate of incorrectly classified objects for a given property"@en .
+                                                                    "rate of incorrectly classified objects for a given property"@en ;
+                                                     dqv:expectedDataType ""^^xsd:double .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :rateOfIncorrectlyClassifiedObjectsForAGivenProperty ;
    owl:annotatedProperty dqv:expectedDataType ;
    owl:annotatedTarget ""^^xsd:double ;
-   rdfs:comment "as percentage"@en ,
-                "som prosent"@nb
+   skos:scopeNote "as percentage"@en ,
+                  "som prosent"@nb
  ] .
 
 
 ###  https://data.norge.no/vocabulary/dqvno#rateOfMissingObjects
 :rateOfMissingObjects rdf:type owl:NamedIndividual ,
                                dqv:Metric ;
-                      dqv:inDimension :undercoverage ;
-                      dqv:expectedDataType ""^^xsd:double ;
                       dct:source "based on ISO 19157"@en ,
                                  "basert på ISO 19157"@nb ;
                       skos:definition "antall enheter som mangler i forhold til antall enheter som skulle være med i datasettet"@nb ,
@@ -506,22 +766,23 @@ dqv:QualityCertificate rdf:type owl:Class .
                       skos:example "\"0.02%\" (0.02% of buildings are missing in the dataset)"@en ,
                                    "\"0.02%\" (datasettet dekker 0.02% færre bygninger en det som eksisterer i virkeligheten)"@nb ;
                       skos:prefLabel "andel manglende enheter"@nb ,
-                                     "rate of missing objects"@en .
+                                     "rate of missing objects"@en ;
+                      dqv:expectedDataType ""^^xsd:double ;
+                      :ininDimension :undercoverage .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :rateOfMissingObjects ;
    owl:annotatedProperty dqv:expectedDataType ;
    owl:annotatedTarget ""^^xsd:double ;
-   rdfs:comment "as percentage"@en ,
-                "som prosent"@nb
+   skos:scopeNote "as percentage"@en ,
+                  "som prosent"@nb
  ] .
 
 
 ###  https://data.norge.no/vocabulary/dqvno#rateOfObjectsWithImputedValueForAGivenProperty
 :rateOfObjectsWithImputedValueForAGivenProperty rdf:type owl:NamedIndividual ,
                                                          dqv:Metric ;
-                                                dqv:inDimension :imputation ;
-                                                dqv:expectedDataType ""^^xsd:double ;
+                                                :inSubDimension :imputation ;
                                                 dct:source "egendefinert"@nb ,
                                                            "own definition"@en ;
                                                 skos:altLabel "andel objekter med imputert verdi for en gitt egenskap"@nb ;
@@ -530,22 +791,22 @@ dqv:QualityCertificate rdf:type owl:Class .
                                                 skos:example "\"0.04%\" (0.04% av bygningene har fått antatt verdi for «byggeår»)"@nb ,
                                                              "\"0.04%\" (0.04% of the buildings have imputed value for the property “year of construction”)"@en ;
                                                 skos:prefLabel "andel enheter med imputert verdi for en gitt egenskap"@nb ,
-                                                               "rate of objects with imputed value for a given property"@en .
+                                                               "rate of objects with imputed value for a given property"@en ;
+                                                dqv:expectedDataType ""^^xsd:double .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :rateOfObjectsWithImputedValueForAGivenProperty ;
    owl:annotatedProperty dqv:expectedDataType ;
    owl:annotatedTarget ""^^xsd:double ;
-   rdfs:comment "as percentage"@en ,
-                "som prosent"@nb
+   skos:scopeNote "as percentage"@en ,
+                  "som prosent"@nb
  ] .
 
 
 ###  https://data.norge.no/vocabulary/dqvno#rateOfObjectsWithInconsistencyBetweenGivenProperties
 :rateOfObjectsWithInconsistencyBetweenGivenProperties rdf:type owl:NamedIndividual ,
                                                                dqv:Metric ;
-                                                      dqv:inDimension :consistencyWithinDataset ;
-                                                      dqv:expectedDataType ""^^xsd:double ;
+                                                      :inSubDimension :consistencyWithinDataset ;
                                                       dct:source "egendefinert"@nb ,
                                                                  "own definition"@en ;
                                                       skos:altLabel "andel objekter med inkonsistens mellom gitte egenskaper"@nb ;
@@ -556,22 +817,22 @@ dqv:QualityCertificate rdf:type owl:Class .
                                                                    "\"0,4%\" (av ansatte i datasettet står oppført med startdato på arbeidsforhold som er før fødsesldato)"@nb ,
                                                                    "“0.03%\" (0.03% of the buildings in the dataset have “usable area” larger than “gross area”)"@en ;
                                                       skos:prefLabel "andel enheter med inkonsistens mellom gitte egenskaper"@nb ,
-                                                                     "rate of objects with inconsistency between given properties"@en .
+                                                                     "rate of objects with inconsistency between given properties"@en ;
+                                                      dqv:expectedDataType ""^^xsd:double .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :rateOfObjectsWithInconsistencyBetweenGivenProperties ;
    owl:annotatedProperty dqv:expectedDataType ;
    owl:annotatedTarget ""^^xsd:double ;
-   rdfs:comment "as percentage"@en ,
-                "som prosent"@nb
+   skos:scopeNote "as percentage"@en ,
+                  "som prosent"@nb
  ] .
 
 
 ###  https://data.norge.no/vocabulary/dqvno#rateOfObjectsWithInconsistentProperties
 :rateOfObjectsWithInconsistentProperties rdf:type owl:NamedIndividual ,
                                                   dqv:Metric ;
-                                         dqv:inDimension :consistencyWithinDataset ;
-                                         dqv:expectedDataType ""^^xsd:double ;
+                                         :inSubDimension :consistencyWithinDataset ;
                                          dct:source "egendefinert"@nb ,
                                                     "own definition"@en ;
                                          skos:altLabel "andel objekter med inkonsistente egenskaper"@nb ;
@@ -580,22 +841,22 @@ dqv:QualityCertificate rdf:type owl:Class .
                                          skos:example "\"0.03%\" (0.03% of the buildings have inconsistency between some properties)"@en ,
                                                       "\"0.03%\" (av bygningene har inkonsistens innbyrdes mellom noen av egenskapene)"@nb ;
                                          skos:prefLabel "andel enheter med inkonsistente egenskaper"@nb ,
-                                                        "rate of objects with inconsistent properties"@en .
+                                                        "rate of objects with inconsistent properties"@en ;
+                                         dqv:expectedDataType ""^^xsd:double .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :rateOfObjectsWithInconsistentProperties ;
    owl:annotatedProperty dqv:expectedDataType ;
    owl:annotatedTarget ""^^xsd:double ;
-   rdfs:comment "as percentage"@en ,
-                "som prosent"@nb
+   skos:scopeNote "as percentage"@en ,
+                  "som prosent"@nb
  ] .
 
 
 ###  https://data.norge.no/vocabulary/dqvno#rateOfObjectsWithIncorrectIdentifiers
 :rateOfObjectsWithIncorrectIdentifiers rdf:type owl:NamedIndividual ,
                                                 dqv:Metric ;
-                                       dqv:inDimension :identifierCorrectness ;
-                                       dqv:expectedDataType ""^^xsd:double ;
+                                       :inSubDimension :identifierCorrectness ;
                                        dct:source "egendefinert"@nb ,
                                                   "own definition"@en ;
                                        skos:altLabel "andel objekter med identifikatorfeil"@nb ;
@@ -604,22 +865,22 @@ dqv:QualityCertificate rdf:type owl:Class .
                                        skos:example "\"0,01%\" (0,01% av personene i datasettet har gått fra midlertidig tilknytning til permanent oppholdstillatelse og står oppført med d-nummer som identifikator istedenfor f-nummer)"@nb ,
                                                     "\"0.01%\" (0.01% of the buildings in the dataset have wrong identifiers)"@en ;
                                        skos:prefLabel "andel enheter med identifikatorfeil"@nb ,
-                                                      "rate of objects with incorrect identifiers"@en .
+                                                      "rate of objects with incorrect identifiers"@en ;
+                                       dqv:expectedDataType ""^^xsd:double .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :rateOfObjectsWithIncorrectIdentifiers ;
    owl:annotatedProperty dqv:expectedDataType ;
    owl:annotatedTarget ""^^xsd:double ;
-   rdfs:comment "as percent"@en ,
-                "som prosent"@nb
+   skos:scopeNote "as percentage"@en ,
+                  "som prosent"@nb
  ] .
 
 
 ###  https://data.norge.no/vocabulary/dqvno#rateOfObjectsWithMissingValueForAGivenProperty
 :rateOfObjectsWithMissingValueForAGivenProperty rdf:type owl:NamedIndividual ,
                                                          dqv:Metric ;
-                                                dqv:inDimension :undercoverage ;
-                                                dqv:expectedDataType ""^^xsd:double ;
+                                                :inSubDimension :undercoverage ;
                                                 dct:source "egendefinert"@nb ,
                                                            "own definition"@en ;
                                                 skos:definition "antall enheter med manglende verdi for en gitt egenskap i forhold til antall enheter i datasettet"@nb ,
@@ -627,20 +888,21 @@ dqv:QualityCertificate rdf:type owl:Class .
                                                 skos:example "\"0.02%\" (0.02% av verdiene for egenskapen «bruksareal» mangler i datasettet)"@nb ,
                                                              "\"0.02%\" (0.02% of buildings in the dataset do not have value for the property “usable area”)"@en ;
                                                 skos:prefLabel "andel enheter med manglende verdi for en gitt egenskap"@nb ,
-                                                               "rate of objects with missing value for av given property"@en .
+                                                               "rate of objects with missing value for av given property"@en ;
+                                                dqv:expectedDataType ""^^xsd:double .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :rateOfObjectsWithMissingValueForAGivenProperty ;
    owl:annotatedProperty dqv:expectedDataType ;
    owl:annotatedTarget ""^^xsd:double ;
-   rdfs:comment "as percentage"@en ,
-                "som prosent"@nb
+   skos:scopeNote "as percentage"@en ,
+                  "som prosent"@nb
  ] .
 
 
 ###  https://data.norge.no/vocabulary/dqvno#undercoverage
 :undercoverage rdf:type owl:NamedIndividual ,
-                        dqv:Dimension ;
+                        :SubDimension ;
                skos:broader :completeness ;
                dct:source "ISO 19157"@en ,
                           "ISO 19157"@nb ;
@@ -651,15 +913,19 @@ dqv:QualityCertificate rdf:type owl:Class .
                               "underdekning"@nb .
 
 
-###  https://www.w3.org/TR/vocab-dqv/#dqv:qualityAssessment
-dqv:qualityAssessment rdf:type owl:NamedIndividual .
-
-
 #################################################################
 #    Annotations
 #################################################################
 
-owl:Thing rdfs:label ""@en .
+rdfs:comment skos:scopeNote "To refer to a textual comment."@en ,
+                            "Brukes til å referere til en fritekstmerknad."@nb .
+
+
+skos:prefLabel skos:prefLabel "har definisjon"@nb ;
+               rdfs:isDefinedBy "https://www.w3.org/TR/skos-reference/#labels" ;
+               skos:scopeNote "To refer to the prefered term to a quality dimension, subdimension or metric."@en ,
+                              "Brukes til å referere til den anbefalte termen til en kvalitetsdimensjon, kvalitetsdeldimensjon eller et kvalitetsmål"@nb ;
+               skos:prefLabel "has definition"@en .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
