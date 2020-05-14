@@ -1,4 +1,4 @@
-= Forslag til DQV-AP-NO (Norsk applikasjonsprofil av DQV)
+= Forslag til DQV-AP-NO (Norsk applikasjonsprofil av DQV)  v.1.0.0
 :description: DQV-AP-NO (Norwegian Application Profile of DQV)
 :doctype: book
 :docinfo:
@@ -14,10 +14,14 @@ image::images/digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
 
 include::shared/download.adoc[]
 
-WARNING: Under utarbeidelse (blir løpende justert).
-
 NOTE: *Innmelding av feil og mangler:* +
-Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/dqv-ap-no[Github Issues]. Dersom man ikke allerede har bruker på Github kan man opprette bruker gratis. +
+Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/dqv-ap-no[Github Issues]. Dersom man ikke allerede har bruker på Github kan man opprette bruker gratis.
+
+*Status*: Under arbeid (blir løpende justert)
+
+*Publisert*: <publiseringsdato settes senere>
+
+*Gjeldende versjon*: Gjeldende versjon vil bli publisert til https://data.norge.no/specification/dqv-ap-no/ (kommer etter høringen sammen med https://informasjonsforvaltning.github.io/dcat-ap-no/[DCAT-AP-NO])
 
 // Oversettelse:
 include::locale/attributes.adoc[]
