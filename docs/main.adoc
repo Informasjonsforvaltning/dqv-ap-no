@@ -17,6 +17,7 @@ include::shared/download.adoc[]
 NOTE: *Innmelding av feil og mangler:* +
 Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/dqv-ap-no[Github Issues]. Dersom man ikke allerede har bruker på Github kan man opprette bruker gratis.
 
+
 *Status*: Under arbeid (blir løpende justert)
 
 *Publisert*: <publiseringsdato settes senere>
