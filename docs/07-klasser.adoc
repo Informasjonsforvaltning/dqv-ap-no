@@ -34,7 +34,6 @@ Se https://informasjonsforvaltning.github.io/dcat-ap-no/#klasse-datasett[beskriv
 |URI|dqv:QualityAnnotation
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:QualityAnnotation[https://www.w3.org/TR/vocab-dqv/#dqv:QualityAnnotation]
 |Status|Anbefalt
-|Kommentar|
 |===
 
 ==== Måleresultat (dqv:QualityMeasurement) [[klasse-måleresultat]]
@@ -46,7 +45,6 @@ Se https://informasjonsforvaltning.github.io/dcat-ap-no/#klasse-datasett[beskriv
 |URI|dqv:QualityMeasurement
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurement[https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurement]
 |Status|Anbefalt
-|Kommentar|
 |===
 
 ==== Standard/spesifikasjon [[klasse-standard]]
@@ -128,5 +126,4 @@ Klassen brukes når man skal beskrive sin egen kvalitetsdeldimensjon, dvs. når 
 |URI|oa:TextualBody
 |Referanse|https://www.w3.org/TR/annotation-vocab/#textualbody[https://www.w3.org/TR/annotation-vocab/#textualbody]
 |Status|Valgfri
-|Kommentar|
 |===
