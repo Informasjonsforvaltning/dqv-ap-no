@@ -1,4 +1,4 @@
-fritekstmerknad== Egenskaper per klasse
+== Egenskaper per klasse
 
 I tillegg til egenskapene som er tatt med i denne spesifikasjonen, kan egenskapene i DQV samt SKOS, DCAT, DCAT-AP, DCAT-AP-NO og andre veletablerte vokabularer også brukes.
 
@@ -23,7 +23,6 @@ Egenskapene beskrevet her i denne spesifikasjonen, supplerer https://informasjon
 |Referanse|https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo[https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo]
 |Multiplisitet|0..n
 |Status|Anbefalt
-|Kommentar|
 |Eksempel a| [source]
 ----
 :aDataset
@@ -72,7 +71,6 @@ dqvno:isAuthoritative
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityMeasurement[https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityMeasurement]
 |Multiplisitet|0..n
 |Status|Anbefalt
-|Kommentar|
 |Eksempel a| [source]
 ----
 :aDataset
@@ -231,7 +229,6 @@ Denne egenskapen skal referere til én instans av en kvalitetsdeldimensjon.
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:expectedDataType[https://www.w3.org/TR/vocab-dqv/#dqv:expectedDataType]
 |Multiplisitet|0..1
 |Status|Anbefalt
-|Kommentar|
 |Eksempel a| [source]
 ----
 :missingObjects
@@ -315,7 +312,6 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:inDimension[https://www.w3.org/TR/vocab-dqv/#dqv:inDimension]
 |Multiplisitet|0..n
 |Status|Anbefalt
-|Kommentar|
 |Eksempel a| [source]
 ----
 :aQAnnotation
@@ -336,7 +332,6 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Referanse|https://www.w3.org/TR/annotation-vocab/#hasbody[https://www.w3.org/TR/annotation-vocab/#hasbody]
 |Multiplisitet|0..n
 |Status|Anbefalt
-|Kommentar|
 |Eksempel a| [source]
 ----
 :aQAnnotation
@@ -367,7 +362,6 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Multiplisitet|0..n
 |Status|Valgfri
 |Kommentar|Norsk utvidelse. For å kunne ha fritekstkommentarer.
-|Eksempel|
 |===
 
 ===== Kvalitetsnote: har mål (oa:hasTarget)
@@ -381,8 +375,6 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Referanse|https://www.w3.org/TR/annotation-vocab/#hastarget[https://www.w3.org/TR/annotation-vocab/#hastarget]
 |Multiplisitet|0..1
 |Status|Valgfri
-|Kommentar|
-|Eksempel|
 |===
 
 === Måleresultat (dqv:QualityMeasurement)
@@ -400,7 +392,6 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:isMeasurementOf[https://www.w3.org/TR/vocab-dqv/#dqv:isMeasurementOf]
 |Multiplisitet|1..1
 |Status|Obligatorisk
-|Kommentar|
 |Eksempel a| [source]
 ----
 :aQMeasurement
@@ -423,7 +414,6 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:value[https://www.w3.org/TR/vocab-dqv/#dqv:value]
 |Multiplisitet|0..1
 |Status|Anbefalt
-|Kommentar|
 |Eksempel a| [source]
 ----
 :aQMeasurement
@@ -472,7 +462,6 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:inDimension[https://www.w3.org/TR/vocab-dqv/#dqv:inDimension]
 |Multiplisitet|0..n
 |Status|Anbefalt
-|Kommentar|
 |Eksempel a| [source]
 ----
 :aQSpecification
@@ -494,7 +483,6 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Status|Anbefalt
 |Kommentar|Norsk utvidelse. For å kunne ha tittel til standard/spesifikasjon. +
 Egenskapen kan gjentas for hvert språk tittelen finnes i.
-|Eksempel|
 |===
 
 ===== Standard/spesifikasjon: har referanse (rdfs:seeAlso)
@@ -509,7 +497,6 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 |Multiplisitet|0..n
 |Status|Anbefalt
 |Kommentar|Norsk utvidelse. For å kunne ha referanse til standard/spesifikasjon.
-|Eksempel|
 |===
 
 ==== Valgfrie egenskaper
@@ -526,7 +513,6 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 |Multiplisitet|0..n
 |Status|Valgfri
 |Kommentar|Norsk utvidelse. For å kunne ha fritekstkommentarer.
-|Eksempel|
 |===
 
 === Tekstdel (oa:TextualBody)
@@ -544,7 +530,6 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 |Referanse|https://www.w3.org/TR/rdf-schema/#ch_value[https://www.w3.org/TR/rdf-schema/#ch_value]
 |Multiplisitet|1..n
 |Status|Obligatorisk
-|Kommentar|
 |Eksempel a| [source]
 ----
 :aPlainText
@@ -568,7 +553,6 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 |Referanse|http://purl.org/dc/terms/format[http://purl.org/dc/terms/format]
 |Multiplisitet|0..1
 |Status|Anbefalt
-|Kommentar|
 |Eksempel|Se eksemplet over.
 |===
 
@@ -583,6 +567,5 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 |Referanse|http://purl.org/dc/terms/language[http://purl.org/dc/terms/language]
 |Multiplisitet|0..1
 |Status|Anbefalt
-|Kommentar|
 |Eksempel|Se eksemplet over.
 |===
