@@ -20,7 +20,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 
 *Status*: Høringsutkast
 
-*Publisert*: 2020-05-28
+*Publisert*: 2020-06-02
 
 *Gjeldende versjon*: Gjeldende versjon vil bli publisert til https://data.norge.no/specification/dqv-ap-no/ (kommer etter høringen sammen med https://informasjonsforvaltning.github.io/dcat-ap-no/[DCAT-AP-NO])
 
