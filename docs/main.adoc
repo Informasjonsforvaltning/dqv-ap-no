@@ -1,4 +1,5 @@
-= DQV-AP-NO (Norsk applikasjonsprofil av DQV) (Høringsutkast)
+= DQV-AP-NO (Norsk applikasjonsprofil av DQV)
+Høringsutkast til versjon 1.0
 :description: DQV-AP-NO (Norwegian Application Profile of DQV)
 :doctype: book
 :docinfo:
