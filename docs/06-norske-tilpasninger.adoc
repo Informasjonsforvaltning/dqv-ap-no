@@ -1,4 +1,4 @@
-== Norske tilpasninger
+== Norske tilpasninger [[Norske_tilpasninger]]
 
 Følgende tilpasninger er gjort i denne norske applikasjonsprofilen:
 

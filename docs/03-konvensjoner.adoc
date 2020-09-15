@@ -1,4 +1,4 @@
-== Konvensjoner brukt i denne spesifikasjonen
+== Konvensjoner brukt i denne spesifikasjonen [[Konvensjoner_brukt_i_denne_spesifikasjonen]]
 
 Ordene «obligatorisk», «anbefalt» eller «valgfri» er forklart i https://informasjonsforvaltning.github.io/dcat-ap-no/#om-kravene[DCAT-AP-NO].
 
