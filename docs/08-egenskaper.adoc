@@ -19,7 +19,7 @@ Egenskapene beskrevet her i denne spesifikasjonen, supplerer https://informasjon
 |Engelsk navn|conforms to
 |URI|dct:conformsTo
 |Range|dct:Standard
-|Beskrivelse|Brukes til å referere til en kvalitetsspesifikasjon/-standarder.
+|Beskrivelse|Brukes til å referere til en kvalitetsspesifikasjon/-standard.
 |Referanse|https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo[https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo]
 |Multiplisitet|0..n
 |Status|Anbefalt
@@ -95,7 +95,7 @@ dqvno:isAuthoritative
 |Multiplisitet|1..1
 |Status|Anbefalt
 |Kommentar|Norsk utvidelse.
-|Eksempel a|Eksemplet viser at underdekning (`dqvno:undercoverage`) er en deldimensjon i kvalitetsdimensjon fullstendighet (`dqvno:completeness`):
+|Eksempel a|Eksemplet under viser bruk av `skos:broader` for å uttrykke at `dqvno:undercoverage` er en deldimensjon i `dqvno:completeness`; bruk av `skos:prefLabel` for å oppgi anbefalt term på engelsk og bokmål; og bruk av `skos:definition` for å oppgi definisjon på engelsk og bokmål:
 [source]
 ----
 dqvno:undercoverage
@@ -108,7 +108,7 @@ dqvno:undercoverage
 
 ==== Anbefalte egenskaper
 
-===== Kvalitetsdeldimensjon: har anbefalt term (skos:prefLabel) [Kvalitetsdeldimensjon_harAnbefaltTerm]
+===== Kvalitetsdeldimensjon: har anbefalt term (skos:prefLabel) [[Kvalitetsdeldimensjon_harAnbefaltTerm]]
 
 [cols="30s,70"]
 |===
@@ -121,14 +121,7 @@ dqvno:undercoverage
 |Status|Anbefalt
 |Kommentar|Norsk utvidelse. +
 Egenskapen kan gjentas for hvert språk termen finnes i.
-|Eksempel a| [source]
-----
-dqvno:undercoverage
-   a dqvno:SubDimension ;
-   skos:broader dqvno:completeness ;
-   skos:prefLabel "under-coverage"@en , "underdekning"@nb ;
-   skos:definition "data absent from a data set"@en , "data som mangler i et datasett"@nb .
-----
+|Eksempel | Se eksemplet under <<Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)>>
 |===
 
 ===== Kvalitetsdeldimensjon: har definisjon (skos:definition) [[Kvalitetsdeldimensjon_harDefinisjon]]
@@ -144,14 +137,7 @@ dqvno:undercoverage
 |Status|Anbefalt
 |Kommentar|Norsk utvidelse. +
 Egenskapen kan gjentas for hvert språk definisjonen finnes i.
-|Eksempel a| [source]
-----
-dqvno:undercoverage
-   a dqvno:SubDimension ;
-   skos:broader dqvno:completeness ;
-   skos:prefLabel "under-coverage"@en , "underdekning"@nb ;
-   skos:definition "data absent from a data set"@en , "data som mangler i et datasett"@nb .
-----
+|Eksempel | Se eksemplet under <<Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)>>
 |===
 
 === Kvalitetsdimension (dqv:Dimension)
@@ -171,7 +157,7 @@ dqvno:undercoverage
 |Status|Anbefalt
 |Kommentar|Norsk utvidelse. +
 Egenskapen kan gjentas for hvert språk termen finnes i.
-|Eksempel | Se tilsvarende eksempel for Kvalitetsdimensjon.
+|Eksempel | Se tilsvarende eksempel under <<Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)>>
 |===
 
 ===== Kvalitetsdimensjon: har definisjon (skos:definition) [[Kvalitetsdimensjon_harDefinisjon]]
@@ -187,7 +173,7 @@ Egenskapen kan gjentas for hvert språk termen finnes i.
 |Status|Anbefalt
 |Kommentar|Norsk utvidelse. +
 Egenskapen kan gjentas for hvert språk definisjonen finnes i.
-|Eksempel | Se tilsvarende eksempel for Kvalitetsdimensjon.
+|Eksempel | Se tilsvarende eksempel under <<Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)>>
 |===
 
 === Kvalitetsmål (dqv:Metric)
@@ -225,7 +211,7 @@ Denne egenskapen skal referere til én instans av en kvalitetsdeldimensjon.
 |Engelsk navn|expected data type
 |URI|dqv:expectedDataType
 |Range|xsd:anySimpleType
-|Beskrivelse|Brukes til å beskrive forventet datatype av et måleresultat.
+|Beskrivelse|Brukes til å referere til forventet datatype av et måleresultat.
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:expectedDataType[https://www.w3.org/TR/vocab-dqv/#dqv:expectedDataType]
 |Multiplisitet|0..1
 |Status|Anbefalt
@@ -254,7 +240,7 @@ Denne egenskapen skal referere til én instans av en kvalitetsdeldimensjon.
 |Status|Anbefalt
 |Kommentar|Norsk utvidelse. +
 Egenskapen kan gjentas for hvert språk termen finnes i.
-|Eksempel|Se tilsvarende eksempler for Kvalitetsdeldimensjon.
+|Eksempel | Se tilsvarende eksempel under <<Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)>>
 |===
 
 ===== Kvalitetsmål: har definisjon (skos:definition) [[Kvalitetsmål_harDefinisjon]]
@@ -270,7 +256,7 @@ Egenskapen kan gjentas for hvert språk termen finnes i.
 |Status|Anbefalt
 |Kommentar|Norsk utvidelse. +
 Egenskapen kan gjentas for hvert språk definisjonen finnes i.
-|Eksempel|Se tilsvarende eksempler for Kvalitetsdeldimensjon.
+|Eksempel | Se tilsvarende eksempel under <<Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)>>
 |===
 
 === Kvalitetsnote (dqv:QualityAnnotation)
@@ -414,13 +400,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:value[https://www.w3.org/TR/vocab-dqv/#dqv:value]
 |Multiplisitet|0..1
 |Status|Anbefalt
-|Eksempel a| [source]
-----
-:aQMeasurement
-   a dqv:QualityMeasurement ;
-   dqv:isMeasurementOf dqvno:missingObjects ;
-   dqv:value “true”^^xsd:boolean .
-----
+|Eksempel | Se eksemplet under <<Måleresultat: er måleresultat av (dqv:isMeasurementOf)>>
 |===
 
 ==== Valgfrie egenskaper
@@ -553,7 +533,7 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 |Referanse|http://purl.org/dc/terms/format[http://purl.org/dc/terms/format]
 |Multiplisitet|0..1
 |Status|Anbefalt
-|Eksempel|Se eksemplet over.
+|Eksempel|Se eksemplet under <<Textdel: har verdi (rdfs:value)>>.
 |===
 
 ===== Tekstdel: er i språk/målform [[Tekstdel_erISpråk]]
@@ -567,5 +547,5 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 |Referanse|http://purl.org/dc/terms/language[http://purl.org/dc/terms/language]
 |Multiplisitet|0..1
 |Status|Anbefalt
-|Eksempel|Se eksemplet over.
+|Eksempel|Se eksemplet under <<Textdel: har verdi (rdfs:value)>>.
 |===

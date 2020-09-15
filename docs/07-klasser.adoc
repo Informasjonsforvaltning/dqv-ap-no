@@ -4,7 +4,7 @@ I tillegg til klassene som er tatt med i denne spesifikasjonen, kan alle de andr
 
 === Obligatoriske klasser
 
-Siden denne spesifikasjonen bruker datasett (`dcat:Dataset`) som utgangspunkt, tas bare datasett (`dcat:Dataset`) med som obligatorisk klasse. Når f.eks. spesifikasjonen brukes til å beskrive kvalitet av en distribusjon (`dcat:Distribution`) vil selvsagt distribusjon også være obligatorisk.
+Siden denne spesifikasjonen bruker datasett (`dcat:Dataset`) som utgangspunkt, tas bare datasett (`dcat:Dataset`) med som obligatorisk klasse. Når f.eks. spesifikasjonen brukes til å beskrive kvalitet på en distribusjon (`dcat:Distribution`) vil selvsagt distribusjon også være obligatorisk.
 
 ==== Datasett [[Datasett]]
 
@@ -17,7 +17,7 @@ Se https://informasjonsforvaltning.github.io/dcat-ap-no/#klasse-datasett[beskriv
 [cols="30s,70"]
 |===
 |Engelsk navn|user quality feedback
-|Beskrivelse|Brukes til å beskrive brukertilbakemeldinger på kvalitet.
+|Beskrivelse|Brukes til å representere en brukertilbakemelding på kvalitet.
 |URI|dqv:UserQualityFeedback
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:UserQualityFeedback[https://www.w3.org/TR/vocab-dqv/#dqv:UserQualityFeedback]
 |Subklasse av|dqv:QualityAnnotation
@@ -30,7 +30,7 @@ Se https://informasjonsforvaltning.github.io/dcat-ap-no/#klasse-datasett[beskriv
 [cols="30s,70"]
 |===
 |Engelsk navn|quality annotation
-|Beskrivelse|Brukes til å beskrive en tekstlig kvalitetsbeskrivelse.
+|Beskrivelse|Brukes til å representere en tekstlig beskrivelse av kvalitet.
 |URI|dqv:QualityAnnotation
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:QualityAnnotation[https://www.w3.org/TR/vocab-dqv/#dqv:QualityAnnotation]
 |Status|Anbefalt
@@ -41,7 +41,7 @@ Se https://informasjonsforvaltning.github.io/dcat-ap-no/#klasse-datasett[beskriv
 [cols="30s,70"]
 |===
 |Engelsk navn|quality measurement
-|Beskrivelse|Brukes til å beskrive et måleresultat.
+|Beskrivelse|Brukes til å representere et måleresultat.
 |URI|dqv:QualityMeasurement
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurement[https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurement]
 |Status|Anbefalt
@@ -58,14 +58,14 @@ Se https://informasjonsforvaltning.github.io/dcat-ap-no/#klasse-standard[beskriv
 [cols="30s,70"]
 |===
 |Engelsk navn|quality subdimension
-|Beskrivelse|Brukes til å beskrive en kvalitetsdeldimensjon.
+|Beskrivelse|Brukes til å representere en kvalitetsdeldimensjon.
 |URI|dqvno:SubDimension
 |Subklasse av| dqv:Dimension
 |Referanse|
 |Status|Valgfri
 |Kommentar|Norsk utvidelse. DQV har ikke definert kvalitets**del**dimensjon som egen klasse, kun kvalitetsdimensjon (`dqv:Dimension`).
 
-Klassen brukes når man skal beskrive sin egen kvalitetsdeldimensjon, dvs. når man ikke bruker prederfinerte instanser av kvalitetsdeldimensjon.
+Klassen brukes når man skal beskrive sin egen kvalitetsdeldimensjon, dvs. når man ikke bruker prederfinerte instanser av Kvalitetsdeldimensjon.
 |===
 
 ==== Kvalitetsdimensjon (dqv:Dimension) [[Kvalitetsdimensjon]]
@@ -73,11 +73,11 @@ Klassen brukes når man skal beskrive sin egen kvalitetsdeldimensjon, dvs. når 
 [cols="30s,70"]
 |===
 |Engelsk navn|quality dimension
-|Beskrivelse|Brukes til å beskrive en kvalitetsdimensjon.
+|Beskrivelse|Brukes til å representere en kvalitetsdimensjon.
 |URI|dqv:Dimension
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:Dimension[https://www.w3.org/TR/vocab-dqv/#dqv:Dimension]
 |Status|Valgfri
-|Kommentar| Klassen brukes når man skal beskrive sin egen kvalitetsdimensjon, dvs. når man ikke bruker prederfinerte instanser av kvalitetsdimensjon.
+|Kommentar| Klassen brukes når man skal beskrive sin egen kvalitetsdimensjon, dvs. når man ikke bruker prederfinerte instanser av Kvalitetsdimensjon.
 |===
 
 ==== Kvalitetsmål (dqv:Metric) [[Kvalitetsmål]]
@@ -85,7 +85,7 @@ Klassen brukes når man skal beskrive sin egen kvalitetsdeldimensjon, dvs. når 
 [cols="30s,70"]
 |===
 |Engelsk navn|quality metric
-|Beskrivelse|Brukes til å beskrive kvalitetsmål.
+|Beskrivelse|Brukes til å representere et kvalitetsmål.
 |URI|dqv:Metric
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:Metric[https://www.w3.org/TR/vocab-dqv/#dqv:Metric]
 |Status|Valgfri
@@ -97,7 +97,7 @@ Klassen brukes når man skal beskrive sin egen kvalitetsdeldimensjon, dvs. når 
 [cols="30s,70"]
 |===
 |Engelsk navn|quality certificate
-|Beskrivelse|Brukes til å beskrive et kvalitetssertifikat.
+|Beskrivelse|Brukes til å representere et kvalitetssertifikat.
 |URI|dqv:QualityCertificate
 |Subklasse av|dqv:QualityAnnotation
 |Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate[https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate]
@@ -110,7 +110,7 @@ Klassen brukes når man skal beskrive sin egen kvalitetsdeldimensjon, dvs. når 
 [cols="30s,70"]
 |===
 |Engelsk navn|motivation
-|Beskrivelse|Brukes til å beskrive intensjonen eller motivasjonen til en Kvalitetsnote.
+|Beskrivelse|Brukes til å representere intensjonen eller motivasjonen til en Kvalitetsnote.
 |URI|oa:Motivation
 |Referanse|https://www.w3.org/TR/annotation-vocab/#motivation[https://www.w3.org/TR/annotation-vocab/#motivation]
 |Status|Valgfri
@@ -122,7 +122,7 @@ Klassen brukes når man skal beskrive sin egen kvalitetsdeldimensjon, dvs. når 
 [cols="30s,70"]
 |===
 |Engelsk navn|textual body
-|Beskrivelse|Brukes til å beskrive tekstdelen av en Kvalitetsnote.
+|Beskrivelse|Brukes til å representere tekstdelen av en Kvalitetsnote.
 |URI|oa:TextualBody
 |Referanse|https://www.w3.org/TR/annotation-vocab/#textualbody[https://www.w3.org/TR/annotation-vocab/#textualbody]
 |Status|Valgfri
