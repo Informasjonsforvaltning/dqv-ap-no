@@ -8,7 +8,7 @@ For klasser som finnes både i denne spesifikasjonen og i DCAT-AP-NO, supplerer 
 
 Tilsvarende gjelder også for f.eks. Distribusjon (`dcat:Distribution`) når spesifikasjonen skal brukes til å beskrive kvalitet på en distribusjon.
 
-Egenskapene beskrevet her i denne spesifikasjonen, supplerer https://informasjonsforvaltning.github.io/dcat-ap-no/#_datasett[egenskapene for Datasett beskrevet i DCAT-AP-NO].
+Egenskapene beskrevet her i denne spesifikasjonen, supplerer https://data.norge.no/specification/dcat-ap-no/#datasett[egenskapene for Datasett beskrevet i DCAT-AP-NO].
 
 ==== Anbefalte egenskaper [[Datasett_anbefalte_egenskaper]]
 

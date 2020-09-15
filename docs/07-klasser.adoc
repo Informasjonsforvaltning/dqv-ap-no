@@ -8,7 +8,7 @@ Siden denne spesifikasjonen bruker datasett (`dcat:Dataset`) som utgangspunkt, t
 
 ==== Datasett [[Datasett]]
 
-Se https://informasjonsforvaltning.github.io/dcat-ap-no/#klasse-datasett[beskrivelsen av denne klassen i DCAT-AP-NO].
+Se https://data.norge.no/specification/dcat-ap-no/#klasse-datasett[beskrivelsen av denne klassen i DCAT-AP-NO].
 
 === Anbefalte klasser [[Anbefalte_klasser]]
 
@@ -46,7 +46,7 @@ Se https://informasjonsforvaltning.github.io/dcat-ap-no/#klasse-datasett[beskriv
 
 ==== Standard/spesifikasjon [[Standard]]
 
-Se https://informasjonsforvaltning.github.io/dcat-ap-no/#klasse-standard[beskrivelsen av denne klassen i DCAT-AP-NO].
+Se https://data.norge.no/specification/dcat-ap-no/#klasse-standard[beskrivelsen av denne klassen i DCAT-AP-NO].
 
 === Valgfrie klasser [[Valgfrie_klasser]]
 
