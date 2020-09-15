@@ -17,10 +17,9 @@ Egenskapene beskrevet her i denne spesifikasjonen, supplerer https://informasjon
 [cols="30s,70"]
 |===
 |Engelsk navn|conforms to
-|URI|dct:conformsTo
+|URI|https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo[dct:conformsTo]
 |Range|dct:Standard
 |Beskrivelse|Brukes til å referere til en kvalitetsspesifikasjon/-standard.
-|Referanse|https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo[https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo]
 |Multiplisitet|0..n
 |Status|Anbefalt
 |Eksempel a| [source]
@@ -36,10 +35,9 @@ Egenskapene beskrevet her i denne spesifikasjonen, supplerer https://informasjon
 [cols="30s,70"]
 |===
 |Engelsk navn|has quality annotation
-|URI|dqv:hasQualityAnnotation
+|URI|https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityAnnotation[dqv:hasQualityAnnotation]
 |Range|dqv:QualityAnnotation
 |Beskrivelse|Brukes til å referere til en kvalitetsnote.
-|Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityAnnotation[https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityAnnotation]
 |Multiplisitet|0..n
 |Status|Anbefalt
 |Kommentar| Gjelder også Brukertilbakemelding (`dqv:UserQualityFeedback`) og Kvalitetssertifikat (`dqv:QualityCertificate`) som er subklasser av Kvalitetsnote (`dqv:QualityAnnotation`).
@@ -65,10 +63,9 @@ dqvno:isAuthoritative
 [cols="30s,70"]
 |===
 |Engelsk navn|has quality measurement
-|URI|dqv:hasQualityMeasurement
+|URI|https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityMeasurement[dqv:hasQualityMeasurement]
 |Range|dqv:QualityMeasurement
 |Beskrivelse|Brukes til å referere til et måleresultat.
-|Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityMeasurement[https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityMeasurement]
 |Multiplisitet|0..n
 |Status|Anbefalt
 |Eksempel a| [source]
@@ -88,10 +85,9 @@ dqvno:isAuthoritative
 [cols="30s,70"]
 |===
 |Engelsk navn|has a broader concept
-|URI|skos:broader
+|URI|https://www.w3.org/TR/skos-reference/#semantic-relations[skos:broader]
 |Range|dqv:Dimension, skos:Concept
 |Beskrivelse|Brukes til å referere til kvalitetsdimensjonen som kvalitetsdeldimensjonen tilhører.
-|Referanse|https://www.w3.org/TR/skos-reference/#semantic-relations[https://www.w3.org/TR/skos-reference/#semantic-relations]
 |Multiplisitet|1..1
 |Status|Anbefalt
 |Kommentar|Norsk utvidelse.
@@ -113,10 +109,9 @@ dqvno:undercoverage
 [cols="30s,70"]
 |===
 |Engelsk navn|has prefered label
-|URI|skos:prefLabel
+|URI|https://www.w3.org/TR/skos-reference/#labels[skos:prefLabel]
 |Range|rdf:Literal
 |Beskrivelse|Brukes til å referere til den anbefalte termen til en kvalitetsdeldimensjon.
-|Referanse|https://www.w3.org/TR/skos-reference/#labels[https://www.w3.org/TR/skos-reference/#labels]
 |Multiplisitet|0..n
 |Status|Anbefalt
 |Kommentar|Norsk utvidelse. +
@@ -129,10 +124,9 @@ Egenskapen kan gjentas for hvert språk termen finnes i.
 [cols="30s,70"]
 |===
 |Engelsk navn|has definition
-|URI|skos:definition
+|URI|https://www.w3.org/TR/skos-reference/#notes[skos:definition]
 |Range|rdf:Literal
 |Beskrivelse|Brukes til å referere til definisjonen av en kvalitetsdeldimensjon.
-|Referanse|https://www.w3.org/TR/skos-reference/#notes[https://www.w3.org/TR/skos-reference/#notes]
 |Multiplisitet|0..n
 |Status|Anbefalt
 |Kommentar|Norsk utvidelse. +
@@ -149,10 +143,9 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.
 [cols="30s,70"]
 |===
 |Engelsk navn|has prefered label
-|URI|skos:prefLabel
+|URI|https://www.w3.org/TR/skos-reference/#labels[skos:prefLabel]
 |Range|rdf:Literal
 |Beskrivelse|Brukes til å referere til den anbefalte termen til en kvalitetsdimensjon.
-|Referanse|https://www.w3.org/TR/skos-reference/#labels[https://www.w3.org/TR/skos-reference/#labels]
 |Multiplisitet|0..n
 |Status|Anbefalt
 |Kommentar|Norsk utvidelse. +
@@ -165,10 +158,9 @@ Egenskapen kan gjentas for hvert språk termen finnes i.
 [cols="30s,70"]
 |===
 |Engelsk navn|has definition
-|URI|skos:definition
+|URI|https://www.w3.org/TR/skos-reference/#notes[skos:definition]
 |Range|rdf:Literal
 |Beskrivelse|Brukes til å referere til definisjonen av en kvalitetsdimensjon.
-|Referanse|https://www.w3.org/TR/skos-reference/#notes[https://www.w3.org/TR/skos-reference/#notes]
 |Multiplisitet|0..n
 |Status|Anbefalt
 |Kommentar|Norsk utvidelse. +
@@ -180,12 +172,12 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.
 
 ==== Obligatoriske egenskaper
 
-===== Kvalitetsmål: er i kvalitetsdeldimensjon (dqvno:inSubDimension) [[dqvno:inSumDimension]]
+===== Kvalitetsmål: er i kvalitetsdeldimensjon (dqvno:inSubDimension) [[inSumDimension]]
 
 [cols="30s,70"]
 |===
 |Engelsk navn|is in subdimension
-|URI|dqvno:inSubDimension
+|URI|https://data.norge.no/vocabulary/dqvno#inSubDimension[dqvno:inSubDimension]
 |Subklasse av| dqv:inDimension
 |Range|dqvno:SubDimension
 |Beskrivelse|Brukes til å referere til kvalitetsdeldimensjonen som kvalitetsmålet hører til.
@@ -209,10 +201,9 @@ Denne egenskapen skal referere til én instans av en kvalitetsdeldimensjon.
 [cols="30s,70"]
 |===
 |Engelsk navn|expected data type
-|URI|dqv:expectedDataType
+|URI|https://www.w3.org/TR/vocab-dqv/#dqv:expectedDataType[dqv:expectedDataType]
 |Range|xsd:anySimpleType
 |Beskrivelse|Brukes til å referere til forventet datatype av et måleresultat.
-|Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:expectedDataType[https://www.w3.org/TR/vocab-dqv/#dqv:expectedDataType]
 |Multiplisitet|0..1
 |Status|Anbefalt
 |Eksempel a| [source]
@@ -232,10 +223,9 @@ Denne egenskapen skal referere til én instans av en kvalitetsdeldimensjon.
 [cols="30s,70"]
 |===
 |Engelsk navn|has prefered label
-|URI|skos:prefLabel
+|URI|https://www.w3.org/TR/skos-reference/#labels[skos:prefLabel]
 |Range|rdf:Literal
 |Beskrivelse|Brukes til å referere til den anbefalte termen til et kvalitetsmål.
-|Referanse|https://www.w3.org/TR/skos-reference/#labels[https://www.w3.org/TR/skos-reference/#labels]
 |Multiplisitet|0..n
 |Status|Anbefalt
 |Kommentar|Norsk utvidelse. +
@@ -248,10 +238,9 @@ Egenskapen kan gjentas for hvert språk termen finnes i.
 [cols="30s,70"]
 |===
 |Engelsk navn|has definition
-|URI|skos:definition
+|URI|https://www.w3.org/TR/skos-reference/#notes[skos:definition]
 |Range|rdf:Literal
 |Beskrivelse|Brukes til å referere til definisjonen av et kvalitetsmål.
-|Referanse|https://www.w3.org/TR/skos-reference/#notes[https://www.w3.org/TR/skos-reference/#notes]
 |Multiplisitet|0..n
 |Status|Anbefalt
 |Kommentar|Norsk utvidelse. +
@@ -270,10 +259,9 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 [cols="30s,70"]
 |===
 |Engelsk navn|is motivated by
-|URI|oa:motivatedBy
+|URI|https://www.w3.org/TR/annotation-vocab/#motivatedby[oa:motivatedBy]
 |Range|oa:Motivation
 |Beskrivelse|Brukes til å referere til beskrivelse av motivasjonen.
-|Referanse|https://www.w3.org/TR/annotation-vocab/#motivatedby[https://www.w3.org/TR/annotation-vocab/#motivatedby]
 |Multiplisitet|1..n
 |Status|Obligatorisk
 |Kommentar|I henhold til DQV skal en `dqv:QualityAnnotation` alltid ha en `oa:motivatedBy` med en instans av `oa:Motivation`, og instansen er https://www.w3.org/TR/vocab-dqv/#dqv:qualityAssessment[`dqv:qualityAssessment`].
@@ -292,10 +280,9 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 [cols="30s,70"]
 |===
 |Engelsk navn|is in dimension
-|URI|dqv:inDimension
+|URI|https://www.w3.org/TR/vocab-dqv/#dqv:inDimension[dqv:inDimension]
 |Range|dqv:Dimension
 |Beskrivelse|Brukes til å referere til en kvalitetsdimensjon.
-|Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:inDimension[https://www.w3.org/TR/vocab-dqv/#dqv:inDimension]
 |Multiplisitet|0..n
 |Status|Anbefalt
 |Eksempel a| [source]
@@ -312,10 +299,9 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 [cols="30s,70"]
 |===
 |Engelsk navn|has body
-|URI|oa:hasBody
+|URI|https://www.w3.org/TR/annotation-vocab/#hasbody[oa:hasBody]
 |Range|oa:TextualBody
 |Beskrivelse|Brukes til å referere til en tekstdel i en kvalitetsnote.
-|Referanse|https://www.w3.org/TR/annotation-vocab/#hasbody[https://www.w3.org/TR/annotation-vocab/#hasbody]
 |Multiplisitet|0..n
 |Status|Anbefalt
 |Eksempel a| [source]
@@ -341,10 +327,9 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 [cols="30s,70"]
 |===
 |Engelsk navn|has comment
-|URI|rdfs:comment
+|URI|https://www.w3.org/TR/rdf-schema/#ch_comment[rdfs:comment]
 |Range|rdfs:Literal
 |Beskrivelse|Brukes til å referere til en fritekstmerknad.
-|Referanse|https://www.w3.org/TR/rdf-schema/#ch_comment[https://www.w3.org/TR/rdf-schema/#ch_comment]
 |Multiplisitet|0..n
 |Status|Valgfri
 |Kommentar|Norsk utvidelse. For å kunne ha fritekstkommentarer.
@@ -355,10 +340,9 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 [cols="30s,70"]
 |===
 |Engelsk navn|has target
-|URI|oa:hasTarget
+|URI|https://www.w3.org/TR/annotation-vocab/#hastarget[oa:hasTarget]
 |Range|dcat:Resource
 |Beskrivelse|Brukes til å referere til ressursen som kvalitetsnoten er for.
-|Referanse|https://www.w3.org/TR/annotation-vocab/#hastarget[https://www.w3.org/TR/annotation-vocab/#hastarget]
 |Multiplisitet|0..1
 |Status|Valgfri
 |===
@@ -372,10 +356,9 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 [cols="30s,70"]
 |===
 |Engelsk navn|is measurement of
-|URI|dqv:isMeasurementOf
+|URI|https://www.w3.org/TR/vocab-dqv/#dqv:isMeasurementOf[dqv:isMeasurementOf]
 |Range|dqv:Metric
 |Beskrivelse|Brukes til å referere til et kvalitetsmål.
-|Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:isMeasurementOf[https://www.w3.org/TR/vocab-dqv/#dqv:isMeasurementOf]
 |Multiplisitet|1..1
 |Status|Obligatorisk
 |Eksempel a| [source]
@@ -394,10 +377,9 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 [cols="30s,70"]
 |===
 |Engelsk navn|has value
-|URI|dqv:value
+|URI|https://www.w3.org/TR/vocab-dqv/#dqv:value[dqv:value]
 |Range|xsd:boolean, xsd:double, xsd:nonNagativeInteger, rdfs:Literal
 |Beskrivelse|Brukes til å referere til verdien av et måleresultat.
-|Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:value[https://www.w3.org/TR/vocab-dqv/#dqv:value]
 |Multiplisitet|0..1
 |Status|Anbefalt
 |Eksempel | Se eksemplet under <<Måleresultat: er måleresultat av (dqv:isMeasurementOf)>>
@@ -410,10 +392,9 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 [cols="30s,70"]
 |===
 |Engelsk navn|has comment
-|URI|rdfs:comment
+|URI|https://www.w3.org/TR/rdf-schema/#ch_comment[rdfs:comment]
 |Range|rdfs:Literal
 |Beskrivelse|Brukes til å referere til en fritekstmerknad.
-|Referanse|https://www.w3.org/TR/rdf-schema/#ch_comment[https://www.w3.org/TR/rdf-schema/#ch_comment]
 |Multiplisitet|0..n
 |Status|Valgfri
 |Kommentar|Norsk utvidelse. For å kunne ha fritekstkommentarer.
@@ -436,10 +417,9 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 [cols="30s,70"]
 |===
 |Engelsk navn|has title
-|URI|dct:title
+|URI|https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/elements/1.1/title[dct:title]
 |Range|rdfs:Literal
 |Beskrivelse|Brukes til å referere til tittelen til standarden/spesifikasjonen.
-|Referanse|https://www.w3.org/TR/rdf-schema/#ch_comment[https://www.w3.org/TR/rdf-schema/#ch_comment]
 |Multiplisitet|1..n
 |Status|Obligatorisk
 |Kommentar|Norsk utvidelse. For å kunne ha tittel til standard/spesifikasjon. +
@@ -453,10 +433,9 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 [cols="30s,70"]
 |===
 |Engelsk navn|is in dimension
-|URI|dqv:inDimension
+|URI|https://www.w3.org/TR/vocab-dqv/#dqv:inDimension[dqv:inDimension]
 |Range|dqv:Dimension
 |Beskrivelse|Brukes til å referere til en kvalitetsdimensjon som standarden/spesifikasjonen dekker.
-|Referanse|https://www.w3.org/TR/vocab-dqv/#dqv:inDimension[https://www.w3.org/TR/vocab-dqv/#dqv:inDimension]
 |Multiplisitet|0..n
 |Status|Anbefalt
 |Eksempel a| [source]
@@ -472,10 +451,9 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 [cols="30s,70"]
 |===
 |Engelsk navn|has reference
-|URI|rdfs:seeAlso
+|URI|https://www.w3.org/TR/rdf-schema/#ch_seealso[rdfs:seeAlso]
 |Range|rdfs:Resource
 |Beskrivelse|Brukes til å referere til en referanse til standarden/spesifikasjonen.
-|Referanse|https://www.w3.org/TR/rdf-schema/#ch_seealso[https://www.w3.org/TR/rdf-schema/#ch_seealso]
 |Multiplisitet|0..n
 |Status|Anbefalt
 |Kommentar|Norsk utvidelse. For å kunne ha referanse til standard/spesifikasjon.
@@ -488,10 +466,9 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 [cols="30s,70"]
 |===
 |Engelsk navn|has comment
-|URI|rdfs:comment
+|URI|https://www.w3.org/TR/rdf-schema/#ch_comment[rdfs:comment]
 |Range|rdfs:Literal
 |Beskrivelse|Brukes til å referere til en fritekstmerknad.
-|Referanse|https://www.w3.org/TR/rdf-schema/#ch_comment[https://www.w3.org/TR/rdf-schema/#ch_comment]
 |Multiplisitet|0..n
 |Status|Valgfri
 |Kommentar|Norsk utvidelse. For å kunne ha fritekstkommentarer.
@@ -502,10 +479,9 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 [cols="30s,70"]
 |===
 |Engelsk navn|has versjon number
-|URI|owl:versionInfo
+|URI|https://www.w3.org/TR/owl-ref/#versionInfo-def[owl:versionInfo]
 |Range|rdfs:Literal
 |Beskrivelse|Brukes til å referere til versjonsnummer.
-|Referanse|https://www.w3.org/TR/owl-ref/#versionInfo-def
 |Multiplisitet|0..1
 |Status|Valgfri
 |Kommentar|Norsk utvidelse. For å kunne refefere til versjonsnummer.
@@ -520,10 +496,9 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 [cols="30s,70"]
 |===
 |Engelsk navn|har value
-|URI|rdfs:value
+|URI|https://www.w3.org/TR/rdf-schema/#ch_value[rdfs:value]
 |Range|rdfs:Resource
 |Beskrivelse|Brukes til å referere til selve teksten i en tekstdel.
-|Referanse|https://www.w3.org/TR/rdf-schema/#ch_value[https://www.w3.org/TR/rdf-schema/#ch_value]
 |Multiplisitet|1..n
 |Status|Obligatorisk
 |Eksempel a| [source]
@@ -543,10 +518,9 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 [cols="30s,70"]
 |===
 |Engelsk navn|format
-|URI|dct:format
+|URI|https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/format[dct:format]
 |Range|dct:MediaType
 |Beskrivelse|Brukes til å referere til formatet som en gitt tekst er skrevet i.
-|Referanse|http://purl.org/dc/terms/format[http://purl.org/dc/terms/format]
 |Multiplisitet|0..1
 |Status|Anbefalt
 |Eksempel|Se eksemplet under <<Textdel: har verdi (rdfs:value)>>.
@@ -557,10 +531,9 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 [cols="30s,70"]
 |===
 |Engelsk navn|language
-|URI|dct:language
+|URI|https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/elements/1.1/language[dct:language]
 |Range|dct:LinguisticSystem
 |Beskrivelse|Brukes til å referere til språk/målform som en gitt tekst er skrevet i.
-|Referanse|http://purl.org/dc/terms/language[http://purl.org/dc/terms/language]
 |Multiplisitet|0..1
 |Status|Anbefalt
 |Eksempel|Se eksemplet under <<Textdel: har verdi (rdfs:value)>>.
