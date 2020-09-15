@@ -477,7 +477,7 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 
 [cols="30s,70"]
 |===
-|Engelsk navn|has versjon number
+|Engelsk navn|has version number
 |URI|https://www.w3.org/TR/owl-ref/#versionInfo-def[owl:versionInfo]
 |Range|rdfs:Literal
 |Beskrivelse|Brukes til å referere til versjonsnummer.
