@@ -12,7 +12,7 @@ Egenskapene beskrevet her i denne spesifikasjonen, supplerer https://informasjon
 
 ==== Anbefalte egenskaper
 
-===== Datasett: er i samsvar med (dct:conformsTo)
+===== Datasett: er i samsvar med (dct:conformsTo) [[Datasett_erISamsvarMed]]
 
 [cols="30s,70"]
 |===
@@ -31,7 +31,7 @@ Egenskapene beskrevet her i denne spesifikasjonen, supplerer https://informasjon
 ----
 |===
 
-===== Datasett: har kvalitetsnote (dqv:hasQualityAnnotation)
+===== Datasett: har kvalitetsnote (dqv:hasQualityAnnotation) [[Datasett_harKvalitetsnote]]
 
 [cols="30s,70"]
 |===
@@ -60,7 +60,7 @@ dqvno:isAuthoritative
 ----
 |===
 
-===== Datasett: har kvantifiserbart måleresultat (dqv:hasQualityMeasurement)
+===== Datasett: har kvantifiserbart måleresultat (dqv:hasQualityMeasurement) [[Datasett_harMåleresultat]]
 
 [cols="30s,70"]
 |===
@@ -79,11 +79,11 @@ dqvno:isAuthoritative
 ----
 |===
 
-=== Kvalitetsdeldimensjon (dqvno:SubDimension) [[klasse-kvalitetsdeldimensjon]]
+=== Kvalitetsdeldimensjon (dqvno:SubDimension)
 
 ==== Obligatoriske egenskaper
 
-===== Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)
+===== Kvalitetsdeldimensjon: er deldimensjon av (skos:broader) [[Kvalitetsdeldimensjon_erDeldimensjonAv]]
 
 [cols="30s,70"]
 |===
@@ -108,7 +108,7 @@ dqvno:undercoverage
 
 ==== Anbefalte egenskaper
 
-===== Kvalitetsdeldimensjon: har anbefalt term (skos:prefLabel)
+===== Kvalitetsdeldimensjon: har anbefalt term (skos:prefLabel) [Kvalitetsdeldimensjon_harAnbefaltTerm]
 
 [cols="30s,70"]
 |===
@@ -131,7 +131,7 @@ dqvno:undercoverage
 ----
 |===
 
-===== Kvalitetsdeldimensjon: har definisjon (skos:definition)
+===== Kvalitetsdeldimensjon: har definisjon (skos:definition) [[Kvalitetsdeldimensjon_harDefinisjon]]
 
 [cols="30s,70"]
 |===
@@ -154,11 +154,11 @@ dqvno:undercoverage
 ----
 |===
 
-=== Kvalitetsdimension (dqv:Dimension) [[klasse-kvalitetsdimensjon]]
+=== Kvalitetsdimension (dqv:Dimension)
 
 ==== Anbefalte egenskaper
 
-===== Kvalitetsdimensjon: har anbefalt term (skos:prefLabel)
+===== Kvalitetsdimensjon: har anbefalt term (skos:prefLabel) [[Kvalitetsdimensjon_harAnbefaltTerm]]
 
 [cols="30s,70"]
 |===
@@ -174,7 +174,7 @@ Egenskapen kan gjentas for hvert språk termen finnes i.
 |Eksempel | Se tilsvarende eksempel for Kvalitetsdimensjon.
 |===
 
-===== Kvalitetsdimensjon: har definisjon (skos:definition)
+===== Kvalitetsdimensjon: har definisjon (skos:definition) [[Kvalitetsdimensjon_harDefinisjon]]
 
 [cols="30s,70"]
 |===
@@ -194,7 +194,7 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.
 
 ==== Obligatoriske egenskaper
 
-===== Kvalitetsmål: er i kvalitetsdeldimensjon (dqvno:inSubDimension)
+===== Kvalitetsmål: er i kvalitetsdeldimensjon (dqvno:inSubDimension) [[dqvno:inSumDimension]]
 
 [cols="30s,70"]
 |===
@@ -218,7 +218,7 @@ Denne egenskapen skal referere til én instans av en kvalitetsdeldimensjon.
 
 ==== Anbefalte egenskaper
 
-===== Kvalitetsmål: har forventet datatype (dqv:expectedDataType)
+===== Kvalitetsmål: har forventet datatype (dqv:expectedDataType) [[Kvalitetsmål_harForventetDatatype]]
 
 [cols="30s,70"]
 |===
@@ -241,7 +241,7 @@ Denne egenskapen skal referere til én instans av en kvalitetsdeldimensjon.
 ----
 |===
 
-===== Kvalitetsmål: har anbefalt term (skos:prefLabel)
+===== Kvalitetsmål: har anbefalt term (skos:prefLabel) [[Kvalitetsmål_harAnbefaltTerm]]
 
 [cols="30s,70"]
 |===
@@ -257,7 +257,7 @@ Egenskapen kan gjentas for hvert språk termen finnes i.
 |Eksempel|Se tilsvarende eksempler for Kvalitetsdeldimensjon.
 |===
 
-===== Kvalitetsmål: har definisjon (skos:definition)
+===== Kvalitetsmål: har definisjon (skos:definition) [[Kvalitetsmål_harDefinisjon]]
 
 [cols="30s,70"]
 |===
@@ -279,7 +279,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 
 ==== Obligatoriske egenskaper
 
-===== Kvalitetsnote: er motivert av (oa:motivatedBy)
+===== Kvalitetsnote: er motivert av (oa:motivatedBy) [[Kvalitetsnote_erMotivertAv]]
 
 [cols="30s,70"]
 |===
@@ -301,7 +301,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 
 ==== Anbefalte egenskaper
 
-===== Kvalitetsnote: er i kvalitetsdimensjon (dqv:inDimension)
+===== Kvalitetsnote: er i kvalitetsdimensjon (dqv:inDimension) [[Kvalitetsnote_erIKvalitetsdimensjon]]
 
 [cols="30s,70"]
 |===
@@ -321,7 +321,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 ----
 |===
 
-===== Kvalitetsnote: har tekstdel (oa:hasBody)
+===== Kvalitetsnote: har tekstdel (oa:hasBody) [[Kvalitetsnote_harTekstdel]]
 
 [cols="30s,70"]
 |===
@@ -350,7 +350,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 
 ==== Valgfrie egenskaper
 
-===== Kvalitetsnote: har merknad (rdfs:comment)
+===== Kvalitetsnote: har merknad (rdfs:comment) [[Kvalitetsnote_harMerknad]]
 
 [cols="30s,70"]
 |===
@@ -364,7 +364,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Kommentar|Norsk utvidelse. For å kunne ha fritekstkommentarer.
 |===
 
-===== Kvalitetsnote: har mål (oa:hasTarget)
+===== Kvalitetsnote: har mål (oa:hasTarget) [[Kvalitetsnote_harMål]]
 
 [cols="30s,70"]
 |===
@@ -381,7 +381,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 
 ==== Obligatoriske egenskaper
 
-===== Måleresultat: er måleresultat av (dqv:isMeasurementOf)
+===== Måleresultat: er måleresultat av (dqv:isMeasurementOf) [[Måleresultat_erMåleresultatAv]]
 
 [cols="30s,70"]
 |===
@@ -403,7 +403,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 
 ==== Anbefalte egenskaper
 
-===== Måleresultat: har verdi (dqv:value)
+===== Måleresultat: har verdi (dqv:value) [[Måleresultat_harVerdi]]
 
 [cols="30s,70"]
 |===
@@ -425,7 +425,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 
 ==== Valgfrie egenskaper
 
-===== Måleresultat: har merknad (rdfs:comment)
+===== Måleresultat: har merknad (rdfs:comment) [[Måleresultat_harMerknad]]
 
 [cols="30s,70"]
 |===
@@ -451,7 +451,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 
 ==== Anbefalte egenskaper
 
-===== Standard/spesifikasjon: er i kvalitetsdimensjon (dqv:inDimension)
+===== Standard/spesifikasjon: er i kvalitetsdimensjon (dqv:inDimension) [[Standard_erIKvalitetsdimensjon]]
 
 [cols="30s,70"]
 |===
@@ -470,7 +470,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 ----
 |===
 
-===== Standard/spesifikasjon: har tittel (dct:title)
+===== Standard/spesifikasjon: har tittel (dct:title) [[Standard_harTittel]]
 
 [cols="30s,70"]
 |===
@@ -485,7 +485,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 Egenskapen kan gjentas for hvert språk tittelen finnes i.
 |===
 
-===== Standard/spesifikasjon: har referanse (rdfs:seeAlso)
+===== Standard/spesifikasjon: har referanse (rdfs:seeAlso) [[Standard_harReferanse]]
 
 [cols="30s,70"]
 |===
@@ -501,7 +501,7 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 
 ==== Valgfrie egenskaper
 
-===== Standard/spesifikasjon: har merknad (rdfs:comment)
+===== Standard/spesifikasjon: har merknad (rdfs:comment) [[Standard_harMerknad]]
 
 [cols="30s,70"]
 |===
@@ -519,7 +519,7 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 
 ==== Obligatoriske egenskaper
 
-===== Textdel: har verdi (rdfs:value)
+===== Textdel: har verdi (rdfs:value) [[Tekstdel_harVerdi]]
 
 [cols="30s,70"]
 |===
@@ -542,7 +542,7 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 
 ==== Anbefalte egenskaper
 
-===== Tekstdel: er i format
+===== Tekstdel: er i format [[Tekstdel_erIFormat]]
 
 [cols="30s,70"]
 |===
@@ -556,7 +556,7 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 |Eksempel|Se eksemplet over.
 |===
 
-===== Tekstdel: er i språk/målform
+===== Tekstdel: er i språk/målform [[Tekstdel_erISpråk]]
 
 [cols="30s,70"]
 |===
