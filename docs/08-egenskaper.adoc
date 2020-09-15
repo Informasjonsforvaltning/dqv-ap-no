@@ -60,7 +60,7 @@ dqvno:isAuthoritative
 ----
 |===
 
-===== Datasett: har kvantifiserbart måleresultat (dqv:hasQualityMeasurement) [[Datasett_harMåleresultat]]
+===== Datasett: har måleresultat (dqv:hasQualityMeasurement) [[Datasett_harMåleresultat]]
 
 [cols="30s,70"]
 |===
