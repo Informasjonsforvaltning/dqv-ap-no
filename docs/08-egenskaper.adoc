@@ -471,7 +471,7 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 |===
 |Engelsk navn|has reference
 |URI|rdfs:seeAlso
-|Range|rdfs:Literal
+|Range|rdfs:Resource
 |Beskrivelse|Brukes til å referere til en referanse til standarden/spesifikasjonen.
 |Referanse|https://www.w3.org/TR/rdf-schema/#ch_seealso[https://www.w3.org/TR/rdf-schema/#ch_seealso]
 |Multiplisitet|0..n
