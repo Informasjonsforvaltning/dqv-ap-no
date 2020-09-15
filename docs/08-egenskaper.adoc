@@ -172,7 +172,7 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.
 
 ==== Obligatoriske egenskaper [[Kvalitetsmål_obligatoriske_egenskaper]]
 
-===== Kvalitetsmål: er i kvalitetsdeldimensjon (dqvno:inSubDimension) [[inSumDimension]]
+===== Kvalitetsmål: er i kvalitetsdeldimensjon (dqvno:inSubDimension) [[inSubDimension]]
 
 [cols="30s,70"]
 |===
