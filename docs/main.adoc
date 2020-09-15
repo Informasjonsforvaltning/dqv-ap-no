@@ -14,7 +14,7 @@ Utkast til versjon 1.0
 image::images/digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
 
 WARNING: *Det pågår løpende justeringer*: +
-Inntil spesifikasjonen blir endelig pbulisert som gjelende versjon (se under), blir utkastet (denne publiseringen) løpende justert for bl.a. å hensynta kommentarer og innspill fra høringsrunden.
+Inntil spesifikasjonen blir endelig pbulisert som gjeldende versjon (se under), blir utkastet (denne publiseringen) løpende justert for bl.a. å hensynta kommentarer og innspill fra høringsrunden.
 
 
 include::shared/download.adoc[]
