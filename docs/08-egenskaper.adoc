@@ -181,7 +181,6 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.
 |Subklasse av| dqv:inDimension
 |Range|dqvno:SubDimension
 |Beskrivelse|Brukes til å referere til kvalitetsdeldimensjonen som kvalitetsmålet hører til.
-|Referanse|
 |Multiplisitet|1..1
 |Status|Anbefalt
 |Kommentar|Norsk utvidelse. +
