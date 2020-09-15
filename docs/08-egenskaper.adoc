@@ -454,7 +454,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 
 [cols="30s,70"]
 |===
-|Engelsk navn|has comment
+|Engelsk navn|has title
 |URI|dct:title
 |Range|rdfs:Literal
 |Beskrivelse|Brukes til å referere til tittelen til standarden/spesifikasjonen.
