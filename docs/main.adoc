@@ -28,6 +28,8 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 
 *Ontologi*: Det er utarbeidet et https://github.com/Informasjonsforvaltning/dqv-ap-no/blob/review/ontology/dqvno/dqvno-turtle.ttl[utkast til ontologien for DQV-AP-NO med predefinerte instanser (kontrollert vokabular)]. Gjeldende versjon av ontologien vil bli publisert til https://data.norge.no/vocabulary/dqvno# ([yellow-background]#<kommer>#).
 
+*Veileder*: Det er utarbeidet en https://data.norge.no/guide/veileder-kvantifiserbar-kvalitet/[Veileder for beskrivelse av kvalitet på datasett – kvantifiserbar kvalitet].
+
 // Oversettelse:
 include::locale/attributes.adoc[]
 
