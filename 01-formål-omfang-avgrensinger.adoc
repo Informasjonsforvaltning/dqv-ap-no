@@ -1,4 +1,4 @@
-== Formål, omfang og avgrensinger
+== Formål, omfang og avgrensinger [[Formål_omfang_og_avgrensinger]]
 
 https://doc.difi.no/data/kvalitet-pa-datasett/[_Spesifikasjon for beskrivelse av kvalitet på datasett_] foreslo å bruke https://www.w3.org/TR/vocab-dqv/[_DQV (Data Quality Vocabulary)_ fra W3C] til å beskrive kvalitet på datasett i https://fellesdatakatalog.digdir.no/about[Fellesdatakatalogen]. DQV er nå også foreslått å brukes i https://joinup.ec.europa.eu/solution/abr-specification-registry-registries/news/stable-draft-bregdcat-ap[BRegDCAT-AP fra EU].
 

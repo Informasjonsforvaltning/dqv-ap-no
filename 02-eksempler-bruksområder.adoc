@@ -2,7 +2,7 @@
 
 Noen eksempler på når spesifikasjonen skal brukes (ikke-uttømmende):
 
-* Beskrivelse av kvantifiserbar kvalitet: Se eksemplet under egenskapen <<Datasett: har kvantifiserbart måleresultat (dqv:hasQualityMeasurement)>>.
+* Beskrivelse av kvantifiserbar kvalitet: Se eksemplet under egenskapen <<Datasett: har måleresultat (dqv:hasQualityMeasurement)>>.
 ** Når man refererer til en predefinert instans av et kvalitetsmål (f.eks. `dqvno:missingObjects` som er en predefinert instans av `dqv:Metric`), trenger man ikke å ta med kvalitets(del)dimensjonen som kvalitetsmålet er i (ettersom dette er predefinert sammen med det aktuelle kvalitetsmålet).
 
 * Beskrivelse av kvalitet i form av fritekst, inkl. brukertilbakemelding på kvalitet i fritekst: Se eksempel under egenskapen <<Datasett: har kvalitetsnote (dqv:hasQualityAnnotation)>>.
