@@ -1,16 +1,16 @@
-== Egenskaper per klasse
+== Egenskaper per klasse [[Egenskaper_per_klasse]]
 
 I tillegg til egenskapene som er tatt med i denne spesifikasjonen, kan egenskapene i DQV samt SKOS, DCAT, DCAT-AP, DCAT-AP-NO og andre veletablerte vokabularer også brukes.
 
 For klasser som finnes både i denne spesifikasjonen og i DCAT-AP-NO, supplerer egenskapene nevnt i denne spesifikasjonen DCAT-AP-NO.
 
-=== Datasett (dcat:Dataset)
+=== Datasett (dcat:Dataset) [[Datasett_egenskaper]]
 
 Tilsvarende gjelder også for f.eks. Distribusjon (`dcat:Distribution`) når spesifikasjonen skal brukes til å beskrive kvalitet på en distribusjon.
 
-Egenskapene beskrevet her i denne spesifikasjonen, supplerer https://informasjonsforvaltning.github.io/dcat-ap-no/#_datasett[egenskapene for Datasett beskrevet i DCAT-AP-NO].
+Egenskapene beskrevet her i denne spesifikasjonen, supplerer https://data.norge.no/specification/dcat-ap-no/#datasett[egenskapene for Datasett beskrevet i DCAT-AP-NO].
 
-==== Anbefalte egenskaper
+==== Anbefalte egenskaper [[Datasett_anbefalte_egenskaper]]
 
 ===== Datasett: er i samsvar med (dct:conformsTo) [[Datasett_erISamsvarMed]]
 
@@ -76,9 +76,9 @@ dqvno:isAuthoritative
 ----
 |===
 
-=== Kvalitetsdeldimensjon (dqvno:SubDimension)
+=== Kvalitetsdeldimensjon (dqvno:SubDimension) [[Kvalitetsdeldimensjon_egenskaper]]
 
-==== Obligatoriske egenskaper
+==== Obligatoriske egenskaper [[Kvalitetsdeldimensjon_obligatoriske_egenskaper]]
 
 ===== Kvalitetsdeldimensjon: er deldimensjon av (skos:broader) [[Kvalitetsdeldimensjon_erDeldimensjonAv]]
 
@@ -102,7 +102,7 @@ dqvno:undercoverage
 ----
 |===
 
-==== Anbefalte egenskaper
+==== Anbefalte egenskaper [[Kvalitetsdeldimensjon_anbefalte_egenskaper]]
 
 ===== Kvalitetsdeldimensjon: har anbefalt term (skos:prefLabel) [[Kvalitetsdeldimensjon_harAnbefaltTerm]]
 
@@ -134,9 +134,9 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.
 |Eksempel | Se eksemplet under <<Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)>>
 |===
 
-=== Kvalitetsdimension (dqv:Dimension)
+=== Kvalitetsdimensjon (dqv:Dimension) [[Kvalitetsdimensjon_egenskaper]]
 
-==== Anbefalte egenskaper
+==== Anbefalte egenskaper [[Kvalitetsdimensjon_anbefalte_egenskaper]]
 
 ===== Kvalitetsdimensjon: har anbefalt term (skos:prefLabel) [[Kvalitetsdimensjon_harAnbefaltTerm]]
 
@@ -168,20 +168,19 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.
 |Eksempel | Se tilsvarende eksempel under <<Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)>>
 |===
 
-=== Kvalitetsmål (dqv:Metric)
+=== Kvalitetsmål (dqv:Metric) [[Kvalitetsmål_egenskaper]]
 
-==== Obligatoriske egenskaper
+==== Obligatoriske egenskaper [[Kvalitetsmål_obligatoriske_egenskaper]]
 
-===== Kvalitetsmål: er i kvalitetsdeldimensjon (dqvno:inSubDimension) [[inSumDimension]]
+===== Kvalitetsmål: er i kvalitetsdeldimensjon (dqvno:inSubDimension) [[inSubDimension]]
 
 [cols="30s,70"]
 |===
 |Engelsk navn|is in subdimension
 |URI|https://data.norge.no/vocabulary/dqvno#inSubDimension[dqvno:inSubDimension]
-|Subklasse av| dqv:inDimension
+|Subegenskap av| dqv:inDimension
 |Range|dqvno:SubDimension
 |Beskrivelse|Brukes til å referere til kvalitetsdeldimensjonen som kvalitetsmålet hører til.
-|Referanse|
 |Multiplisitet|1..1
 |Status|Anbefalt
 |Kommentar|Norsk utvidelse. +
@@ -194,7 +193,7 @@ Denne egenskapen skal referere til én instans av en kvalitetsdeldimensjon.
 ----
 |===
 
-==== Anbefalte egenskaper
+==== Anbefalte egenskaper [[Kvalitetsmål_anbefalte_egenskaper]]
 
 ===== Kvalitetsmål: har forventet datatype (dqv:expectedDataType) [[Kvalitetsmål_harForventetDatatype]]
 
@@ -248,11 +247,11 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.
 |Eksempel | Se tilsvarende eksempel under <<Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)>>
 |===
 
-=== Kvalitetsnote (dqv:QualityAnnotation)
+=== Kvalitetsnote (dqv:QualityAnnotation) [[Kvalitetsnote_egenskaper]]
 
 Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemelding>> (`dqv:UserFeedback`) og <<klasse-kvalitetssertifikat, Kvalitetssertifikat>> (`dqv:QualityCertificate`) som er subklasser av Kvalitetsnote (`dqv:QualityAnnotation`).
 
-==== Obligatoriske egenskaper
+==== Obligatoriske egenskaper [[Kvalitetsnote_obligatoriske_egenskaper]]
 
 ===== Kvalitetsnote: er motivert av (oa:motivatedBy) [[Kvalitetsnote_erMotivertAv]]
 
@@ -273,7 +272,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 ----
 |===
 
-==== Anbefalte egenskaper
+==== Anbefalte egenskaper [[Kvalitetsnote_anbefalte_egenskaper]]
 
 ===== Kvalitetsnote: er i kvalitetsdimensjon (dqv:inDimension) [[Kvalitetsnote_erIKvalitetsdimensjon]]
 
@@ -320,7 +319,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 ----
 |===
 
-==== Valgfrie egenskaper
+==== Valgfrie egenskaper [[Kvalitetsnote_valgfrie_egenskaper]]
 
 ===== Kvalitetsnote: har merknad (rdfs:comment) [[Kvalitetsnote_harMerknad]]
 
@@ -347,9 +346,9 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Status|Valgfri
 |===
 
-=== Måleresultat (dqv:QualityMeasurement)
+=== Måleresultat (dqv:QualityMeasurement) [[Måleresultat_egenskaper]]
 
-==== Obligatoriske egenskaper
+==== Obligatoriske egenskaper [[Måleresultat_obligatoriske_egenskaper]]
 
 ===== Måleresultat: er måleresultat av (dqv:isMeasurementOf) [[Måleresultat_erMåleresultatAv]]
 
@@ -370,7 +369,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 ----
 |===
 
-==== Anbefalte egenskaper
+==== Anbefalte egenskaper [[Måleresultat_anbefalte_egenskaper]]
 
 ===== Måleresultat: har verdi (dqv:value) [[Måleresultat_harVerdi]]
 
@@ -385,7 +384,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 |Eksempel | Se eksemplet under <<Måleresultat: er måleresultat av (dqv:isMeasurementOf)>>
 |===
 
-==== Valgfrie egenskaper
+==== Valgfrie egenskaper [[Måleresultat_valgfrie_egenskaper]]
 
 ===== Måleresultat: har merknad (rdfs:comment) [[Måleresultat_harMerknad]]
 
@@ -408,9 +407,9 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 ----
 |===
 
-=== Standard/spesifikasjon (dct:Standard)
+=== Standard/spesifikasjon (dct:Standard) [[Standard_egenskaper]]
 
-==== Obligatoriske egenskaper
+==== Obligatoriske egenskaper [[Standard_obligatoriske_egenskaper]]
 
 ===== Standard/spesifikasjon: har tittel (dct:title) [[Standard_harTittel]]
 
@@ -426,7 +425,7 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 Egenskapen kan gjentas for hvert språk tittelen finnes i.
 |===
 
-==== Anbefalte egenskaper
+==== Anbefalte egenskaper [[Standard_anbefalte_egenskaper]]
 
 ===== Standard/spesifikasjon: er i kvalitetsdimensjon (dqv:inDimension) [[Standard_erIKvalitetsdimensjon]]
 
@@ -459,7 +458,7 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 |Kommentar|Norsk utvidelse. For å kunne ha referanse til standard/spesifikasjon.
 |===
 
-==== Valgfrie egenskaper
+==== Valgfrie egenskaper [[Standard_valgfrie_egenskaper]]
 
 ===== Standard/spesifikasjon: har merknad (rdfs:comment) [[Standard_harMerknad]]
 
@@ -478,7 +477,7 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 
 [cols="30s,70"]
 |===
-|Engelsk navn|has versjon number
+|Engelsk navn|has version number
 |URI|https://www.w3.org/TR/owl-ref/#versionInfo-def[owl:versionInfo]
 |Range|rdfs:Literal
 |Beskrivelse|Brukes til å referere til versjonsnummer.
@@ -487,9 +486,9 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 |Kommentar|Norsk utvidelse. For å kunne refefere til versjonsnummer.
 |===
 
-=== Tekstdel (oa:TextualBody)
+=== Tekstdel (oa:TextualBody) [[Tekstdel_egenskaper]]
 
-==== Obligatoriske egenskaper
+==== Obligatoriske egenskaper [[Tekstdel_obligatoriske_egenskaper]]
 
 ===== Textdel: har verdi (rdfs:value) [[Tekstdel_harVerdi]]
 
@@ -511,7 +510,7 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 ----
 |===
 
-==== Anbefalte egenskaper
+==== Anbefalte egenskaper [[Tekstdel_anbefalte_egenskaper]]
 
 ===== Tekstdel: er i format [[Tekstdel_erIFormat]]
 
