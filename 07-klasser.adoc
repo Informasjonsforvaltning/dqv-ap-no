@@ -6,7 +6,7 @@ I tillegg til klassene som er tatt med i denne spesifikasjonen, kan alle de andr
 
 Siden denne spesifikasjonen bruker datasett (`dcat:Dataset`) som utgangspunkt, tas bare datasett (`dcat:Dataset`) med som obligatorisk klasse. Når f.eks. spesifikasjonen brukes til å beskrive kvalitet på en distribusjon (`dcat:Distribution`) vil selvsagt distribusjon også være obligatorisk.
 
-==== Datasett [[Datasett]]
+==== Datasett (dcat:Dataset) [[Datasett]]
 
 Se https://data.norge.no/specification/dcat-ap-no/#klasse-datasett[beskrivelsen av denne klassen i DCAT-AP-NO].
 
