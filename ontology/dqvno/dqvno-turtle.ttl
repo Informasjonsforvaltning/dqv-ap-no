@@ -69,10 +69,6 @@ dqv:expectedDataType rdf:type owl:AnnotationProperty ;
                      rdfs:domain dqv:Metric .
 
 
-###  https://data.norge.no/vocabulary/dqvno#ininDimension
-dqvno:ininDimension rdf:type owl:AnnotationProperty .
-
-
 #################################################################
 #    Datatypes
 #################################################################
@@ -796,6 +792,7 @@ dqvno:rateOfIncorrectlyClassifiedObjectsForAGivenProperty rdf:type owl:NamedIndi
 ###  https://data.norge.no/vocabulary/dqvno#rateOfMissingObjects
 dqvno:rateOfMissingObjects rdf:type owl:NamedIndividual ,
                                     dqv:Metric ;
+                           dqvno:inSubDimension dqvno:undercoverage ;
                            dct:source "based on ISO 19157"@en ,
                                       "basert på ISO 19157"@nb ;
                            skos:definition "antall enheter som mangler i forhold til antall enheter som skulle være med i datasettet"@nb ,
@@ -804,8 +801,7 @@ dqvno:rateOfMissingObjects rdf:type owl:NamedIndividual ,
                                         "\"0.02%\" (datasettet dekker 0.02% færre bygninger en det som eksisterer i virkeligheten)"@nb ;
                            skos:prefLabel "andel manglende enheter"@nb ,
                                           "rate of missing objects"@en ;
-                           dqv:expectedDataType ""^^xsd:double ;
-                           dqvno:ininDimension dqvno:undercoverage .
+                           dqv:expectedDataType ""^^xsd:double .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource dqvno:rateOfMissingObjects ;
@@ -960,8 +956,8 @@ rdfs:comment skos:prefLabel "har merknad"@nb ;
              skos:prefLabel "has comment"@en .
 
 
-owl:versionInfo rdfs:isDefinedBy "https://www.w3.org/TR/owl-ref/#versionInfo-def"@en ;
-                skos:scopeNote "Brukes til å referere til versjonsnummer."@nb .
+owl:versionInfo skos:scopeNote "Brukes til å referere til versjonsnummer."@nb ;
+                rdfs:isDefinedBy "https://www.w3.org/TR/owl-ref/#versionInfo-def"@en .
 
 
 skos:prefLabel skos:prefLabel "har definisjon"@nb ;
@@ -971,9 +967,9 @@ skos:prefLabel skos:prefLabel "har definisjon"@nb ;
                skos:prefLabel "has definition"@en .
 
 
-dqv:expectedDataType skos:scopeNote "Brukes til å referere til forventet datatype av et måleresultat."@nb ;
-                     rdfs:isDefinedBy "https://www.w3.org/TR/vocab-dqv/#dqv:expectedDataType"@en ,
-                                      "https://www.w3.org/TR/vocab-dqv/#dqv:expectedDataType"@nb ;
+dqv:expectedDataType rdfs:isDefinedBy "https://www.w3.org/TR/vocab-dqv/#dqv:expectedDataType"@en ;
+                     skos:scopeNote "Brukes til å referere til forventet datatype av et måleresultat."@nb ;
+                     rdfs:isDefinedBy "https://www.w3.org/TR/vocab-dqv/#dqv:expectedDataType"@nb ;
                      skos:prefLabel "expected data type"@en ,
                                     "har forventet datatype"@nb .
 
