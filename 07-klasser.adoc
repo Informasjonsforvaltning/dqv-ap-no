@@ -1,16 +1,16 @@
-== Klasser
+== Klasser [[Klasser]]
 
 I tillegg til klassene som er tatt med i denne spesifikasjonen, kan alle de andre klassene i https://www.w3.org/TR/vocab-dqv/[DQV] også brukes.
 
-=== Obligatoriske klasser
+=== Obligatoriske klasser [[Obligatoriske_klasser]]
 
 Siden denne spesifikasjonen bruker datasett (`dcat:Dataset`) som utgangspunkt, tas bare datasett (`dcat:Dataset`) med som obligatorisk klasse. Når f.eks. spesifikasjonen brukes til å beskrive kvalitet på en distribusjon (`dcat:Distribution`) vil selvsagt distribusjon også være obligatorisk.
 
 ==== Datasett [[Datasett]]
 
-Se https://informasjonsforvaltning.github.io/dcat-ap-no/#klasse-datasett[beskrivelsen av denne klassen i DCAT-AP-NO].
+Se https://data.norge.no/specification/dcat-ap-no/#klasse-datasett[beskrivelsen av denne klassen i DCAT-AP-NO].
 
-=== Anbefalte Klasser
+=== Anbefalte klasser [[Anbefalte_klasser]]
 
 ==== Brukertilbakemelding (dqv:UserQualityFeedback) [[Brukertilbakemelding]]
 
@@ -46,9 +46,9 @@ Se https://informasjonsforvaltning.github.io/dcat-ap-no/#klasse-datasett[beskriv
 
 ==== Standard/spesifikasjon [[Standard]]
 
-Se https://informasjonsforvaltning.github.io/dcat-ap-no/#klasse-standard[beskrivelsen av denne klassen i DCAT-AP-NO].
+Se https://data.norge.no/specification/dcat-ap-no/#klasse-standard[beskrivelsen av denne klassen i DCAT-AP-NO].
 
-=== Valgfrie klasser
+=== Valgfrie klasser [[Valgfrie_klasser]]
 
 ==== Kvalitetsdeldimensjon (dqvno:SubDimension) [[SubDimension]]
 

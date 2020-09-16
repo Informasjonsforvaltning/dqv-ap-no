@@ -1,4 +1,8 @@
-== URIer brukt i denne spesifikasjonen
+== Navnerom [[Navnerom]]
+
+Navnerommet til denne spesifikasjonen er https://data.norge.no/vocabulary/dqvno#[https://data.norge.no/vocabulary/dqvno#]
+
+=== Navnerom brukt i denne spesifikasjonen [[Navnerom_brukt_i_denne_spesifikasjonen]]
 
 [cols="20s,80"]
 |===
