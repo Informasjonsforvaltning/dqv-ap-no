@@ -13,13 +13,13 @@
 @base <https://exampledatasets.org/examples/dqvExamples#> .
 
 <https://exampledatasets.org/examples/dqvExamples#> rdf:type owl:Ontology ;
-                                                     owl:versionIRI <Example:0.3> ;
+                                                     owl:versionIRI <urn:absolute:Example-v0.4> ;
                                                      rdfs:isDefinedBy "Digitaliseringsdirektoratet"@nb ,
                                                                       "Norwegian Digitalisation Agency"@en ;
                                                      rdfs:label "dqv-ap-no-eksempler"@nb ,
                                                                 "dqv-ap-no-examples"@en ;
-                                                     owl:versionInfo "v0.3"@en ,
-                                                                     "v0.3"@nb .
+                                                     owl:versionInfo "v0.4: Correcting some typos + some minor adjustments"@en ,
+                                                                     "v0.4: Retter opp noen skrivefeil + noen små justeringer"@nb .
 
 #################################################################
 #    Object Properties
@@ -177,7 +177,8 @@ dqvno:completeness rdf:type owl:NamedIndividual ,
                    skos:prefLabel "completeness"@en ,
                                   "fullstendighet"@nb ;
                    rdfs:comment "Dette er en predefinert kvalitetsdimensjon (dqv:Dimension)."@nb ,
-                                "This is a predefined quality dimension (dqv:Dimension)."@en .
+                                "This is a predefined quality dimension (dqv:Dimension)."@en ;
+                   rdfs:isDefinedBy "https://data.norge.no/vocabulary/dqvno#completeness" .
 
 
 ###  https://data.norge.no/vocabulary/dqvno#isAuthoritative
@@ -186,7 +187,8 @@ dqvno:isAuthoritative rdf:type owl:NamedIndividual ,
                       skos:prefLabel "er autoritativ"@nb ,
                                      "is authoritative"@en ;
                       rdfs:comment "Dette er et predefinert kvalitetssertifikat (dqv:QualityCertificate) som sier at noe er autoritativt."@nb ,
-                                   "This is a predefined dqv:QualityCertificate stating that something is authoritative."@en .
+                                   "This is a predefined dqv:QualityCertificate stating that something is authoritative."@en ;
+                      rdfs:isDefinedBy "https://data.norge.no/vocabulary/dqvno#isAuthoritative" .
 
 
 ###  https://data.norge.no/vocabulary/dqvno#missingObjects
@@ -195,7 +197,8 @@ dqvno:missingObjects rdf:type owl:NamedIndividual ,
                      skos:prefLabel "manglende enheter"@nb ,
                                     "missing objects"@en ;
                      rdfs:comment "Dette er et predefinert kvalitetsmål (dqv:Metric) med boolsk verdi, som sier hvorvidt det mangler noen enheter i datasettet."@nb ,
-                                  "This is a predefined dqv:Metric in boolean, which states whether some objects are missing in the dataset."@en .
+                                  "This is a predefined dqv:Metric in boolean, which states whether some objects are missing in the dataset."@en ;
+                     rdfs:isDefinedBy "https://data.norge.no/vocabulary/dqvno#missingObjects" .
 
 
 ###  https://data.norge.no/vocabulary/dqvno#numberOfMissingObjects
@@ -204,7 +207,8 @@ dqvno:numberOfMissingObjects rdf:type owl:NamedIndividual ,
                              skos:prefLabel "antall manglende enheter"@nb ,
                                             "number of missing objects"@en ;
                              rdfs:comment "Dette er et predefinert kvalitetsmål (dqv:Metric) med ikke-negativ-heltall, som sier antall enheter som mangler i datasettet."@nb ,
-                                          "This is a predefined metric (dqv:Metric) with nonNegativeInteger, which states the number of objects that are missing in the dataset."@en .
+                                          "This is a predefined metric (dqv:Metric) with nonNegativeInteger, which states the number of objects that are missing in the dataset."@en ;
+                             rdfs:isDefinedBy "https://data.norge.no/vocabulary/dqvno#numberOfMissingObjects" .
 
 
 ###  https://data.norge.no/vocabulary/dqvno#rateOfMissingObjects
@@ -213,7 +217,8 @@ dqvno:rateOfMissingObjects rdf:type owl:NamedIndividual ,
                            skos:prefLabel "andel manglende enheter"@nb ,
                                           "rate of missing objects"@en ;
                            rdfs:comment "Dette er et predefinert kvalitetsmål (dqv:Metric) med double (uttrykt som prosent), som sier andel enheter som mangler i datasettet."@nb ,
-                                        "This is a predefined metric (dqv:Metric) with double (typed as percentage), which states the rate of missing objects in the dataset."@en .
+                                        "This is a predefined metric (dqv:Metric) with double (typed as percentage), which states the rate of missing objects in the dataset."@en ;
+                           rdfs:isDefinedBy "https://data.norge.no/vocabulary/dqvno#rateOfMissingObjects" .
 
 
 ###  https://exampledatasets.org/examples/dqvExamples#dsBuildings
@@ -228,11 +233,11 @@ dqvno:rateOfMissingObjects rdf:type owl:NamedIndividual ,
                                        :qmRateMissingObjects ;
              dct:description "An example dataset."@en ,
                              "Et eksempeldatasett."@nb ;
-             dct:identifier "https://exampledatasets.org/examples/dqvExamples#" ;
-             dct:publisher "https://data.brreg.no/enhetsregisteret/api/enheter/991825827" ;
-             dct:title "Buldings - an example dataset"@en ,
+             dct:identifier "https://exampledatasets.org/examples/dqvExamples#"^^xsd:anyURI ;
+             dct:publisher "https://data.brreg.no/enhetsregisteret/api/enheter/991825827"^^xsd:anyURI ;
+             dct:title "Buildings - an example dataset"@en ,
                        "Bygninger - et eksempeldatasett"@nb ;
-             dcat:theme "http://publications.europa.eu/resource/authority/data-theme/GOVE" .
+             dcat:theme "http://publications.europa.eu/resource/authority/data-theme/GOVE"^^xsd:anyURI .
 
 
 ###  https://exampledatasets.org/examples/dqvExamples#qaCompleteness
@@ -331,7 +336,8 @@ dqv:qualityAssessment rdf:type owl:NamedIndividual ,
                       skos:prefLabel "kvalitetsvurdering"@nb ,
                                      "quality assessment"@en ;
                       rdfs:comment "Dette er en predefinert instans av oa:Motivation."@nb ,
-                                   "This is a predefined instance of oa:Motivation."@en .
+                                   "This is a predefined instance of oa:Motivation."@en ;
+                      rdfs:isDefinedBy "https://www.w3.org/TR/vocab-dqv/#dqv:qualityAssessment" .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

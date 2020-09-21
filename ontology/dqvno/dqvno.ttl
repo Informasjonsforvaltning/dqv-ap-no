@@ -21,11 +21,11 @@
                                            rdfs:label "DQV-AP-NO"@en ,
                                                       "DQV-AP-NO"@nb ;
                                            owl:versionInfo """Changes, as a result of the public consultation:
-- editorial changes of the texts (skos:scopeNote)
+- editorial changes of the texts (skos:scopeNote etc.)
 - added the property owl:versionInfo to the class dct:Standard
 - adjusted Domain/Range for some of the Object/Data properties"""@en ,
                                                            """Endringer, som resultat av åpen høring:
-- redaksjonelle justeringer av tekster (skos:scopeNote)
+- redaksjonelle justeringer av tekster (skos:scopeNote osv.)
 - tilføyet egenskapen owl:versionInfo i klassen dct:Standard
 - Justert Domain/Range for noen av Object/Data properties"""@nb ;
                                            skos:prefLabel "DQV-AP-NO"@en ,
@@ -111,7 +111,7 @@ skos:broader rdf:type owl:ObjectProperty ,
                           owl:onClass dqv:Dimension
                         ] ;
              skos:altLabel "har et bredere begrep"@nb ;
-             skos:prefLabel "er deldimension av"@nb ,
+             skos:prefLabel "er deldimensjon av"@nb ,
                             "has a broader concept"@en ;
              skos:scopeNote "Brukes til å referere til kvalitetsdimensjonen som kvalitetsdeldimensjonen tilhører."@nb ,
                             "To refer to the quality dimension that the quality subdimension belongs."@en .
@@ -136,7 +136,7 @@ dqv:hasQualityMeasurement rdf:type owl:ObjectProperty ,
                           rdfs:domain dcat:Dataset ;
                           rdfs:range dqv:QualityMeasurement ;
                           rdfs:isDefinedBy "http://www.w3.org/ns/dqv#hasQualityMeasurement" ;
-                          skos:prefLabel "har quantifiserbart måleresultat"@nb ,
+                          skos:prefLabel "har måleresultat"@nb ,
                                          "has quality measurement"@en ;
                           skos:scopeNote "Brukes til å referere til et måleresultat."@nb ,
                                          "To refer to a quality measurement"@en .
@@ -307,18 +307,19 @@ dqv:value rdf:type owl:DatatypeProperty ;
 
 ###  http://purl.org/dc/terms/Standard
 dct:Standard rdf:type owl:Class ;
-             rdfs:isDefinedBy "http://purl.org/dc/terms/Standard" ;
+             rdfs:isDefinedBy "http://purl.org/dc/terms/Standard"@en ;
              skos:prefLabel "Standard eller spesifikasjon"@nb ,
                             "Standard or specification"@en .
 
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
-skos:Concept rdf:type owl:Class .
+skos:Concept rdf:type owl:Class ;
+             rdfs:isDefinedBy "https://www.w3.org/TR/skos-reference/#concepts"@en .
 
 
 ###  http://www.w3.org/ns/dcat#Dataset
 dcat:Dataset rdf:type owl:Class ;
-             rdfs:isDefinedBy "https://www.w3.org/TR/vocab-dcat-2/#Class:Dataset" ;
+             rdfs:isDefinedBy "https://www.w3.org/TR/vocab-dcat-2/#Class:Dataset"@en ;
              skos:prefLabel "Dataset"@en ,
                             "Datasett"@nb .
 
@@ -381,7 +382,7 @@ dqv:UserQualityFeedback rdf:type owl:Class ;
 
 ###  http://www.w3.org/ns/oa#Motivation
 oa:Motivation rdf:type owl:Class ;
-              rdfs:isDefinedBy "http://www.w3.org/ns/oa#motivation" ;
+              rdfs:isDefinedBy "http://www.w3.org/ns/oa#motivation"@en ;
               skos:prefLabel "Motivasjon"@nb ,
                              "Motivation"@en ;
               skos:scopeNote "Brukes til å representere intensjonen eller motivasjonen til en Kvalitetsnote."@nb .
@@ -389,7 +390,7 @@ oa:Motivation rdf:type owl:Class ;
 
 ###  http://www.w3.org/ns/oa#TextualBody
 oa:TextualBody rdf:type owl:Class ;
-               rdfs:isDefinedBy "http://www.w3.org/ns/oa#textualbody"@nb ;
+               rdfs:isDefinedBy "http://www.w3.org/ns/oa#textualbody"@en ;
                skos:prefLabel "Tekstdel"@nb ,
                               "Textual body"@en ;
                skos:scopeNote "Brukes til å representere tekstdelen av en Kvalitetsnote."@nb .
@@ -956,8 +957,8 @@ rdfs:comment skos:prefLabel "har merknad"@nb ;
              skos:prefLabel "has comment"@en .
 
 
-owl:versionInfo skos:scopeNote "Brukes til å referere til versjonsnummer."@nb ;
-                rdfs:isDefinedBy "https://www.w3.org/TR/owl-ref/#versionInfo-def"@en .
+owl:versionInfo rdfs:isDefinedBy "https://www.w3.org/TR/owl-ref/#versionInfo-def"@en ;
+                skos:scopeNote "Brukes til å referere til versjonsnummer."@nb .
 
 
 skos:prefLabel skos:prefLabel "har definisjon"@nb ;
