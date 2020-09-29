@@ -1,0 +1,39 @@
+name: build html
+
+on:
+  push:
+    branches:
+    - master
+    paths:
+    - ontology/dqv-ap-no/**
+
+jobs:
+  pylode_build:
+    runs-on: ubuntu-18.04
+    name: html build
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: make build directory
+      run: |
+        mkdir ontology/dqv-ap-no/build
+
+    - name: copy index.html
+      uses: canastro/copy-file-action@master
+      with:
+        source: "ontology/dqv-ap-no/index.html"
+        target: "ontology/dqv-ap-no/build/index.html"
+
+    - name: copy dqv-ap-no.ttl
+      uses: canastro/copy-file-action@master
+      with:
+        source: "ontology/dqv-ap-no/dqv-ap-no.ttl"
+        target: "ontology/dqv-ap-no/build/dqv-ap-no.ttl"
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: dqv-ap-no_vocabulary
+        publish_dir: ontology/dqv-ap-no/build
