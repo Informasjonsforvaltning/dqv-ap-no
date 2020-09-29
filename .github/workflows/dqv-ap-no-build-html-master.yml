@@ -1,4 +1,4 @@
-name: build html
+name: build html dqv-ap-no
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
     - ontology/dqv-ap-no/**
 
 jobs:
-  pylode_build:
+  build_html:
     runs-on: ubuntu-18.04
     name: html build
     steps:

@@ -1,4 +1,4 @@
-name: build html
+name: build html dqvno
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
     - ontology/dqvno/**
 
 jobs:
-  pylode_build:
+  build_html:
     runs-on: ubuntu-18.04
     name: html build
     steps:
