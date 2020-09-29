@@ -2,7 +2,7 @@
 
 For forvaltning av ontologien for DQV-AP-NO (norsk profil av DQV).
 
-Gjeldende version vil bli publisert til data.norge.no/vocabulary/dqvno#.
+Gjeldende version vil bli publisert til https://data.norge.no/vocabulary/dqvno
 
 Ontologien beskriver hele applikasjonsprofil DQV-AP-NO, samt et kontrollert vokabular med predefinerte instanser som skal/bør brukes sammen med DQV-AP-NO.
 
