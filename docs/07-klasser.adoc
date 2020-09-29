@@ -8,7 +8,9 @@ Siden denne spesifikasjonen bruker datasett (`dcat:Dataset`) som utgangspunkt, t
 
 ==== Datasett (dcat:Dataset) [[Datasett]]
 
-Se https://data.norge.no/specification/dcat-ap-no/#klasse-datasett[beskrivelsen av denne klassen i DCAT-AP-NO].
+Se https://informasjonsforvaltning.github.io/dcat-ap-no/#klasse-datasett[beskrivelsen av denne klassen i DCAT-AP-NO].
+
+*Kommentar*: I DCAT-AP-NO er klassen Datasett (`dcat:Dataset`) anbefalt, mens den er obligatorisk i denne spesifikasjonen. Dette fordi denne spesifikasjonen tar utgangspunkt i beskrivelse av kvalitet på datasett.
 
 === Anbefalte klasser [[Anbefalte_klasser]]
 
@@ -47,6 +49,8 @@ Se https://data.norge.no/specification/dcat-ap-no/#klasse-datasett[beskrivelsen 
 ==== Standard/spesifikasjon [[Standard]]
 
 Se https://data.norge.no/specification/dcat-ap-no/#klasse-standard[beskrivelsen av denne klassen i DCAT-AP-NO].
+
+*Kommentar*: I DCAT-AP-NO er klassen Standard (`dct:Standard`) valgfri, mens den er anbefalt i denne spesifikasjonen. Dette fordi konformitet til kvalitetsstandarder/-spesifikasjoner bør dokumenteres når det finnes relevante kvalitetsstandarder/-spesifikasjoner.
 
 === Valgfrie klasser [[Valgfrie_klasser]]
 

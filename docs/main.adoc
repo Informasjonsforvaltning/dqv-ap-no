@@ -22,8 +22,8 @@ include::shared/download.adoc[]
 NOTE: *Innmelding av feil og mangler:* +
 Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/dqv-ap-no[Github Issues]. Dersom man ikke allerede har bruker på Github kan man opprette bruker gratis.
 
-*Status*: [yellow-background]#Under publisering# +
-*Publisert*: [yellow-background]#<dato kommer># +
+*Status*: [yellow-background]#Til møtet i Arkitektur- og standardiseringsrådet# +
+*Publisert*: [yellow-background]#2020-09-29# +
 *Gjeldende versjon*: Gjeldende versjon vil bli publisert til https://data.norge.no/specification/dqv-ap-no/ ([yellow-background]#<kommer>#)
 
 *Ontologi*: Det er utarbeidet et https://github.com/Informasjonsforvaltning/dqv-ap-no/blob/review/ontology/dqvno/dqvno.ttl[utkast til ontologien for DQV-AP-NO med predefinerte instanser (kontrollert vokabular)]. Gjeldende versjon av ontologien vil bli publisert til https://data.norge.no/vocabulary/dqvno# ([yellow-background]#<kommer>#).
