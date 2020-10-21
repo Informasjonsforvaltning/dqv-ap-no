@@ -1,5 +1,5 @@
 == Konvensjoner brukt i denne spesifikasjonen [[Konvensjoner_brukt_i_denne_spesifikasjonen]]
 
-Ordene «obligatorisk», «anbefalt» eller «valgfri» er forklart i https://informasjonsforvaltning.github.io/dcat-ap-no/#om-kravene[DCAT-AP-NO].
+Ordene «obligatorisk», «anbefalt» eller «valgfri» er forklart i https://https://data.norge.no/specification/dcat-ap-no/#Om-kravene[DCAT-AP-NO].
 
 Klasser og egenskaper er i denne spesifikasjonen beskrevet med norske navn. Siden denne spesifikasjonen legger til rette for internasjonal utveksling, skal engelske navn i form av URIer benyttes.
