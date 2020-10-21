@@ -1,6 +1,6 @@
 # dqvno
 
-For forvaltning av kontrollerte vokabularer knyttet til dqv-ap-no (norsk profil av DQV).
+For forvaltning av ontologien for DQV-AP-NO (norsk profil av DQV).
 
 Lenke: https://data.norge.no/vocabulary/dqv-ap-no
 

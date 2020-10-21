@@ -1,4 +1,4 @@
-name: build html
+name: build html dqv-ap-no
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
     - ontology/dqv-ap-no/**
 
 jobs:
-  pylode_build:
+  build_html:
     runs-on: ubuntu-18.04
     name: html build
     steps:
@@ -35,5 +35,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_branch: dqv-ap-no_vocabulary
         publish_dir: ontology/dqv-ap-no/build
