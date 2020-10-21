@@ -7,111 +7,133 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dqvno: <https://data.norge.no/vocabulary/dqvno#> .
+@prefix brregOrg: <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/> .
+@prefix euDataTheme: <http://publications.europa.eu/resource/authority/data-theme/> .
+@prefix euDatasetType: <https://data.europa.eu/euodp/en/data/dataset/dataset-type/> .
 @base <https://exampledatasets.org/examples/dqvExamples#> .
 
 <https://exampledatasets.org/examples/dqvExamples#> rdf:type owl:Ontology ;
-                                                     owl:versionIRI <urn:absolute:Example-v0.4> ;
+                                                     owl:versionIRI <urn:absolute:Example-v0.5> ;
                                                      rdfs:isDefinedBy "Digitaliseringsdirektoratet"@nb ,
                                                                       "Norwegian Digitalisation Agency"@en ;
                                                      rdfs:label "dqv-ap-no-eksempler"@nb ,
                                                                 "dqv-ap-no-examples"@en ;
-                                                     owl:versionInfo "v0.4: Correcting some typos + some minor adjustments"@en ,
-                                                                     "v0.4: Retter opp noen skrivefeil + noen små justeringer"@nb .
+                                                     owl:versionInfo """v0.5, main changes:
+- IRIs as IRIs now (not Literal).
+- Clean-up reg. Annotation/Data/Object properties."""@en ,
+                                                                     """v0.5, viktigste endringer:
+- IRIer som IRIer (og ikke Literaler).
+- Opprydding Annotation/Data/Object properties."""@nb .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/identifier
+dct:identifier rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
 
 #################################################################
 #    Object Properties
 #################################################################
 
 ###  http://purl.org/dc/terms/conformsTo
-dct:conformsTo rdf:type owl:ObjectProperty .
+dct:conformsTo rdf:type owl:ObjectProperty ;
+               rdfs:domain dcat:Dataset ;
+               rdfs:range dct:Standard .
 
 
-###  http://purl.org/dc/terms/description
-dct:description rdf:type owl:ObjectProperty .
+###  http://purl.org/dc/terms/publisher
+dct:publisher rdf:type owl:ObjectProperty ;
+              rdfs:domain dcat:Dataset ;
+              rdfs:range foaf:Agent .
 
 
-###  http://www.w3.org/2000/01/rdf-schema#comment
-rdfs:comment rdf:type owl:ObjectProperty .
+###  http://purl.org/dc/terms/type
+dct:type rdf:type owl:ObjectProperty ;
+         rdfs:domain dcat:Dataset ;
+         rdfs:range skos:Concept .
+
+
+###  http://www.w3.org/ns/dcat#theme
+dcat:theme rdf:type owl:ObjectProperty ;
+           rdfs:domain dcat:Dataset ;
+           rdfs:range skos:Concept .
 
 
 ###  https://www.w3.org/TR/annotation-vocab/#hasBody
-oa:hasBody rdf:type owl:ObjectProperty .
+oa:hasBody rdf:type owl:ObjectProperty ;
+           rdfs:domain dqv:QualityAnnotation ;
+           rdfs:range oa:TextualBody .
 
 
 ###  https://www.w3.org/TR/annotation-vocab/#hasTarget
-oa:hasTarget rdf:type owl:ObjectProperty .
+oa:hasTarget rdf:type owl:ObjectProperty ;
+             rdfs:domain oa:TextualBody ;
+             rdfs:range dcat:Dataset .
 
 
 ###  https://www.w3.org/TR/annotation-vocab/#motivatedBy
-oa:motivatedBy rdf:type owl:ObjectProperty .
+oa:motivatedBy rdf:type owl:ObjectProperty ;
+               rdfs:domain dqv:QualityAnnotation ;
+               rdfs:range oa:Motivation .
 
 
 ###  https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityAnnotation
-dqv:hasQualityAnnotation rdf:type owl:ObjectProperty .
+dqv:hasQualityAnnotation rdf:type owl:ObjectProperty ;
+                         rdfs:domain dcat:Dataset ;
+                         rdfs:range dqv:QualityAnnotation .
 
 
 ###  https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityMeasurement
-dqv:hasQualityMeasurement rdf:type owl:ObjectProperty .
+dqv:hasQualityMeasurement rdf:type owl:ObjectProperty ;
+                          rdfs:domain dcat:Dataset ;
+                          rdfs:range dqv:QualityMeasurement .
 
 
 ###  https://www.w3.org/TR/vocab-dqv/#dqv:inDimension
-dqv:inDimension rdf:type owl:ObjectProperty .
+dqv:inDimension rdf:type owl:ObjectProperty ;
+                rdfs:domain dct:Standard ,
+                            dqv:QualityAnnotation ;
+                rdfs:range dqv:Dimension .
 
 
 ###  https://www.w3.org/TR/vocab-dqv/#dqv:isMeasurementOf
 dqv:isMeasurementOf rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf owl:topObjectProperty .
+                    rdfs:domain dqv:QualityMeasurement ;
+                    rdfs:range dqv:Metric .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://purl.org/dc/terms/description
-dct:description rdf:type owl:DatatypeProperty .
-
-
 ###  http://purl.org/dc/terms/format
 dct:format rdf:type owl:DatatypeProperty .
-
-
-###  http://purl.org/dc/terms/identifier
-dct:identifier rdf:type owl:DatatypeProperty .
 
 
 ###  http://purl.org/dc/terms/language
 dct:language rdf:type owl:DatatypeProperty .
 
 
-###  http://purl.org/dc/terms/publisher
-dct:publisher rdf:type owl:DatatypeProperty .
-
-
-###  http://purl.org/dc/terms/title
-dct:title rdf:type owl:DatatypeProperty .
-
-
-###  http://www.w3.org/2000/01/rdf-schema#comment
-rdfs:comment rdf:type owl:DatatypeProperty .
-
-
-###  http://www.w3.org/2000/01/rdf-schema#seeAlso
-rdfs:seeAlso rdf:type owl:DatatypeProperty .
-
-
 ###  http://www.w3.org/2000/01/rdf-schema#value
 rdfs:value rdf:type owl:DatatypeProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#prefLabel
-skos:prefLabel rdf:type owl:DatatypeProperty .
-
-
-###  http://www.w3.org/ns/dcat#theme
-dcat:theme rdf:type owl:DatatypeProperty .
 
 
 ###  https://www.w3.org/TR/vocab-dqv/#dqv:value
@@ -129,8 +151,16 @@ dqv:value rdf:type owl:DatatypeProperty ;
 dct:Standard rdf:type owl:Class .
 
 
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class .
+
+
 ###  http://www.w3.org/ns/dcat#Dataset
 dcat:Dataset rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+foaf:Agent rdf:type owl:Class .
 
 
 ###  https://www.w3.org/TR/annotation-vocab/#Motivation
@@ -171,60 +201,86 @@ dqv:UserQualityFeedback rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
+###  http://publications.europa.eu/resource/authority/data-theme/GOVE
+euDataTheme:GOVE rdf:type owl:NamedIndividual ,
+                          skos:Concept .
+
+
+###  https://data.europa.eu/euodp/en/data/dataset/dataset-type/TEST_DATA
+euDatasetType:TEST_DATA rdf:type owl:NamedIndividual ,
+                                 skos:Concept .
+
+
 ###  https://data.norge.no/vocabulary/dqvno#completeness
 dqvno:completeness rdf:type owl:NamedIndividual ,
                             dqv:Dimension ;
-                   skos:prefLabel "completeness"@en ,
-                                  "fullstendighet"@nb ;
                    rdfs:comment "Dette er en predefinert kvalitetsdimensjon (dqv:Dimension)."@nb ,
                                 "This is a predefined quality dimension (dqv:Dimension)."@en ;
-                   rdfs:isDefinedBy "https://data.norge.no/vocabulary/dqvno#completeness" .
+                   skos:prefLabel "completeness"@en ,
+                                  "fullstendighet"@nb .
+
+
+###  https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827
+brregOrg:991825827 rdf:type owl:NamedIndividual , foaf:Agent .
+
+
+###  https://www.w3.org/TR/vocab-dqv/#dqv:qualityAssessment
+dqv:qualityAssessment rdf:type owl:NamedIndividual ,
+                               oa:Motivation ;
+                      rdfs:comment "Dette er en predefinert instans av oa:Motivation."@nb ,
+                                   "This is a predefined instance of oa:Motivation."@en ;
+                      rdfs:isDefinedBy dqv:qualityAssessment ;
+                      skos:prefLabel "kvalitetsvurdering"@nb ,
+                                     "quality assessment"@en .
 
 
 ###  https://data.norge.no/vocabulary/dqvno#isAuthoritative
 dqvno:isAuthoritative rdf:type owl:NamedIndividual ,
                                dqv:QualityCertificate ;
-                      skos:prefLabel "er autoritativ"@nb ,
-                                     "is authoritative"@en ;
                       rdfs:comment "Dette er et predefinert kvalitetssertifikat (dqv:QualityCertificate) som sier at noe er autoritativt."@nb ,
                                    "This is a predefined dqv:QualityCertificate stating that something is authoritative."@en ;
-                      rdfs:isDefinedBy "https://data.norge.no/vocabulary/dqvno#isAuthoritative" .
+                      rdfs:isDefinedBy dqvno:isAuthoritative ;
+                      skos:prefLabel "er autoritativ"@nb ,
+                                     "is authoritative"@en .
 
 
 ###  https://data.norge.no/vocabulary/dqvno#missingObjects
 dqvno:missingObjects rdf:type owl:NamedIndividual ,
                               dqv:Metric ;
-                     skos:prefLabel "manglende enheter"@nb ,
-                                    "missing objects"@en ;
                      rdfs:comment "Dette er et predefinert kvalitetsmål (dqv:Metric) med boolsk verdi, som sier hvorvidt det mangler noen enheter i datasettet."@nb ,
                                   "This is a predefined dqv:Metric in boolean, which states whether some objects are missing in the dataset."@en ;
-                     rdfs:isDefinedBy "https://data.norge.no/vocabulary/dqvno#missingObjects" .
+                     rdfs:isDefinedBy dqvno:missingObjects ;
+                     skos:prefLabel "manglende enheter"@nb ,
+                                    "missing objects"@en .
 
 
 ###  https://data.norge.no/vocabulary/dqvno#numberOfMissingObjects
 dqvno:numberOfMissingObjects rdf:type owl:NamedIndividual ,
                                       dqv:Metric ;
-                             skos:prefLabel "antall manglende enheter"@nb ,
-                                            "number of missing objects"@en ;
                              rdfs:comment "Dette er et predefinert kvalitetsmål (dqv:Metric) med ikke-negativ-heltall, som sier antall enheter som mangler i datasettet."@nb ,
                                           "This is a predefined metric (dqv:Metric) with nonNegativeInteger, which states the number of objects that are missing in the dataset."@en ;
-                             rdfs:isDefinedBy "https://data.norge.no/vocabulary/dqvno#numberOfMissingObjects" .
+                             rdfs:isDefinedBy dqvno:numberOfMissingObjects ;
+                             skos:prefLabel "antall manglende enheter"@nb ,
+                                            "number of missing objects"@en .
 
 
 ###  https://data.norge.no/vocabulary/dqvno#rateOfMissingObjects
 dqvno:rateOfMissingObjects rdf:type owl:NamedIndividual ,
                                     dqv:Metric ;
-                           skos:prefLabel "andel manglende enheter"@nb ,
-                                          "rate of missing objects"@en ;
                            rdfs:comment "Dette er et predefinert kvalitetsmål (dqv:Metric) med double (uttrykt som prosent), som sier andel enheter som mangler i datasettet."@nb ,
                                         "This is a predefined metric (dqv:Metric) with double (typed as percentage), which states the rate of missing objects in the dataset."@en ;
-                           rdfs:isDefinedBy "https://data.norge.no/vocabulary/dqvno#rateOfMissingObjects" .
+                           rdfs:isDefinedBy dqvno:rateOfMissingObjects ;
+                           skos:prefLabel "andel manglende enheter"@nb ,
+                                          "rate of missing objects"@en .
 
 
 ###  https://exampledatasets.org/examples/dqvExamples#dsBuildings
 :dsBuildings rdf:type owl:NamedIndividual ,
                       dcat:Dataset ;
              dct:conformsTo :qsQualitySpecification ;
+             dct:publisher brregOrg:991825827 ;
+             dct:type euDatasetType:TEST_DATA ;
+             dcat:theme euDataTheme:GOVE ;
              dqv:hasQualityAnnotation dqvno:isAuthoritative ,
                                       :qaCompleteness ,
                                       :qaUserFeedback ;
@@ -233,11 +289,9 @@ dqvno:rateOfMissingObjects rdf:type owl:NamedIndividual ,
                                        :qmRateMissingObjects ;
              dct:description "An example dataset."@en ,
                              "Et eksempeldatasett."@nb ;
-             dct:identifier "https://exampledatasets.org/examples/dqvExamples#"^^xsd:anyURI ;
-             dct:publisher "https://data.brreg.no/enhetsregisteret/api/enheter/991825827"^^xsd:anyURI ;
+             dct:identifier "https://exampledatasets.org/examples/dqvExamples#" ;
              dct:title "Buildings - an example dataset"@en ,
-                       "Bygninger - et eksempeldatasett"@nb ;
-             dcat:theme "http://publications.europa.eu/resource/authority/data-theme/GOVE"^^xsd:anyURI .
+                       "Bygninger - et eksempeldatasett"@nb .
 
 
 ###  https://exampledatasets.org/examples/dqvExamples#qaCompleteness
@@ -292,10 +346,10 @@ dqvno:rateOfMissingObjects rdf:type owl:NamedIndividual ,
                                  dct:Standard ;
                         dct:title "Eksempel kvalitetsspesifikasjon"@nb ,
                                   "Example quality specification"@en ;
-                        rdfs:seeAlso "https://exampledatasets.org/standards/kvalitetsspesifikasjon/"@nb ,
-                                     "https://exampledatasets.org/standards/quality-specification/"@en ;
                         rdfs:comment "Denne spesifikasjonen dekker følgende kvalitetsdimensjoner: fullstendighet, nøyaktighet og konsistens."@nb ,
-                                     "The specification covers the following dimensions: completeness, accuracy and consistency."@en .
+                                     "The specification covers the following dimensions: completeness, accuracy and consistency."@en ;
+                        rdfs:seeAlso <https://exampledatasets.org/standards/quality-specification> ,
+                                     <https://exampledatasets.org/standards/kvalitetsspesifikasjon/> .
 
 
 ###  https://exampledatasets.org/examples/dqvExamples#tekstBrukertilbakemelding
@@ -328,16 +382,6 @@ dqvno:rateOfMissingObjects rdf:type owl:NamedIndividual ,
                   dct:format "text/plain" ;
                   dct:language "en" ;
                   rdfs:value "Good example dataset with good enough completeness." .
-
-
-###  https://www.w3.org/TR/vocab-dqv/#dqv:qualityAssessment
-dqv:qualityAssessment rdf:type owl:NamedIndividual ,
-                               oa:Motivation ;
-                      skos:prefLabel "kvalitetsvurdering"@nb ,
-                                     "quality assessment"@en ;
-                      rdfs:comment "Dette er en predefinert instans av oa:Motivation."@nb ,
-                                   "This is a predefined instance of oa:Motivation."@en ;
-                      rdfs:isDefinedBy "https://www.w3.org/TR/vocab-dqv/#dqv:qualityAssessment" .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
