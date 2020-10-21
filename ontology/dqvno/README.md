@@ -2,11 +2,9 @@
 
 For forvaltning av ontologien for DQV-AP-NO (norsk profil av DQV).
 
-Gjeldende version vil bli publisert til https://data.norge.no/vocabulary/dqvno
+Lenke: https://data.norge.no/vocabulary/dqv-ap-no
 
-Ontologien beskriver hele applikasjonsprofil DQV-AP-NO, samt et kontrollert vokabular med predefinerte instanser som skal/bør brukes sammen med DQV-AP-NO.
-
-Vokabularet inneholder flere predefinerte instanser av kvalitetsmål (dqv:Metric), kvalitetsdimensjon (dqv:Dimension) og kvalitetsdeldimensjon (dqvno:SubDimension), samt dqvno:isAuthoritative som er en predefinert instans av kvalitetssertifikat (dqv:QualityAnnotation) (det sistnevnte vises ikke i figuren under).
+Vokabularet inneholder p.t. predefinerte kvantifiserbare kvalitet (kvalitetsmål, dqv:Metric) og tilhørende kvalitetsdimensjoner og -deldimensjoner (dqv:Dimension), samt dqvno:erAutoritativ (dqv:QualityAnnotation) (det sistnevnte vises ikke i figuren under).
 
 ![predefinerte kvalitetsmål](images/dqvno_v04.png)
 
