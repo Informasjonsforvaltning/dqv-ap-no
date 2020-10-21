@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
 <meta name="description" content="DQV-AP-NO (Norwegian Application Profile of DQV)">
-<title>Forslag til DQV-AP-NO (Norsk applikasjonsprofil av DQV)</title>
+<title>DQV-AP-NO (Norsk applikasjonsprofil av DQV)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -440,153 +440,173 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
-<h1>Forslag til DQV-AP-NO (Norsk applikasjonsprofil av DQV)</h1>
+<h1>DQV-AP-NO (Norsk applikasjonsprofil av DQV)</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Innholdsfortegnelse</div>
 <ul class="sectlevel1">
-<li><a href="#_formål_omfang_og_avgrensinger">Formål, omfang og avgrensinger</a></li>
-<li><a href="#_eksempler_på_bruksområder">Eksempler på bruksområder</a></li>
-<li><a href="#_konvensjoner_brukt_i_denne_spesifikasjonen">Konvensjoner brukt i denne spesifikasjonen</a></li>
-<li><a href="#_urier_brukt_i_denne_spesifikasjonen">URIer brukt i denne spesifikasjonen</a></li>
-<li><a href="#_forenklet_modell_for_dqv_ap_no">Forenklet modell for DQV-AP-NO</a></li>
-<li><a href="#_norske_tilpasninger">Norske tilpasninger</a></li>
-<li><a href="#_klasser">Klasser</a>
+<li><a href="#Formål_omfang_og_avgrensinger">Formål, omfang og avgrensinger</a></li>
+<li><a href="#Eksempler_på_bruksområder">Eksempler på bruksområder</a></li>
+<li><a href="#Konvensjoner_brukt_i_denne_spesifikasjonen">Konvensjoner brukt i denne spesifikasjonen</a></li>
+<li><a href="#Navnerom">Navnerom</a>
 <ul class="sectlevel2">
-<li><a href="#_obligatoriske_klasser">Obligatoriske klasser</a>
-<ul class="sectlevel3">
-<li><a href="#klasse-datasett">Datasett</a></li>
+<li><a href="#Navnerom_brukt_i_denne_spesifikasjonen">Navnerom brukt i denne spesifikasjonen</a></li>
 </ul>
 </li>
-<li><a href="#_anbefalte_klasser">Anbefalte Klasser</a>
-<ul class="sectlevel3">
-<li><a href="#klasse-brukertilbakemelding">Brukertilbakemelding (dqv:UserQualityFeedback)</a></li>
-<li><a href="#klasse-kvalitetsnote">Kvalitetsnote (dqv:QualityAnnotation)</a></li>
-<li><a href="#klasse-måleresultat">Måleresultat (dqv:QualityMeasurement)</a></li>
-<li><a href="#klasse-standard">Standard/spesifikasjon</a></li>
-</ul>
-</li>
-<li><a href="#_valgfrie_klasser">Valgfrie klasser</a>
-<ul class="sectlevel3">
-<li><a href="#klasse-kvalitetsdimensjon">Kvalitets(del)dimensjon (dqv:Dimension)</a></li>
-<li><a href="#klasse-kvalitetsmål">Kvalitetsmål (dqv:Metric)</a></li>
-<li><a href="#klasse-kvalitetssertifikat">Kvalitetssertifikat (dqv:QualityCertificate)</a></li>
-<li><a href="#klasse-motivasjon">Motivasjon (oa:Motivation)</a></li>
-<li><a href="#klasse-tekstdel">Tekstdel (oa:TextualBody)</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#_egenskaper_per_klasse">Egenskaper per klasse</a>
+<li><a href="#Forenklet_modell_for_DQV-AP-NO">Forenklet modell for DQV-AP-NO</a></li>
+<li><a href="#Norske_tilpasninger">Norske tilpasninger</a></li>
+<li><a href="#Klasser">Klasser</a>
 <ul class="sectlevel2">
-<li><a href="#_datasett_dcatdataset">Datasett (dcat:Dataset)</a>
+<li><a href="#Obligatoriske_klasser">Obligatoriske klasser</a>
 <ul class="sectlevel3">
-<li><a href="#_anbefalte_egenskaper">Anbefalte egenskaper</a>
-<ul class="sectlevel4">
-<li><a href="#_datasett_er_i_samsvar_med_dctconformsto">Datasett: er i samsvar med (dct:conformsTo)</a></li>
-<li><a href="#_datasett_har_kvalitetsnote_dqvhasqualityannotation">Datasett: har kvalitetsnote (dqv:hasQualityAnnotation)</a></li>
-<li><a href="#_datasett_har_kvantifiserbart_måleresultat_dqvhasqualitymeasurement">Datasett: har kvantifiserbart måleresultat (dqv:hasQualityMeasurement)</a></li>
+<li><a href="#Datasett">Datasett (dcat:Dataset)</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="#_kvalitetsdeldimensjon_dqvdimension">Kvalitets(del)dimensjon (dqv:Dimension)</a>
+<li><a href="#Anbefalte_klasser">Anbefalte klasser</a>
 <ul class="sectlevel3">
-<li><a href="#_obligatoriske_egenskaper">Obligatoriske egenskaper</a>
-<ul class="sectlevel4">
-<li><a href="#_kvalitetsdeldimensjon_er_deldimensjon_av_skosbroader">Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)</a></li>
+<li><a href="#Brukertilbakemelding">Brukertilbakemelding (dqv:UserQualityFeedback)</a></li>
+<li><a href="#Kvalitetsnote">Kvalitetsnote (dqv:QualityAnnotation)</a></li>
+<li><a href="#Måleresultat">Måleresultat (dqv:QualityMeasurement)</a></li>
+<li><a href="#Standard">Standard/spesifikasjon</a></li>
 </ul>
 </li>
-<li><a href="#_anbefalte_egenskaper_2">Anbefalte egenskaper</a>
-<ul class="sectlevel4">
-<li><a href="#_kvalitetsdeldimensjon_har_anbefalt_term_skospreflabel">Kvalitets(del)dimensjon: har anbefalt term (skos:prefLabel)</a></li>
-<li><a href="#_kvalitetsdeldimensjon_har_definisjon_skosdefinition">Kvalitets(del)dimensjon: har definisjon (skos:definition)</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#_kvalitetsmål_dqvmetric">Kvalitetsmål (dqv:Metric)</a>
+<li><a href="#Valgfrie_klasser">Valgfrie klasser</a>
 <ul class="sectlevel3">
-<li><a href="#_obligatoriske_egenskaper_2">Obligatoriske egenskaper</a>
-<ul class="sectlevel4">
-<li><a href="#_kvalitetsmål_er_i_kvalitetsdeldimensjon_dqvindimension">Kvalitetsmål: er i kvalitetsdeldimensjon (dqv:inDimension)</a></li>
-</ul>
-</li>
-<li><a href="#_anbefalte_egenskaper_3">Anbefalte egenskaper</a>
-<ul class="sectlevel4">
-<li><a href="#_kvalitetsmål_har_forventet_datatype_dqvexpecteddatatype">Kvalitetsmål: har forventet datatype (dqv:expectedDataType)</a></li>
-<li><a href="#_kvalitetsmål_har_anbefalt_term_skospreflabel">Kvalitetsmål: har anbefalt term (skos:prefLabel)</a></li>
-<li><a href="#_kvalitetsmål_har_definisjon_skosdefinition">Kvalitetsmål: har definisjon (skos:definition)</a></li>
+<li><a href="#SubDimension">Kvalitetsdeldimensjon (dqvno:SubDimension)</a></li>
+<li><a href="#Kvalitetsdimensjon">Kvalitetsdimensjon (dqv:Dimension)</a></li>
+<li><a href="#Kvalitetsmål">Kvalitetsmål (dqv:Metric)</a></li>
+<li><a href="#Kvalitetssertifikat">Kvalitetssertifikat (dqv:QualityCertificate)</a></li>
+<li><a href="#Motivasjon">Motivasjon (oa:Motivation)</a></li>
+<li><a href="#Tekstdel">Tekstdel (oa:TextualBody)</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#_kvalitetsnote_dqvqualityannotation">Kvalitetsnote (dqv:QualityAnnotation)</a>
+<li><a href="#Egenskaper_per_klasse">Egenskaper per klasse</a>
+<ul class="sectlevel2">
+<li><a href="#Datasett_egenskaper">Datasett (dcat:Dataset)</a>
 <ul class="sectlevel3">
-<li><a href="#_obligatoriske_egenskaper_3">Obligatoriske egenskaper</a>
+<li><a href="#Datasett_anbefalte_egenskaper">Anbefalte egenskaper</a>
 <ul class="sectlevel4">
-<li><a href="#_kvalitetsnote_er_motivert_av_oamotivatedby">Kvalitetsnote: er motivert av (oa:motivatedBy)</a></li>
-</ul>
-</li>
-<li><a href="#_anbefalte_egenskaper_4">Anbefalte egenskaper</a>
-<ul class="sectlevel4">
-<li><a href="#_kvalitetsnote_er_i_kvalitetsdimensjon_dqvindimension">Kvalitetsnote: er i kvalitetsdimensjon (dqv:inDimension)</a></li>
-<li><a href="#_kvalitetsnote_har_tekstdel_oahasbody">Kvalitetsnote: har tekstdel (oa:hasBody)</a></li>
-</ul>
-</li>
-<li><a href="#_valgfrie_egenskaper">Valgfrie egenskaper</a>
-<ul class="sectlevel4">
-<li><a href="#_kvalitetsnote_har_merknad_rdfscomment">Kvalitetsnote: har merknad (rdfs:comment)</a></li>
-<li><a href="#_kvalitetsnote_har_mål_oahastarget">Kvalitetsnote: har mål (oa:hasTarget)</a></li>
+<li><a href="#Datasett_erISamsvarMed">Datasett: er i samsvar med (dct:conformsTo)</a></li>
+<li><a href="#Datasett_harKvalitetsnote">Datasett: har kvalitetsnote (dqv:hasQualityAnnotation)</a></li>
+<li><a href="#Datasett_harMåleresultat">Datasett: har måleresultat (dqv:hasQualityMeasurement)</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#_måleresultat_dqvqualitymeasurement">Måleresultat (dqv:QualityMeasurement)</a>
+<li><a href="#Kvalitetsdeldimensjon_egenskaper">Kvalitetsdeldimensjon (dqvno:SubDimension)</a>
 <ul class="sectlevel3">
-<li><a href="#_obligatoriske_egenskaper_4">Obligatoriske egenskaper</a>
+<li><a href="#Kvalitetsdeldimensjon_obligatoriske_egenskaper">Obligatoriske egenskaper</a>
 <ul class="sectlevel4">
-<li><a href="#_måleresultat_er_måleresultat_av_dqvismeasurementof">Måleresultat: er måleresultat av (dqv:isMeasurementOf)</a></li>
+<li><a href="#Kvalitetsdeldimensjon_erDeldimensjonAv">Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)</a></li>
 </ul>
 </li>
-<li><a href="#_anbefalte_egenskaper_5">Anbefalte egenskaper</a>
+<li><a href="#Kvalitetsdeldimensjon_anbefalte_egenskaper">Anbefalte egenskaper</a>
 <ul class="sectlevel4">
-<li><a href="#_måleresultat_har_verdi_dqvvalue">Måleresultat: har verdi (dqv:value)</a></li>
-</ul>
-</li>
-<li><a href="#_valgfrie_egenskaper_2">Valgfrie egenskaper</a>
-<ul class="sectlevel4">
-<li><a href="#_måleresultat_har_merknad_rdfscomment">Måleresultat: har merknad (rdfs:comment)</a></li>
+<li><a href="#Kvalitetsdeldimensjon_harAnbefaltTerm">Kvalitetsdeldimensjon: har anbefalt term (skos:prefLabel)</a></li>
+<li><a href="#Kvalitetsdeldimensjon_harDefinisjon">Kvalitetsdeldimensjon: har definisjon (skos:definition)</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#_standardspesifikasjon_dctstandard">Standard/spesifikasjon (dct:Standard)</a>
+<li><a href="#Kvalitetsdimensjon_egenskaper">Kvalitetsdimensjon (dqv:Dimension)</a>
 <ul class="sectlevel3">
-<li><a href="#_anbefalte_egenskaper_6">Anbefalte egenskaper</a>
+<li><a href="#Kvalitetsdimensjon_anbefalte_egenskaper">Anbefalte egenskaper</a>
 <ul class="sectlevel4">
-<li><a href="#_standardspesifikasjon_er_i_kvalitetsdimensjon_dqvindimension">Standard/spesifikasjon: er i kvalitetsdimensjon (dqv:inDimension)</a></li>
-<li><a href="#_standardspesifikasjon_har_tittel_dcttitle">Standard/spesifikasjon: har tittel (dct:title)</a></li>
-<li><a href="#_standardspesifikasjon_har_referanse_rdfsseealso">Standard/spesifikasjon: har referanse (rdfs:seeAlso)</a></li>
-</ul>
-</li>
-<li><a href="#_valgfrie_egenskaper_3">Valgfrie egenskaper</a>
-<ul class="sectlevel4">
-<li><a href="#_standardspesifikasjon_har_merknad_rdfscomment">Standard/spesifikasjon: har merknad (rdfs:comment)</a></li>
+<li><a href="#Kvalitetsdimensjon_harAnbefaltTerm">Kvalitetsdimensjon: har anbefalt term (skos:prefLabel)</a></li>
+<li><a href="#Kvalitetsdimensjon_harDefinisjon">Kvalitetsdimensjon: har definisjon (skos:definition)</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#_tekstdel_oatextualbody">Tekstdel (oa:TextualBody)</a>
+<li><a href="#Kvalitetsmål_egenskaper">Kvalitetsmål (dqv:Metric)</a>
 <ul class="sectlevel3">
-<li><a href="#_obligatoriske_egenskaper_5">Obligatoriske egenskaper</a>
+<li><a href="#Kvalitetsmål_obligatoriske_egenskaper">Obligatoriske egenskaper</a>
 <ul class="sectlevel4">
-<li><a href="#_textdel_har_verdi_rdfsvalue">Textdel: har verdi (rdfs:value)</a></li>
+<li><a href="#inSubDimension">Kvalitetsmål: er i kvalitetsdeldimensjon (dqvno:inSubDimension)</a></li>
 </ul>
 </li>
-<li><a href="#_anbefalte_egenskaper_7">Anbefalte egenskaper</a>
+<li><a href="#Kvalitetsmål_anbefalte_egenskaper">Anbefalte egenskaper</a>
 <ul class="sectlevel4">
-<li><a href="#_tekstdel_er_i_format">Tekstdel: er i format</a></li>
-<li><a href="#_tekstdel_er_i_språkmålform">Tekstdel: er i språk/målform</a></li>
+<li><a href="#Kvalitetsmål_harForventetDatatype">Kvalitetsmål: har forventet datatype (dqv:expectedDataType)</a></li>
+<li><a href="#Kvalitetsmål_harAnbefaltTerm">Kvalitetsmål: har anbefalt term (skos:prefLabel)</a></li>
+<li><a href="#Kvalitetsmål_harDefinisjon">Kvalitetsmål: har definisjon (skos:definition)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Kvalitetsnote_egenskaper">Kvalitetsnote (dqv:QualityAnnotation)</a>
+<ul class="sectlevel3">
+<li><a href="#Kvalitetsnote_obligatoriske_egenskaper">Obligatoriske egenskaper</a>
+<ul class="sectlevel4">
+<li><a href="#Kvalitetsnote_erMotivertAv">Kvalitetsnote: er motivert av (oa:motivatedBy)</a></li>
+</ul>
+</li>
+<li><a href="#Kvalitetsnote_anbefalte_egenskaper">Anbefalte egenskaper</a>
+<ul class="sectlevel4">
+<li><a href="#Kvalitetsnote_erIKvalitetsdimensjon">Kvalitetsnote: er i kvalitetsdimensjon (dqv:inDimension)</a></li>
+<li><a href="#Kvalitetsnote_harTekstdel">Kvalitetsnote: har tekstdel (oa:hasBody)</a></li>
+</ul>
+</li>
+<li><a href="#Kvalitetsnote_valgfrie_egenskaper">Valgfrie egenskaper</a>
+<ul class="sectlevel4">
+<li><a href="#Kvalitetsnote_harMerknad">Kvalitetsnote: har merknad (rdfs:comment)</a></li>
+<li><a href="#Kvalitetsnote_harMål">Kvalitetsnote: har mål (oa:hasTarget)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Måleresultat_egenskaper">Måleresultat (dqv:QualityMeasurement)</a>
+<ul class="sectlevel3">
+<li><a href="#Måleresultat_obligatoriske_egenskaper">Obligatoriske egenskaper</a>
+<ul class="sectlevel4">
+<li><a href="#Måleresultat_erMåleresultatAv">Måleresultat: er måleresultat av (dqv:isMeasurementOf)</a></li>
+</ul>
+</li>
+<li><a href="#Måleresultat_anbefalte_egenskaper">Anbefalte egenskaper</a>
+<ul class="sectlevel4">
+<li><a href="#Måleresultat_harVerdi">Måleresultat: har verdi (dqv:value)</a></li>
+</ul>
+</li>
+<li><a href="#Måleresultat_valgfrie_egenskaper">Valgfrie egenskaper</a>
+<ul class="sectlevel4">
+<li><a href="#Måleresultat_harMerknad">Måleresultat: har merknad (rdfs:comment)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Standard_egenskaper">Standard/spesifikasjon (dct:Standard)</a>
+<ul class="sectlevel3">
+<li><a href="#Standard_obligatoriske_egenskaper">Obligatoriske egenskaper</a>
+<ul class="sectlevel4">
+<li><a href="#Standard_harTittel">Standard/spesifikasjon: har tittel (dct:title)</a></li>
+</ul>
+</li>
+<li><a href="#Standard_anbefalte_egenskaper">Anbefalte egenskaper</a>
+<ul class="sectlevel4">
+<li><a href="#Standard_erIKvalitetsdimensjon">Standard/spesifikasjon: er i kvalitetsdimensjon (dqv:inDimension)</a></li>
+<li><a href="#Standard_harReferanse">Standard/spesifikasjon: har referanse (rdfs:seeAlso)</a></li>
+</ul>
+</li>
+<li><a href="#Standard_valgfrie_egenskaper">Valgfrie egenskaper</a>
+<ul class="sectlevel4">
+<li><a href="#Standard_harMerknad">Standard/spesifikasjon: har merknad (rdfs:comment)</a></li>
+<li><a href="#Standard_harVersjonsnr">Standard/spesifikasjon: har versjonsnummer (owl:versionInfo)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Tekstdel_egenskaper">Tekstdel (oa:TextualBody)</a>
+<ul class="sectlevel3">
+<li><a href="#Tekstdel_obligatoriske_egenskaper">Obligatoriske egenskaper</a>
+<ul class="sectlevel4">
+<li><a href="#Tekstdel_harVerdi">Textdel: har verdi (rdfs:value)</a></li>
+</ul>
+</li>
+<li><a href="#Tekstdel_anbefalte_egenskaper">Anbefalte egenskaper</a>
+<ul class="sectlevel4">
+<li><a href="#Tekstdel_erIFormat">Tekstdel: er i format</a></li>
+<li><a href="#Tekstdel_erISpråk">Tekstdel: er i språk/målform</a></li>
 </ul>
 </li>
 </ul>
@@ -612,19 +632,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Dette dokumentet kan også lastes ned <a href="document.pdf">som PDF</a> eller <a href="document.epub">som EPUB</a>.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-under publisering (små justeringer kan komme).
+Dette dokumentet kan også lastes ned <a href="document.pdf">som PDF</a>.
 </td>
 </tr>
 </table>
@@ -637,24 +645,37 @@ under publisering (små justeringer kan komme).
 </td>
 <td class="content">
 <strong>Innmelding av feil og mangler:</strong><br>
-Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på <a href="https://github.com/Informasjonsforvaltning/dqv-ap-no">Github Issues</a>. Dersom man ikke allerede har bruker på Github kan man opprette bruker gratis.<br>
+Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på <a href="https://github.com/Informasjonsforvaltning/dqv-ap-no">Github Issues</a>. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis.
 </td>
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p><strong>Status</strong>: Gjeldende<br>
+<strong>Publisert</strong>: 2020-10-21 (v.1.0)<br>
+<strong>Gjeldende versjon</strong>: <a href="https://data.norge.no/specification/dqv-ap-no/" class="bare">https://data.norge.no/specification/dqv-ap-no/</a><br>
+<strong>Forrige versjon</strong>: ingen<br>
+<strong>Redaktørens utkast</strong>: <a href="https://informasjonsforvaltning.github.io/dqv-ap-no/" class="bare">https://informasjonsforvaltning.github.io/dqv-ap-no/</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Ontologi</strong>: Gjeldende versjon av ontologien for DQV-AP-NO med predefinerte instanser (kontrollert vokabular) blir publisert til <a href="https://data.norge.no/vocabulary/dqvno#" class="bare">https://data.norge.no/vocabulary/dqvno#</a>. Redaktørens utkast til ontologien er tilgjengelig på <a href="https://github.com/Informasjonsforvaltning/dqv-ap-no/blob/review/ontology/dqvno/dqvno.ttl">Github</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Veileder</strong>: Det er utarbeidet en <a href="https://data.norge.no/guide/veileder-kvantifiserbar-kvalitet/">Veileder for beskrivelse av kvalitet på datasett – kvantifiserbar kvalitet</a>.</p>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_formål_omfang_og_avgrensinger"><a class="link" href="#_formål_omfang_og_avgrensinger">Formål, omfang og avgrensinger</a></h2>
+<h2 id="Formål_omfang_og_avgrensinger"><a class="link" href="#Formål_omfang_og_avgrensinger">Formål, omfang og avgrensinger</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="https://doc.difi.no/data/kvalitet-pa-datasett/"><em>Spesifikasjon for beskrivelse av kvalitet på datasett</em></a> foreslo å bruke <a href="https://www.w3.org/TR/vocab-dqv/"><em>DQV (Data Quality Vocabulary)</em> fra W3C</a> til å beskrive kvalitet på datasett i <a href="https://fellesdatakatalog.digdir.no/about">Fellesdatakatalogen</a>. DQV er nå også foreslått å brukes i <a href="https://joinup.ec.europa.eu/solution/abr-specification-registry-registries/news/stable-draft-bregdcat-ap">BRegDCAT-AP fra EU</a>.</p>
+<p><a href="https://data.norge.no/specification/spesifikasjon-for-beskrivelse-av-kvalitet-pa-datasett/"><em>Spesifikasjon for beskrivelse av kvalitet på datasett</em></a> foreslo å bruke <a href="https://www.w3.org/TR/vocab-dqv/"><em>DQV (Data Quality Vocabulary)</em> fra W3C</a> til å beskrive kvalitet på datasett i <a href="https://data.norge.no/about">Fellesdatakatalogen</a>. DQV er nå også eksplisitt inkludert i <a href="https://joinup.ec.europa.eu/collection/access-base-registries/solution/abr-specification-registry-registries">BRegDCAT-AP fra EU</a>.</p>
 </div>
 <div class="paragraph">
-<p>Dette er en teknisk spesifikasjon for en norsk applikasjonsprofil av DQV, DQV-AP-NO.</p>
+<p>Dette er en teknisk spesifikasjon for en norsk applikasjonsprofil av DQV, DQV-AP-NO. DQV-AP-NO er ikke en direkte oversettelse av DQV fra W3C. I tillegg til å beskrive hvordan klasser og egenskaper i DQV brukes, tilpasses DQV til norske forhold ved å bruke norske utvidelser i denne applikasjonsprofilen.</p>
 </div>
 <div class="paragraph">
-<p>Applikasjonsprofilen inngår i <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur/informasjonsforvaltning">Rammeverk for informasjonsforvaltning</a>. Den brukes sammen med og supplerer DCAT-AP-NO v.2.0+, som i skrivende stund <a href="https://doc.difi.no/review/dcat-ap-no/">er under arbeid</a>.</p>
+<p>Applikasjonsprofilen inngår i <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur/informasjonsforvaltning">Rammeverk for informasjonsforvaltning</a>. Den brukes sammen med og supplerer <a href="https://data.norge.no/specification/dcat-ap-no/">DCAT-AP-NO v.2.0+</a>.</p>
 </div>
 <div class="paragraph">
 <p>Applikasjonsprofilen tar utgangspunkt i datasett (<code>dcat:Dataset</code>) som det skal beskrives kvalitet for. Den kan også på tilsvarende måte brukes til å beskrive kvalitet på bl.a. en distribusjon (<code>dcat:Distribution</code>), uten at dette eksplisitt beskrives i denne spesifikasjonen.</p>
@@ -662,7 +683,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_eksempler_på_bruksområder"><a class="link" href="#_eksempler_på_bruksområder">Eksempler på bruksområder</a></h2>
+<h2 id="Eksempler_på_bruksområder"><a class="link" href="#Eksempler_på_bruksområder">Eksempler på bruksområder</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Noen eksempler på når spesifikasjonen skal brukes (ikke-uttømmende):</p>
@@ -670,7 +691,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <div class="ulist">
 <ul>
 <li>
-<p>Beskrivelse av kvantifiserbar kvalitet: Se eksemplet under egenskapen <a href="#_datasett_har_kvantifiserbart_måleresultat_dqvhasqualitymeasurement">Datasett: har kvantifiserbart måleresultat (dqv:hasQualityMeasurement)</a>.</p>
+<p>Beskrivelse av kvantifiserbar kvalitet: Se eksemplet under egenskapen <a href="#Datasett_harMåleresultat">Datasett: har måleresultat (dqv:hasQualityMeasurement)</a>.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -680,13 +701,13 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </li>
 <li>
-<p>Beskrivelse av kvalitet i form av fritekst, inkl. brukertilbakemelding på kvalitet i fritekst: Se eksempel under egenskapen <a href="#_datasett_har_kvalitetsnote_dqvhasqualityannotation">Datasett: har kvalitetsnote (dqv:hasQualityAnnotation)</a>.</p>
+<p>Beskrivelse av kvalitet i form av fritekst, inkl. brukertilbakemelding på kvalitet i fritekst: Se eksempel under egenskapen <a href="#Datasett_harKvalitetsnote">Datasett: har kvalitetsnote (dqv:hasQualityAnnotation)</a>.</p>
 </li>
 <li>
-<p>Beskrivelse av at kvaliteten er i samsvar med gitt standard/spesifikasjon: Se eksempel under egenskapen <a href="#_datasett_er_i_samsvar_med_dctconformsto">Datasett: er i samsvar med (dct:conformsTo)</a>.</p>
+<p>Beskrivelse av at kvaliteten er i samsvar med gitt standard/spesifikasjon: Se eksempel under egenskapen <a href="#Datasett_erISamsvarMed">Datasett: er i samsvar med (dct:conformsTo)</a>.</p>
 </li>
 <li>
-<p>Beskrivelse av at et datasett er autoritativt: Se eksempel under klassen <a href="#klasse-kvalitetssertifikat">Kvalitetssertifikat (dqv:QualityCertificate)</a>.</p>
+<p>Beskrivelse av at et datasett er autoritativt: Se eksempel under egenskapen <a href="#Datasett_harKvalitetsnote">Datasett: har kvalitetsnote (dqv:hasQualityAnnotation)</a>.</p>
 </li>
 </ul>
 </div>
@@ -696,10 +717,10 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_konvensjoner_brukt_i_denne_spesifikasjonen"><a class="link" href="#_konvensjoner_brukt_i_denne_spesifikasjonen">Konvensjoner brukt i denne spesifikasjonen</a></h2>
+<h2 id="Konvensjoner_brukt_i_denne_spesifikasjonen"><a class="link" href="#Konvensjoner_brukt_i_denne_spesifikasjonen">Konvensjoner brukt i denne spesifikasjonen</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Ordene «obligatorisk», «anbefalt» eller «valgfri» er forklart i <a href="https://doc.difi.no/review/dcat-ap-no/#om-kravene">DCAT-AP-NO</a>.</p>
+<p>Ordene «obligatorisk», «anbefalt» eller «valgfri» er forklart i <a href="https://data.norge.no/specification/dcat-ap-no/#Om-kravene">DCAT-AP-NO</a>.</p>
 </div>
 <div class="paragraph">
 <p>Klasser og egenskaper er i denne spesifikasjonen beskrevet med norske navn. Siden denne spesifikasjonen legger til rette for internasjonal utveksling, skal engelske navn i form av URIer benyttes.</p>
@@ -707,8 +728,13 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_urier_brukt_i_denne_spesifikasjonen"><a class="link" href="#_urier_brukt_i_denne_spesifikasjonen">URIer brukt i denne spesifikasjonen</a></h2>
+<h2 id="Navnerom"><a class="link" href="#Navnerom">Navnerom</a></h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Navnerommet til denne spesifikasjonen er <a href="https://data.norge.no/vocabulary/dqvno#">https://data.norge.no/vocabulary/dqvno#</a></p>
+</div>
+<div class="sect2">
+<h3 id="Navnerom_brukt_i_denne_spesifikasjonen"><a class="link" href="#Navnerom_brukt_i_denne_spesifikasjonen">Navnerom brukt i denne spesifikasjonen</a></h3>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -716,51 +742,52 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>dcat:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>dcat</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.w3.org/ns/dcat#" class="bare">http://www.w3.org/ns/dcat#</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>dct:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>dct</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://purl.org/dc/terms/" class="bare">http://purl.org/dc/terms/</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>dqv:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>dqv</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv" class="bare">https://www.w3.org/TR/vocab-dqv/#dqv</a>:</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>dqvno:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>dqvno</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://data.norge.no/vocabulary/dqvno#" class="bare">https://data.norge.no/vocabulary/dqvno#</a> (under publisering)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>oa:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>oa</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.w3.org/ns/oa#" class="bare">http://www.w3.org/ns/oa#</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>owl:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>owl</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.w3.org/2002/07/owl#" class="bare">http://www.w3.org/2002/07/owl#</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>rdf:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>rdf</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#" class="bare">http://www.w3.org/1999/02/22-rdf-syntax-ns#</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>rdfs:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>rdfs</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/rdf-schema/#ch_" class="bare">https://www.w3.org/TR/rdf-schema/#ch_</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>skos:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>skos</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.w3.org/2004/02/skos/core#" class="bare">http://www.w3.org/2004/02/skos/core#</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>xsd:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>xsd</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.w3.org/2001/XMLSchema#" class="bare">http://www.w3.org/2001/XMLSchema#</a></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
+</div>
 <div class="sect1">
-<h2 id="_forenklet_modell_for_dqv_ap_no"><a class="link" href="#_forenklet_modell_for_dqv_ap_no">Forenklet modell for DQV-AP-NO</a></h2>
+<h2 id="Forenklet_modell_for_DQV-AP-NO"><a class="link" href="#Forenklet_modell_for_DQV-AP-NO">Forenklet modell for DQV-AP-NO</a></h2>
 <div class="sectionbody">
 <div class="imageblock">
 <div class="content">
@@ -768,10 +795,13 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 <div class="title">Figur 1. Forenklet modell for DQV-AP-NO.</div>
 </div>
+<div class="paragraph">
+<p>Denne spesifikasjon tar utgangspunkt i beskrivelse av kvalitet på Datasett (<code>dcat:Dataset</code>). Figuren over viser derfor kun Datasett. Som forklart under <a href="#Formål_omfang_og_avgrensinger">Formål, omfang og avgrensinger</a> kan denne spesifikasjonen på tilsvarende måte også brukes til å beskrive kvalitet på andre ressurser som f.eks. distribusjon (<code>dcat:Distribution</code>) og datatjeneste (<code>dcat:DataService</code>).</p>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_norske_tilpasninger"><a class="link" href="#_norske_tilpasninger">Norske tilpasninger</a></h2>
+<h2 id="Norske_tilpasninger"><a class="link" href="#Norske_tilpasninger">Norske tilpasninger</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Følgende tilpasninger er gjort i denne norske applikasjonsprofilen:</p>
@@ -779,40 +809,51 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <div class="ulist">
 <ul>
 <li>
-<p>Eksplisitte krav til bruk av klasser og egenskaper: DQV er et generelt vokabular for beskrivelse av datakvalitet. DQV har derfor, men få unntak, ikke satt på krav til bruk av klasser og egenskaper. Denne applikasjonsprofilen er en konkret anvendelse av DQV. Det er derfor satt «status» («obligatorisk», «anbefalt» eller «valgfri») på klasser og egenskaper, samt multiplisitet på egenskaper.</p>
+<p>Eksplisitte krav til bruk av klasser og egenskaper: DQV er et generelt vokabular for beskrivelse av datakvalitet. DQV har derfor, med få unntak, ikke satt på krav til bruk av klasser og egenskaper. Denne applikasjonsprofilen er en konkret anvendelse av DQV. Det er derfor satt «status» («obligatorisk», «anbefalt» eller «valgfri») på klasser og egenskaper, samt multiplisitet på egenskaper.</p>
 </li>
 <li>
-<p>Tilføyelse av klassen Kvalitetsdeldimensjon: Ifm. utarbeidelse av <a href="https://doc.difi.no/data/kvalitet-pa-datasett/"><em>Spesifikasjon for beskrivelse av kvalitet på datasett</em></a> ble det identifisert et behov for å ha «kvalitetsdeldimensjon» som er et mellomnivå mellom kvalitetsdimensjon (<code>dqv:Dimension</code>) og kvalitetsmål (<code>dqv:Metric</code>). DQV har ikke kvalitets<strong>del</strong>dimensjon som egen klasse, men det er mulig å uttrykke kvalitetsdeldimensjon.</p>
+<p>Tilføyelse av klassen Kvalitetsdeldimensjon (<code>dqvno:SubDimension</code>): Ifm. utarbeidelse av <a href="https://doc.difi.no/data/kvalitet-pa-datasett/"><em>Spesifikasjon for beskrivelse av kvalitet på datasett</em></a> ble det identifisert et behov for å ha «kvalitetsdeldimensjon» som er et mellomnivå mellom kvalitetsdimensjon (<code>dqv:Dimension</code>) og kvalitetsmål (<code>dqv:Metric</code>). DQV har ikke kvalitets<strong>del</strong>dimensjon som egen klasse.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Som en konsekvens, er det også tilføyet en egenskap <code>dqvno:inSubDimension</code> i klassen Kvalitetsmål (<code>dqv:Metric</code>), som brukes til å referere fra et kvalitetsmål (<code>dqv:Metric</code>) til
+kvalitetsdeldimensjonen (<code>dqvno:SubDimension</code>) som kvalitetsmålet tilhører.</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p>Eksplisitt inkludering av egenskaper fra andre vokabularer: For at denne spesifikasjonen kan stå på egne ben, er det eksplisitt tatt med egenskaper fra andre veletablerte vokabularer (bl.a. <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">Dublin Core</a> og <a href="https://www.w3.org/TR/skos-reference/">SKOS</a>). Dette er dokumentert i kommentar-feltet som “norsk utvidelse”. Eksempel: <code>rdfs:comment</code> er tatt med som valgfri egenskap, for å dekke behov for fritekstkommentar som var identifisert i <a href="https://doc.difi.no/data/kvalitet-pa-datasett/"><em>Spesifikasjon for beskrivelse av kvalitet på datasett</em></a>.</p>
+<p>Eksplisitt inkludering av egenskaper fra andre vokabularer: For at denne spesifikasjonen skal kunne stå på egne ben, er det eksplisitt tatt med egenskaper fra andre veletablerte vokabularer (bl.a. <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">Dublin Core</a> og <a href="https://www.w3.org/TR/skos-reference/">SKOS</a>). Dette er dokumentert i kommentar-feltet som “norsk utvidelse”. Eksempel: <code>rdfs:comment</code> er tatt med som valgfri egenskap, for å dekke behov for fritekstkommentar som var identifisert i <a href="https://doc.difi.no/data/kvalitet-pa-datasett/"><em>Spesifikasjon for beskrivelse av kvalitet på datasett</em></a>.</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_klasser"><a class="link" href="#_klasser">Klasser</a></h2>
+<h2 id="Klasser"><a class="link" href="#Klasser">Klasser</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>I tillegg til klassene som er tatt med i denne spesifikasjonen, kan alle de andre klassene i <a href="https://www.w3.org/TR/vocab-dqv/">DQV</a> også brukes.</p>
 </div>
 <div class="sect2">
-<h3 id="_obligatoriske_klasser"><a class="link" href="#_obligatoriske_klasser">Obligatoriske klasser</a></h3>
+<h3 id="Obligatoriske_klasser"><a class="link" href="#Obligatoriske_klasser">Obligatoriske klasser</a></h3>
 <div class="paragraph">
-<p>Siden denne spesifikasjonen bruker datasett (<code>dcat:Dataset</code>) som utgangspunkt, tas bare datasett (<code>dcat:Dataset</code>) med som obligatorisk klasse. Når f.eks. spesifikasjonen brukes til å beskrive kvalitet av en distribusjon (<code>dcat:Distribution</code>) vil selvsagt distribusjon også være obligatorisk.</p>
+<p>Siden denne spesifikasjonen bruker datasett (<code>dcat:Dataset</code>) som utgangspunkt, tas bare datasett (<code>dcat:Dataset</code>) med som obligatorisk klasse. Når f.eks. spesifikasjonen brukes til å beskrive kvalitet på en distribusjon (<code>dcat:Distribution</code>) vil selvsagt distribusjon også være obligatorisk.</p>
 </div>
 <div class="sect3">
-<h4 id="klasse-datasett"><a class="link" href="#klasse-datasett">Datasett</a></h4>
+<h4 id="Datasett"><a class="link" href="#Datasett">Datasett (dcat:Dataset)</a></h4>
 <div class="paragraph">
-<p>Se <a href="https://doc.difi.no/review/dcat-ap-no/#klasse-datasett">beskrivelsen av denne klassen i DCAT-AP-NO</a>.</p>
+<p>Se <a href="https://data.norge.no/specification/dcat-ap-no/#klasse-datasett">beskrivelsen av denne klassen i DCAT-AP-NO</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Kommentar</strong>: I DCAT-AP-NO er klassen Datasett (<code>dcat:Dataset</code>) anbefalt, mens den er obligatorisk i denne spesifikasjonen. Dette fordi denne spesifikasjonen tar utgangspunkt i beskrivelse av kvalitet på datasett.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_anbefalte_klasser"><a class="link" href="#_anbefalte_klasser">Anbefalte Klasser</a></h3>
+<h3 id="Anbefalte_klasser"><a class="link" href="#Anbefalte_klasser">Anbefalte klasser</a></h3>
 <div class="sect3">
-<h4 id="klasse-brukertilbakemelding"><a class="link" href="#klasse-brukertilbakemelding">Brukertilbakemelding (dqv:UserQualityFeedback)</a></h4>
+<h4 id="Brukertilbakemelding"><a class="link" href="#Brukertilbakemelding">Brukertilbakemelding (dqv:UserQualityFeedback)</a></h4>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -825,15 +866,11 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å beskrive brukertilbakemeldinger på kvalitet.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å representere en brukertilbakemelding på kvalitet.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dqv:UserQualityFeedback</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:UserQualityFeedback">https://www.w3.org/TR/vocab-dqv/#dqv:UserQualityFeedback</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:UserQualityFeedback">dqv:UserQualityFeedback</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Subklasse av</strong></p></td>
@@ -845,13 +882,13 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I tillegg til predefinerte <code>dqv:qualityAssessment</code> som er motivasjonen som skal brukes for alle kvalitetsnoter, bør en av predefinerte instanser av <code>oa:Motivation</code> brukes for å skille mellom ulike typer brukertilbakemeldinger, f.eks. 'classifications', 'questions'.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-kvalitetsnote"><a class="link" href="#klasse-kvalitetsnote">Kvalitetsnote (dqv:QualityAnnotation)</a></h4>
+<h4 id="Kvalitetsnote"><a class="link" href="#Kvalitetsnote">Kvalitetsnote (dqv:QualityAnnotation)</a></h4>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -864,29 +901,21 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til tekstlige beskrivelser av kvalitet.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å representere en tekstlig beskrivelse av kvalitet.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dqv:QualityAnnotation</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:QualityAnnotation">https://www.w3.org/TR/vocab-dqv/#dqv:QualityAnnotation</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:QualityAnnotation">dqv:QualityAnnotation</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-måleresultat"><a class="link" href="#klasse-måleresultat">Måleresultat (dqv:QualityMeasurement)</a></h4>
+<h4 id="Måleresultat"><a class="link" href="#Måleresultat">Måleresultat (dqv:QualityMeasurement)</a></h4>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -899,41 +928,69 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å beskrive kvantifiserbare måleresultater.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å representere et måleresultat.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dqv:QualityMeasurement</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurement">https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurement</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurement">dqv:QualityMeasurement</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="Standard"><a class="link" href="#Standard">Standard/spesifikasjon</a></h4>
+<div class="paragraph">
+<p>Se <a href="https://data.norge.no/specification/dcat-ap-no/#klasse-standard">beskrivelsen av denne klassen i DCAT-AP-NO</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Kommentar</strong>: I DCAT-AP-NO er klassen Standard (<code>dct:Standard</code>) valgfri, mens den er anbefalt i denne spesifikasjonen. Dette fordi konformitet til kvalitetsstandarder/-spesifikasjoner bør dokumenteres når det finnes relevante kvalitetsstandarder/-spesifikasjoner.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Valgfrie_klasser"><a class="link" href="#Valgfrie_klasser">Valgfrie klasser</a></h3>
+<div class="sect3">
+<h4 id="SubDimension"><a class="link" href="#SubDimension">Kvalitetsdeldimensjon (dqvno:SubDimension)</a></h4>
+<table class="tableblock frame-all grid-all stripes-odd stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">quality subdimension</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å representere en kvalitetsdeldimensjon.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://data.norge.no/vocabulary/dqvno#SubDimension">dqvno:SubDimension</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Subklasse av</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dqv:Dimension</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
+</tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Norsk utvidelse. DQV har ikke definert kvalitets<strong>del</strong>dimensjon som egen klasse, kun kvalitetsdimensjon (<code>dqv:Dimension</code>).</p>
+<p class="tableblock">Klassen brukes når man skal beskrive sin egen kvalitetsdeldimensjon, dvs. når man ikke bruker prederfinerte instanser av Kvalitetsdeldimensjon.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-standard"><a class="link" href="#klasse-standard">Standard/spesifikasjon</a></h4>
-<div class="paragraph">
-<p>Se <a href="https://doc.difi.no/review/dcat-ap-no/#klasse-standard">beskrivelsen av denne klassen i DCAT-AP-NO</a>.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_valgfrie_klasser"><a class="link" href="#_valgfrie_klasser">Valgfrie klasser</a></h3>
-<div class="sect3">
-<h4 id="klasse-kvalitetsdimensjon"><a class="link" href="#klasse-kvalitetsdimensjon">Kvalitets(del)dimensjon (dqv:Dimension)</a></h4>
-<div class="paragraph">
-<p>Her er Kvalitetsdimensjon og Kvalitetsdeldimensjon beskrevet samlet. <code>dqv:Dimension</code> skal brukes som URI for begge.</p>
-</div>
+<h4 id="Kvalitetsdimensjon"><a class="link" href="#Kvalitetsdimensjon">Kvalitetsdimensjon (dqv:Dimension)</a></h4>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -946,15 +1003,11 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å beskrive kvalitetsdimensjoner og kvalitetsdeldimensjoner.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å representere en kvalitetsdimensjon.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dqv:Dimension</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:Dimension">https://www.w3.org/TR/vocab-dqv/#dqv:Dimension</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:Dimension">dqv:Dimension</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
@@ -962,13 +1015,13 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DQV har ikke definert kvalitets<strong>del</strong>dimensjon som egen klasse, kun kvalitetsdimensjon (<code>dqv:Dimension</code>). For å uttrykke kvalitetsdeldimensjoner brukes skos:broader. Se under <a href="#_kvalitetsdeldimensjon_er_deldimensjon_av_skosbroader">Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)</a> for eksempel.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Klassen brukes når man skal beskrive sin egen kvalitetsdimensjon, dvs. når man ikke bruker prederfinerte instanser av Kvalitetsdimensjon.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-kvalitetsmål"><a class="link" href="#klasse-kvalitetsmål">Kvalitetsmål (dqv:Metric)</a></h4>
+<h4 id="Kvalitetsmål"><a class="link" href="#Kvalitetsmål">Kvalitetsmål (dqv:Metric)</a></h4>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -981,15 +1034,11 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å beskrive kvalitetsmål.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å representere et kvalitetsmål.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dqv:Metric</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:Metric">https://www.w3.org/TR/vocab-dqv/#dqv:Metric</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:Metric">dqv:Metric</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
@@ -997,13 +1046,13 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Klassen brukes når man skal definere sitt eget kvalitetsmål.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Klassen brukes når man skal beskrive sitt eget kvalitetsmål, dvs. når man ikke bruker prederfinerte instanser av kvalitetsmål.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-kvalitetssertifikat"><a class="link" href="#klasse-kvalitetssertifikat">Kvalitetssertifikat (dqv:QualityCertificate)</a></h4>
+<h4 id="Kvalitetssertifikat"><a class="link" href="#Kvalitetssertifikat">Kvalitetssertifikat (dqv:QualityCertificate)</a></h4>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1016,7 +1065,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å beskrive noe som bekrefter en gitt kvalitet.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å representere et kvalitetssertifikat.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
@@ -1024,11 +1073,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Subklasse av</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dqv:QualityAnnotation</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate">https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate">dqv:QualityAnnotation</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
@@ -1036,35 +1081,13 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Klassen brukes når  man skal definere sitt eget kvalitetssertifikat.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>:aDataset
-   a dcat:Dataset ;
-   dqv:hasQualityAnnotation dqvno:isAuthoritative .</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>der <code>dqvno:isAuthoritative</code> er en predefinert instans av <code>dqv:QualityCertificate</code>:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>dqvno:isAuthoritative
-   a dqv:QualityCertificate ;
-   oa:motivatedBy dqv:qualityAssessment ;
-   skos:definition "kvalitetsbeskrivelse som uttrykker at noe er autoritativt"@nb , "quality description which states that something is authoritative"@en ;
-   skos:prefLabel "er autoritativ"@nb , "is authoritative"@en .</pre>
-</div>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Klassen brukes når  man skal beskrive sitt eget Kvalitetssertifikat, dvs. når man ikke bruker prederfinerte instanser av Kvalitetssertifikat.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-motivasjon"><a class="link" href="#klasse-motivasjon">Motivasjon (oa:Motivation)</a></h4>
+<h4 id="Motivasjon"><a class="link" href="#Motivasjon">Motivasjon (oa:Motivation)</a></h4>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1077,15 +1100,11 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å beskrive intensjonen eller motivasjonen til en Kvalitetsnote (<code>dqv:QualityAnnotation</code>).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å representere intensjonen eller motivasjonen til en Kvalitetsnote.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">oa:Motivation</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/annotation-vocab/#motivation">https://www.w3.org/TR/annotation-vocab/#motivation</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/annotation-vocab/#motivation">oa:Motivation</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
@@ -1099,7 +1118,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </table>
 </div>
 <div class="sect3">
-<h4 id="klasse-tekstdel"><a class="link" href="#klasse-tekstdel">Tekstdel (oa:TextualBody)</a></h4>
+<h4 id="Tekstdel"><a class="link" href="#Tekstdel">Tekstdel (oa:TextualBody)</a></h4>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1112,23 +1131,15 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å beskrive tekstdelen av en Kvalitetsnote (<code>dqv:QualityAnnotation</code>).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å representere tekstdelen av en Kvalitetsnote.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">oa:TextualBody</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/annotation-vocab/#textualbody">https://www.w3.org/TR/annotation-vocab/#textualbody</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/annotation-vocab/#textualbody">oa:TextualBody</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>
@@ -1137,7 +1148,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_egenskaper_per_klasse"><a class="link" href="#_egenskaper_per_klasse">Egenskaper per klasse</a></h2>
+<h2 id="Egenskaper_per_klasse"><a class="link" href="#Egenskaper_per_klasse">Egenskaper per klasse</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>I tillegg til egenskapene som er tatt med i denne spesifikasjonen, kan egenskapene i DQV samt SKOS, DCAT, DCAT-AP, DCAT-AP-NO og andre veletablerte vokabularer også brukes.</p>
@@ -1146,17 +1157,17 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <p>For klasser som finnes både i denne spesifikasjonen og i DCAT-AP-NO, supplerer egenskapene nevnt i denne spesifikasjonen DCAT-AP-NO.</p>
 </div>
 <div class="sect2">
-<h3 id="_datasett_dcatdataset"><a class="link" href="#_datasett_dcatdataset">Datasett (dcat:Dataset)</a></h3>
+<h3 id="Datasett_egenskaper"><a class="link" href="#Datasett_egenskaper">Datasett (dcat:Dataset)</a></h3>
 <div class="paragraph">
 <p>Tilsvarende gjelder også for f.eks. Distribusjon (<code>dcat:Distribution</code>) når spesifikasjonen skal brukes til å beskrive kvalitet på en distribusjon.</p>
 </div>
 <div class="paragraph">
-<p>Egenskapene beskrevet her i denne spesifikasjonen, supplerer <a href="https://doc.difi.no/review/dcat-ap-no/#_datasett">egenskapene for Datasett beskrevet i DCAT-AP-NO</a>.</p>
+<p>Egenskapene beskrevet her i denne spesifikasjonen, supplerer <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett">egenskapene for Datasett beskrevet i DCAT-AP-NO</a>.</p>
 </div>
 <div class="sect3">
-<h4 id="_anbefalte_egenskaper"><a class="link" href="#_anbefalte_egenskaper">Anbefalte egenskaper</a></h4>
+<h4 id="Datasett_anbefalte_egenskaper"><a class="link" href="#Datasett_anbefalte_egenskaper">Anbefalte egenskaper</a></h4>
 <div class="sect4">
-<h5 id="_datasett_er_i_samsvar_med_dctconformsto"><a class="link" href="#_datasett_er_i_samsvar_med_dctconformsto">Datasett: er i samsvar med (dct:conformsTo)</a></h5>
+<h5 id="Datasett_erISamsvarMed"><a class="link" href="#Datasett_erISamsvarMed">Datasett: er i samsvar med (dct:conformsTo)</a></h5>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1169,7 +1180,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dct:conformsTo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">dct:conformsTo</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
@@ -1177,11 +1188,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til en eller kvalitetsspesifikasjoner/-standarder.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til en kvalitetsspesifikasjon/-standard.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
@@ -1190,10 +1197,6 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
@@ -1209,7 +1212,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </table>
 </div>
 <div class="sect4">
-<h5 id="_datasett_har_kvalitetsnote_dqvhasqualityannotation"><a class="link" href="#_datasett_har_kvalitetsnote_dqvhasqualityannotation">Datasett: har kvalitetsnote (dqv:hasQualityAnnotation)</a></h5>
+<h5 id="Datasett_harKvalitetsnote"><a class="link" href="#Datasett_harKvalitetsnote">Datasett: har kvalitetsnote (dqv:hasQualityAnnotation)</a></h5>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1222,7 +1225,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dqv:hasQualityAnnotation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityAnnotation">dqv:hasQualityAnnotation</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
@@ -1230,11 +1233,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å knytte en Kvalitetsnote eller Brukertilbakemelding til et datasett.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityAnnotation">https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityAnnotation</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til en kvalitetsnote.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
@@ -1246,7 +1245,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gjelder også Brukertilbakemelding (<code>dqv:UserQualityFeedback</code>) og Kvalitetssertifikat (<code>dqv:QualityCertificate</code>) som er subklasser av Kvalitetsnote (<code>dqv:QualityAnnotation</code>).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
@@ -1254,7 +1253,19 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <div class="content">
 <pre class="highlight"><code>:aDataset
    a dcat:Dataset ;
-   dqv:hasQualityAnnotation :aQAnnotation, :aUserFeedBack .</code></pre>
+   dqv:hasQualityAnnotation :aQAnnotation, :aUserFeedBack, dqvno:isAuthoritative .</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>der <code>dqvno:isAuthoritative</code> er en predefinert instans av Kvalitetssertifikat (<code>dqv:QualityCertificate</code>):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>dqvno:isAuthoritative
+   a dqv:QualityCertificate ;
+   oa:motivatedBy dqv:qualityAssessment ;
+   skos:definition "kvalitetsbeskrivelse som uttrykker at noe er autoritativt"@nb , "quality description which states that something is authoritative"@en ;
+   skos:prefLabel "er autoritativ"@nb , "is authoritative"@en .</pre>
 </div>
 </div></div></td>
 </tr>
@@ -1262,7 +1273,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </table>
 </div>
 <div class="sect4">
-<h5 id="_datasett_har_kvantifiserbart_måleresultat_dqvhasqualitymeasurement"><a class="link" href="#_datasett_har_kvantifiserbart_måleresultat_dqvhasqualitymeasurement">Datasett: har kvantifiserbart måleresultat (dqv:hasQualityMeasurement)</a></h5>
+<h5 id="Datasett_harMåleresultat"><a class="link" href="#Datasett_harMåleresultat">Datasett: har måleresultat (dqv:hasQualityMeasurement)</a></h5>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1275,7 +1286,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dqv:hasQualityMeasurement</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityMeasurement">dqv:hasQualityMeasurement</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
@@ -1283,11 +1294,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å knytte kvalitetsmåleresultat til et datasett.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityMeasurement">https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityMeasurement</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til et måleresultat.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
@@ -1296,10 +1303,6 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
@@ -1317,11 +1320,11 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_kvalitetsdeldimensjon_dqvdimension"><a class="link" href="#_kvalitetsdeldimensjon_dqvdimension">Kvalitets(del)dimensjon (dqv:Dimension)</a></h3>
+<h3 id="Kvalitetsdeldimensjon_egenskaper"><a class="link" href="#Kvalitetsdeldimensjon_egenskaper">Kvalitetsdeldimensjon (dqvno:SubDimension)</a></h3>
 <div class="sect3">
-<h4 id="_obligatoriske_egenskaper"><a class="link" href="#_obligatoriske_egenskaper">Obligatoriske egenskaper</a></h4>
+<h4 id="Kvalitetsdeldimensjon_obligatoriske_egenskaper"><a class="link" href="#Kvalitetsdeldimensjon_obligatoriske_egenskaper">Obligatoriske egenskaper</a></h4>
 <div class="sect4">
-<h5 id="_kvalitetsdeldimensjon_er_deldimensjon_av_skosbroader"><a class="link" href="#_kvalitetsdeldimensjon_er_deldimensjon_av_skosbroader">Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)</a></h5>
+<h5 id="Kvalitetsdeldimensjon_erDeldimensjonAv"><a class="link" href="#Kvalitetsdeldimensjon_erDeldimensjonAv">Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)</a></h5>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1334,7 +1337,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">skos:broader</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/skos-reference/#semantic-relations">skos:broader</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
@@ -1342,11 +1345,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til den tilhørende kvalitetsdimensjon fra en kvalitetsdeldimensjon.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/skos-reference/#semantic-relations">https://www.w3.org/TR/skos-reference/#semantic-relations</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til kvalitetsdimensjonen som kvalitetsdeldimensjonen tilhører.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
@@ -1363,12 +1362,12 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Eksemplet viser at underdekning (<code>dqvno:undercoverage</code>) er en deldimensjon i kvalitetsdimensjon fullstendighet (<code>dqvno:completeness</code>):</p>
+<p>Eksemplet under viser bruk av <code>skos:broader</code> for å uttrykke at <code>dqvno:undercoverage</code> er en deldimensjon i <code>dqvno:completeness</code>; bruk av <code>skos:prefLabel</code> for å oppgi anbefalt term på engelsk og bokmål; og bruk av <code>skos:definition</code> for å oppgi definisjon på engelsk og bokmål:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code>dqvno:undercoverage
-   a dqv:Dimension ;
+   a dqvno:SubDimension ;
    skos:broader dqvno:completeness ;
    skos:prefLabel "under-coverage"@en , "underdekning"@nb ;
    skos:definition "data absent from a data set"@en , "data som mangler i et datasett"@nb .</code></pre>
@@ -1380,9 +1379,9 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_anbefalte_egenskaper_2"><a class="link" href="#_anbefalte_egenskaper_2">Anbefalte egenskaper</a></h4>
+<h4 id="Kvalitetsdeldimensjon_anbefalte_egenskaper"><a class="link" href="#Kvalitetsdeldimensjon_anbefalte_egenskaper">Anbefalte egenskaper</a></h4>
 <div class="sect4">
-<h5 id="_kvalitetsdeldimensjon_har_anbefalt_term_skospreflabel"><a class="link" href="#_kvalitetsdeldimensjon_har_anbefalt_term_skospreflabel">Kvalitets(del)dimensjon: har anbefalt term (skos:prefLabel)</a></h5>
+<h5 id="Kvalitetsdeldimensjon_harAnbefaltTerm"><a class="link" href="#Kvalitetsdeldimensjon_harAnbefaltTerm">Kvalitetsdeldimensjon: har anbefalt term (skos:prefLabel)</a></h5>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1395,7 +1394,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">skos:prefLabel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/skos-reference/#labels">skos:prefLabel</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
@@ -1403,11 +1402,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til termen som blir sett på som den best egnede for kvalitets(del)dimensjonen.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/skos-reference/#labels">https://www.w3.org/TR/skos-reference/#labels</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til den anbefalte termen til en kvalitetsdeldimensjon.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
@@ -1419,25 +1414,18 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Norsk utvidelse.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Norsk utvidelse.<br>
+Egenskapen kan gjentas for hvert språk termen finnes i.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>dqvno:undercoverage
-   a dqv:Dimension ;
-   skos:broader dqvno:completeness ;
-   skos:prefLabel "under-coverage"@en , "underdekning"@nb ;
-   skos:definition "data absent from a data set"@en , "data som mangler i et datasett"@nb .</code></pre>
-</div>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Se eksemplet under <a href="#Kvalitetsdeldimensjon_erDeldimensjonAv">Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)</a></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_kvalitetsdeldimensjon_har_definisjon_skosdefinition"><a class="link" href="#_kvalitetsdeldimensjon_har_definisjon_skosdefinition">Kvalitets(del)dimensjon: har definisjon (skos:definition)</a></h5>
+<h5 id="Kvalitetsdeldimensjon_harDefinisjon"><a class="link" href="#Kvalitetsdeldimensjon_harDefinisjon">Kvalitetsdeldimensjon: har definisjon (skos:definition)</a></h5>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1450,7 +1438,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">skos:definition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/skos-reference/#notes">skos:definition</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
@@ -1458,11 +1446,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til beskrivelsen som avgrenser kvalitets(del)dimensjonen mot beslektede kvalitets(del)dimensjoner.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/skos-reference/#notes">https://www.w3.org/TR/skos-reference/#notes</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til definisjonen av en kvalitetsdeldimensjon.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
@@ -1474,19 +1458,12 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Norsk utvidelse.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Norsk utvidelse.<br>
+Egenskapen kan gjentas for hvert språk definisjonen finnes i.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>dqvno:undercoverage
-   a dqv:Dimension ;
-   skos:broader dqvno:completeness ;
-   skos:prefLabel "under-coverage"@en , "underdekning"@nb ;
-   skos:definition "data absent from a data set"@en , "data som mangler i et datasett"@nb .</code></pre>
-</div>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Se eksemplet under <a href="#Kvalitetsdeldimensjon_erDeldimensjonAv">Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -1494,11 +1471,11 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_kvalitetsmål_dqvmetric"><a class="link" href="#_kvalitetsmål_dqvmetric">Kvalitetsmål (dqv:Metric)</a></h3>
+<h3 id="Kvalitetsdimensjon_egenskaper"><a class="link" href="#Kvalitetsdimensjon_egenskaper">Kvalitetsdimensjon (dqv:Dimension)</a></h3>
 <div class="sect3">
-<h4 id="_obligatoriske_egenskaper_2"><a class="link" href="#_obligatoriske_egenskaper_2">Obligatoriske egenskaper</a></h4>
+<h4 id="Kvalitetsdimensjon_anbefalte_egenskaper"><a class="link" href="#Kvalitetsdimensjon_anbefalte_egenskaper">Anbefalte egenskaper</a></h4>
 <div class="sect4">
-<h5 id="_kvalitetsmål_er_i_kvalitetsdeldimensjon_dqvindimension"><a class="link" href="#_kvalitetsmål_er_i_kvalitetsdeldimensjon_dqvindimension">Kvalitetsmål: er i kvalitetsdeldimensjon (dqv:inDimension)</a></h5>
+<h5 id="Kvalitetsdimensjon_harAnbefaltTerm"><a class="link" href="#Kvalitetsdimensjon_harAnbefaltTerm">Kvalitetsdimensjon: har anbefalt term (skos:prefLabel)</a></h5>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1507,23 +1484,117 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">is in dimension</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">has prefered label</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/skos-reference/#labels">skos:prefLabel</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdf:Literal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til den anbefalte termen til en kvalitetsdimensjon.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Norsk utvidelse.<br>
+Egenskapen kan gjentas for hvert språk termen finnes i.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Se tilsvarende eksempel under <a href="#Kvalitetsdeldimensjon_erDeldimensjonAv">Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="Kvalitetsdimensjon_harDefinisjon"><a class="link" href="#Kvalitetsdimensjon_harDefinisjon">Kvalitetsdimensjon: har definisjon (skos:definition)</a></h5>
+<table class="tableblock frame-all grid-all stripes-odd stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">has definition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/skos-reference/#notes">skos:definition</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdf:Literal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til definisjonen av en kvalitetsdimensjon.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Norsk utvidelse.<br>
+Egenskapen kan gjentas for hvert språk definisjonen finnes i.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Se tilsvarende eksempel under <a href="#Kvalitetsdeldimensjon_erDeldimensjonAv">Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Kvalitetsmål_egenskaper"><a class="link" href="#Kvalitetsmål_egenskaper">Kvalitetsmål (dqv:Metric)</a></h3>
+<div class="sect3">
+<h4 id="Kvalitetsmål_obligatoriske_egenskaper"><a class="link" href="#Kvalitetsmål_obligatoriske_egenskaper">Obligatoriske egenskaper</a></h4>
+<div class="sect4">
+<h5 id="inSubDimension"><a class="link" href="#inSubDimension">Kvalitetsmål: er i kvalitetsdeldimensjon (dqvno:inSubDimension)</a></h5>
+<table class="tableblock frame-all grid-all stripes-odd stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">is in subdimension</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://data.norge.no/vocabulary/dqvno#inSubDimension">dqvno:inSubDimension</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Subegenskap av</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dqv:inDimension</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dqv:Dimension</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dqvno:SubDimension</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til kvalitetsdeldimensjonen som det gitte kvalitetsmålet hører til.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:inDimension">https://www.w3.org/TR/vocab-dqv/#dqv:inDimension</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til kvalitetsdeldimensjonen som kvalitetsmålet hører til.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
@@ -1535,7 +1606,8 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Norsk restriksjon: Denne egenskapen skal referere til en instans av en kvalitetsdeldimensjon.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Norsk utvidelse.<br>
+Denne egenskapen skal referere til én instans av en kvalitetsdeldimensjon.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
@@ -1543,7 +1615,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <div class="content">
 <pre class="highlight"><code>:aQMetric
    a dqv:Metric;
-   dqv:inDimension dqvno:undercoverage .</code></pre>
+   dqvno:inSubDimension dqvno:undercoverage .</code></pre>
 </div>
 </div></div></td>
 </tr>
@@ -1552,9 +1624,9 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_anbefalte_egenskaper_3"><a class="link" href="#_anbefalte_egenskaper_3">Anbefalte egenskaper</a></h4>
+<h4 id="Kvalitetsmål_anbefalte_egenskaper"><a class="link" href="#Kvalitetsmål_anbefalte_egenskaper">Anbefalte egenskaper</a></h4>
 <div class="sect4">
-<h5 id="_kvalitetsmål_har_forventet_datatype_dqvexpecteddatatype"><a class="link" href="#_kvalitetsmål_har_forventet_datatype_dqvexpecteddatatype">Kvalitetsmål: har forventet datatype (dqv:expectedDataType)</a></h5>
+<h5 id="Kvalitetsmål_harForventetDatatype"><a class="link" href="#Kvalitetsmål_harForventetDatatype">Kvalitetsmål: har forventet datatype (dqv:expectedDataType)</a></h5>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1567,7 +1639,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dqv:expectedDataType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:expectedDataType">dqv:expectedDataType</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
@@ -1575,11 +1647,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å beskrive forventet datatype av måleresultat.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:expectedDataType">https://www.w3.org/TR/vocab-dqv/#dqv:expectedDataType</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til forventet datatype av et måleresultat.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
@@ -1588,10 +1656,6 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
@@ -1611,7 +1675,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </table>
 </div>
 <div class="sect4">
-<h5 id="_kvalitetsmål_har_anbefalt_term_skospreflabel"><a class="link" href="#_kvalitetsmål_har_anbefalt_term_skospreflabel">Kvalitetsmål: har anbefalt term (skos:prefLabel)</a></h5>
+<h5 id="Kvalitetsmål_harAnbefaltTerm"><a class="link" href="#Kvalitetsmål_harAnbefaltTerm">Kvalitetsmål: har anbefalt term (skos:prefLabel)</a></h5>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1624,7 +1688,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">skos:prefLabel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/skos-reference/#labels">skos:prefLabel</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
@@ -1632,11 +1696,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til termen som blir sett på som den best egnede for kvalitetsmålet</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/skos-reference/#labels">https://www.w3.org/TR/skos-reference/#labels</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til den anbefalte termen til et kvalitetsmål.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
@@ -1648,17 +1708,18 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Norsk utvidelse.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Norsk utvidelse.<br>
+Egenskapen kan gjentas for hvert språk termen finnes i.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Se tilsvarende eksempler for Kvalitets(del)dimensjon.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Se tilsvarende eksempel under <a href="#Kvalitetsdeldimensjon_erDeldimensjonAv">Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)</a></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_kvalitetsmål_har_definisjon_skosdefinition"><a class="link" href="#_kvalitetsmål_har_definisjon_skosdefinition">Kvalitetsmål: har definisjon (skos:definition)</a></h5>
+<h5 id="Kvalitetsmål_harDefinisjon"><a class="link" href="#Kvalitetsmål_harDefinisjon">Kvalitetsmål: har definisjon (skos:definition)</a></h5>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1671,7 +1732,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">skos:definition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/skos-reference/#notes">skos:definition</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
@@ -1679,11 +1740,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til beskrivelsen som avgrenser kvalitetsmålet mot beslektede kvalitetsmål.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/skos-reference/#notes">https://www.w3.org/TR/skos-reference/#notes</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til definisjonen av et kvalitetsmål.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
@@ -1695,11 +1752,12 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Norsk utvidelse.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Norsk utvidelse.<br>
+Egenskapen kan gjentas for hvert språk definisjonen finnes i.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Se tilsvarende eksempler for Kvalitets(del)dimensjon.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Se tilsvarende eksempel under <a href="#Kvalitetsdeldimensjon_erDeldimensjonAv">Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -1707,14 +1765,14 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_kvalitetsnote_dqvqualityannotation"><a class="link" href="#_kvalitetsnote_dqvqualityannotation">Kvalitetsnote (dqv:QualityAnnotation)</a></h3>
+<h3 id="Kvalitetsnote_egenskaper"><a class="link" href="#Kvalitetsnote_egenskaper">Kvalitetsnote (dqv:QualityAnnotation)</a></h3>
 <div class="paragraph">
 <p>Tilsvarende gjelder også for <a href="#klasse-brukertilbakemelding">Brukertilbakemelding</a> (<code>dqv:UserFeedback</code>) og <a href="#klasse-kvalitetssertifikat">Kvalitetssertifikat</a> (<code>dqv:QualityCertificate</code>) som er subklasser av Kvalitetsnote (<code>dqv:QualityAnnotation</code>).</p>
 </div>
 <div class="sect3">
-<h4 id="_obligatoriske_egenskaper_3"><a class="link" href="#_obligatoriske_egenskaper_3">Obligatoriske egenskaper</a></h4>
+<h4 id="Kvalitetsnote_obligatoriske_egenskaper"><a class="link" href="#Kvalitetsnote_obligatoriske_egenskaper">Obligatoriske egenskaper</a></h4>
 <div class="sect4">
-<h5 id="_kvalitetsnote_er_motivert_av_oamotivatedby"><a class="link" href="#_kvalitetsnote_er_motivert_av_oamotivatedby">Kvalitetsnote: er motivert av (oa:motivatedBy)</a></h5>
+<h5 id="Kvalitetsnote_erMotivertAv"><a class="link" href="#Kvalitetsnote_erMotivertAv">Kvalitetsnote: er motivert av (oa:motivatedBy)</a></h5>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1727,7 +1785,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">oa:motivatedBy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/annotation-vocab/#motivatedby">oa:motivatedBy</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
@@ -1735,11 +1793,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til beskrivelse av motivasjon.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/annotation-vocab/#motivatedby">https://www.w3.org/TR/annotation-vocab/#motivatedby</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til beskrivelse av motivasjonen.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
@@ -1768,9 +1822,9 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_anbefalte_egenskaper_4"><a class="link" href="#_anbefalte_egenskaper_4">Anbefalte egenskaper</a></h4>
+<h4 id="Kvalitetsnote_anbefalte_egenskaper"><a class="link" href="#Kvalitetsnote_anbefalte_egenskaper">Anbefalte egenskaper</a></h4>
 <div class="sect4">
-<h5 id="_kvalitetsnote_er_i_kvalitetsdimensjon_dqvindimension"><a class="link" href="#_kvalitetsnote_er_i_kvalitetsdimensjon_dqvindimension">Kvalitetsnote: er i kvalitetsdimensjon (dqv:inDimension)</a></h5>
+<h5 id="Kvalitetsnote_erIKvalitetsdimensjon"><a class="link" href="#Kvalitetsnote_erIKvalitetsdimensjon">Kvalitetsnote: er i kvalitetsdimensjon (dqv:inDimension)</a></h5>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1783,7 +1837,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dqv:inDimension</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:inDimension">dqv:inDimension</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
@@ -1791,11 +1845,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til kvalitetsdimensjon.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:inDimension">https://www.w3.org/TR/vocab-dqv/#dqv:inDimension</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til en kvalitetsdimensjon.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
@@ -1804,10 +1854,6 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
@@ -1824,7 +1870,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </table>
 </div>
 <div class="sect4">
-<h5 id="_kvalitetsnote_har_tekstdel_oahasbody"><a class="link" href="#_kvalitetsnote_har_tekstdel_oahasbody">Kvalitetsnote: har tekstdel (oa:hasBody)</a></h5>
+<h5 id="Kvalitetsnote_harTekstdel"><a class="link" href="#Kvalitetsnote_harTekstdel">Kvalitetsnote: har tekstdel (oa:hasBody)</a></h5>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1837,7 +1883,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">oa:hasBody</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/annotation-vocab/#hasbody">oa:hasBody</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
@@ -1845,11 +1891,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til tekstdel i en kvalitetsnote.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/annotation-vocab/#hasbody">https://www.w3.org/TR/annotation-vocab/#hasbody</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til en tekstdel i en kvalitetsnote.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
@@ -1858,10 +1900,6 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
@@ -1886,9 +1924,9 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_valgfrie_egenskaper"><a class="link" href="#_valgfrie_egenskaper">Valgfrie egenskaper</a></h4>
+<h4 id="Kvalitetsnote_valgfrie_egenskaper"><a class="link" href="#Kvalitetsnote_valgfrie_egenskaper">Valgfrie egenskaper</a></h4>
 <div class="sect4">
-<h5 id="_kvalitetsnote_har_merknad_rdfscomment"><a class="link" href="#_kvalitetsnote_har_merknad_rdfscomment">Kvalitetsnote: har merknad (rdfs:comment)</a></h5>
+<h5 id="Kvalitetsnote_harMerknad"><a class="link" href="#Kvalitetsnote_harMerknad">Kvalitetsnote: har merknad (rdfs:comment)</a></h5>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1901,7 +1939,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:comment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/rdf-schema/#ch_comment">rdfs:comment</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
@@ -1909,11 +1947,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til fritekst merknad.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/rdf-schema/#ch_comment">https://www.w3.org/TR/rdf-schema/#ch_comment</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til en fritekstmerknad.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
@@ -1927,15 +1961,11 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Norsk utvidelse. For å kunne ha fritekstkommentarer.</p></td>
 </tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
 </tbody>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_kvalitetsnote_har_mål_oahastarget"><a class="link" href="#_kvalitetsnote_har_mål_oahastarget">Kvalitetsnote: har mål (oa:hasTarget)</a></h5>
+<h5 id="Kvalitetsnote_harMål"><a class="link" href="#Kvalitetsnote_harMål">Kvalitetsnote: har mål (oa:hasTarget)</a></h5>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -1948,7 +1978,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">oa:hasTarget</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/annotation-vocab/#hastarget">oa:hasTarget</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
@@ -1959,10 +1989,6 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til ressursen som kvalitetsnoten er for.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/annotation-vocab/#hastarget">https://www.w3.org/TR/annotation-vocab/#hastarget</a></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
@@ -1970,25 +1996,17 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
 </tbody>
 </table>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_måleresultat_dqvqualitymeasurement"><a class="link" href="#_måleresultat_dqvqualitymeasurement">Måleresultat (dqv:QualityMeasurement)</a></h3>
+<h3 id="Måleresultat_egenskaper"><a class="link" href="#Måleresultat_egenskaper">Måleresultat (dqv:QualityMeasurement)</a></h3>
 <div class="sect3">
-<h4 id="_obligatoriske_egenskaper_4"><a class="link" href="#_obligatoriske_egenskaper_4">Obligatoriske egenskaper</a></h4>
+<h4 id="Måleresultat_obligatoriske_egenskaper"><a class="link" href="#Måleresultat_obligatoriske_egenskaper">Obligatoriske egenskaper</a></h4>
 <div class="sect4">
-<h5 id="_måleresultat_er_måleresultat_av_dqvismeasurementof"><a class="link" href="#_måleresultat_er_måleresultat_av_dqvismeasurementof">Måleresultat: er måleresultat av (dqv:isMeasurementOf)</a></h5>
+<h5 id="Måleresultat_erMåleresultatAv"><a class="link" href="#Måleresultat_erMåleresultatAv">Måleresultat: er måleresultat av (dqv:isMeasurementOf)</a></h5>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2001,7 +2019,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dqv:isMeasurementOf</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:isMeasurementOf">dqv:isMeasurementOf</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
@@ -2009,11 +2027,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til et konkret Kvalitetsmål (dqv:Metric) som et gitt Måleresultat (dqv:QualityMeasurement) er resultat av</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:isMeasurementOf">https://www.w3.org/TR/vocab-dqv/#dqv:isMeasurementOf</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til et kvalitetsmål.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
@@ -2022,10 +2036,6 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
@@ -2043,9 +2053,9 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_anbefalte_egenskaper_5"><a class="link" href="#_anbefalte_egenskaper_5">Anbefalte egenskaper</a></h4>
+<h4 id="Måleresultat_anbefalte_egenskaper"><a class="link" href="#Måleresultat_anbefalte_egenskaper">Anbefalte egenskaper</a></h4>
 <div class="sect4">
-<h5 id="_måleresultat_har_verdi_dqvvalue"><a class="link" href="#_måleresultat_har_verdi_dqvvalue">Måleresultat: har verdi (dqv:value)</a></h5>
+<h5 id="Måleresultat_harVerdi"><a class="link" href="#Måleresultat_harVerdi">Måleresultat: har verdi (dqv:value)</a></h5>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2058,7 +2068,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dqv:value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:value">dqv:value</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
@@ -2066,11 +2076,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til verdien av et måleresultat</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:value">https://www.w3.org/TR/vocab-dqv/#dqv:value</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til verdien av et måleresultat.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
@@ -2081,28 +2087,17 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>:aQMeasurement
-   a dqv:QualityMeasurement ;
-   dqv:isMeasurementOf dqvno:missingObjects ;
-   dqv:value “true”^^xsd:boolean .</code></pre>
-</div>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Se eksemplet under <a href="#Måleresultat_erMåleresultatAv">Måleresultat: er måleresultat av (dqv:isMeasurementOf)</a></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_valgfrie_egenskaper_2"><a class="link" href="#_valgfrie_egenskaper_2">Valgfrie egenskaper</a></h4>
+<h4 id="Måleresultat_valgfrie_egenskaper"><a class="link" href="#Måleresultat_valgfrie_egenskaper">Valgfrie egenskaper</a></h4>
 <div class="sect4">
-<h5 id="_måleresultat_har_merknad_rdfscomment"><a class="link" href="#_måleresultat_har_merknad_rdfscomment">Måleresultat: har merknad (rdfs:comment)</a></h5>
+<h5 id="Måleresultat_harMerknad"><a class="link" href="#Måleresultat_harMerknad">Måleresultat: har merknad (rdfs:comment)</a></h5>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2115,7 +2110,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:comment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/rdf-schema/#ch_comment">rdfs:comment</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
@@ -2123,11 +2118,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til fritekst merknad.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/rdf-schema/#ch_comment">https://www.w3.org/TR/rdf-schema/#ch_comment</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til en fritekstmerknad.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
@@ -2159,11 +2150,54 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_standardspesifikasjon_dctstandard"><a class="link" href="#_standardspesifikasjon_dctstandard">Standard/spesifikasjon (dct:Standard)</a></h3>
+<h3 id="Standard_egenskaper"><a class="link" href="#Standard_egenskaper">Standard/spesifikasjon (dct:Standard)</a></h3>
 <div class="sect3">
-<h4 id="_anbefalte_egenskaper_6"><a class="link" href="#_anbefalte_egenskaper_6">Anbefalte egenskaper</a></h4>
+<h4 id="Standard_obligatoriske_egenskaper"><a class="link" href="#Standard_obligatoriske_egenskaper">Obligatoriske egenskaper</a></h4>
 <div class="sect4">
-<h5 id="_standardspesifikasjon_er_i_kvalitetsdimensjon_dqvindimension"><a class="link" href="#_standardspesifikasjon_er_i_kvalitetsdimensjon_dqvindimension">Standard/spesifikasjon: er i kvalitetsdimensjon (dqv:inDimension)</a></h5>
+<h5 id="Standard_harTittel"><a class="link" href="#Standard_harTittel">Standard/spesifikasjon: har tittel (dct:title)</a></h5>
+<table class="tableblock frame-all grid-all stripes-odd stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">has title</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/elements/1.1/title">dct:title</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til tittelen til standarden/spesifikasjonen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Norsk utvidelse. For å kunne ha tittel til standard/spesifikasjon.<br>
+Egenskapen kan gjentas for hvert språk tittelen finnes i.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Standard_anbefalte_egenskaper"><a class="link" href="#Standard_anbefalte_egenskaper">Anbefalte egenskaper</a></h4>
+<div class="sect4">
+<h5 id="Standard_erIKvalitetsdimensjon"><a class="link" href="#Standard_erIKvalitetsdimensjon">Standard/spesifikasjon: er i kvalitetsdimensjon (dqv:inDimension)</a></h5>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2176,7 +2210,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dqv:inDimension</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:inDimension">dqv:inDimension</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
@@ -2184,11 +2218,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til kvalitetsdimensjon</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:inDimension">https://www.w3.org/TR/vocab-dqv/#dqv:inDimension</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til en kvalitetsdimensjon som standarden/spesifikasjonen dekker.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
@@ -2197,10 +2227,6 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
@@ -2216,54 +2242,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </table>
 </div>
 <div class="sect4">
-<h5 id="_standardspesifikasjon_har_tittel_dcttitle"><a class="link" href="#_standardspesifikasjon_har_tittel_dcttitle">Standard/spesifikasjon: har tittel (dct:title)</a></h5>
-<table class="tableblock frame-all grid-all stripes-odd stretch">
-<colgroup>
-<col style="width: 30%;">
-<col style="width: 70%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">has comment</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dct:title</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til tittelen til standarden/spesifikasjonen..</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/rdf-schema/#ch_comment">https://www.w3.org/TR/rdf-schema/#ch_comment</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Norsk utvidelse. For å kunne ha tittel til standard/spesifikasjon.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="_standardspesifikasjon_har_referanse_rdfsseealso"><a class="link" href="#_standardspesifikasjon_har_referanse_rdfsseealso">Standard/spesifikasjon: har referanse (rdfs:seeAlso)</a></h5>
+<h5 id="Standard_harReferanse"><a class="link" href="#Standard_harReferanse">Standard/spesifikasjon: har referanse (rdfs:seeAlso)</a></h5>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2276,19 +2255,15 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:seeAlso</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/rdf-schema/#ch_seealso">rdfs:seeAlso</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Resource</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til referanse til standard/spesifikasjon.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/rdf-schema/#ch_seealso">https://www.w3.org/TR/rdf-schema/#ch_seealso</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til en referanse til standarden/spesifikasjonen.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
@@ -2302,18 +2277,14 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Norsk utvidelse. For å kunne ha referanse til standard/spesifikasjon.</p></td>
 </tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_valgfrie_egenskaper_3"><a class="link" href="#_valgfrie_egenskaper_3">Valgfrie egenskaper</a></h4>
+<h4 id="Standard_valgfrie_egenskaper"><a class="link" href="#Standard_valgfrie_egenskaper">Valgfrie egenskaper</a></h4>
 <div class="sect4">
-<h5 id="_standardspesifikasjon_har_merknad_rdfscomment"><a class="link" href="#_standardspesifikasjon_har_merknad_rdfscomment">Standard/spesifikasjon: har merknad (rdfs:comment)</a></h5>
+<h5 id="Standard_harMerknad"><a class="link" href="#Standard_harMerknad">Standard/spesifikasjon: har merknad (rdfs:comment)</a></h5>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2326,7 +2297,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:comment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/rdf-schema/#ch_comment">rdfs:comment</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
@@ -2334,11 +2305,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til fritekst merknad.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/rdf-schema/#ch_comment">https://www.w3.org/TR/rdf-schema/#ch_comment</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til en fritekstmerknad.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
@@ -2352,9 +2319,44 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Norsk utvidelse. For å kunne ha fritekstkommentarer.</p></td>
 </tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="Standard_harVersjonsnr"><a class="link" href="#Standard_harVersjonsnr">Standard/spesifikasjon: har versjonsnummer (owl:versionInfo)</a></h5>
+<table class="tableblock frame-all grid-all stripes-odd stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Engelsk navn</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">has version number</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/owl-ref/#versionInfo-def">owl:versionInfo</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:Literal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til versjonsnummer.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Norsk utvidelse. For å kunne refefere til versjonsnummer.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2362,11 +2364,11 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_tekstdel_oatextualbody"><a class="link" href="#_tekstdel_oatextualbody">Tekstdel (oa:TextualBody)</a></h3>
+<h3 id="Tekstdel_egenskaper"><a class="link" href="#Tekstdel_egenskaper">Tekstdel (oa:TextualBody)</a></h3>
 <div class="sect3">
-<h4 id="_obligatoriske_egenskaper_5"><a class="link" href="#_obligatoriske_egenskaper_5">Obligatoriske egenskaper</a></h4>
+<h4 id="Tekstdel_obligatoriske_egenskaper"><a class="link" href="#Tekstdel_obligatoriske_egenskaper">Obligatoriske egenskaper</a></h4>
 <div class="sect4">
-<h5 id="_textdel_har_verdi_rdfsvalue"><a class="link" href="#_textdel_har_verdi_rdfsvalue">Textdel: har verdi (rdfs:value)</a></h5>
+<h5 id="Tekstdel_harVerdi"><a class="link" href="#Tekstdel_harVerdi">Textdel: har verdi (rdfs:value)</a></h5>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2379,7 +2381,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/rdf-schema/#ch_value">rdfs:value</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
@@ -2387,11 +2389,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til selve teksten.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/rdf-schema/#ch_value">https://www.w3.org/TR/rdf-schema/#ch_value</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til selve teksten i en tekstdel.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
@@ -2400,10 +2398,6 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
@@ -2422,9 +2416,9 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_anbefalte_egenskaper_7"><a class="link" href="#_anbefalte_egenskaper_7">Anbefalte egenskaper</a></h4>
+<h4 id="Tekstdel_anbefalte_egenskaper"><a class="link" href="#Tekstdel_anbefalte_egenskaper">Anbefalte egenskaper</a></h4>
 <div class="sect4">
-<h5 id="_tekstdel_er_i_format"><a class="link" href="#_tekstdel_er_i_format">Tekstdel: er i format</a></h5>
+<h5 id="Tekstdel_erIFormat"><a class="link" href="#Tekstdel_erIFormat">Tekstdel: er i format</a></h5>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2437,7 +2431,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dct:format</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/format">dct:format</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
@@ -2448,10 +2442,6 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til formatet som en gitt tekst er skrevet i.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://purl.org/dc/terms/format">http://purl.org/dc/terms/format</a></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
@@ -2460,18 +2450,14 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Se eksemplet over.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Se eksemplet under <a href="#Tekstdel_harVerdi">Textdel: har verdi (rdfs:value)</a>.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_tekstdel_er_i_språkmålform"><a class="link" href="#_tekstdel_er_i_språkmålform">Tekstdel: er i språk/målform</a></h5>
+<h5 id="Tekstdel_erISpråk"><a class="link" href="#Tekstdel_erISpråk">Tekstdel: er i språk/målform</a></h5>
 <table class="tableblock frame-all grid-all stripes-odd stretch">
 <colgroup>
 <col style="width: 30%;">
@@ -2484,7 +2470,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>URI</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dct:language</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/elements/1.1/language">dct:language</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
@@ -2495,10 +2481,6 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <td class="tableblock halign-left valign-top"><p class="tableblock">Brukes til å referere til språk/målform som en gitt tekst er skrevet i.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Referanse</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://purl.org/dc/terms/language">http://purl.org/dc/terms/language</a></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Multiplisitet</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
@@ -2507,12 +2489,8 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kommentar</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Se eksemplet over.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Se eksemplet under <a href="#Tekstdel_harVerdi">Textdel: har verdi (rdfs:value)</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2538,282 +2516,113 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 @prefix xml: &lt;http://www.w3.org/XML/1998/namespace&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 @prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
 @prefix dqvno: &lt;https://data.norge.no/vocabulary/dqvno#&gt; .
+@prefix brregOrg: &lt;https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/&gt; .
+@prefix euDataTheme: &lt;http://publications.europa.eu/resource/authority/data-theme/&gt; .
+@prefix euDatasetType: &lt;http://publications.europa.eu/resource/dataset/dataset-type/&gt; .
 @base &lt;https://exampledatasets.org/examples/dqvExamples#&gt; .
-
-&lt;https://exampledatasets.org/examples/dqvExamples#&gt; rdf:type owl:Ontology ;
-      owl:versionIRI &lt;Example:0.3&gt; ;
-      rdfs:isDefinedBy "Digitaliseringsdirektoratet"@nb , "Norwegian Digitalisation Agency"@en ;
-      rdfs:label "dqv-ap-no-eksempler"@nb , "dqv-ap-no-examples"@en ;
-      owl:versionInfo "v0.3"@en , "v0.3"@nb .
-
-#################################################################
-#    Object Properties
-#################################################################
-
-###  http://purl.org/dc/terms/conformsTo
-dct:conformsTo rdf:type owl:ObjectProperty .
-
-###  http://purl.org/dc/terms/description
-dct:description rdf:type owl:ObjectProperty .
-
-###  http://www.w3.org/2000/01/rdf-schema#comment
-rdfs:comment rdf:type owl:ObjectProperty .
-
-###  https://www.w3.org/TR/annotation-vocab/#hasBody
-oa:hasBody rdf:type owl:ObjectProperty .
-
-###  https://www.w3.org/TR/annotation-vocab/#hasTarget
-oa:hasTarget rdf:type owl:ObjectProperty .
-
-###  https://www.w3.org/TR/annotation-vocab/#motivatedBy
-oa:motivatedBy rdf:type owl:ObjectProperty .
-
-###  https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityAnnotation
-dqv:hasQualityAnnotation rdf:type owl:ObjectProperty .
-
-###  https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityMeasurement
-dqv:hasQualityMeasurement rdf:type owl:ObjectProperty .
-
-###  https://www.w3.org/TR/vocab-dqv/#dqv:inDimension
-dqv:inDimension rdf:type owl:ObjectProperty .
-
-###  https://www.w3.org/TR/vocab-dqv/#dqv:isMeasurementOf
-dqv:isMeasurementOf rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf owl:topObjectProperty .
-
-#################################################################
-#    Data properties
-#################################################################
-
-###  http://purl.org/dc/terms/description
-dct:description rdf:type owl:DatatypeProperty .
-
-###  http://purl.org/dc/terms/format
-dct:format rdf:type owl:DatatypeProperty .
-
-###  http://purl.org/dc/terms/identifier
-dct:identifier rdf:type owl:DatatypeProperty .
-
-###  http://purl.org/dc/terms/language
-dct:language rdf:type owl:DatatypeProperty .
-
-###  http://purl.org/dc/terms/publisher
-dct:publisher rdf:type owl:DatatypeProperty .
-
-###  http://purl.org/dc/terms/title
-dct:title rdf:type owl:DatatypeProperty .
-
-###  http://www.w3.org/2000/01/rdf-schema#comment
-rdfs:comment rdf:type owl:DatatypeProperty .
-
-###  http://www.w3.org/2000/01/rdf-schema#seeAlso
-rdfs:seeAlso rdf:type owl:DatatypeProperty .
-
-###  http://www.w3.org/2000/01/rdf-schema#value
-rdfs:value rdf:type owl:DatatypeProperty .
-
-###  http://www.w3.org/2004/02/skos/core#prefLabel
-skos:prefLabel rdf:type owl:DatatypeProperty .
-
-###  http://www.w3.org/ns/dcat#theme
-dcat:theme rdf:type owl:DatatypeProperty .
-
-###  https://www.w3.org/TR/vocab-dqv/#dqv:value
-dqv:value rdf:type owl:DatatypeProperty ;
-          rdfs:range xsd:boolean ,
-                     xsd:double ,
-                     xsd:nonNegativeInteger .
-
-#################################################################
-#    Classes
-#################################################################
-
-###  http://purl.org/dc/terms/Standard
-dct:Standard rdf:type owl:Class .
-
-###  http://www.w3.org/ns/dcat#Dataset
-dcat:Dataset rdf:type owl:Class .
-
-###  https://www.w3.org/TR/annotation-vocab/#Motivation
-oa:Motivation rdf:type owl:Class .
-
-###  https://www.w3.org/TR/annotation-vocab/#TextualBody
-oa:TextualBody rdf:type owl:Class .
-
-###  https://www.w3.org/TR/vocab-dqv/#dqv:Dimension
-dqv:Dimension rdf:type owl:Class .
-
-###  https://www.w3.org/TR/vocab-dqv/#dqv:Metric
-dqv:Metric rdf:type owl:Class .
-
-###  https://www.w3.org/TR/vocab-dqv/#dqv:QualityAnnotation
-dqv:QualityAnnotation rdf:type owl:Class .
-
-###  https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate
-dqv:QualityCertificate rdf:type owl:Class ;
-                       rdfs:subClassOf dqv:QualityAnnotation .
-
-###  https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurement
-dqv:QualityMeasurement rdf:type owl:Class .
-
-###  https://www.w3.org/TR/vocab-dqv/#dqv:UserQualityFeedback
-dqv:UserQualityFeedback rdf:type owl:Class ;
-                        rdfs:subClassOf dqv:QualityAnnotation .
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  https://data.norge.no/vocabulary/dqvno#completeness
-dqvno:completeness rdf:type owl:NamedIndividual ,
-                            dqv:Dimension ;
-                   skos:prefLabel "completeness"@en ,
-                                  "fullstendighet"@nb ;
-                   rdfs:comment "Dette er en predefinert kvalitetsdimensjon (dqv:Dimension)."@nb ,
-                                "This is a predefined quality dimension (dqv:Dimension)."@en .
-
-###  https://data.norge.no/vocabulary/dqvno#isAuthoritative
-dqvno:isAuthoritative rdf:type owl:NamedIndividual ,
-                               dqv:QualityCertificate ;
-                      skos:prefLabel "er autoritativ"@nb ,
-                                     "is authoritative"@en ;
-                      rdfs:comment "Dette er et predefinert kvalitetssertifikat (dqv:QualityCertificate) som sier at noe er autoritativt."@nb ,
-                                   "This is a predefined dqv:QualityCertificate stating that something is authoritative."@en .
-
-###  https://data.norge.no/vocabulary/dqvno#missingObjects
-dqvno:missingObjects rdf:type owl:NamedIndividual ,
-                              dqv:Metric ;
-                     skos:prefLabel "manglende enheter"@nb ,
-                                    "missing objects"@en ;
-                     rdfs:comment "Dette er et predefinert kvalitetsmål (dqv:Metric) med boolsk verdi, som sier hvorvidt det mangler noen enheter i datasettet."@nb ,
-                                  "This is a predefined dqv:Metric in boolean, which states whether some objects are missing in the dataset."@en .
-
-###  https://data.norge.no/vocabulary/dqvno#numberOfMissingObjects
-dqvno:numberOfMissingObjects rdf:type owl:NamedIndividual ,
-                                      dqv:Metric ;
-                             skos:prefLabel "antall manglende enheter"@nb ,
-                                            "number of missing objects"@en ;
-                             rdfs:comment "Dette er et predefinert kvalitetsmål (dqv:Metric) med ikke-negativ-heltall, som sier antall enheter som mangler i datasettet."@nb ,
-                                          "This is a predefined metric (dqv:Metric) with nonNegativeInteger, which states the number of objects that are missing in the dataset."@en .
-
-###  https://data.norge.no/vocabulary/dqvno#rateOfMissingObjects
-dqvno:rateOfMissingObjects rdf:type owl:NamedIndividual ,
-                                    dqv:Metric ;
-                           skos:prefLabel "andel manglende enheter"@nb ,
-                                          "rate of missing objects"@en ;
-                           rdfs:comment "Dette er et predefinert kvalitetsmål (dqv:Metric) med double (uttrykt som prosent), som sier andel enheter som mangler i datasettet."@nb ,
-                                        "This is a predefined metric (dqv:Metric) with double (typed as percentage), which states the rate of missing objects in the dataset."@en .
 
 ###  https://exampledatasets.org/examples/dqvExamples#dsBuildings
 :dsBuildings rdf:type owl:NamedIndividual ,
-                      dcat:Dataset ;
-             dct:conformsTo :qsQualitySpecification ;
-             dqv:hasQualityAnnotation dqvno:isAuthoritative ,
-                                      :qaCompleteness ,
-                                      :qaUserFeedback ;
-             dqv:hasQualityMeasurement :qmMissingObjects ,
-                                       :qmNumberMissingObjects ,
-                                       :qmRateMissingObjects ;
-             dct:description "An example dataset."@en ,
-                             "Et eksempeldatasett."@nb ;
-             dct:identifier "https://exampledatasets.org/examples/dqvExamples#" ;
-             dct:publisher "https://data.brreg.no/enhetsregisteret/api/enheter/991825827" ;
-             dct:title "Buldings - an example dataset"@en ,
-                       "Bygninger - et eksempeldatasett"@nb ;
-             dcat:theme "http://publications.europa.eu/resource/authority/data-theme/GOVE" .
+            dcat:Dataset ;
+   dct:conformsTo :qsQualitySpecification ;
+   dct:publisher brregOrg:991825827 ;
+   dcat:theme euDataTheme:GOVE ;
+   dqv:hasQualityAnnotation dqvno:isAuthoritative ,
+                            :qaCompleteness ,
+                            :qaUserFeedback ;
+   dqv:hasQualityMeasurement :qmMissingObjects ,
+                             :qmNumberMissingObjects ,
+                             :qmRateMissingObjects ;
+   dct:description "An example dataset."@en ,
+                   "Et eksempeldatasett."@nb ;
+   dct:identifier "https://exampledatasets.org/examples/dqvExamples#" ;
+   dct:type euDatasetType:TEST_DATA ;
+   dct:title "Buildings - an example dataset"@en ,
+             "Bygninger - et eksempeldatasett"@nb .
 
 ###  https://exampledatasets.org/examples/dqvExamples#qaCompleteness
 :qaCompleteness rdf:type owl:NamedIndividual ,
-                         dqv:QualityAnnotation ;
-                oa:hasBody :tekstFullstendighet ,
-                           :textCompleteness ;
-                oa:hasTarget :dsBuildings ;
-                oa:motivatedBy dqv:qualityAssessment ;
-                dqv:inDimension dqvno:completeness .
+            dqv:QualityAnnotation ;
+   oa:hasBody :tekstFullstendighet ,
+              :textCompleteness ;
+   oa:hasTarget :dsBuildings ;
+   oa:motivatedBy dqv:qualityAssessment ;
+   dqv:inDimension dqvno:completeness .
 
 ###  https://exampledatasets.org/examples/dqvExamples#qaUserFeedback
 :qaUserFeedback rdf:type owl:NamedIndividual ,
-                         dqv:UserQualityFeedback ;
-                oa:hasBody :tekstBrukertilbakemelding ,
-                           :textUserFeedback ;
-                oa:hasTarget :dsBuildings ;
-                oa:motivatedBy dqv:qualityAssessment ;
-                dqv:inDimension dqvno:completeness .
+            dqv:UserQualityFeedback ;
+   oa:hasBody :tekstBrukertilbakemelding ,
+              :textUserFeedback ;
+   oa:hasTarget :dsBuildings ;
+   oa:motivatedBy dqv:qualityAssessment ;
+   dqv:inDimension dqvno:completeness .
 
 ###  https://exampledatasets.org/examples/dqvExamples#qmMissingObjects
 :qmMissingObjects rdf:type owl:NamedIndividual ,
-                           dqv:QualityMeasurement ;
-                  dqv:isMeasurementOf dqvno:missingObjects ;
-                  dqv:value "true"^^xsd:boolean ;
-                  rdfs:comment "Ja, noen bygninger mangler i datasettet."@nb ,
-                               "Yes, some buildings are missing in the dataset."@en .
+            dqv:QualityMeasurement ;
+   dqv:isMeasurementOf dqvno:missingObjects ;
+   dqv:value "true"^^xsd:boolean ;
+   rdfs:comment "Ja, noen bygninger mangler i datasettet."@nb ,
+                "Yes, some buildings are missing in the dataset."@en .
 
 ###  https://exampledatasets.org/examples/dqvExamples#qmNumberMissingObjects
 :qmNumberMissingObjects rdf:type owl:NamedIndividual ,
-                                 dqv:QualityMeasurement ;
-                        dqv:isMeasurementOf dqvno:numberOfMissingObjects ;
-                        dqv:value "2"^^xsd:nonNegativeInteger ;
-                        rdfs:comment "To bygninger mangler i datasettet."@nb ,
-                                     "Two buildings are missing in the dataset."@en .
+            dqv:QualityMeasurement ;
+   dqv:isMeasurementOf dqvno:numberOfMissingObjects ;
+   dqv:value "2"^^xsd:nonNegativeInteger ;
+   rdfs:comment "To bygninger mangler i datasettet."@nb ,
+                "Two buildings are missing in the dataset."@en .
 
 ###  https://exampledatasets.org/examples/dqvExamples#qmRateMissingObjects
 :qmRateMissingObjects rdf:type owl:NamedIndividual ,
-                               dqv:QualityMeasurement ;
-                      dqv:isMeasurementOf dqvno:rateOfMissingObjects ;
-                      dqv:value "0.02"^^xsd:double ;
-                      rdfs:comment "0.02% av bygninger mangler i datasettet."@nb ,
-                                   "0.02% of buildings are missing in the dataset."@en .
+            dqv:QualityMeasurement ;
+   dqv:isMeasurementOf dqvno:rateOfMissingObjects ;
+   dqv:value "0.02"^^xsd:double ;
+   rdfs:comment "0.02% av bygninger mangler i datasettet."@nb ,
+                "0.02% of buildings are missing in the dataset."@en .
 
 ###  https://exampledatasets.org/examples/dqvExamples#qsQualitySpecification
 :qsQualitySpecification rdf:type owl:NamedIndividual ,
-                                 dct:Standard ;
-                        dct:title "Eksempel kvalitetsspesifikasjon"@nb ,
-                                  "Example quality specification"@en ;
-                        rdfs:seeAlso "https://exampledatasets.org/standards/kvalitetsspesifikasjon/"@nb ,
-                                     "https://exampledatasets.org/standards/quality-specification/"@en ;
-                        rdfs:comment "Denne spesifikasjonen dekker følgende kvalitetsdimensjoner: fullstendighet, nøyaktighet og konsistens."@nb ,
-                                     "The specification covers the following dimensions: completeness, accuracy and consistency."@en .
+            dct:Standard ;
+   dct:title "Eksempel kvalitetsspesifikasjon"@nb ,
+             "Example quality specification"@en ;
+   rdfs:comment "Denne spesifikasjonen dekker følgende kvalitetsdimensjoner: fullstendighet, nøyaktighet og konsistens."@nb ,
+                "The specification covers the following dimensions: completeness, accuracy and consistency."@en ;
+   rdfs:seeAlso &lt;https://exampledatasets.org/standards/quality-specification&gt; ,
+                &lt;https://exampledatasets.org/standards/kvalitetsspesifikasjon/&gt; .
 
 ###  https://exampledatasets.org/examples/dqvExamples#tekstBrukertilbakemelding
 :tekstBrukertilbakemelding rdf:type owl:NamedIndividual ,
-                                    oa:TextualBody ;
-                           dct:format "text/plain" ;
-                           dct:language "nb" ;
-                           rdfs:value "Godt eksempeldatasett med god nok fullstendighet." .
+             oa:TextualBody ;
+    dct:format "text/plain" ;
+    dct:language "nb" ;
+    rdfs:value "Godt eksempeldatasett med god nok fullstendighet." .
 
 ###  https://exampledatasets.org/examples/dqvExamples#tekstFullstendighet
 :tekstFullstendighet rdf:type owl:NamedIndividual ,
-                              oa:TextualBody ;
-                     dct:format "text/plain" ;
-                     dct:language "nb" ;
-                     rdfs:value "Det tar i gjennomsnitt 24 dager fra en bygning står ferdig eller er revet til den er innlemmet i eller tatt ut fra datasettet." .
+             oa:TextualBody ;
+    dct:format "text/plain" ;
+    dct:language "nb" ;
+    rdfs:value "Det tar i gjennomsnitt 24 dager fra en bygning står ferdig eller er revet til den er innlemmet i eller tatt ut fra datasettet." .
 
 ###  https://exampledatasets.org/examples/dqvExamples#textCompleteness
 :textCompleteness rdf:type owl:NamedIndividual ,
-                           oa:TextualBody ;
-                  dct:format "text/plain" ;
-                  dct:language "en" ;
-                  rdfs:value "On average there will be 24 days from a building is completed or demolished, to it is included in or excluded from the dataset." .
+              oa:TextualBody ;
+     dct:format "text/plain" ;
+     dct:language "en" ;
+     rdfs:value "On average there will be 24 days from a building is completed or demolished, to it is included in or excluded from the dataset." .
 
 ###  https://exampledatasets.org/examples/dqvExamples#textUserFeedback
 :textUserFeedback rdf:type owl:NamedIndividual ,
-                           oa:TextualBody ;
-                  dct:format "text/plain" ;
-                  dct:language "en" ;
-                  rdfs:value "Good example dataset with good enough completeness." .
-
-###  https://www.w3.org/TR/vocab-dqv/#dqv:qualityAssessment
-dqv:qualityAssessment rdf:type owl:NamedIndividual ,
-                               oa:Motivation ;
-                      skos:prefLabel "kvalitetsvurdering"@nb ,
-                                     "quality assessment"@en ;
-                      rdfs:comment "Dette er en predefinert instans av oa:Motivation."@nb ,
-                                   "This is a predefined instance of oa:Motivation."@en .
-
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi</code></pre>
+              oa:TextualBody ;
+     dct:format "text/plain" ;
+     dct:language "en" ;
+     rdfs:value "Good example dataset with good enough completeness." .</code></pre>
 </div>
 </div>
 <!-- Google Analytics -->
@@ -2832,7 +2641,7 @@ ga('send', 'pageview');
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2020-09-29 12:41:31 UTC
+Sist oppdatert 2020-10-21 14:18:21 UTC
 </div>
 </div>
 </body>
