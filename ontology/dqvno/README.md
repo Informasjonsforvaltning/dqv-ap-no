@@ -1,5 +1,5 @@
 # dqvno
-
+ 
 For forvaltning av ontologien for DQV-AP-NO (norsk profil av DQV).
 
 Lenke: https://data.norge.no/vocabulary/dqv-ap-no
