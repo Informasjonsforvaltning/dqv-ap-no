@@ -1,9 +1,0 @@
-== Formål, omfang og avgrensinger [[Formål_omfang_og_avgrensinger]]
-
-https://data.norge.no/specification/spesifikasjon-for-beskrivelse-av-kvalitet-pa-datasett/[_Spesifikasjon for beskrivelse av kvalitet på datasett_] foreslo å bruke https://www.w3.org/TR/vocab-dqv/[_DQV (Data Quality Vocabulary)_ fra W3C] til å beskrive kvalitet på datasett i https://data.norge.no/about[Fellesdatakatalogen]. DQV er nå også eksplisitt inkludert i https://joinup.ec.europa.eu/collection/access-base-registries/solution/abr-specification-registry-registries[BRegDCAT-AP fra EU].
-
-Dette er en teknisk spesifikasjon for en norsk applikasjonsprofil av DQV, DQV-AP-NO. DQV-AP-NO er ikke en direkte oversettelse av DQV fra W3C. I tillegg til å beskrive hvordan klasser og egenskaper i DQV brukes, tilpasses DQV til norske forhold ved å bruke norske utvidelser i denne applikasjonsprofilen.
-
-Applikasjonsprofilen inngår i https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur/informasjonsforvaltning[Rammeverk for informasjonsforvaltning]. Den brukes sammen med og supplerer https://data.norge.no/specification/dcat-ap-no/[DCAT-AP-NO v.2.0+].
-
-Applikasjonsprofilen tar utgangspunkt i datasett (`dcat:Dataset`) som det skal beskrives kvalitet for. Den kan også på tilsvarende måte brukes til å beskrive kvalitet på bl.a. en distribusjon (`dcat:Distribution`), uten at dette eksplisitt beskrives i denne spesifikasjonen.
