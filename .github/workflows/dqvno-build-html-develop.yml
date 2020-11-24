@@ -3,7 +3,7 @@ name: build html dqvno
 on:
   push:
     branches:
-    - master
+    - develop
     paths:
     - ontology/dqvno/**
 
@@ -35,5 +35,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_branch: dqvno_vocabulary
         publish_dir: ontology/dqvno/build

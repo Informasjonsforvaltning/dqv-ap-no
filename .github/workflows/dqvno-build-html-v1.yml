@@ -1,11 +1,11 @@
-name: build html dqv-ap-no
+name: build html dqvno
 
 on:
   push:
     branches:
-    - master
+    - v1
     paths:
-    - ontology/dqv-ap-no/**
+    - ontology/dqvno/**
 
 jobs:
   build_html:
@@ -17,23 +17,23 @@ jobs:
 
     - name: make build directory
       run: |
-        mkdir ontology/dqv-ap-no/build
+        mkdir ontology/dqvno/build
 
     - name: copy index.html
       uses: canastro/copy-file-action@master
       with:
-        source: "ontology/dqv-ap-no/index.html"
-        target: "ontology/dqv-ap-no/build/index.html"
+        source: "ontology/dqvno/index.html"
+        target: "ontology/dqvno/build/index.html"
 
-    - name: copy dqv-ap-no.ttl
+    - name: copy dqvno.ttl
       uses: canastro/copy-file-action@master
       with:
-        source: "ontology/dqv-ap-no/dqv-ap-no.ttl"
-        target: "ontology/dqv-ap-no/build/dqv-ap-no.ttl"
+        source: "ontology/dqvno/dqvno.ttl"
+        target: "ontology/dqvno/build/dqvno.ttl"
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_branch: dqv-ap-no_vocabulary
-        publish_dir: ontology/dqv-ap-no/build
+        publish_branch: dqvno_vocabulary
+        publish_dir: ontology/dqvno/build
