@@ -1,0 +1,6 @@
+== Forenklet modell for DQV-AP-NO [[Forenklet_modell_for_DQV-AP-NO]]
+
+.Forenklet modell for DQV-AP-NO.
+image::images/dqv-ap-no.png[]
+
+Denne spesifikasjon tar utgangspunkt i beskrivelse av kvalitet på Datasett (`dcat:Dataset`). Figuren over viser derfor kun Datasett. Som forklart under <<Formål_omfang_og_avgrensinger, Formål, omfang og avgrensinger>> kan denne spesifikasjonen på tilsvarende måte også brukes til å beskrive kvalitet på andre ressurser som f.eks. distribusjon (`dcat:Distribution`) og datatjeneste (`dcat:DataService`).
