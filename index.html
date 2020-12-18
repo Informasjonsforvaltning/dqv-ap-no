@@ -614,6 +614,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="#eksempelet">Et eksempeldatasett med kvalitetsbeskrivelser</a></li>
+<li><a href="#Endringslogg">Endringslogg</a>
+<ul class="sectlevel2">
+<li><a href="#Endringer-fra-v1-0-0">Endringer fra v.1.0.0 til v.1.0.1</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -652,15 +657,15 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 <div class="paragraph">
 <p><strong>Status</strong>: Gjeldende<br>
-<strong>Versjon</strong>: 1.0<br>
+<strong>Versjon</strong>: 1.0.1 (se <a href="#Endringslogg">endringslogg</a>)<br>
 <strong>Publisert</strong>: 2020-10-21<br>
-<strong>Oppdatert</strong>: 2020-11-02<br>
+<strong>Oppdatert</strong>: 2020-12-18<br>
 <strong>Gjeldende versjon</strong>: <a href="https://data.norge.no/specification/dqv-ap-no/" class="bare">https://data.norge.no/specification/dqv-ap-no/</a><br>
 <strong>Forrige versjon</strong>: ingen<br>
 <strong>Redaktørens utkast</strong>: <a href="https://informasjonsforvaltning.github.io/dqv-ap-no/" class="bare">https://informasjonsforvaltning.github.io/dqv-ap-no/</a></p>
 </div>
 <div class="paragraph">
-<p><strong>Ontologi</strong>: Gjeldende versjon av ontologien for DQV-AP-NO med predefinerte instanser (kontrollert vokabular) blir publisert til <a href="https://data.norge.no/vocabulary/dqvno#" class="bare">https://data.norge.no/vocabulary/dqvno#</a>. Redaktørens utkast til ontologien er tilgjengelig på <a href="https://github.com/Informasjonsforvaltning/dqv-ap-no/blob/review/ontology/dqvno/dqvno.ttl">Github</a>.</p>
+<p><strong>Ontologi</strong>: Gjeldende versjon av ontologien for DQV-AP-NO med predefinerte instanser (kontrollert vokabular) blir publisert til <a href="https://data.norge.no/vocabulary/dqvno#" class="bare">https://data.norge.no/vocabulary/dqvno#</a>. Redaktørens utkast til ontologien er tilgjengelig på <a href="https://github.com/Informasjonsforvaltning/dqv-ap-no/blob/develop/ontology/dqvno/dqvno.ttl">Github</a>.</p>
 </div>
 <div class="paragraph">
 <p><strong>Veileder</strong>: Det er utarbeidet en <a href="https://data.norge.no/guide/veileder-kvantifiserbar-kvalitet/">Veileder for beskrivelse av kvalitet på datasett – kvantifiserbar kvalitet</a>.</p>
@@ -677,7 +682,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <p>Dette er en teknisk spesifikasjon for en norsk applikasjonsprofil av DQV, DQV-AP-NO. DQV-AP-NO er ikke en direkte oversettelse av DQV fra W3C. I tillegg til å beskrive hvordan klasser og egenskaper i DQV brukes, tilpasses DQV til norske forhold ved å bruke norske utvidelser i denne applikasjonsprofilen.</p>
 </div>
 <div class="paragraph">
-<p>Applikasjonsprofilen inngår i <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur/informasjonsforvaltning">Rammeverk for informasjonsforvaltning</a>. Den brukes sammen med og supplerer <a href="https://data.norge.no/specification/dcat-ap-no/">DCAT-AP-NO v.2.0+</a>.</p>
+<p>Applikasjonsprofilen inngår i <a href="https://www.digdir.no/informasjonsforvaltning/rammeverk-informasjonsforvaltning/2118">Rammeverk for informasjonsforvaltning</a>. Den brukes sammen med og supplerer <a href="https://data.norge.no/specification/dcat-ap-no/">DCAT-AP-NO v.2.0+</a>.</p>
 </div>
 <div class="paragraph">
 <p>Applikasjonsprofilen tar utgangspunkt i datasett (<code>dcat:Dataset</code>) som det skal beskrives kvalitet for. Den kan også på tilsvarende måte brukes til å beskrive kvalitet på bl.a. en distribusjon (<code>dcat:Distribution</code>), uten at dette eksplisitt beskrives i denne spesifikasjonen.</p>
@@ -811,10 +816,10 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <div class="ulist">
 <ul>
 <li>
-<p>Eksplisitte krav til bruk av klasser og egenskaper: DQV er et generelt vokabular for beskrivelse av datakvalitet. DQV har derfor, med få unntak, ikke satt på krav til bruk av klasser og egenskaper. Denne applikasjonsprofilen er en konkret anvendelse av DQV. Det er derfor satt «status» («obligatorisk», «anbefalt» eller «valgfri») på klasser og egenskaper, samt multiplisitet på egenskaper.</p>
+<p>Eksplisitte krav til bruk av klasser og egenskaper: DQV er et generelt vokabular for beskrivelse av datakvalitet. DQV har derfor, med få unntak, ikke satt på krav til bruk av klasser og egenskaper. Denne applikasjonsprofilen er en konkret anvendelse av DQV. Det er derfor satt «kravsnivå» («obligatorisk», «anbefalt» eller «valgfri») på klasser og egenskaper, samt multiplisitet på egenskaper.</p>
 </li>
 <li>
-<p>Tilføyelse av klassen Kvalitetsdeldimensjon (<code>dqvno:SubDimension</code>): Ifm. utarbeidelse av <a href="https://doc.difi.no/data/kvalitet-pa-datasett/"><em>Spesifikasjon for beskrivelse av kvalitet på datasett</em></a> ble det identifisert et behov for å ha «kvalitetsdeldimensjon» som er et mellomnivå mellom kvalitetsdimensjon (<code>dqv:Dimension</code>) og kvalitetsmål (<code>dqv:Metric</code>). DQV har ikke kvalitets<strong>del</strong>dimensjon som egen klasse.</p>
+<p>Tilføyelse av klassen Kvalitetsdeldimensjon (<code>dqvno:SubDimension</code>): Ifm. utarbeidelse av <a href="https://data.norge.no/specification/spesifikasjon-for-beskrivelse-av-kvalitet-pa-datasett/"><em>Spesifikasjon for beskrivelse av kvalitet på datasett</em></a> ble det identifisert et behov for å ha «kvalitetsdeldimensjon» som er et mellomnivå mellom kvalitetsdimensjon (<code>dqv:Dimension</code>) og kvalitetsmål (<code>dqv:Metric</code>). DQV har ikke kvalitets<strong>del</strong>dimensjon som egen klasse.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -825,7 +830,7 @@ kvalitetsdeldimensjonen (<code>dqvno:SubDimension</code>) som kvalitetsmålet ti
 </div>
 </li>
 <li>
-<p>Eksplisitt inkludering av egenskaper fra andre vokabularer: For at denne spesifikasjonen skal kunne stå på egne ben, er det eksplisitt tatt med egenskaper fra andre veletablerte vokabularer (bl.a. <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">Dublin Core</a> og <a href="https://www.w3.org/TR/skos-reference/">SKOS</a>). Dette er dokumentert i kommentar-feltet som “norsk utvidelse”. Eksempel: <code>rdfs:comment</code> er tatt med som valgfri egenskap, for å dekke behov for fritekstkommentar som var identifisert i <a href="https://doc.difi.no/data/kvalitet-pa-datasett/"><em>Spesifikasjon for beskrivelse av kvalitet på datasett</em></a>.</p>
+<p>Eksplisitt inkludering av egenskaper fra andre vokabularer: For at denne spesifikasjonen skal kunne stå på egne ben, er det eksplisitt tatt med egenskaper fra andre veletablerte vokabularer (bl.a. <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">Dublin Core</a> og <a href="https://www.w3.org/TR/skos-reference/">SKOS</a>). Dette er dokumentert i kommentar-feltet som “norsk utvidelse”. Eksempel: <code>rdfs:comment</code> er tatt med som valgfri egenskap, for å dekke behov for fritekstkommentar som var identifisert i <a href="https://data.norge.no/specification/spesifikasjon-for-beskrivelse-av-kvalitet-pa-datasett/"><em>Spesifikasjon for beskrivelse av kvalitet på datasett</em></a>.</p>
 </li>
 </ul>
 </div>
@@ -879,7 +884,7 @@ kvalitetsdeldimensjonen (<code>dqvno:SubDimension</code>) som kvalitetsmålet ti
 <td class="tableblock halign-left valign-top"><p class="tableblock">dqv:QualityAnnotation</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -910,7 +915,7 @@ kvalitetsdeldimensjonen (<code>dqvno:SubDimension</code>) som kvalitetsmålet ti
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:QualityAnnotation">dqv:QualityAnnotation</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -937,7 +942,7 @@ kvalitetsdeldimensjonen (<code>dqvno:SubDimension</code>) som kvalitetsmålet ti
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurement">dqv:QualityMeasurement</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 </tbody>
@@ -980,7 +985,7 @@ kvalitetsdeldimensjonen (<code>dqvno:SubDimension</code>) som kvalitetsmålet ti
 <td class="tableblock halign-left valign-top"><p class="tableblock">dqv:Dimension</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 <tr>
@@ -1012,7 +1017,7 @@ kvalitetsdeldimensjonen (<code>dqvno:SubDimension</code>) som kvalitetsmålet ti
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:Dimension">dqv:Dimension</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 <tr>
@@ -1043,7 +1048,7 @@ kvalitetsdeldimensjonen (<code>dqvno:SubDimension</code>) som kvalitetsmålet ti
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:Metric">dqv:Metric</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 <tr>
@@ -1078,7 +1083,7 @@ kvalitetsdeldimensjonen (<code>dqvno:SubDimension</code>) som kvalitetsmålet ti
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate">dqv:QualityAnnotation</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 <tr>
@@ -1109,7 +1114,7 @@ kvalitetsdeldimensjonen (<code>dqvno:SubDimension</code>) som kvalitetsmålet ti
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/annotation-vocab/#motivation">oa:Motivation</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 <tr>
@@ -1140,7 +1145,7 @@ kvalitetsdeldimensjonen (<code>dqvno:SubDimension</code>) som kvalitetsmålet ti
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/annotation-vocab/#textualbody">oa:TextualBody</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -1197,7 +1202,7 @@ kvalitetsdeldimensjonen (<code>dqvno:SubDimension</code>) som kvalitetsmålet ti
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -1242,7 +1247,7 @@ kvalitetsdeldimensjonen (<code>dqvno:SubDimension</code>) som kvalitetsmålet ti
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -1303,7 +1308,7 @@ kvalitetsdeldimensjonen (<code>dqvno:SubDimension</code>) som kvalitetsmålet ti
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -1354,7 +1359,7 @@ kvalitetsdeldimensjonen (<code>dqvno:SubDimension</code>) som kvalitetsmålet ti
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -1411,7 +1416,7 @@ kvalitetsdeldimensjonen (<code>dqvno:SubDimension</code>) som kvalitetsmålet ti
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -1455,7 +1460,7 @@ Egenskapen kan gjentas for hvert språk termen finnes i.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -1505,7 +1510,7 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -1549,7 +1554,7 @@ Egenskapen kan gjentas for hvert språk termen finnes i.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -1603,7 +1608,7 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -1656,7 +1661,7 @@ Denne egenskapen skal referere til én instans av en kvalitetsdeldimensjon.</p><
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -1705,7 +1710,7 @@ Denne egenskapen skal referere til én instans av en kvalitetsdeldimensjon.</p><
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -1749,7 +1754,7 @@ Egenskapen kan gjentas for hvert språk termen finnes i.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -1802,7 +1807,7 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 <tr>
@@ -1854,7 +1859,7 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -1900,7 +1905,7 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -1956,7 +1961,7 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 <tr>
@@ -1995,7 +2000,7 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 </tbody>
@@ -2036,7 +2041,7 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 <tr>
@@ -2085,7 +2090,7 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -2127,7 +2132,7 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 <tr>
@@ -2184,7 +2189,7 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 <tr>
@@ -2227,7 +2232,7 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -2272,7 +2277,7 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -2314,7 +2319,7 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 <tr>
@@ -2353,7 +2358,7 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Valgfri</p></td>
 </tr>
 <tr>
@@ -2398,7 +2403,7 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Obligatorisk</p></td>
 </tr>
 <tr>
@@ -2448,7 +2453,7 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -2487,7 +2492,7 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Status</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Kravsnivå</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anbefalt</p></td>
 </tr>
 <tr>
@@ -2627,6 +2632,26 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.</p></td>
      rdfs:value "Good example dataset with good enough completeness." .</code></pre>
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Endringslogg"><a class="link" href="#Endringslogg">Endringslogg</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="Endringer-fra-v1-0-0"><a class="link" href="#Endringer-fra-v1-0-0">Endringer fra v.1.0.0 til v.1.0.1</a></h3>
+<div class="paragraph">
+<p>Kun redaksjonelle justeringer:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Oppdatering av lenker</p>
+</li>
+<li>
+<p>Ledeteksten "Status" er endret til "Kravsnivå" i klasse- og egenskapsbeskrivelsestabellene, fordi de aktuelle radene i tabellene sier hva slags krav det er (obligatorisk, anbefalt eller valgfri).</p>
+</li>
+</ul>
+</div>
 <!-- Google Analytics -->
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -2641,9 +2666,10 @@ ga('send', 'pageview');
 </div>
 </div>
 </div>
+</div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2020-11-24 11:39:02 UTC
+Sist oppdatert 2020-12-18 15:14:13 UTC
 </div>
 </div>
 </body>
