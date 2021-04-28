@@ -314,8 +314,8 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 :aTextBody
    a oa:TextualBody ;
    rdf:value “Statistisk sett mangler det 1,23% av objektene i datasettet” ;
-   dc:language "en" ;
-   dc:format "text/plain" .
+   dct:language "en" ;
+   dct:format "text/plain" .
 ----
 |===
 
