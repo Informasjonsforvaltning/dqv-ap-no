@@ -20,7 +20,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 *Status*: Gjeldende +
 *Versjon*: 1.0.1 (se <<Endringslogg, endringslogg>>) +
 *Publisert*: 2020-10-21 +
-*Oppdatert*: 2020-12-18 +
+*Oppdatert*: 2021-04-28 +
 *Gjeldende versjon*: https://data.norge.no/specification/dqv-ap-no/ +
 *Forrige versjon*: ingen +
 *Redaktørens utkast*: https://informasjonsforvaltning.github.io/dqv-ap-no/
