@@ -96,29 +96,29 @@ Eksemplet under viser de ulike måter å beskrive kvalitet på et eksempeldatase
 ###  https://exampledatasets.org/examples/dqvExamples#tekstBrukertilbakemelding
 :tekstBrukertilbakemelding rdf:type owl:NamedIndividual ,
              oa:TextualBody ;
-    dct:format "text/plain" ;
-    dct:language "nb" ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/TXT> ;
+    dct:language <http://publications.europa.eu/resource/authority/language/NOB> ;
     rdfs:value "Godt eksempeldatasett med god nok fullstendighet." .
 
 ###  https://exampledatasets.org/examples/dqvExamples#tekstFullstendighet
 :tekstFullstendighet rdf:type owl:NamedIndividual ,
              oa:TextualBody ;
-    dct:format "text/plain" ;
-    dct:language "nb" ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/TXT> ;
+    dct:language <http://publications.europa.eu/resource/authority/language/NOB> ;
     rdfs:value "Det tar i gjennomsnitt 24 dager fra en bygning står ferdig eller er revet til den er innlemmet i eller tatt ut fra datasettet." .
 
 ###  https://exampledatasets.org/examples/dqvExamples#textCompleteness
 :textCompleteness rdf:type owl:NamedIndividual ,
               oa:TextualBody ;
-     dct:format "text/plain" ;
-     dct:language "en" ;
+     dct:format <http://publications.europa.eu/resource/authority/file-type/TXT> ;
+     dct:language <http://publications.europa.eu/resource/authority/language/ENG> ;
      rdfs:value "On average there will be 24 days from a building is completed or demolished, to it is included in or excluded from the dataset." .
 
 ###  https://exampledatasets.org/examples/dqvExamples#textUserFeedback
 :textUserFeedback rdf:type owl:NamedIndividual ,
               oa:TextualBody ;
-     dct:format "text/plain" ;
-     dct:language "en" ;
+     dct:format <http://publications.europa.eu/resource/authority/file-type/TXT> ;
+     dct:language <http://publications.europa.eu/resource/authority/language/ENG> ;
      rdfs:value "Good example dataset with good enough completeness." .
 
 ----

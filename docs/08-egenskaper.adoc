@@ -314,8 +314,8 @@ Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemeldin
 :aTextBody
    a oa:TextualBody ;
    rdf:value “Statistisk sett mangler det 1,23% av objektene i datasettet” ;
-   dc:language "en" ;
-   dc:format "text/plain" .
+   dct:language <http://publications.europa.eu/resource/authority/language/NOB> ;
+   dct:format <http://publications.europa.eu/resource/authority/file-type/TXT> .
 ----
 |===
 
@@ -505,8 +505,8 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 :aPlainText
    a oa:TextualBody ;
    rdfs:value “en tekst” ;
-   dct:language “nb” ;
-   dct:format “text/plan” .
+   dct:language <http://publications.europa.eu/resource/authority/language/NOB> ;
+   dct:format <http://publications.europa.eu/resource/authority/file-type/TXT> .
 ----
 |===
 
