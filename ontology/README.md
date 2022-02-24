@@ -1,6 +1,6 @@
-# Ontologies, controlled vocabularies and examples related to DQV-AP-NO
+# dqv-ap-no | ontology
 
-For forvaltningen av ontologier, kontrollerte vokabularer og eksempler knyttet til DQV-AP-NO (norsk applikasjonsprofil av DQV).
+For forvaltningen av ontologien for DQV-AP-NO (norsk applikasjonsprofil av DQV).
 
 Gjeldende versjon er publisert under https://data.norge.no/vocabulary/
 
