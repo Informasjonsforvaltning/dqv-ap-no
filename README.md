@@ -1,8 +1,6 @@
-# DQV-AP-NO
-Norwegain Application Profile of DQV (https://www.w3.org/TR/vocab-dqv/),  
-with ontologies, controlled vocabularies and examples.
+# dqv-ap-no
 
-For forvaltning av spesifikasjonen DQV-AP-NO (norsk applikasjonspforil av DQV) med tilhørende ontologier og eksempler.
+Norwegain Application Profile of DQV (https://www.w3.org/TR/vocab-dqv/) / Norsk applikasjonsprofil av DQV.
 
 Gjeldende versjon av spesifikasjonen vil bli publisert til https://data.norge.no/specification/dqv-ap-no.
 
