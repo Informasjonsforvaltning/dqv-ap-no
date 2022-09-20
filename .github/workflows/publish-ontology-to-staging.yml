@@ -1,4 +1,4 @@
-name: Publish ontology to data.norge.no/vocabulary
+name: Publish ontology to staging.fellesdatakatalog.digdir.no/vocabulary
 
 on:
   push:
@@ -25,7 +25,7 @@ jobs:
           ontology-type: "vocabulary"
           ontology: "dqvno"
           host: "https://staging.fellesdatakatalog.digdir.no"
-          api-key: ${{ secrets.STATIC_RDF_SERVER_API_KEY }}
+          api-key: ${{ secrets.STATIC_RDF_SERVER_API_KEY_STAGING }}
           files: |
             ontology/dqvno/dqvno.ttl text/turtle en
             ontology/dqvno/index.html text/html nb
