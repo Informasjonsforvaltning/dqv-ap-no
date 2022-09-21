@@ -2,6 +2,6 @@
 
 For forvaltningen av ontologien for DQV-AP-NO (norsk applikasjonsprofil av DQV).
 
-Gjeldende versjon er publisert under https://data.norge.no/vocabulary/
+Gjeldende versjon er publisert under <https://data.norge.no/vocabulary/>
 
-\- _Digitaliseringsdirektoratet / Norwegian Digitalisation Agency (https://digdir.no)_
+\- _Digitaliseringsdirektoratet / Norwegian Digitalisation Agency (<https://digdir.no>)_
