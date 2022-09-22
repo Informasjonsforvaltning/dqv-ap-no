@@ -3,36 +3,36 @@ name: build html dqvno
 on:
   push:
     branches:
-    - develop
+      - develop
     paths:
-    - ontology/dqvno/**
+      - ontology/dqvno/**
 
 jobs:
   build_html:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     name: html build
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: make build directory
-      run: |
-        mkdir ontology/dqvno/build
+      - name: make build directory
+        run: |
+          mkdir ontology/dqvno/build
 
-    - name: copy index.html
-      uses: canastro/copy-file-action@master
-      with:
-        source: "ontology/dqvno/index.html"
-        target: "ontology/dqvno/build/index.html"
+      - name: copy index.html
+        uses: canastro/copy-file-action@master
+        with:
+          source: "ontology/dqvno/index.html"
+          target: "ontology/dqvno/build/index.html"
 
-    - name: copy dqvno.ttl
-      uses: canastro/copy-file-action@master
-      with:
-        source: "ontology/dqvno/dqvno.ttl"
-        target: "ontology/dqvno/build/dqvno.ttl"
+      - name: copy dqvno.ttl
+        uses: canastro/copy-file-action@master
+        with:
+          source: "ontology/dqvno/dqvno.ttl"
+          target: "ontology/dqvno/build/dqvno.ttl"
 
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ontology/dqvno/build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ontology/dqvno/build
