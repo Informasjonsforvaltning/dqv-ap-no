@@ -1,4 +1,4 @@
-name: build html dqvno
+name: build html dqvno and publish develop to GitHub pages
 
 on:
   push:
@@ -6,6 +6,7 @@ on:
       - develop
     paths:
       - ontology/dqvno/**
+  workflow_dispatch:
 
 jobs:
   build_html:
