@@ -16,9 +16,9 @@
                                                         "Kontrollert vokabular for beskrivelse av datakvalitet"@nb ;
                                            rdfs:isDefinedBy "Digitaliseringsdirektoratet"@nb ,
                                                             "Norwegian Digitalisation Agency"@en ;
-                                           rdfs:label "dqvno"@en ,
-                                                      "dqvno"@nb ,
-                                                      "dqvno"@nn ;
+                                           rdfs:label "dqv-ap-no"@en ,
+                                                      "dqv-ap-no"@nb ,
+                                                      "dqv-ap-no"@nn ;
                                            owl:versionInfo "Draft"@en ,
                                                            """Utkast. Endringene sammenlignet med forrige versjon, hovedsakelig:
 - fjernet dqv:isMeasurementOf fra Object Properties (brukes ikke her)
