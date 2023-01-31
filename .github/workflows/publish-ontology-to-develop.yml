@@ -3,7 +3,7 @@ name: build html dqvno and publish develop to GitHub pages
 on:
   push:
     branches:
-      - develop
+      - develop-test
     paths:
       - ontology/**
   workflow_dispatch:
