@@ -3,7 +3,7 @@ name: Publish ontology to data.norge.no/vocabulary
 on:
   push:
     branches:
-      - v1
+      - develop
     paths:
       - ontology/**
   workflow_dispatch:
@@ -18,14 +18,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Upload rdf to static-rdf-server
+      - name: Upload files to static-rdf-server
         uses: Informasjonsforvaltning/upload-files-to-static-rdf-server-action@v3.2.0
-        id: upload-rdf
+        id: upload-files
         with:
           ontology-type: "vocabulary"
           ontology: "dqvno"
           host: "https://data.norge.no"
           api-key: ${{ secrets.STATIC_RDF_SERVER_API_KEY }}
           files: |
-            ontology/dqvno/dqvno.ttl text/turtle en
+            ontology/dqvno/dqvno.ttl text/turtle en 
             ontology/dqvno/index.html text/html nb

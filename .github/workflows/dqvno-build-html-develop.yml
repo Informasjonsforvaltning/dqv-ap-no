@@ -5,7 +5,7 @@ on:
     branches:
       - develop
     paths:
-      - ontology/dqvno/**
+      - ontology/**
   workflow_dispatch:
 
 jobs:
@@ -18,23 +18,23 @@ jobs:
 
       - name: make build directory
         run: |
-          mkdir ontology/dqvno/build
+          mkdir ontology/build
 
       - name: copy index.html
         uses: canastro/copy-file-action@master
         with:
-          source: "ontology/dqvno/index.html"
-          target: "ontology/dqvno/build/index.html"
+          source: "ontology/index.html"
+          target: "ontology/build/index.html"
 
       - name: copy dqvno.ttl
         uses: canastro/copy-file-action@master
         with:
-          source: "ontology/dqvno/dqvno.ttl"
-          target: "ontology/dqvno/build/dqvno.ttl"
+          source: "ontology/dqvno.ttl"
+          target: "ontology/build/dqvno.ttl"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ontology/dqvno/build
+          publish_dir: ontology/build
           destination_dir: vocabulary
