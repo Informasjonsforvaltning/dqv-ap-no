@@ -3,7 +3,7 @@ name: Publish ontology to data.norge.no/vocabulary
 on:
   push:
     branches:
-      - develop
+      - v1
     paths:
       - ontology/**
   workflow_dispatch:
