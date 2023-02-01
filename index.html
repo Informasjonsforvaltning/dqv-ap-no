@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.18">
 <meta name="description" content="DQV-AP-NO (Norwegian Application Profile of DQV)">
+<meta name="author" content="Digitaliseringsdirektoratet (Digdir) / The Norwegian Digitalisation Agency">
 <title>DQV-AP-NO (Norsk applikasjonsprofil av DQV)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -441,6 +442,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <body class="book toc2 toc-left">
 <div id="header">
 <h1>DQV-AP-NO (Norsk applikasjonsprofil av DQV)</h1>
+<div class="details">
+<span id="author" class="author">Digitaliseringsdirektoratet (Digdir) / The Norwegian Digitalisation Agency</span><br>
+</div>
 <div id="toc" class="toc2">
 <div id="toctitle">Innholdsfortegnelse</div>
 <ul class="sectlevel1">
@@ -627,7 +631,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sectionbody">
 <div class="imageblock">
 <div class="content">
-<img src="images/digitaliseringsdirektoratet.png" alt="digitaliseringsdirektoratet" width="50%">
+<a class="image" href="https://digdir.no/"><img src="images/Digdir.png" alt="Digdir" width="50%"></a>
 </div>
 </div>
 <div class="admonitionblock tip">
@@ -650,26 +654,23 @@ Dette dokumentet kan også lastes ned <a href="files/dqv-ap-no.pdf">som PDF</a>.
 </td>
 <td class="content">
 <strong>Innmelding av feil og mangler:</strong><br>
-Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på <a href="https://github.com/Informasjonsforvaltning/dqv-ap-no">Github Issues</a>. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis.
+Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på <a href="https://github.com/Informasjonsforvaltning/dqv-ap-no/issueso">Github Issues</a>. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
 <p><strong>Status</strong>: Gjeldende<br>
-<strong>Versjon</strong>: 1.0.1 (se <a href="#Endringslogg">endringslogg</a>)<br>
+<strong>Versjon</strong>: 1.0.2 (se <a href="#Endringslogg">endringslogg</a>)<br>
 <strong>Publisert</strong>: 2020-10-21<br>
-<strong>Oppdatert</strong>: 2021-04-28<br>
+<strong>Oppdatert</strong>: 2023-02-01<br>
 <strong>Gjeldende versjon</strong>: <a href="https://data.norge.no/specification/dqv-ap-no/" class="bare">https://data.norge.no/specification/dqv-ap-no/</a><br>
-<strong>Forrige versjon</strong>: ingen<br>
-<strong>Redaktørens utkast</strong>: <a href="https://informasjonsforvaltning.github.io/dqv-ap-no/" class="bare">https://informasjonsforvaltning.github.io/dqv-ap-no/</a></p>
+<strong>Gjeldende versjon av ontologi</strong>: <a href="https://data.norge.no/vocabulary/dqvno#" class="bare">https://data.norge.no/vocabulary/dqvno#</a><br>
+<strong>Redaktørens utkast</strong>: <a href="https://informasjonsforvaltning.github.io/dqv-ap-no/" class="bare">https://informasjonsforvaltning.github.io/dqv-ap-no/</a><br>
+<strong>Redaktørens utkast til ontologi</strong>: <a href="https://informasjonsforvaltning.github.io/dqv-ap-no/vocabulary" class="bare">https://informasjonsforvaltning.github.io/dqv-ap-no/vocabulary</a><br>
+<strong>Veileder</strong>: <a href="https://data.norge.no/guide/veileder-kvantifiserbar-kvalitet/">Veileder for beskrivelse av kvalitet på datasett – kvantifiserbar kvalitet</a></p>
 </div>
-<div class="paragraph">
-<p><strong>Ontologi</strong>: Gjeldende versjon av ontologien for DQV-AP-NO med predefinerte instanser (kontrollert vokabular) blir publisert til <a href="https://data.norge.no/vocabulary/dqvno#" class="bare">https://data.norge.no/vocabulary/dqvno#</a>. Redaktørens utkast til ontologien er tilgjengelig på <a href="https://github.com/Informasjonsforvaltning/dqv-ap-no/blob/develop/ontology/dqvno/dqvno.ttl">Github</a>.</p>
-</div>
-<div class="paragraph">
-<p><strong>Veileder</strong>: Det er utarbeidet en <a href="https://data.norge.no/guide/veileder-kvantifiserbar-kvalitet/">Veileder for beskrivelse av kvalitet på datasett – kvantifiserbar kvalitet</a>.</p>
-</div>
+<!-- toc disabled -->
 </div>
 </div>
 <div class="sect1">
@@ -1258,9 +1259,9 @@ kvalitetsdeldimensjonen (<code>dqvno:SubDimension</code>) som kvalitetsmålet ti
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>:aDataset
+<pre>:aDataset
    a dcat:Dataset ;
-   dqv:hasQualityAnnotation :aQAnnotation, :aUserFeedBack, dqvno:isAuthoritative .</code></pre>
+   dqv:hasQualityAnnotation :aQAnnotation, :aUserFeedBack, dqvno:isAuthoritative .</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1774,7 +1775,7 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.</p></td>
 <div class="sect2">
 <h3 id="Kvalitetsnote_egenskaper"><a class="link" href="#Kvalitetsnote_egenskaper">Kvalitetsnote (dqv:QualityAnnotation)</a></h3>
 <div class="paragraph">
-<p>Tilsvarende gjelder også for <a href="#klasse-brukertilbakemelding">Brukertilbakemelding</a> (<code>dqv:UserFeedback</code>) og <a href="#klasse-kvalitetssertifikat">Kvalitetssertifikat</a> (<code>dqv:QualityCertificate</code>) som er subklasser av Kvalitetsnote (<code>dqv:QualityAnnotation</code>).</p>
+<p>Tilsvarende gjelder også for <a href="#Brukertilbakemelding">Brukertilbakemelding (dqv:UserQualityFeedback)</a> (<code>dqv:UserFeedback</code>) og <a href="#Kvalitetssertifikat">Kvalitetssertifikat (dqv:QualityCertificate)</a> (<code>dqv:QualityCertificate</code>) som er subklasser av Kvalitetsnote (<code>dqv:QualityAnnotation</code>).</p>
 </div>
 <div class="sect3">
 <h4 id="Kvalitetsnote_obligatoriske_egenskaper"><a class="link" href="#Kvalitetsnote_obligatoriske_egenskaper">Obligatoriske egenskaper</a></h4>
@@ -2669,7 +2670,7 @@ ga('send', 'pageview');
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2023-01-31 14:00:10 UTC
+Sist oppdatert 2023-02-01 08:50:28 UTC
 </div>
 </div>
 </body>

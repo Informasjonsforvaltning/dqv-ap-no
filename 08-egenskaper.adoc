@@ -41,14 +41,13 @@ Egenskapene beskrevet her i denne spesifikasjonen, supplerer https://data.norge.
 |Multiplisitet|0..n
 |Kravsnivå|Anbefalt
 |Kommentar| Gjelder også Brukertilbakemelding (`dqv:UserQualityFeedback`) og Kvalitetssertifikat (`dqv:QualityCertificate`) som er subklasser av Kvalitetsnote (`dqv:QualityAnnotation`).
-|Eksempel a| [source]
+|Eksempel a| 
 ----
 :aDataset
    a dcat:Dataset ;
    dqv:hasQualityAnnotation :aQAnnotation, :aUserFeedBack, dqvno:isAuthoritative .
 ----
 der `dqvno:isAuthoritative` er en predefinert instans av Kvalitetssertifikat (`dqv:QualityCertificate`):
-[souce]
 ----
 dqvno:isAuthoritative
    a dqv:QualityCertificate ;
@@ -249,7 +248,7 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.
 
 === Kvalitetsnote (dqv:QualityAnnotation) [[Kvalitetsnote_egenskaper]]
 
-Tilsvarende gjelder også for <<klasse-brukertilbakemelding, Brukertilbakemelding>> (`dqv:UserFeedback`) og <<klasse-kvalitetssertifikat, Kvalitetssertifikat>> (`dqv:QualityCertificate`) som er subklasser av Kvalitetsnote (`dqv:QualityAnnotation`).
+Tilsvarende gjelder også for <<Brukertilbakemelding>> (`dqv:UserFeedback`) og <<Kvalitetssertifikat>> (`dqv:QualityCertificate`) som er subklasser av Kvalitetsnote (`dqv:QualityAnnotation`).
 
 ==== Obligatoriske egenskaper [[Kvalitetsnote_obligatoriske_egenskaper]]
 
