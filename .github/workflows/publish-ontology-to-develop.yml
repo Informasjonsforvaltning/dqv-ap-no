@@ -1,4 +1,4 @@
-name: build html dqvno and publish develop to GitHub pages
+name: Publish ontology to GitHub pages
 
 on:
   push:
@@ -12,29 +12,15 @@ jobs:
   build_html:
     runs-on: ubuntu-latest
     name: html build
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
-      - name: make build directory
-        run: |
-          mkdir ontology/build
-
-      - name: copy index.html
-        uses: canastro/copy-file-action@master
-        with:
-          source: "ontology/index.html"
-          target: "ontology/build/index.html"
-
-      - name: copy dqvno.ttl
-        uses: canastro/copy-file-action@master
-        with:
-          source: "ontology/dqvno.ttl"
-          target: "ontology/build/dqvno.ttl"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ontology/build
-          destination_dir: vocabulary
+          publish_branch: gh-pages
+          publish_dir: ./ontology
+          destination_dir: ./vocabulary
