@@ -11,7 +11,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dqvno: <https://data.norge.no/vocabulary/dqvno#> .
-@prefix brregOrg: <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/> .
+@prefix brregOrg: <https://organization-catalog.fellesdatakatalog.digdir.no/organizations/> .
 @prefix euDataTheme: <http://publications.europa.eu/resource/authority/data-theme/> .
 @prefix euDatasetType: <https://data.europa.eu/euodp/en/data/dataset/dataset-type/> .
 @base <https://exampledatasets.org/examples/dqvExamples#> .
@@ -220,7 +220,7 @@ dqvno:completeness rdf:type owl:NamedIndividual ,
                                   "fullstendighet"@nb .
 
 
-###  https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827
+###  https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827
 brregOrg:991825827 rdf:type owl:NamedIndividual , foaf:Agent .
 
 
