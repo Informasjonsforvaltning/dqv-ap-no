@@ -21,7 +21,7 @@ Egenskapene beskrevet her i denne spesifikasjonen, supplerer https://data.norge.
 |Range|dct:Standard
 |Beskrivelse|Brukes til å referere til en kvalitetsspesifikasjon/-standard.
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Eksempel a| [source]
 ----
 :aDataset
@@ -39,7 +39,7 @@ Egenskapene beskrevet her i denne spesifikasjonen, supplerer https://data.norge.
 |Range|dqv:QualityAnnotation
 |Beskrivelse|Brukes til å referere til en kvalitetsnote.
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Kommentar| Gjelder også Brukertilbakemelding (`dqv:UserQualityFeedback`) og Kvalitetssertifikat (`dqv:QualityCertificate`) som er subklasser av Kvalitetsnote (`dqv:QualityAnnotation`).
 |Eksempel a| 
 ----
@@ -66,7 +66,7 @@ dqvno:isAuthoritative
 |Range|dqv:QualityMeasurement
 |Beskrivelse|Brukes til å referere til et måleresultat.
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Eksempel a| [source]
 ----
 :aDataset
@@ -88,7 +88,7 @@ dqvno:isAuthoritative
 |Range|dqv:Dimension, skos:Concept
 |Beskrivelse|Brukes til å referere til kvalitetsdimensjonen som kvalitetsdeldimensjonen tilhører.
 |Multiplisitet|1..1
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Kommentar|Norsk utvidelse.
 |Eksempel a|Eksemplet under viser bruk av `skos:broader` for å uttrykke at `dqvno:undercoverage` er en deldimensjon i `dqvno:completeness`; bruk av `skos:prefLabel` for å oppgi anbefalt term på engelsk og bokmål; og bruk av `skos:definition` for å oppgi definisjon på engelsk og bokmål:
 [source]
@@ -112,7 +112,7 @@ dqvno:undercoverage
 |Range|rdf:Literal
 |Beskrivelse|Brukes til å referere til den anbefalte termen til en kvalitetsdeldimensjon.
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Kommentar|Norsk utvidelse. +
 Egenskapen kan gjentas for hvert språk termen finnes i.
 |Eksempel | Se eksemplet under <<Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)>>
@@ -127,7 +127,7 @@ Egenskapen kan gjentas for hvert språk termen finnes i.
 |Range|rdf:Literal
 |Beskrivelse|Brukes til å referere til definisjonen av en kvalitetsdeldimensjon.
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Kommentar|Norsk utvidelse. +
 Egenskapen kan gjentas for hvert språk definisjonen finnes i.
 |Eksempel | Se eksemplet under <<Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)>>
@@ -146,7 +146,7 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.
 |Range|rdf:Literal
 |Beskrivelse|Brukes til å referere til den anbefalte termen til en kvalitetsdimensjon.
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Kommentar|Norsk utvidelse. +
 Egenskapen kan gjentas for hvert språk termen finnes i.
 |Eksempel | Se tilsvarende eksempel under <<Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)>>
@@ -161,7 +161,7 @@ Egenskapen kan gjentas for hvert språk termen finnes i.
 |Range|rdf:Literal
 |Beskrivelse|Brukes til å referere til definisjonen av en kvalitetsdimensjon.
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Kommentar|Norsk utvidelse. +
 Egenskapen kan gjentas for hvert språk definisjonen finnes i.
 |Eksempel | Se tilsvarende eksempel under <<Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)>>
@@ -181,7 +181,7 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.
 |Range|dqvno:SubDimension
 |Beskrivelse|Brukes til å referere til kvalitetsdeldimensjonen som kvalitetsmålet hører til.
 |Multiplisitet|1..1
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Kommentar|Norsk utvidelse. +
 Denne egenskapen skal referere til én instans av en kvalitetsdeldimensjon.
 |Eksempel a| [source]
@@ -203,7 +203,7 @@ Denne egenskapen skal referere til én instans av en kvalitetsdeldimensjon.
 |Range|xsd:anySimpleType
 |Beskrivelse|Brukes til å referere til forventet datatype av et måleresultat.
 |Multiplisitet|0..1
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Eksempel a| [source]
 ----
 :missingObjects
@@ -225,7 +225,7 @@ Denne egenskapen skal referere til én instans av en kvalitetsdeldimensjon.
 |Range|rdf:Literal
 |Beskrivelse|Brukes til å referere til den anbefalte termen til et kvalitetsmål.
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Kommentar|Norsk utvidelse. +
 Egenskapen kan gjentas for hvert språk termen finnes i.
 |Eksempel | Se tilsvarende eksempel under <<Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)>>
@@ -240,7 +240,7 @@ Egenskapen kan gjentas for hvert språk termen finnes i.
 |Range|rdf:Literal
 |Beskrivelse|Brukes til å referere til definisjonen av et kvalitetsmål.
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Kommentar|Norsk utvidelse. +
 Egenskapen kan gjentas for hvert språk definisjonen finnes i.
 |Eksempel | Se tilsvarende eksempel under <<Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)>>
@@ -261,7 +261,7 @@ Tilsvarende gjelder også for <<Brukertilbakemelding>> (`dqv:UserFeedback`) og <
 |Range|oa:Motivation
 |Beskrivelse|Brukes til å referere til beskrivelse av motivasjonen.
 |Multiplisitet|1..n
-|Kravsnivå|Obligatorisk
+|Kravnivå|Obligatorisk
 |Kommentar|I henhold til DQV skal en `dqv:QualityAnnotation` alltid ha en `oa:motivatedBy` med en instans av `oa:Motivation`, og instansen er https://www.w3.org/TR/vocab-dqv/#dqv:qualityAssessment[`dqv:qualityAssessment`].
 |Eksempel a| [source]
 ----
@@ -282,7 +282,7 @@ Tilsvarende gjelder også for <<Brukertilbakemelding>> (`dqv:UserFeedback`) og <
 |Range|dqv:Dimension
 |Beskrivelse|Brukes til å referere til en kvalitetsdimensjon.
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Eksempel a| [source]
 ----
 :aQAnnotation
@@ -301,7 +301,7 @@ Tilsvarende gjelder også for <<Brukertilbakemelding>> (`dqv:UserFeedback`) og <
 |Range|oa:TextualBody
 |Beskrivelse|Brukes til å referere til en tekstdel i en kvalitetsnote.
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Eksempel a| [source]
 ----
 :aQAnnotation
@@ -329,7 +329,7 @@ Tilsvarende gjelder også for <<Brukertilbakemelding>> (`dqv:UserFeedback`) og <
 |Range|rdfs:Literal
 |Beskrivelse|Brukes til å referere til en fritekstmerknad.
 |Multiplisitet|0..n
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |Kommentar|Norsk utvidelse. For å kunne ha fritekstkommentarer.
 |===
 
@@ -342,7 +342,7 @@ Tilsvarende gjelder også for <<Brukertilbakemelding>> (`dqv:UserFeedback`) og <
 |Range|dcat:Resource
 |Beskrivelse|Brukes til å referere til ressursen som kvalitetsnoten er for.
 |Multiplisitet|0..1
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |===
 
 === Måleresultat (dqv:QualityMeasurement) [[Måleresultat_egenskaper]]
@@ -358,7 +358,7 @@ Tilsvarende gjelder også for <<Brukertilbakemelding>> (`dqv:UserFeedback`) og <
 |Range|dqv:Metric
 |Beskrivelse|Brukes til å referere til et kvalitetsmål.
 |Multiplisitet|1..1
-|Kravsnivå|Obligatorisk
+|Kravnivå|Obligatorisk
 |Eksempel a| [source]
 ----
 :aQMeasurement
@@ -379,7 +379,7 @@ Tilsvarende gjelder også for <<Brukertilbakemelding>> (`dqv:UserFeedback`) og <
 |Range|xsd:boolean, xsd:double, xsd:nonNagativeInteger, rdfs:Literal
 |Beskrivelse|Brukes til å referere til verdien av et måleresultat.
 |Multiplisitet|0..1
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Eksempel | Se eksemplet under <<Måleresultat: er måleresultat av (dqv:isMeasurementOf)>>
 |===
 
@@ -394,7 +394,7 @@ Tilsvarende gjelder også for <<Brukertilbakemelding>> (`dqv:UserFeedback`) og <
 |Range|rdfs:Literal
 |Beskrivelse|Brukes til å referere til en fritekstmerknad.
 |Multiplisitet|0..n
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |Kommentar|Norsk utvidelse. For å kunne ha fritekstkommentarer.
 |Eksempel a| [source]
 ----
@@ -419,7 +419,7 @@ Tilsvarende gjelder også for <<Brukertilbakemelding>> (`dqv:UserFeedback`) og <
 |Range|rdfs:Literal
 |Beskrivelse|Brukes til å referere til tittelen til standarden/spesifikasjonen.
 |Multiplisitet|1..n
-|Kravsnivå|Obligatorisk
+|Kravnivå|Obligatorisk
 |Kommentar|Norsk utvidelse. For å kunne ha tittel til standard/spesifikasjon. +
 Egenskapen kan gjentas for hvert språk tittelen finnes i.
 |===
@@ -435,7 +435,7 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 |Range|dqv:Dimension
 |Beskrivelse|Brukes til å referere til en kvalitetsdimensjon som standarden/spesifikasjonen dekker.
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Eksempel a| [source]
 ----
 :aQSpecification
@@ -453,7 +453,7 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 |Range|rdfs:Resource
 |Beskrivelse|Brukes til å referere til en referanse til standarden/spesifikasjonen.
 |Multiplisitet|0..n
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Kommentar|Norsk utvidelse. For å kunne ha referanse til standard/spesifikasjon.
 |===
 
@@ -468,7 +468,7 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 |Range|rdfs:Literal
 |Beskrivelse|Brukes til å referere til en fritekstmerknad.
 |Multiplisitet|0..n
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |Kommentar|Norsk utvidelse. For å kunne ha fritekstkommentarer.
 |===
 
@@ -481,7 +481,7 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 |Range|rdfs:Literal
 |Beskrivelse|Brukes til å referere til versjonsnummer.
 |Multiplisitet|0..1
-|Kravsnivå|Valgfri
+|Kravnivå|Valgfri
 |Kommentar|Norsk utvidelse. For å kunne refefere til versjonsnummer.
 |===
 
@@ -498,7 +498,7 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 |Range|rdfs:Resource
 |Beskrivelse|Brukes til å referere til selve teksten i en tekstdel.
 |Multiplisitet|1..n
-|Kravsnivå|Obligatorisk
+|Kravnivå|Obligatorisk
 |Eksempel a| [source]
 ----
 :aPlainText
@@ -520,7 +520,7 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 |Range|dct:MediaType
 |Beskrivelse|Brukes til å referere til formatet som en gitt tekst er skrevet i.
 |Multiplisitet|0..1
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Eksempel|Se eksemplet under <<Textdel: har verdi (rdfs:value)>>.
 |===
 
@@ -533,6 +533,6 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 |Range|dct:LinguisticSystem
 |Beskrivelse|Brukes til å referere til språk/målform som en gitt tekst er skrevet i.
 |Multiplisitet|0..1
-|Kravsnivå|Anbefalt
+|Kravnivå|Anbefalt
 |Eksempel|Se eksemplet under <<Textdel: har verdi (rdfs:value)>>.
 |===

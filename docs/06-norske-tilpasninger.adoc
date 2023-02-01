@@ -2,7 +2,7 @@
 
 Følgende tilpasninger er gjort i denne norske applikasjonsprofilen:
 
-* Eksplisitte krav til bruk av klasser og egenskaper: DQV er et generelt vokabular for beskrivelse av datakvalitet. DQV har derfor, med få unntak, ikke satt på krav til bruk av klasser og egenskaper. Denne applikasjonsprofilen er en konkret anvendelse av DQV. Det er derfor satt «kravsnivå» («obligatorisk», «anbefalt» eller «valgfri») på klasser og egenskaper, samt multiplisitet på egenskaper.
+* Eksplisitte krav til bruk av klasser og egenskaper: DQV er et generelt vokabular for beskrivelse av datakvalitet. DQV har derfor, med få unntak, ikke satt på krav til bruk av klasser og egenskaper. Denne applikasjonsprofilen er en konkret anvendelse av DQV. Det er derfor satt «kravnivå» («obligatorisk», «anbefalt» eller «valgfri») på klasser og egenskaper, samt multiplisitet på egenskaper.
 
 * Tilføyelse av klassen Kvalitetsdeldimensjon (`dqvno:SubDimension`): Ifm. utarbeidelse av https://data.norge.no/specification/spesifikasjon-for-beskrivelse-av-kvalitet-pa-datasett/[_Spesifikasjon for beskrivelse av kvalitet på datasett_] ble det identifisert et behov for å ha «kvalitetsdeldimensjon» som er et mellomnivå mellom kvalitetsdimensjon (`dqv:Dimension`) og kvalitetsmål (`dqv:Metric`). DQV har ikke kvalitets**del**dimensjon som egen klasse.
 ** Som en konsekvens, er det også tilføyet en egenskap `dqvno:inSubDimension` i klassen Kvalitetsmål (`dqv:Metric`), som brukes til å referere fra et kvalitetsmål (`dqv:Metric`) til
