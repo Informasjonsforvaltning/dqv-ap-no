@@ -48,7 +48,7 @@ Eksemplet under viser de ulike måter å beskrive kvalitet på et eksempeldatase
               :textCompleteness ;
    oa:hasTarget :dsBuildings ;
    oa:motivatedBy dqv:qualityAssessment ;
-   dqv:inDimension dqvno:completeness .
+   dqv:inDimension <https://data.norge.no/vocabulary/quality-dimension#completeness> .
 
 ###  https://exampledatasets.org/examples/dqvExamples#qaUserFeedback
 :qaUserFeedback rdf:type owl:NamedIndividual ,
@@ -57,12 +57,12 @@ Eksemplet under viser de ulike måter å beskrive kvalitet på et eksempeldatase
               :textUserFeedback ;
    oa:hasTarget :dsBuildings ;
    oa:motivatedBy dqv:qualityAssessment ;
-   dqv:inDimension dqvno:completeness .
+   dqv:inDimension <https://data.norge.no/vocabulary/quality-dimension#completeness> .
 
 ###  https://exampledatasets.org/examples/dqvExamples#qmMissingObjects
 :qmMissingObjects rdf:type owl:NamedIndividual ,
             dqv:QualityMeasurement ;
-   dqv:isMeasurementOf dqvno:missingObjects ;
+   dqv:isMeasurementOf <https://data.norge.no/vocabulary/quality-metric#qm-completeness-1001> ;
    dqv:value "true"^^xsd:boolean ;
    rdfs:comment "Ja, noen bygninger mangler i datasettet."@nb ,
                 "Yes, some buildings are missing in the dataset."@en .
@@ -70,7 +70,7 @@ Eksemplet under viser de ulike måter å beskrive kvalitet på et eksempeldatase
 ###  https://exampledatasets.org/examples/dqvExamples#qmNumberMissingObjects
 :qmNumberMissingObjects rdf:type owl:NamedIndividual ,
             dqv:QualityMeasurement ;
-   dqv:isMeasurementOf dqvno:numberOfMissingObjects ;
+   dqv:isMeasurementOf <https://data.norge.no/vocabulary/quality-metric#qm-completeness-1002> ;
    dqv:value "2"^^xsd:nonNegativeInteger ;
    rdfs:comment "To bygninger mangler i datasettet."@nb ,
                 "Two buildings are missing in the dataset."@en .
@@ -78,9 +78,9 @@ Eksemplet under viser de ulike måter å beskrive kvalitet på et eksempeldatase
 ###  https://exampledatasets.org/examples/dqvExamples#qmRateMissingObjects
 :qmRateMissingObjects rdf:type owl:NamedIndividual ,
             dqv:QualityMeasurement ;
-   dqv:isMeasurementOf dqvno:rateOfMissingObjects ;
+   dqv:isMeasurementOf <https://data.norge.no/vocabulary/quality-metric#qm-completeness-1003> ;
    dqv:value "0.02"^^xsd:double ;
-   rdfs:comment "0.02% av bygninger mangler i datasettet."@nb ,
+   rdfs:comment "0,02% av bygninger mangler i datasettet."@nb ,
                 "0.02% of buildings are missing in the dataset."@en .
 
 ###  https://exampledatasets.org/examples/dqvExamples#qsQualitySpecification

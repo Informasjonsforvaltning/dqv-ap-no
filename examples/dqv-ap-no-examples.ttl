@@ -1,4 +1,4 @@
-@prefix : <https://exampledatasets.org/examples/dqvExamples#> .
+@prefix : <https://example.org/examples/dqvExamples#> .
 @prefix oa: <https://www.w3.org/TR/annotation-vocab/#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dqv: <https://www.w3.org/TR/vocab-dqv/#dqv:> .
@@ -14,9 +14,9 @@
 @prefix brregOrg: <https://organization-catalog.fellesdatakatalog.digdir.no/organizations/> .
 @prefix euDataTheme: <http://publications.europa.eu/resource/authority/data-theme/> .
 @prefix euDatasetType: <https://data.europa.eu/euodp/en/data/dataset/dataset-type/> .
-@base <https://exampledatasets.org/examples/dqvExamples#> .
+@base <https://example.org/examples/dqvExamples#> .
 
-<https://exampledatasets.org/examples/dqvExamples#> rdf:type owl:Ontology ;
+<https://example.org/examples/dqvExamples#> rdf:type owl:Ontology ;
                                                      owl:versionIRI <urn:absolute:Example-v0.5> ;
                                                      rdfs:isDefinedBy "Digitaliseringsdirektoratet"@nb ,
                                                                       "Norwegian Digitalisation Agency"@en ;
@@ -211,15 +211,6 @@ euDatasetType:TEST_DATA rdf:type owl:NamedIndividual ,
                                  skos:Concept .
 
 
-###  https://data.norge.no/vocabulary/dqvno#completeness
-dqvno:completeness rdf:type owl:NamedIndividual ,
-                            dqv:Dimension ;
-                   rdfs:comment "Dette er en predefinert kvalitetsdimensjon (dqv:Dimension)."@nb ,
-                                "This is a predefined quality dimension (dqv:Dimension)."@en ;
-                   skos:prefLabel "completeness"@en ,
-                                  "fullstendighet"@nb .
-
-
 ###  https://organization-catalog.fellesdatakatalog.digdir.no/organizations/991825827
 brregOrg:991825827 rdf:type owl:NamedIndividual , foaf:Agent .
 
@@ -243,38 +234,7 @@ dqvno:isAuthoritative rdf:type owl:NamedIndividual ,
                       skos:prefLabel "er autoritativ"@nb ,
                                      "is authoritative"@en .
 
-
-###  https://data.norge.no/vocabulary/dqvno#missingObjects
-dqvno:missingObjects rdf:type owl:NamedIndividual ,
-                              dqv:Metric ;
-                     rdfs:comment "Dette er et predefinert kvalitetsmål (dqv:Metric) med boolsk verdi, som sier hvorvidt det mangler noen enheter i datasettet."@nb ,
-                                  "This is a predefined dqv:Metric in boolean, which states whether some objects are missing in the dataset."@en ;
-                     rdfs:isDefinedBy dqvno:missingObjects ;
-                     skos:prefLabel "manglende enheter"@nb ,
-                                    "missing objects"@en .
-
-
-###  https://data.norge.no/vocabulary/dqvno#numberOfMissingObjects
-dqvno:numberOfMissingObjects rdf:type owl:NamedIndividual ,
-                                      dqv:Metric ;
-                             rdfs:comment "Dette er et predefinert kvalitetsmål (dqv:Metric) med ikke-negativ-heltall, som sier antall enheter som mangler i datasettet."@nb ,
-                                          "This is a predefined metric (dqv:Metric) with nonNegativeInteger, which states the number of objects that are missing in the dataset."@en ;
-                             rdfs:isDefinedBy dqvno:numberOfMissingObjects ;
-                             skos:prefLabel "antall manglende enheter"@nb ,
-                                            "number of missing objects"@en .
-
-
-###  https://data.norge.no/vocabulary/dqvno#rateOfMissingObjects
-dqvno:rateOfMissingObjects rdf:type owl:NamedIndividual ,
-                                    dqv:Metric ;
-                           rdfs:comment "Dette er et predefinert kvalitetsmål (dqv:Metric) med double (uttrykt som prosent), som sier andel enheter som mangler i datasettet."@nb ,
-                                        "This is a predefined metric (dqv:Metric) with double (typed as percentage), which states the rate of missing objects in the dataset."@en ;
-                           rdfs:isDefinedBy dqvno:rateOfMissingObjects ;
-                           skos:prefLabel "andel manglende enheter"@nb ,
-                                          "rate of missing objects"@en .
-
-
-###  https://exampledatasets.org/examples/dqvExamples#dsBuildings
+###  https://example.org/examples/dqvExamples#dsBuildings
 :dsBuildings rdf:type owl:NamedIndividual ,
                       dcat:Dataset ;
              dct:conformsTo :qsQualitySpecification ;
@@ -289,70 +249,69 @@ dqvno:rateOfMissingObjects rdf:type owl:NamedIndividual ,
                                        :qmRateMissingObjects ;
              dct:description "An example dataset."@en ,
                              "Et eksempeldatasett."@nb ;
-             dct:identifier "https://exampledatasets.org/examples/dqvExamples#" ;
+             dct:identifier "https://example.org/examples/dqvExamples#" ;
              dct:title "Buildings - an example dataset"@en ,
                        "Bygninger - et eksempeldatasett"@nb .
 
-
-###  https://exampledatasets.org/examples/dqvExamples#qaCompleteness
+###  https://example.org/examples/dqvExamples#qaCompleteness
 :qaCompleteness rdf:type owl:NamedIndividual ,
                          dqv:QualityAnnotation ;
                 oa:hasBody :tekstFullstendighet ,
                            :textCompleteness ;
                 oa:hasTarget :dsBuildings ;
                 oa:motivatedBy dqv:qualityAssessment ;
-                dqv:inDimension dqvno:completeness .
+                dqv:inDimension <https://data.norge.no/vocabulary/quality-dimension#completeness> .
 
 
-###  https://exampledatasets.org/examples/dqvExamples#qaUserFeedback
+###  https://example.org/examples/dqvExamples#qaUserFeedback
 :qaUserFeedback rdf:type owl:NamedIndividual ,
                          dqv:UserQualityFeedback ;
                 oa:hasBody :tekstBrukertilbakemelding ,
                            :textUserFeedback ;
                 oa:hasTarget :dsBuildings ;
                 oa:motivatedBy dqv:qualityAssessment ;
-                dqv:inDimension dqvno:completeness .
+                dqv:inDimension <https://data.norge.no/vocabulary/quality-dimension#completeness> .
 
 
-###  https://exampledatasets.org/examples/dqvExamples#qmMissingObjects
+###  https://example.org/examples/dqvExamples#qmMissingObjects
 :qmMissingObjects rdf:type owl:NamedIndividual ,
                            dqv:QualityMeasurement ;
-                  dqv:isMeasurementOf dqvno:missingObjects ;
+                  dqv:isMeasurementOf <https://data.norge.no/vocabulary/quality-metric#qm-completeness-1001> ;
                   dqv:value "true"^^xsd:boolean ;
                   rdfs:comment "Ja, noen bygninger mangler i datasettet."@nb ,
                                "Yes, some buildings are missing in the dataset."@en .
 
 
-###  https://exampledatasets.org/examples/dqvExamples#qmNumberMissingObjects
+###  https://example.org/examples/dqvExamples#qmNumberMissingObjects
 :qmNumberMissingObjects rdf:type owl:NamedIndividual ,
                                  dqv:QualityMeasurement ;
-                        dqv:isMeasurementOf dqvno:numberOfMissingObjects ;
+                        dqv:isMeasurementOf <https://data.norge.no/vocabulary/quality-metric#qm-completeness-1003> ;
                         dqv:value "2"^^xsd:nonNegativeInteger ;
                         rdfs:comment "To bygninger mangler i datasettet."@nb ,
                                      "Two buildings are missing in the dataset."@en .
 
 
-###  https://exampledatasets.org/examples/dqvExamples#qmRateMissingObjects
+###  https://example.org/examples/dqvExamples#qmRateMissingObjects
 :qmRateMissingObjects rdf:type owl:NamedIndividual ,
                                dqv:QualityMeasurement ;
-                      dqv:isMeasurementOf dqvno:rateOfMissingObjects ;
+                      dqv:isMeasurementOf <https://data.norge.no/vocabulary/quality-metric#qm-completeness-1003> ;
                       dqv:value "0.02"^^xsd:double ;
                       rdfs:comment "0.02% av bygninger mangler i datasettet."@nb ,
                                    "0.02% of buildings are missing in the dataset."@en .
 
 
-###  https://exampledatasets.org/examples/dqvExamples#qsQualitySpecification
+###  https://example.org/examples/dqvExamples#qsQualitySpecification
 :qsQualitySpecification rdf:type owl:NamedIndividual ,
                                  dct:Standard ;
                         dct:title "Eksempel kvalitetsspesifikasjon"@nb ,
                                   "Example quality specification"@en ;
                         rdfs:comment "Denne spesifikasjonen dekker følgende kvalitetsdimensjoner: fullstendighet, nøyaktighet og konsistens."@nb ,
                                      "The specification covers the following dimensions: completeness, accuracy and consistency."@en ;
-                        rdfs:seeAlso <https://exampledatasets.org/standards/quality-specification> ,
-                                     <https://exampledatasets.org/standards/kvalitetsspesifikasjon/> .
+                        rdfs:seeAlso <https://example.org/standards/quality-specification> ,
+                                     <https://example.org/standards/kvalitetsspesifikasjon/> .
 
 
-###  https://exampledatasets.org/examples/dqvExamples#tekstBrukertilbakemelding
+###  https://example.org/examples/dqvExamples#tekstBrukertilbakemelding
 :tekstBrukertilbakemelding rdf:type owl:NamedIndividual ,
                                     oa:TextualBody ;
                            dct:format "text/plain" ;
@@ -360,7 +319,7 @@ dqvno:rateOfMissingObjects rdf:type owl:NamedIndividual ,
                            rdfs:value "Godt eksempeldatasett med god nok fullstendighet." .
 
 
-###  https://exampledatasets.org/examples/dqvExamples#tekstFullstendighet
+###  https://example.org/examples/dqvExamples#tekstFullstendighet
 :tekstFullstendighet rdf:type owl:NamedIndividual ,
                               oa:TextualBody ;
                      dct:format "text/plain" ;
@@ -368,7 +327,7 @@ dqvno:rateOfMissingObjects rdf:type owl:NamedIndividual ,
                      rdfs:value "Det tar i gjennomsnitt 24 dager fra en bygning står ferdig eller er revet til den er innlemmet i eller tatt ut fra datasettet." .
 
 
-###  https://exampledatasets.org/examples/dqvExamples#textCompleteness
+###  https://example.org/examples/dqvExamples#textCompleteness
 :textCompleteness rdf:type owl:NamedIndividual ,
                            oa:TextualBody ;
                   dct:format "text/plain" ;
@@ -376,7 +335,7 @@ dqvno:rateOfMissingObjects rdf:type owl:NamedIndividual ,
                   rdfs:value "On average there will be 24 days from a building is completed or demolished, to it is included in or excluded from the dataset." .
 
 
-###  https://exampledatasets.org/examples/dqvExamples#textUserFeedback
+###  https://example.org/examples/dqvExamples#textUserFeedback
 :textUserFeedback rdf:type owl:NamedIndividual ,
                            oa:TextualBody ;
                   dct:format "text/plain" ;
@@ -385,3 +344,4 @@ dqvno:rateOfMissingObjects rdf:type owl:NamedIndividual ,
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+###  and manually modified later
