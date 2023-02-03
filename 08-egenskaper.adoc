@@ -90,12 +90,12 @@ dqvno:isAuthoritative
 |Multiplisitet|1..1
 |Kravnivå|Anbefalt
 |Kommentar|Norsk utvidelse.
-|Eksempel a|Eksemplet under viser bruk av `skos:broader` for å uttrykke at `dqvno:undercoverage` er en deldimensjon i `dqvno:completeness`; bruk av `skos:prefLabel` for å oppgi anbefalt term på engelsk og bokmål; og bruk av `skos:definition` for å oppgi definisjon på engelsk og bokmål:
+|Eksempel a|Eksemplet under viser bruk av `skos:broader` for å uttrykke at `https://data.norge.no/vocabulary/quality-dimension#under-coverage` (underdekning) er en deldimensjon i `https://data.norge.no/vocabulary/quality-dimension#completeness` (fullstendighet); bruk av `skos:prefLabel` for å oppgi anbefalt term på engelsk og bokmål; og bruk av `skos:definition` for å oppgi definisjon på engelsk og bokmål:
 [source]
 ----
-dqvno:undercoverage
+<https://data.norge.no/vocabulary/quality-dimension#under-coverage>
    a dqvno:SubDimension ;
-   skos:broader dqvno:completeness ;
+   skos:broader <https://data.norge.no/vocabulary/quality-dimension#completeness> ;
    skos:prefLabel "under-coverage"@en , "underdekning"@nb ;
    skos:definition "data absent from a data set"@en , "data som mangler i et datasett"@nb .
 ----
@@ -188,7 +188,7 @@ Denne egenskapen skal referere til én instans av en kvalitetsdeldimensjon.
 ----
 :aQMetric
    a dqv:Metric;
-   dqvno:inSubDimension dqvno:undercoverage .
+   dqvno:inSubDimension <https://data.norge.no/vocabulary/quality-dimension#under-coverage> .
 ----
 |===
 
@@ -288,7 +288,7 @@ Tilsvarende gjelder også for <<Brukertilbakemelding>> (`dqv:UserFeedback`) og <
 :aQAnnotation
    a dqv:QualityAnnotation ;
    oa:motivatedBy dqv:qualityAssessment ;
-   dqv:inDimension dqvno:completeness .
+   dqv:inDimension <https://data.norge.no/vocabulary/quality-dimension#completeness> .
 ----
 |===
 
@@ -308,7 +308,7 @@ Tilsvarende gjelder også for <<Brukertilbakemelding>> (`dqv:UserFeedback`) og <
    a dqv:QualityAnnotation ;
    oa:motivatedBy dqv:qualityAssessment ;
    oa:hasBody :aTextBody ;
-   dqv:inDimension dqvno:completeness .
+   dqv:inDimension <https://data.norge.no/vocabulary/quality-dimension#completeness> .
 
 :aTextBody
    a oa:TextualBody ;
@@ -363,7 +363,7 @@ Tilsvarende gjelder også for <<Brukertilbakemelding>> (`dqv:UserFeedback`) og <
 ----
 :aQMeasurement
    a dqv:QualityMeasurement ;
-   dqv:isMeasurementOf dqvno:missingObjects ;
+   dqv:isMeasurementOf <https://data.norge.no/vocabulary/quality-metric#qm-completeness-1001> ;
    dqv:value “true”^^xsd:boolean .
 ----
 |===
@@ -400,7 +400,7 @@ Tilsvarende gjelder også for <<Brukertilbakemelding>> (`dqv:UserFeedback`) og <
 ----
 :aQMeasurement
    a dqv:QualityMeasurement;
-   dqv:isMeasurementOf dqvno:missingObjects ;
+   dqv:isMeasurementOf <https://data.norge.no/vocabulary/quality-metric#qm-completeness-1001> ;
    dqv:value “false”^^xsd:boolean ;
    rdfs:comment “Datasettet skal være komplett. Erfaringsmessig vil det imidlertid være 1 dags forsinkelse før alle objektene er tatt med i datasettet.”@nb .
 ----
@@ -440,7 +440,8 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.
 ----
 :aQSpecification
    a dct:Standard;
-   dqv:inDimension dqvno:completeness, dqvno:accuracy .
+   dqv:inDimension <https://data.norge.no/vocabulary/quality-metric#qm-completeness-1001> , 
+      <https://data.norge.no/vocabulary/quality-dimension#accuracy> .
 ----
 |===
 

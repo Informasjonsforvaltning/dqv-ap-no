@@ -664,7 +664,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <p><strong>Status</strong>: Gjeldende<br>
 <strong>Versjon</strong>: 1.0.2 (se <a href="#Endringslogg">endringslogg</a>)<br>
 <strong>Publisert</strong>: 2020-10-21<br>
-<strong>Oppdatert</strong>: 2023-02-01<br>
+<strong>Oppdatert</strong>: 2023-02-03<br>
 <strong>Gjeldende versjon</strong>: <a href="https://data.norge.no/specification/dqv-ap-no/" class="bare">https://data.norge.no/specification/dqv-ap-no/</a><br>
 <strong>Gjeldende versjon av ontologi</strong>: <a href="https://data.norge.no/vocabulary/dqvno#" class="bare">https://data.norge.no/vocabulary/dqvno#</a><br>
 <strong>Redaktørens utkast</strong>: <a href="https://informasjonsforvaltning.github.io/dqv-ap-no/" class="bare">https://informasjonsforvaltning.github.io/dqv-ap-no/</a><br>
@@ -704,7 +704,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <div class="ulist">
 <ul>
 <li>
-<p>Når man refererer til en predefinert instans av et kvalitetsmål (f.eks. <code>dqvno:missingObjects</code> som er en predefinert instans av <code>dqv:Metric</code>), trenger man ikke å ta med kvalitets(del)dimensjonen som kvalitetsmålet er i (ettersom dette er predefinert sammen med det aktuelle kvalitetsmålet).</p>
+<p>Når man refererer til en predefinert instans av et kvalitetsmål, f.eks. <a href="https://data.norge.no/vocabulary/quality-metric#qm-completeness-1001" class="bare">https://data.norge.no/vocabulary/quality-metric#qm-completeness-1001</a> (manglende enheter) som er en predefinert instans av <code>dqv:Metric</code>, trenger man ikke å ta med kvalitets(del)dimensjonen som kvalitetsmålet er i (ettersom dette er predefinert sammen med det aktuelle kvalitetsmålet).</p>
 </li>
 </ul>
 </div>
@@ -1371,13 +1371,13 @@ kvalitetsdeldimensjonen (<code>dqvno:SubDimension</code>) som kvalitetsmålet ti
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Eksempel</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Eksemplet under viser bruk av <code>skos:broader</code> for å uttrykke at <code>dqvno:undercoverage</code> er en deldimensjon i <code>dqvno:completeness</code>; bruk av <code>skos:prefLabel</code> for å oppgi anbefalt term på engelsk og bokmål; og bruk av <code>skos:definition</code> for å oppgi definisjon på engelsk og bokmål:</p>
+<p>Eksemplet under viser bruk av <code>skos:broader</code> for å uttrykke at <code><a href="https://data.norge.no/vocabulary/quality-dimension#under-coverage" class="bare">https://data.norge.no/vocabulary/quality-dimension#under-coverage</a></code> (underdekning) er en deldimensjon i <code><a href="https://data.norge.no/vocabulary/quality-dimension#completeness" class="bare">https://data.norge.no/vocabulary/quality-dimension#completeness</a></code> (fullstendighet); bruk av <code>skos:prefLabel</code> for å oppgi anbefalt term på engelsk og bokmål; og bruk av <code>skos:definition</code> for å oppgi definisjon på engelsk og bokmål:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>dqvno:undercoverage
+<pre class="highlight"><code>&lt;https://data.norge.no/vocabulary/quality-dimension#under-coverage&gt;
    a dqvno:SubDimension ;
-   skos:broader dqvno:completeness ;
+   skos:broader &lt;https://data.norge.no/vocabulary/quality-dimension#completeness&gt; ;
    skos:prefLabel "under-coverage"@en , "underdekning"@nb ;
    skos:definition "data absent from a data set"@en , "data som mangler i et datasett"@nb .</code></pre>
 </div>
@@ -1624,7 +1624,7 @@ Denne egenskapen skal referere til én instans av en kvalitetsdeldimensjon.</p><
 <div class="content">
 <pre class="highlight"><code>:aQMetric
    a dqv:Metric;
-   dqvno:inSubDimension dqvno:undercoverage .</code></pre>
+   dqvno:inSubDimension &lt;https://data.norge.no/vocabulary/quality-dimension#under-coverage&gt; .</code></pre>
 </div>
 </div></div></td>
 </tr>
@@ -1871,7 +1871,7 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.</p></td>
 <pre class="highlight"><code>:aQAnnotation
    a dqv:QualityAnnotation ;
    oa:motivatedBy dqv:qualityAssessment ;
-   dqv:inDimension dqvno:completeness .</code></pre>
+   dqv:inDimension &lt;https://data.norge.no/vocabulary/quality-dimension#completeness&gt; .</code></pre>
 </div>
 </div></div></td>
 </tr>
@@ -1918,7 +1918,7 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.</p></td>
    a dqv:QualityAnnotation ;
    oa:motivatedBy dqv:qualityAssessment ;
    oa:hasBody :aTextBody ;
-   dqv:inDimension dqvno:completeness .
+   dqv:inDimension &lt;https://data.norge.no/vocabulary/quality-dimension#completeness&gt; .
 
 :aTextBody
    a oa:TextualBody ;
@@ -2052,7 +2052,7 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.</p></td>
 <div class="content">
 <pre class="highlight"><code>:aQMeasurement
    a dqv:QualityMeasurement ;
-   dqv:isMeasurementOf dqvno:missingObjects ;
+   dqv:isMeasurementOf &lt;https://data.norge.no/vocabulary/quality-metric#qm-completeness-1001&gt; ;
    dqv:value “true”^^xsd:boolean .</code></pre>
 </div>
 </div></div></td>
@@ -2147,7 +2147,7 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.</p></td>
 <div class="content">
 <pre class="highlight"><code>:aQMeasurement
    a dqv:QualityMeasurement;
-   dqv:isMeasurementOf dqvno:missingObjects ;
+   dqv:isMeasurementOf &lt;https://data.norge.no/vocabulary/quality-metric#qm-completeness-1001&gt; ;
    dqv:value “false”^^xsd:boolean ;
    rdfs:comment “Datasettet skal være komplett. Erfaringsmessig vil det imidlertid være 1 dags forsinkelse før alle objektene er tatt med i datasettet.”@nb .</code></pre>
 </div>
@@ -2243,7 +2243,8 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.</p></td>
 <div class="content">
 <pre class="highlight"><code>:aQSpecification
    a dct:Standard;
-   dqv:inDimension dqvno:completeness, dqvno:accuracy .</code></pre>
+   dqv:inDimension &lt;https://data.norge.no/vocabulary/quality-metric#qm-completeness-1001&gt; ,
+      &lt;https://data.norge.no/vocabulary/quality-dimension#accuracy&gt; .</code></pre>
 </div>
 </div></div></td>
 </tr>
@@ -2560,7 +2561,7 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.</p></td>
               :textCompleteness ;
    oa:hasTarget :dsBuildings ;
    oa:motivatedBy dqv:qualityAssessment ;
-   dqv:inDimension dqvno:completeness .
+   dqv:inDimension &lt;https://data.norge.no/vocabulary/quality-dimension#completeness&gt; .
 
 ###  https://exampledatasets.org/examples/dqvExamples#qaUserFeedback
 :qaUserFeedback rdf:type owl:NamedIndividual ,
@@ -2569,12 +2570,12 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.</p></td>
               :textUserFeedback ;
    oa:hasTarget :dsBuildings ;
    oa:motivatedBy dqv:qualityAssessment ;
-   dqv:inDimension dqvno:completeness .
+   dqv:inDimension &lt;https://data.norge.no/vocabulary/quality-dimension#completeness&gt; .
 
 ###  https://exampledatasets.org/examples/dqvExamples#qmMissingObjects
 :qmMissingObjects rdf:type owl:NamedIndividual ,
             dqv:QualityMeasurement ;
-   dqv:isMeasurementOf dqvno:missingObjects ;
+   dqv:isMeasurementOf &lt;https://data.norge.no/vocabulary/quality-metric#qm-completeness-1001&gt; ;
    dqv:value "true"^^xsd:boolean ;
    rdfs:comment "Ja, noen bygninger mangler i datasettet."@nb ,
                 "Yes, some buildings are missing in the dataset."@en .
@@ -2582,7 +2583,7 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.</p></td>
 ###  https://exampledatasets.org/examples/dqvExamples#qmNumberMissingObjects
 :qmNumberMissingObjects rdf:type owl:NamedIndividual ,
             dqv:QualityMeasurement ;
-   dqv:isMeasurementOf dqvno:numberOfMissingObjects ;
+   dqv:isMeasurementOf &lt;https://data.norge.no/vocabulary/quality-metric#qm-completeness-1002&gt; ;
    dqv:value "2"^^xsd:nonNegativeInteger ;
    rdfs:comment "To bygninger mangler i datasettet."@nb ,
                 "Two buildings are missing in the dataset."@en .
@@ -2590,9 +2591,9 @@ Egenskapen kan gjentas for hvert språk tittelen finnes i.</p></td>
 ###  https://exampledatasets.org/examples/dqvExamples#qmRateMissingObjects
 :qmRateMissingObjects rdf:type owl:NamedIndividual ,
             dqv:QualityMeasurement ;
-   dqv:isMeasurementOf dqvno:rateOfMissingObjects ;
+   dqv:isMeasurementOf &lt;https://data.norge.no/vocabulary/quality-metric#qm-completeness-1003&gt; ;
    dqv:value "0.02"^^xsd:double ;
-   rdfs:comment "0.02% av bygninger mangler i datasettet."@nb ,
+   rdfs:comment "0,02% av bygninger mangler i datasettet."@nb ,
                 "0.02% of buildings are missing in the dataset."@en .
 
 ###  https://exampledatasets.org/examples/dqvExamples#qsQualitySpecification
@@ -2677,7 +2678,7 @@ ga('send', 'pageview');
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2023-02-01 14:49:42 UTC
+Sist oppdatert 2023-02-03 11:01:15 UTC
 </div>
 </div>
 </body>
