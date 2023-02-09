@@ -6,4 +6,6 @@ Gjeldende versjon av spesifikasjonen vil bli publisert til <https://data.norge.n
 
 Utkast/høringsversjon av spesifikasjonen vil bli publisert til <https://informasjonsforvaltning.github.io/dqv-ap-no/>.
 
+Utkast/høringsversjon av vokabularet vil bli publisert til <https://informasjonsforvaltning.github.io/dqv-ap-no/vocabulary>.
+
 \- _Norwegian Digitalisation Agency / Digitaliseringsdirektoratet (<https://digdir.no>)_

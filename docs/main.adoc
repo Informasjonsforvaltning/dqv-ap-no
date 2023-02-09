@@ -1,36 +1,38 @@
 = DQV-AP-NO (Norsk applikasjonsprofil av DQV)
+Digitaliseringsdirektoratet (Digdir) / The Norwegian Digitalisation Agency
 :description: DQV-AP-NO (Norwegian Application Profile of DQV)
 :doctype: book
 :docinfo:
 :icons: font
 :toc: left
+ifdef::backend-pdf[:toc: macro]
 :toc-title: Innholdsfortegnelse
 :toclevels: 4
 :sectlinks:
 :table-stripes: odd
-:title-logo-image: image:images/digitaliseringsdirektoratet.png[pdfwidth=30vw]
+:title-logo-image: image:images/Digdir.png[pdfwidth=30vw]
 
-image::images/digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
+image::images/Digdir.png[width=50%, pdfwidth=30vw, link=https://digdir.no/]
 
 include::shared/download.adoc[]
 
 NOTE: *Innmelding av feil og mangler:* +
-Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/dqv-ap-no[Github Issues]. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis.
+Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/dqv-ap-no/issues[Github Issues]. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis.
 
 *Status*: Gjeldende +
-*Versjon*: 1.0.1 (se <<Endringslogg, endringslogg>>) +
+*Versjon*: 1.0.2 (se <<Endringslogg, endringslogg>>) +
 *Publisert*: 2020-10-21 +
-*Oppdatert*: 2021-04-28 +
+*Oppdatert*: 2023-02-03 +
 *Gjeldende versjon*: https://data.norge.no/specification/dqv-ap-no/ +
-*Forrige versjon*: ingen +
-*Redaktørens utkast*: https://informasjonsforvaltning.github.io/dqv-ap-no/
-
-*Ontologi*: Gjeldende versjon av ontologien for DQV-AP-NO med predefinerte instanser (kontrollert vokabular) blir publisert til https://data.norge.no/vocabulary/dqvno#. Redaktørens utkast til ontologien er tilgjengelig på https://github.com/Informasjonsforvaltning/dqv-ap-no/blob/develop/ontology/dqvno/dqvno.ttl[Github].
-
-*Veileder*: Det er utarbeidet en https://data.norge.no/guide/veileder-kvantifiserbar-kvalitet/[Veileder for beskrivelse av kvalitet på datasett – kvantifiserbar kvalitet].
+*Gjeldende versjon av ontologi*: https://data.norge.no/vocabulary/dqvno# +
+*Redaktørens utkast*: https://informasjonsforvaltning.github.io/dqv-ap-no/ + 
+*Redaktørens utkast til ontologi*: https://informasjonsforvaltning.github.io/dqv-ap-no/vocabulary + 
+*Veileder*: https://data.norge.no/guide/veileder-kvantifiserbar-kvalitet/[Veileder for beskrivelse av kvalitet på datasett – kvantifiserbar kvalitet]
 
 // Oversettelse:
 include::locale/attributes.adoc[]
+
+toc::[]
 
 // innhold her:
 
