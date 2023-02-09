@@ -22,109 +22,104 @@
       "dqv-ap-no"@nb ,
       "dqv-ap-no"@nn ;
    owl:versionIRI <dqvno:0.5> ;
-   dct:modified "2023-02-02"^^xsd:date ;
+   dct:modified "2023-02-09"^^xsd:date ;
    owl:versionInfo "Draft"@en ,
       """Utkast. Endringene sammenlignet med forrige versjon, hovedsakelig:
-- predefinerte instanser / named individuals markert som deprecated"""@nb .
-
-#################################################################
-#    Annotation properties
-#################################################################
-
-###  http://purl.org/dc/terms/source
-dct:source rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#altLabel
-skos:altLabel rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#definition
-skos:definition rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#example
-skos:example rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#prefLabel
-skos:prefLabel rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#scopeNote
-skos:scopeNote rdf:type owl:AnnotationProperty .
+- fleste predefinerte instanser ('named individuals') er nå markert som deprecated.
+- norske klasser og egenskaper føyet til."""@nb .
 
 
 #################################################################
-#    Datatypes
+#    Classes defined in DQV-AP-NO
 #################################################################
 
-###  http://www.w3.org/2001/XMLSchema#duration
-xsd:duration rdf:type rdfs:Datatype ;
-   rdfs:isDefinedBy "http://www.datypic.com/sc/xsd/t-xsd_duration.html" .
-
+###  https://data.norge.no/vocabulary/dqvno#SubDimension
+:SubDimension rdf:type owl:Class ;
+   rdfs:subClassOf dqv:Dimension ;
+   rdfs:label "Quality subdimension"@en , "Kvalitetsdeldimensjon"@nb ;
+   rdfs:comment "This class is used to represent a quality subdimension."@en ,
+      "Klassen brukes til å representere en kvalitetsdeldimensjon."@nb ;
+   .
 
 #################################################################
-#    Object Properties
+#    Object properties defined in DQV-AP-NO
 #################################################################
 
-###  http://www.w3.org/2002/07/owl#topObjectProperty
-owl:topObjectProperty rdf:type owl:FunctionalProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#broader
-skos:broader rdf:type owl:ObjectProperty .
-
-
-###  https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityMeasurement
-dqv:hasQualityMeasurement rdf:type owl:ObjectProperty .
-
-
-###  https://www.w3.org/TR/vocab-dqv/#dqv:inDimension
-dqv:inDimension rdf:type owl:ObjectProperty .
-
-
-###  https://www.w3.org/ns/oa#motivatedBy
-oa:motivatedBy rdf:type owl:ObjectProperty .
+###  https://data.norge.no/vocabulary/dqvno#inSubDimension
+:inSubDimension rdf:type owl:ObjectProperty ;
+   rdfs:subPropertyOf dqv:inDimension ;
+   rdfs:domain dqv:Metric ;
+   rdfs:range :SubDimension ;
+   rdfs:label "is in quality subdimension"@en , "er i kvalitetsdeldimensjon"@nb ;
+   rdfs:comment "This property is used to refer to the quality subdimension that the quality metric belongs to."@en ,
+         "Egenskapen brukes til å referere til kvalitetsdeldimensjonen som kvalitetsmålet hører til."@nb ;
+  .
 
 
 #################################################################
-#    Data properties
+#    Individuals 
 #################################################################
 
-###  https://www.w3.org/TR/vocab-dqv/#dqv:expectedDataType
-dqv:expectedDataType rdf:type owl:DatatypeProperty .
+###  https://data.norge.no/vocabulary/dqvno#isAuthoritative
+:isAuthoritative rdf:type owl:NamedIndividual ,
+            dqv:QualityCertificate ;
+   oa:motivatedBy dqv:qualityAssessment ;
+   dct:source "egendefinert"@nb ,
+               "own definition"@en ;
+   skos:definition "kvalitetsbeskrivelse som uttrykker at noe er autoritativt"@nb ,
+                  "quality description which states that something is authoritative"@en ;
+   skos:prefLabel "er autoritativ"@nb ,
+                  "is authoritative"@en .
 
 
-###  https://www.w3.org/TR/vocab-dqv/#dqv:value
-dqv:value rdf:type owl:DatatypeProperty .
+###  https://data.norge.no/vocabulary/dqvno#item
+:item rdf:type owl:NamedIndividual ,
+            skos:Concept ;
+   dct:source "ISO 19157"@en ,
+               "ISO 19157"@nb ;
+   skos:altLabel "entity"@en ;
+   skos:definition "anything that can be described and considered separately"@en ,
+                     "noe som kan beskrives og vurderes separat"@nb ;
+   skos:prefLabel "element"@nb ,
+                  "item"@en ;
+   skos:scopeNote "An item can be any part of a dataset, such as an object or a property."@en ,
+                  "Et element er en del av et datasett og kan være enhet eller egenskap."@nb .
+
+###  https://data.norge.no/vocabulary/dqvno#object
+:object rdf:type owl:NamedIndividual ,
+            skos:Concept ;
+   dct:source "ISO 19157"@en ,
+               "basert på ISO 19157"@nb ;
+   skos:altLabel "feature"@en ,
+                  "objekt"@nb ;
+   skos:definition "abstraction of real world phenomena"@en ,
+                  "avbildning av et fenomen i den virkelige verden"@nb ;
+   skos:prefLabel "enhet"@nb ,
+                  "object"@en .
+
+###  https://data.norge.no/vocabulary/dqvno#property
+:property rdf:type owl:NamedIndividual ,
+            skos:Concept ;
+   dct:source "based on \"Geodatakvalitet\", Norwegian Mapping Authority (https://www.kartverket.no/globalassets/standard/bransjestandarder-utover-sosi/geodatakvalitet.pdf)"@en ,
+            "«Geodatakvalitet», Kartverket (https://www.kartverket.no/globalassets/standard/bransjestandarder-utover-sosi/geodatakvalitet.pdf)"@nb ;
+   skos:altLabel "attribute"@en ,
+               "attributt"@nb ,
+               "characteristic"@en ,
+               "kjennemerke"@nb ,
+               "variabel"@nb ,
+               "variable"@en ;
+   skos:definition "named characteristic of an object"@en ,
+                  "navngitt kjennetegn eller karakteristikk av en enhet"@nb ;
+   skos:example "income, age, weight, occupation, industry, disease"@en ,
+               "inntekt, alder, vekt, yrke, bransje, sykdom"@nb ;
+   skos:prefLabel "egenskap"@nb ,
+                  "property"@en .
 
 
 #################################################################
-#    Classes
-#################################################################
-
-###  http://www.w3.org/2004/02/skos/core#Concept
-skos:Concept rdf:type owl:Class .
-
-
-###  https://www.w3.org/TR/vocab-dqv/#dqv:Dimension
-dqv:Dimension rdf:type owl:Class ;
-              owl:disjointWith dqv:Metric ,
-                               dqv:QualityCertificate .
-
-
-###  https://www.w3.org/TR/vocab-dqv/#dqv:Metric
-dqv:Metric rdf:type owl:Class ;
-           owl:disjointWith dqv:QualityCertificate .
-
-
-###  https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate
-dqv:QualityCertificate rdf:type owl:Class .
-
-
-#################################################################
-#    Individuals
+# ---------------------------------------------------------------
+#    The following individuals are deprecated
+# ---------------------------------------------------------------
 #################################################################
 
 ###  https://data.norge.no/vocabulary/dqvno#accuracy
@@ -272,32 +267,6 @@ dqv:QualityCertificate rdf:type owl:Class .
                   "imputering"@nb .
 
 
-###  https://data.norge.no/vocabulary/dqvno#isAuthoritative
-:isAuthoritative rdf:type owl:NamedIndividual ,
-            dqv:QualityCertificate ;
-   oa:motivatedBy dqv:qualityAssessment ;
-   dct:source "egendefinert"@nb ,
-               "own definition"@en ;
-   skos:definition "kvalitetsbeskrivelse som uttrykker at noe er autoritativt"@nb ,
-                  "quality description which states that something is authoritative"@en ;
-   skos:prefLabel "er autoritativ"@nb ,
-                  "is authoritative"@en .
-
-
-###  https://data.norge.no/vocabulary/dqvno#item
-:item rdf:type owl:NamedIndividual ,
-            skos:Concept ;
-   dct:source "ISO 19157"@en ,
-               "ISO 19157"@nb ;
-   skos:altLabel "entity"@en ;
-   skos:definition "anything that can be described and considered separately"@en ,
-                     "noe som kan beskrives og vurderes separat"@nb ;
-   skos:prefLabel "element"@nb ,
-                  "item"@en ;
-   skos:scopeNote "An item can be any part of a dataset, such as an object or a property."@en ,
-                  "Et element er en del av et datasett og kan være enhet eller egenskap."@nb .
-
-
 ###  https://data.norge.no/vocabulary/dqvno#missingObjects
 :missingObjects rdf:type owl:NamedIndividual ,
             dqv:Metric ;
@@ -420,18 +389,6 @@ dqv:QualityCertificate rdf:type owl:Class .
    skos:prefLabel "antall enheter med manglende verdi for en gitt egenskap"@nb ,
                   "number of objects with missing value for a given property"@en .
 
-###  https://data.norge.no/vocabulary/dqvno#object
-:object rdf:type owl:NamedIndividual ,
-            skos:Concept ;
-   dct:source "ISO 19157"@en ,
-               "basert på ISO 19157"@nb ;
-   skos:altLabel "feature"@en ,
-                  "objekt"@nb ;
-   skos:definition "abstraction of real world phenomena"@en ,
-                  "avbildning av et fenomen i den virkelige verden"@nb ;
-   skos:prefLabel "enhet"@nb ,
-                  "object"@en .
-
 
 ###  https://data.norge.no/vocabulary/dqvno#overallTimeDifference
 :overallTimeDifference rdf:type owl:NamedIndividual ,
@@ -464,25 +421,6 @@ dqv:QualityCertificate rdf:type owl:Class .
                   "excess data present in a data set"@en ;
    skos:prefLabel "over-coverage"@en ,
                   "overdekning"@nb .
-
-
-###  https://data.norge.no/vocabulary/dqvno#property
-:property rdf:type owl:NamedIndividual ,
-            skos:Concept ;
-   dct:source "based on \"Geodatakvalitet\", Norwegian Mapping Authority (https://www.kartverket.no/globalassets/standard/bransjestandarder-utover-sosi/geodatakvalitet.pdf)"@en ,
-            "«Geodatakvalitet», Kartverket (https://www.kartverket.no/globalassets/standard/bransjestandarder-utover-sosi/geodatakvalitet.pdf)"@nb ;
-   skos:altLabel "attribute"@en ,
-               "attributt"@nb ,
-               "characteristic"@en ,
-               "kjennemerke"@nb ,
-               "variabel"@nb ,
-               "variable"@en ;
-   skos:definition "named characteristic of an object"@en ,
-                  "navngitt kjennetegn eller karakteristikk av en enhet"@nb ;
-   skos:example "income, age, weight, occupation, industry, disease"@en ,
-               "inntekt, alder, vekt, yrke, bransje, sykdom"@nb ;
-   skos:prefLabel "egenskap"@nb ,
-                  "property"@en .
 
 
 ###  https://data.norge.no/vocabulary/dqvno#rateOfExcessObjects
@@ -707,18 +645,3 @@ dqv:QualityCertificate rdf:type owl:Class .
                      "data som mangler i et datasett"@nb ;
    skos:prefLabel "under-coverage"@en ,
                   "underdekning"@nb .
-
-
-###  https://www.w3.org/TR/vocab-dqv/#dqv:qualityAssessment
-dqv:qualityAssessment rdf:type owl:NamedIndividual .
-
-
-#################################################################
-#    Annotations
-#################################################################
-
-owl:Thing rdfs:label ""@en .
-
-
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
-###  and manually modified later
