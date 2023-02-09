@@ -3,4 +3,8 @@ index.html
 dqv-ap-no.pdf
 *.tmp
 !ontology/index.html
+<<<<<<< HEAD
 .idea/
+=======
+.idea/
+>>>>>>> 54c4f5a9ac0d1dde514504a7ef9d6dbd0cd92c65
