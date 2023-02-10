@@ -32,15 +32,9 @@ jobs:
           program: "asciidoctor-pdf -D docs -o files/dqv-ap-no.pdf -a lang=nb docs/main.adoc"
         continue-on-error: true
 
-<<<<<<< HEAD
       - name: Upload files to static-rdf-server
         uses: Informasjonsforvaltning/upload-files-to-static-rdf-server-action@v3.2.0
         id: upload-files
-=======
-      - name: Upload rdf to static-rdf-server
-        uses: Informasjonsforvaltning/upload-files-to-static-rdf-server-action@v3.2.0
-        id: upload-rdf
->>>>>>> 54c4f5a9ac0d1dde514504a7ef9d6dbd0cd92c65
         with:
           ontology-type: "specification"
           ontology: "dqv-ap-no"
