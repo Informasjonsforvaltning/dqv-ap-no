@@ -285,7 +285,7 @@ dqvno:isAuthoritative rdf:type owl:NamedIndividual ,
 ###  https://example.org/examples/dqvExamples#qmNumberMissingObjects
 :qmNumberMissingObjects rdf:type owl:NamedIndividual ,
                                  dqv:QualityMeasurement ;
-                        dqv:isMeasurementOf <https://data.norge.no/vocabulary/quality-metric#qm-completeness-1003> ;
+                        dqv:isMeasurementOf <https://data.norge.no/vocabulary/quality-metric#qm-completeness-1002> ;
                         dqv:value "2"^^xsd:nonNegativeInteger ;
                         rdfs:comment "To bygninger mangler i datasettet."@nb ,
                                      "Two buildings are missing in the dataset."@en .
@@ -296,7 +296,7 @@ dqvno:isAuthoritative rdf:type owl:NamedIndividual ,
                                dqv:QualityMeasurement ;
                       dqv:isMeasurementOf <https://data.norge.no/vocabulary/quality-metric#qm-completeness-1003> ;
                       dqv:value "0.02"^^xsd:double ;
-                      rdfs:comment "0.02% av bygninger mangler i datasettet."@nb ,
+                      rdfs:comment "0,02% av bygninger mangler i datasettet."@nb ,
                                    "0.02% of buildings are missing in the dataset."@en .
 
 
