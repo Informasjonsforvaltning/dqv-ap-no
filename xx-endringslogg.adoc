@@ -1,5 +1,14 @@
 == Endringslogg [[Endringslogg]]
 
+=== Endringer fra 1.0.2 til v.1.0.3 [[Endringer-fra-v1-0-2]]
+
+Redaksjonelle justeringer, deriblant at følgende norske klasse- og egenskapsnavn er endret: 
+
+* Klassenavnet «Måleresutlat» er endret til «Kvalitetsmåling»
+** tilsvarende er egenskapsnavnet «har måleresultat» endret til «har kvalitetsmåling»
+* Klassenavnet «Kvalitetsnote» er endret itl «Kvalitetsmerknad»
+** tilsvarende er egenskapsnavnet «har kvalitetsnote» endret til «har kvalitetsmerknad»
+
 === Endringer fra 1.0.1 til v.1.0.2 [[Endringer-fra-v1-0-1]]
 
 Kun redaksjonelle justeringer. 
