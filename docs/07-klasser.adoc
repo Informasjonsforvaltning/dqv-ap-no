@@ -1,6 +1,6 @@
 == Klasser [[Klasser]]
 
-I tillegg til klassene som er tatt med i denne spesifikasjonen, kan alle de andre klassene i https://www.w3.org/TR/vocab-dqv/[DQV] også brukes.
+I tillegg til klassene som er tatt med i denne spesifikasjonen, kan alle de andre klassene i https://www.w3.org/TR/vocab-dqv/[DQV &#x29C9;, window="_blank", role="ext-link"] også brukes.
 
 === Obligatoriske klasser [[Obligatoriske_klasser]]
 
@@ -8,7 +8,7 @@ Siden denne spesifikasjonen bruker datasett (`dcat:Dataset`) som utgangspunkt, t
 
 ==== Datasett (dcat:Dataset) [[Datasett]]
 
-Se https://data.norge.no/specification/dcat-ap-no/#klasse-datasett[beskrivelsen av denne klassen i DCAT-AP-NO].
+Se https://data.norge.no/specification/dcat-ap-no#Datasett[beskrivelsen av denne klassen i DCAT-AP-NO &#x29C9;, window="_blank", role="ext-link"].
 
 *Kommentar*: I DCAT-AP-NO er klassen Datasett (`dcat:Dataset`) anbefalt, mens den er obligatorisk i denne spesifikasjonen. Dette fordi denne spesifikasjonen tar utgangspunkt i beskrivelse av kvalitet på datasett.
 
@@ -18,7 +18,7 @@ Se https://data.norge.no/specification/dcat-ap-no/#klasse-datasett[beskrivelsen 
 
 [cols="30s,70"]
 |===
-|Engelsk navn|user quality feedback
+|Engelsk navn|User quality feedback
 |Beskrivelse|Brukes til å representere en brukertilbakemelding på kvalitet.
 |URI|https://www.w3.org/TR/vocab-dqv/#dqv:UserQualityFeedback[dqv:UserQualityFeedback]
 |Subklasse av|dqv:QualityAnnotation
@@ -26,21 +26,21 @@ Se https://data.norge.no/specification/dcat-ap-no/#klasse-datasett[beskrivelsen 
 |Kommentar|  I tillegg til predefinerte `dqv:qualityAssessment` som er motivasjonen som skal brukes for alle kvalitetsnoter, bør en av predefinerte instanser av `oa:Motivation` brukes for å skille mellom ulike typer brukertilbakemeldinger, f.eks. 'classifications', 'questions'.
 |===
 
-==== Kvalitetsnote (dqv:QualityAnnotation) [[Kvalitetsnote]]
+==== Kvalitetsmerknad (dqv:QualityAnnotation) [[Kvalitetsmerknad]]
 
 [cols="30s,70"]
 |===
-|Engelsk navn|quality annotation
+|Engelsk navn|Quality annotation
 |Beskrivelse|Brukes til å representere en tekstlig beskrivelse av kvalitet.
 |URI|https://www.w3.org/TR/vocab-dqv/#dqv:QualityAnnotation[dqv:QualityAnnotation]
 |Kravnivå|Anbefalt
 |===
 
-==== Måleresultat (dqv:QualityMeasurement) [[Måleresultat]]
+==== Kvalitetsmåling (dqv:QualityMeasurement) [[Kvalitetsmåling]]
 
 [cols="30s,70"]
 |===
-|Engelsk navn|quality measurement
+|Engelsk navn|Quality measurement
 |Beskrivelse|Brukes til å representere et måleresultat.
 |URI|https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurement[dqv:QualityMeasurement]
 |Kravnivå|Anbefalt
@@ -48,7 +48,7 @@ Se https://data.norge.no/specification/dcat-ap-no/#klasse-datasett[beskrivelsen 
 
 ==== Standard/spesifikasjon [[Standard]]
 
-Se https://data.norge.no/specification/dcat-ap-no/#klasse-standard[beskrivelsen av denne klassen i DCAT-AP-NO].
+Se https://data.norge.no/specification/dcat-ap-no#Standard[beskrivelsen av denne klassen i DCAT-AP-NO &#x29C9;, window="_blank", role="ext-link"].
 
 *Kommentar*: I DCAT-AP-NO er klassen Standard (`dct:Standard`) valgfri, mens den er anbefalt i denne spesifikasjonen. Dette fordi konformitet til kvalitetsstandarder/-spesifikasjoner bør dokumenteres når det finnes relevante kvalitetsstandarder/-spesifikasjoner.
 
@@ -58,7 +58,7 @@ Se https://data.norge.no/specification/dcat-ap-no/#klasse-standard[beskrivelsen 
 
 [cols="30s,70"]
 |===
-|Engelsk navn|quality subdimension
+|Engelsk navn|Quality subdimension
 |Beskrivelse|Brukes til å representere en kvalitetsdeldimensjon.
 |URI|https://data.norge.no/vocabulary/dqvno#SubDimension[dqvno:SubDimension]
 |Subklasse av| dqv:Dimension
@@ -72,7 +72,7 @@ Klassen brukes når man skal beskrive sin egen kvalitetsdeldimensjon, dvs. når 
 
 [cols="30s,70"]
 |===
-|Engelsk navn|quality dimension
+|Engelsk navn|Quality dimension
 |Beskrivelse|Brukes til å representere en kvalitetsdimensjon.
 |URI|https://www.w3.org/TR/vocab-dqv/#dqv:Dimension[dqv:Dimension]
 |Kravnivå|Valgfri
@@ -83,7 +83,7 @@ Klassen brukes når man skal beskrive sin egen kvalitetsdeldimensjon, dvs. når 
 
 [cols="30s,70"]
 |===
-|Engelsk navn|quality metric
+|Engelsk navn|Quality metric
 |Beskrivelse|Brukes til å representere et kvalitetsmål.
 |URI|https://www.w3.org/TR/vocab-dqv/#dqv:Metric[dqv:Metric]
 |Kravnivå|Valgfri
@@ -94,7 +94,7 @@ Klassen brukes når man skal beskrive sin egen kvalitetsdeldimensjon, dvs. når 
 
 [cols="30s,70"]
 |===
-|Engelsk navn|quality certificate
+|Engelsk navn|Quality certificate
 |Beskrivelse|Brukes til å representere et kvalitetssertifikat.
 |URI|dqv:QualityCertificate
 |Subklasse av|https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate[dqv:QualityAnnotation]
@@ -106,7 +106,7 @@ Klassen brukes når man skal beskrive sin egen kvalitetsdeldimensjon, dvs. når 
 
 [cols="30s,70"]
 |===
-|Engelsk navn|motivation
+|Engelsk navn|Motivation
 |Beskrivelse|Brukes til å representere intensjonen eller motivasjonen til en Kvalitetsnote.
 |URI|https://www.w3.org/TR/annotation-vocab/#motivation[oa:Motivation]
 |Kravnivå|Valgfri
@@ -117,7 +117,7 @@ Klassen brukes når man skal beskrive sin egen kvalitetsdeldimensjon, dvs. når 
 
 [cols="30s,70"]
 |===
-|Engelsk navn|textual body
+|Engelsk navn|Textual body
 |Beskrivelse|Brukes til å representere tekstdelen av en Kvalitetsnote.
 |URI|https://www.w3.org/TR/annotation-vocab/#textualbody[oa:TextualBody]
 |Kravnivå|Valgfri
