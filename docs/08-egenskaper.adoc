@@ -8,7 +8,7 @@ For klasser som finnes både i denne spesifikasjonen og i DCAT-AP-NO, supplerer 
 
 Tilsvarende gjelder også for f.eks. Distribusjon (`dcat:Distribution`) når spesifikasjonen skal brukes til å beskrive kvalitet på en distribusjon.
 
-Egenskapene beskrevet her i denne spesifikasjonen, supplerer https://data.norge.no/specification/dcat-ap-no/#Datasett[egenskapene for Datasett beskrevet i DCAT-AP-NO].
+Egenskapene beskrevet her i denne spesifikasjonen, supplerer https://data.norge.no/specification/dcat-ap-no/#Datasett[egenskapene for Datasett beskrevet i DCAT-AP-NO &#x29C9;, window="_blank", role="ext-link"].
 
 ==== Anbefalte egenskaper [[Datasett_anbefalte_egenskaper]]
 
@@ -30,14 +30,14 @@ Egenskapene beskrevet her i denne spesifikasjonen, supplerer https://data.norge.
 ----
 |===
 
-===== Datasett: har kvalitetsnote (dqv:hasQualityAnnotation) [[Datasett_harKvalitetsnote]]
+===== Datasett: har kvalitetsmerknad (dqv:hasQualityAnnotation) [[Datasett_harKvalitetsmerknad]]
 
 [cols="30s,70"]
 |===
 |Engelsk navn|has quality annotation
 |URI|https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityAnnotation[dqv:hasQualityAnnotation]
 |Range|dqv:QualityAnnotation
-|Beskrivelse|Brukes til å referere til en kvalitetsnote.
+|Beskrivelse|Brukes til å referere til en kvalitetsmerknad.
 |Multiplisitet|0..n
 |Kravnivå|Anbefalt
 |Kommentar| Gjelder også Brukertilbakemelding (`dqv:UserQualityFeedback`) og Kvalitetssertifikat (`dqv:QualityCertificate`) som er subklasser av Kvalitetsnote (`dqv:QualityAnnotation`).
@@ -57,14 +57,14 @@ dqvno:isAuthoritative
 ----
 |===
 
-===== Datasett: har måleresultat (dqv:hasQualityMeasurement) [[Datasett_harMåleresultat]]
+===== Datasett: har kvalitetsmåling (dqv:hasQualityMeasurement) [[Datasett_harKvalitetsmåling]]
 
 [cols="30s,70"]
 |===
 |Engelsk navn|has quality measurement
 |URI|https://www.w3.org/TR/vocab-dqv/#dqv:hasQualityMeasurement[dqv:hasQualityMeasurement]
 |Range|dqv:QualityMeasurement
-|Beskrivelse|Brukes til å referere til et måleresultat.
+|Beskrivelse|Brukes til å referere til en kvalitetsmåling.
 |Multiplisitet|0..n
 |Kravnivå|Anbefalt
 |Eksempel a| [source]
@@ -246,13 +246,13 @@ Egenskapen kan gjentas for hvert språk definisjonen finnes i.
 |Eksempel | Se tilsvarende eksempel under <<Kvalitetsdeldimensjon: er deldimensjon av (skos:broader)>>
 |===
 
-=== Kvalitetsnote (dqv:QualityAnnotation) [[Kvalitetsnote_egenskaper]]
+=== Kvalitetsmerknad (dqv:QualityAnnotation) [[Kvalitetsmerknad_egenskaper]]
 
-Tilsvarende gjelder også for <<Brukertilbakemelding>> (`dqv:UserFeedback`) og <<Kvalitetssertifikat>> (`dqv:QualityCertificate`) som er subklasser av Kvalitetsnote (`dqv:QualityAnnotation`).
+Tilsvarende gjelder også for <<Brukertilbakemelding>> og <<Kvalitetssertifikat>> som er subklasser av Kvalitetsnote (`dqv:QualityAnnotation`).
 
-==== Obligatoriske egenskaper [[Kvalitetsnote_obligatoriske_egenskaper]]
+==== Obligatoriske egenskaper [[Kvalitetsmerknad_obligatoriske_egenskaper]]
 
-===== Kvalitetsnote: er motivert av (oa:motivatedBy) [[Kvalitetsnote_erMotivertAv]]
+===== Kvalitetsmerknad: er motivert av (oa:motivatedBy) [[Kvalitetsmerknad_erMotivertAv]]
 
 [cols="30s,70"]
 |===
@@ -271,9 +271,9 @@ Tilsvarende gjelder også for <<Brukertilbakemelding>> (`dqv:UserFeedback`) og <
 ----
 |===
 
-==== Anbefalte egenskaper [[Kvalitetsnote_anbefalte_egenskaper]]
+==== Anbefalte egenskaper [[Kvalitetsmerknad_anbefalte_egenskaper]]
 
-===== Kvalitetsnote: er i kvalitetsdimensjon (dqv:inDimension) [[Kvalitetsnote_erIKvalitetsdimensjon]]
+===== Kvalitetsmerknad: er i kvalitetsdimensjon (dqv:inDimension) [[Kvalitetsmerknad_erIKvalitetsdimensjon]]
 
 [cols="30s,70"]
 |===
@@ -292,7 +292,7 @@ Tilsvarende gjelder også for <<Brukertilbakemelding>> (`dqv:UserFeedback`) og <
 ----
 |===
 
-===== Kvalitetsnote: har tekstdel (oa:hasBody) [[Kvalitetsnote_harTekstdel]]
+===== Kvalitetsmerknad: har tekstdel (oa:hasBody) [[Kvalitetsmerknad_harTekstdel]]
 
 [cols="30s,70"]
 |===
@@ -318,9 +318,9 @@ Tilsvarende gjelder også for <<Brukertilbakemelding>> (`dqv:UserFeedback`) og <
 ----
 |===
 
-==== Valgfrie egenskaper [[Kvalitetsnote_valgfrie_egenskaper]]
+==== Valgfrie egenskaper [[Kvalitetsmerknad_valgfrie_egenskaper]]
 
-===== Kvalitetsnote: har merknad (rdfs:comment) [[Kvalitetsnote_harMerknad]]
+===== Kvalitetsmerknad: har merknad (rdfs:comment) [[Kvalitetsmerknad_harMerknad]]
 
 [cols="30s,70"]
 |===
@@ -333,7 +333,7 @@ Tilsvarende gjelder også for <<Brukertilbakemelding>> (`dqv:UserFeedback`) og <
 |Kommentar|Norsk utvidelse. For å kunne ha fritekstkommentarer.
 |===
 
-===== Kvalitetsnote: har mål (oa:hasTarget) [[Kvalitetsnote_harMål]]
+===== Kvalitetsmerknad: har mål (oa:hasTarget) [[Kvalitetsmerknad_harMål]]
 
 [cols="30s,70"]
 |===
@@ -345,11 +345,11 @@ Tilsvarende gjelder også for <<Brukertilbakemelding>> (`dqv:UserFeedback`) og <
 |Kravnivå|Valgfri
 |===
 
-=== Måleresultat (dqv:QualityMeasurement) [[Måleresultat_egenskaper]]
+=== Kvalitetsmåling (dqv:QualityMeasurement) [[Kvalitetsmåling_egenskaper]]
 
-==== Obligatoriske egenskaper [[Måleresultat_obligatoriske_egenskaper]]
+==== Obligatoriske egenskaper [[Kvalitetsmåling_obligatoriske_egenskaper]]
 
-===== Måleresultat: er måleresultat av (dqv:isMeasurementOf) [[Måleresultat_erMåleresultatAv]]
+===== Kvalitetsmåling: er kvalitetsmåling av (dqv:isMeasurementOf) [[Kvalitetsmåling_erKvalitetsmålingAv]]
 
 [cols="30s,70"]
 |===
@@ -368,9 +368,9 @@ Tilsvarende gjelder også for <<Brukertilbakemelding>> (`dqv:UserFeedback`) og <
 ----
 |===
 
-==== Anbefalte egenskaper [[Måleresultat_anbefalte_egenskaper]]
+==== Anbefalte egenskaper [[Kvalitetsmåling_anbefalte_egenskaper]]
 
-===== Måleresultat: har verdi (dqv:value) [[Måleresultat_harVerdi]]
+===== Kvalitetsmåling: har verdi (dqv:value) [[Kvalitetsmåling_harVerdi]]
 
 [cols="30s,70"]
 |===
@@ -380,12 +380,12 @@ Tilsvarende gjelder også for <<Brukertilbakemelding>> (`dqv:UserFeedback`) og <
 |Beskrivelse|Brukes til å referere til verdien av et måleresultat.
 |Multiplisitet|0..1
 |Kravnivå|Anbefalt
-|Eksempel | Se eksemplet under <<Måleresultat: er måleresultat av (dqv:isMeasurementOf)>>
+|Eksempel | Se eksemplet under <<Kvalitetsmåling: er kvalitetsmåling av (dqv:isMeasurementOf)>>
 |===
 
-==== Valgfrie egenskaper [[Måleresultat_valgfrie_egenskaper]]
+==== Valgfrie egenskaper [[Kvalitetsmåling_valgfrie_egenskaper]]
 
-===== Måleresultat: har merknad (rdfs:comment) [[Måleresultat_harMerknad]]
+===== Kvalitetsmåling: har merknad (rdfs:comment) [[Kvalitetsmåling_harMerknad]]
 
 [cols="30s,70"]
 |===
