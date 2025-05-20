@@ -21,8 +21,8 @@
    rdfs:label "dqv-ap-no"@en ,
       "dqv-ap-no"@nb ,
       "dqv-ap-no"@nn ;
-   owl:versionIRI <dqvno:0.5> ;
-   dct:modified "2023-02-09"^^xsd:date ;
+   owl:versionIRI <dqvno:0.6> ;
+   dct:modified "2025-05-20"^^xsd:date ;
    owl:versionInfo "Draft"@en ,
       """Utkast. Endringene sammenlignet med forrige versjon, hovedsakelig:
 - fleste predefinerte instanser ('named individuals') er nå markert som deprecated.
@@ -226,7 +226,7 @@
    adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ;
    dct:isReplacedBy <https://data.norge.no/vocabulary/quality-metric#qm-completeness-2001> ;
    dqv:inDimension :overcoverage ;
-   dqv:expectedDataType "false"^^xsd:boolean ;
+   dqv:expectedDataType xsd:boolean ;
    dct:source "based on ISO 19157"@en ,
                "basert på ISO 19157"@nb ;
    skos:altLabel "overflødige objekter"@nb ;
@@ -273,7 +273,7 @@
    adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ;
    dct:isReplacedBy <https://data.norge.no/vocabulary/quality-metric#qm-completeness-1001> ;
    dqv:inDimension :undercoverage ;
-   dqv:expectedDataType "false"^^xsd:boolean ;
+   dqv:expectedDataType xsd:boolean ;
    dct:source "based on ISO 19157"@en ,
             "basert på ISO 19157"@nb ;
    skos:definition "hvorvidt det mangler enheter i datasettet"@nb ,
@@ -290,7 +290,7 @@
    adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ;
    dct:isReplacedBy <https://data.norge.no/vocabulary/quality-metric#qm-completeness-2002> ;
    dqv:inDimension :overcoverage ;
-   dqv:expectedDataType ""^^xsd:nonNegativeInteger ;
+   dqv:expectedDataType xsd:nonNegativeInteger ;
    dct:source "based on ISO 19175"@en ,
                "basert på ISO 19175"@nb ;
    skos:altLabel "antall overflødige objekter"@nb ;
@@ -308,7 +308,7 @@
    adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ;
    dct:isReplacedBy <https://data.norge.no/vocabulary/quality-metric#qm-accuracy-2001> ;
    dqv:inDimension :classificationCorrectness ;
-   dqv:expectedDataType ""^^xsd:nonNegativeInteger ;
+   dqv:expectedDataType xsd:nonNegativeInteger ;
    dct:source "based on ISO 19157"@en ,
             "basert på ISO 19157"@nb ;
    skos:altLabel "antall feilklassifiserte objekter for en gitt egenskap"@nb ;
@@ -326,7 +326,7 @@
    adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ;
    dct:isReplacedBy <https://data.norge.no/vocabulary/quality-metric#qm-completeness-1002> ;
    dqv:inDimension :undercoverage ;
-   dqv:expectedDataType ""^^xsd:nonNegativeInteger ;
+   dqv:expectedDataType xsd:nonNegativeInteger ;
    dct:source "based on ISO 19157"@en ,
                "basert på ISO 19157"@nb ;
    skos:definition "antall enheter som ikke er i datasettet men som forventes å være med"@nb ,
@@ -343,7 +343,7 @@
    adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ;
    dct:isReplacedBy <https://data.norge.no/vocabulary/quality-metric#qm-completeness-3001> ;
    dqv:inDimension :imputation ;
-   dqv:expectedDataType ""^^xsd:nonNegativeInteger ;
+   dqv:expectedDataType xsd:nonNegativeInteger ;
    dct:source "egendefinert"@nb ,
                "own definition"@en ;
    skos:altLabel "antall objekter med imputert verdi for en gitt egenskap"@nb ;
@@ -361,7 +361,7 @@
    adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ;
    dct:isReplacedBy <https://data.norge.no/vocabulary/quality-metric#qm-accuracy-1001> ;
    dqv:inDimension :identifierCorrectness ;
-   dqv:expectedDataType ""^^xsd:nonNegativeInteger ;
+   dqv:expectedDataType xsd:nonNegativeInteger ;
    dct:source "egendefinert"@nb ,
                "own definition"@en ;
    skos:altLabel "antall objekter med identifikatorfeil"@nb ;
@@ -379,7 +379,7 @@
    adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ;
    dct:isReplacedBy <https://data.norge.no/vocabulary/quality-metric#qm-completeness-1004> ;
    dqv:inDimension :undercoverage ;
-   dqv:expectedDataType ""^^xsd:nonNegativeInteger ;
+   dqv:expectedDataType xsd:nonNegativeInteger ;
    dct:source "egendefinert"@nb ,
                "own defintion"@en ;
    skos:definition "antall enheter i datasettet som mangler verdi for en gitt egenskap"@nb ,
@@ -396,7 +396,7 @@
    adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ;
    dct:isReplacedBy <https://data.norge.no/vocabulary/quality-metric#qm-currentness-1001> ;
    dqv:inDimension :delay ;
-   dqv:expectedDataType ""^^xsd:duration ;
+   dqv:expectedDataType xsd:duration ;
    dct:source "Eurostat RAMON, European Union, Regulation (EC) No 223/2009"@en ,
                "Eurostats begrepsdatabase RAMON, European Union, Regulation (EC) No 223/2009"@nb ;
    skos:definition "length of time between data availability and the event or phenomenon they describe"@en ,
@@ -429,7 +429,7 @@
    adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ;
    dct:isReplacedBy <https://data.norge.no/vocabulary/quality-metric#qm-completeness-2003> ;
    dqv:inDimension :overcoverage ;
-   dqv:expectedDataType ""^^xsd:double ;
+   dqv:expectedDataType xsd:double ;
    dct:source "based on ISO 19157"@en ,
                "basert på ISO 19157"@nb ;
    skos:altLabel "andel overflødige objekter"@nb ;
@@ -443,7 +443,7 @@
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :rateOfExcessObjects ;
    owl:annotatedProperty dqv:expectedDataType ;
-   owl:annotatedTarget ""^^xsd:double ;
+   owl:annotatedTarget xsd:double ;
    rdfs:comment "as percentage"@en ,
                 "som prosent"@nb
  ] .
@@ -455,7 +455,7 @@
    adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ;
    dct:isReplacedBy <https://data.norge.no/vocabulary/quality-metric#qm-accuracy-2002> ;
    dqv:inDimension :classificationCorrectness ;
-   dqv:expectedDataType ""^^xsd:double ;
+   dqv:expectedDataType xsd:double ;
    dct:source "based on ISO 19157"@en ,
                "basert på ISO 19157"@nb ;
    skos:altLabel "andel feilklassifiserte objekter for en gitt egenskap"@nb ,
@@ -470,7 +470,7 @@
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :rateOfIncorrectlyClassifiedObjectsForAGivenProperty ;
    owl:annotatedProperty dqv:expectedDataType ;
-   owl:annotatedTarget ""^^xsd:double ;
+   owl:annotatedTarget xsd:double ;
    rdfs:comment "as percentage"@en ,
                 "som prosent"@nb
  ] .
@@ -482,7 +482,7 @@
    adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ;
    dct:isReplacedBy <https://data.norge.no/vocabulary/quality-metric#qm-completeness-1003> ;
    dqv:inDimension :undercoverage ;
-   dqv:expectedDataType ""^^xsd:double ;
+   dqv:expectedDataType xsd:double ;
    dct:source "based on ISO 19157"@en ,
             "basert på ISO 19157"@nb ;
    skos:definition "antall enheter som mangler i forhold til antall enheter som skulle være med i datasettet"@nb ,
@@ -495,7 +495,7 @@
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :rateOfMissingObjects ;
    owl:annotatedProperty dqv:expectedDataType ;
-   owl:annotatedTarget ""^^xsd:double ;
+   owl:annotatedTarget xsd:double ;
    rdfs:comment "as percentage"@en ,
                 "som prosent"@nb
  ] .
@@ -507,7 +507,7 @@
    adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ;
    dct:isReplacedBy <https://data.norge.no/vocabulary/quality-metric#qm-completeness-3002> ;
    dqv:inDimension :imputation ;
-   dqv:expectedDataType ""^^xsd:double ;
+   dqv:expectedDataType xsd:double ;
    dct:source "egendefinert"@nb ,
                "own definition"@en ;
    skos:altLabel "andel objekter med imputert verdi for en gitt egenskap"@nb ;
@@ -521,7 +521,7 @@
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :rateOfObjectsWithImputedValueForAGivenProperty ;
    owl:annotatedProperty dqv:expectedDataType ;
-   owl:annotatedTarget ""^^xsd:double ;
+   owl:annotatedTarget xsd:double ;
    rdfs:comment "as percentage"@en ,
                 "som prosent"@nb
  ] .
@@ -533,7 +533,7 @@
    adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ;
    dct:isReplacedBy <https://data.norge.no/vocabulary/quality-metric#qm-consistency-1002> ;
    dqv:inDimension :consistencyWithinDataset ;
-   dqv:expectedDataType ""^^xsd:double ;
+   dqv:expectedDataType xsd:double ;
    dct:source "egendefinert"@nb ,
                "own definition"@en ;
    skos:altLabel "andel objekter med inkonsistens mellom gitte egenskaper"@nb ;
@@ -549,7 +549,7 @@
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :rateOfObjectsWithInconsistencyBetweenGivenProperties ;
    owl:annotatedProperty dqv:expectedDataType ;
-   owl:annotatedTarget ""^^xsd:double ;
+   owl:annotatedTarget xsd:double ;
    rdfs:comment "as percentage"@en ,
                 "som prosent"@nb
  ] .
@@ -561,7 +561,7 @@
    adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ;
    dct:isReplacedBy <https://data.norge.no/vocabulary/quality-metric#qm-consistency-1001> ;
    dqv:inDimension :consistencyWithinDataset ;
-   dqv:expectedDataType ""^^xsd:double ;
+   dqv:expectedDataType xsd:double ;
    dct:source "egendefinert"@nb ,
                "own definition"@en ;
    skos:altLabel "andel objekter med inkonsistente egenskaper"@nb ;
@@ -575,7 +575,7 @@
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :rateOfObjectsWithInconsistentProperties ;
    owl:annotatedProperty dqv:expectedDataType ;
-   owl:annotatedTarget ""^^xsd:double ;
+   owl:annotatedTarget xsd:double ;
    rdfs:comment "as percentage"@en ,
                 "som prosent"@nb
  ] .
@@ -587,7 +587,7 @@
    adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ;
    dct:isReplacedBy <https://data.norge.no/vocabulary/quality-metric#qm-accuracy-1002> ;
    dqv:inDimension :identifierCorrectness ;
-   dqv:expectedDataType ""^^xsd:double ;
+   dqv:expectedDataType xsd:double ;
    dct:source "egendefinert"@nb ,
                "own definition"@en ;
    skos:altLabel "andel objekter med identifikatorfeil"@nb ;
@@ -601,7 +601,7 @@
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :rateOfObjectsWithIncorrectIdentifiers ;
    owl:annotatedProperty dqv:expectedDataType ;
-   owl:annotatedTarget ""^^xsd:double ;
+   owl:annotatedTarget xsd:double ;
    rdfs:comment "as percent"@en ,
                 "som prosent"@nb
  ] .
@@ -613,7 +613,7 @@
    adms:status <http://publications.europa.eu/resource/authority/dataset-status/DEPRECATED> ;
    dct:isReplacedBy <https://data.norge.no/vocabulary/quality-metric#qm-completeness-1005> ;
    dqv:inDimension :undercoverage ;
-   dqv:expectedDataType ""^^xsd:double ;
+   dqv:expectedDataType xsd:double ;
    dct:source "egendefinert"@nb ,
                "own definition"@en ;
    skos:definition "antall enheter med manglende verdi for en gitt egenskap i forhold til antall enheter i datasettet"@nb ,
@@ -626,7 +626,7 @@
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :rateOfObjectsWithMissingValueForAGivenProperty ;
    owl:annotatedProperty dqv:expectedDataType ;
-   owl:annotatedTarget ""^^xsd:double ;
+   owl:annotatedTarget xsd:double ;
    rdfs:comment "as percentage"@en ,
                 "som prosent"@nb
  ] .
