@@ -1,5 +1,9 @@
 name: build adocs and publish develop to github pages
 
+permissions:
+  contents: read
+  pages: write
+
 on:
   push:
     branches:
