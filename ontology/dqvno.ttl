@@ -21,12 +21,11 @@
    rdfs:label "dqv-ap-no"@en ,
       "dqv-ap-no"@nb ,
       "dqv-ap-no"@nn ;
-   owl:versionIRI <dqvno:0.6> ;
-   dct:modified "2025-05-20"^^xsd:date ;
+   owl:versionIRI <dqvno:0.7> ;
+   dct:modified "2026-02-25"^^xsd:date ;
    owl:versionInfo "Draft"@en ,
-      """Utkast. Endringene sammenlignet med forrige versjon, hovedsakelig:
-- fleste predefinerte instanser ('named individuals') er nå markert som deprecated.
-- norske klasser og egenskaper føyet til."""@nb .
+      """Utkast. Endringene sammenlignet med forrige versjon:
+- tatt bort domain- og range-spesifikasjoner."""@nb .
 
 
 #################################################################
@@ -48,8 +47,6 @@
 ###  https://data.norge.no/vocabulary/dqvno#inSubDimension
 :inSubDimension rdf:type owl:ObjectProperty ;
    rdfs:subPropertyOf dqv:inDimension ;
-   rdfs:domain dqv:Metric ;
-   rdfs:range :SubDimension ;
    rdfs:label "is in quality subdimension"@en , "er i kvalitetsdeldimensjon"@nb ;
    rdfs:comment "This property is used to refer to the quality subdimension that the quality metric belongs to."@en ,
          "Egenskapen brukes til å referere til kvalitetsdeldimensjonen som kvalitetsmålet hører til."@nb ;
